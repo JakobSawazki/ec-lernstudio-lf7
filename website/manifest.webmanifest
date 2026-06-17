@@ -1,0 +1,16 @@
+{
+  "name": "EC Lernstudio · Lernfeld 7",
+  "short_name": "EC Lernstudio",
+  "description": "Interaktive Lernplattform zu Online-Marketing, SEO, SEA, Targeting, Kennzahlen und KI.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f8",
+  "theme_color": "#071827",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
