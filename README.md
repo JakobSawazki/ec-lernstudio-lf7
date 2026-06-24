@@ -4,8 +4,8 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 erste Ausbaustufe behandelt die in Datenverarbeitung vorgesehenen Inhalte aus
 Lernfeld 7 „Online-Marketing-Maßnahmen umsetzen und bewerten“.
 
-**Version:** `1.0.0`  
-**Dokumentationsstand:** 10. Juni 2026  
+**Version:** `1.1.0`
+**Dokumentationsstand:** 24. Juni 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -48,8 +48,8 @@ KI-Baustein enthalten.
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
 - gemischter LF7-Praxischeck mit zwölf zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
-- XP, Level, Lernserie und acht Abzeichen
-- Glossar mit 15 zentralen Fachbegriffen
+- XP, Level, Lernserie und neun Abzeichen
+- ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
 - versionierter JSON-Export und -Import des Lernstands
@@ -62,6 +62,7 @@ Gespeichert werden:
 
 - Anzeigename oder Kürzel
 - richtig gelöste Aufgaben
+- gelöste Glossar-Checks
 - offene Fehler
 - Abzeichen
 - Lernserie und letzter Lerntag
@@ -79,8 +80,8 @@ Desktop als Vorschlag. Andere Browser speichern die Datei üblicherweise im
 Download-Ordner. Ein USB-Stick kann im Dialog manuell ausgewählt werden.
 
 Der Import akzeptiert höchstens 2 MB, prüft Format und Versionsnummer und
-verwirft unbekannte Aufgaben- oder Abzeichen-IDs. XP werden aus gültigen
-Lösungen neu berechnet.
+verwirft unbekannte Aufgaben-, Glossar- oder Abzeichen-IDs. XP werden aus
+gültigen Aufgabenlösungen und Glossar-Checks neu berechnet.
 
 ## Quellen und Rechte
 
@@ -89,6 +90,7 @@ Private Referenzen:
 - OneNote-Abschnitt `EC/LF7` der Kaufmännischen Schule Nagold
 - BiBox Westermann, Buch-ID `3943`, Einstieg um Seite `240`
 - vom Auftraggeber festgelegte DV-Auswahl für LF7
+- lokal bereitgestellter KMK-Rahmenlehrplan unter `assets/Rahmenlehrplan.pdf`
 
 Die privaten Quellen dienen der fachlichen Orientierung. Originalseiten,
 Screenshots, Buchtexte, Musterlösungen und personenbezogene Inhalte werden
@@ -98,11 +100,14 @@ eigenständig formuliert.
 Die OneNote-Übersicht wurde am 10. Juni 2026 geöffnet und bestätigte die
 Abschnitte 7.5, 7.7, 7.8, 7.9, 7.19 und 7.20. Die BiBox erfordert ein
 persönliches Westermann-Login und ist nicht Bestandteil des Repositories.
+Die lokale Quellenablage `assets/` ist per `.gitignore` ausgeschlossen.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
-Das Titelbild `website/assets/lf7-marketing-lab.png` wurde am 10. Juni 2026
-mit dem integrierten OpenAI-Bildgenerator eigens für dieses Projekt erzeugt.
-Es enthält keine Markenoberflächen oder lesbaren Fremdtexte.
+Das aktuelle Titelbild `website/assets/ecommerce-consultation-hero.png` wurde
+am 24. Juni 2026 mit dem integrierten OpenAI-Bildgenerator eigens für dieses
+Projekt erzeugt. Es zeigt eine E-Commerce-Beratungssituation ohne Logos,
+Markenoberflächen oder lesbare Fremdtexte. Das frühere Titelbild
+`website/assets/lf7-marketing-lab.png` bleibt als Projektasset erhalten.
 
 ## Technische Architektur
 
@@ -117,6 +122,7 @@ Build-Schritt. GitHub Pages veröffentlicht den Ordner `website/`.
 | `website/app.js` | Navigation, Quiz, Labor, Lernstand, Export und Import |
 | `website/service-worker.js` | lokaler Offline-Cache |
 | `website/assets/` | projektbezogene Bildmedien |
+| `assets/` | lokale private Quellenablage, per `.gitignore` ausgeschlossen |
 | `.github/workflows/deploy-pages.yml` | Prüfung und GitHub-Pages-Deployment |
 | `docs/` | Quellen, Übergabe und Deployment |
 
@@ -145,6 +151,7 @@ EC/
     |-- service-worker.js
     |-- styles.css
     `-- assets/
+        |-- ecommerce-consultation-hero.png
         `-- lf7-marketing-lab.png
 ```
 
@@ -180,6 +187,7 @@ Zusätzlich manuell oder automatisiert prüfen:
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
 - XP und Abzeichen
+- Glossar-Suche, Kategorie-Filter, Detailseite und Mini-Quiz
 - Kennzahlen-Labor einschließlich unplausibler Eingaben
 - Export und Import einer Lernstand-Datei
 - Desktopansicht bei etwa 1440 Pixel Breite
@@ -204,7 +212,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.0.0`
+Aktueller Stand: `1.1.0`
 
 ## Offene Weiterentwicklung
 

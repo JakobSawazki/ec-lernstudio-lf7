@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio LF7
 
-Stand: 10. Juni 2026  
-Version: `1.0.0`
+Stand: 24. Juni 2026
+Version: `1.1.0`
 
 ## Auftrag und Ergebnis
 
@@ -19,6 +19,7 @@ umgesetzt. Sie benötigt kein Framework und keinen Build-Schritt.
 - Repository: `https://github.com/JakobSawazki/ec-lernstudio-lf7`
 - GitHub Pages: `https://jakobsawazki.github.io/ec-lernstudio-lf7/`
 - produktive Dateien: `website/`
+- lokale Quellenablage: `assets/`, bewusst per `.gitignore` ausgeschlossen
 
 ## Umgesetzte Inhalte
 
@@ -37,11 +38,12 @@ Das ergibt insgesamt 36 Aufgaben.
 - Kennzahlen-Labor mit Plausibilitätsprüfung
 - Praxischeck mit zwölf zufälligen Fragen
 - Fehlertraining
-- XP und acht Abzeichen
+- XP und neun Abzeichen
 - Lernserie
-- Glossar
+- ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
 - versionierter Datei-Export und -Import
+- menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
 
 ## Zustandsmodell
 
@@ -51,6 +53,7 @@ Felder:
 
 - `name`
 - `answered`
+- `glossaryAnswered`
 - `mistakes`
 - `unlockedBadges`
 - `streak`
@@ -61,7 +64,8 @@ Felder:
 - `lastModuleId`
 
 XP werden nicht als vertrauenswürdiger Wert gespeichert, sondern aus gültigen
-richtig gelösten Aufgaben neu berechnet. Jede gültige Aufgabe zählt 25 XP.
+richtig gelösten Aufgaben und Glossar-Checks neu berechnet. Jede gültige
+Aufgabe zählt 25 XP, jeder erstmals richtig gelöste Glossar-Check 10 XP.
 
 Exportformat:
 
@@ -86,11 +90,22 @@ Neue Frage:
 Bei neuen Modulen müssen Darstellung, Abzeichenbedingungen und Gesamttexte in
 `website/app.js` kontrolliert werden.
 
+Neue Glossarbegriffe:
+
+1. eindeutige ID vergeben,
+2. `term`, `category`, `summary`, `detail` und `example` ausfüllen,
+3. keine langen wörtlichen Übernahmen aus Lehrbüchern oder PDFs verwenden,
+4. danach Glossar-Suche, Detailseite und Mini-Quiz testen.
+
 ## Quellenstatus
 
 Die OneNote-Übersicht war zugänglich und bestätigte die Themenauswahl. Die
 BiBox ist kontogebunden und darf nur nach persönlicher Anmeldung zum Abgleich
 gelesen werden. Geschützte Texte werden nicht übernommen.
+
+Der lokal abgelegte KMK-Rahmenlehrplan `assets/Rahmenlehrplan.pdf` wurde zur
+Ausweitung des Glossars auf die gesamte Ausbildung ausgewertet. Die Datei wird
+nicht veröffentlicht.
 
 Der nächste fachliche Schritt ist ein vollständiger Abgleich der eigenständig
 formulierten Inhalte mit den BiBox-Unterkapiteln.
@@ -113,6 +128,7 @@ Danach lokal über HTTP starten und im Browser prüfen:
 - Zahlen- und Auswahlaufgabe
 - Fehlertraining
 - Kennzahlen-Labor
+- Glossar-Suche, Kategorie-Filter, Detailseite und Mini-Quiz
 - Export und Import
 - Desktop und Mobil
 - Browserkonsole
@@ -121,6 +137,7 @@ Danach lokal über HTTP starten und im Browser prüfen:
 
 - Exportkennzeichen oder Versionsnummer ohne Migrationsplan
 - bestehende Aufgaben-IDs, wenn Lernstände kompatibel bleiben sollen
+- bestehende Glossar-IDs, wenn gespeicherte Glossar-Checks kompatibel bleiben sollen
 - Browser-Schlüssel ohne Datenmigration
 - `website/` als Deployment-Pfad
 - private Quellen in öffentliche Dateien

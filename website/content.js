@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.0.0",
+  version: "1.1.0",
   modules: [
     {
       id: "targeting",
@@ -722,23 +722,567 @@ window.EC_CONTENT = {
       description: "Einen gemischten Praxischeck beendet.",
       condition: "sprints",
       value: 1
+    },
+    {
+      id: "glossary-starter",
+      title: "Begriffsprofi",
+      description: "Zehn Glossar-Checks richtig gelöst.",
+      condition: "glossary",
+      value: 10
     }
   ],
   glossary: [
-    ["Crawling", "Automatisiertes Entdecken von Webseiten und Links."],
-    ["Indexierung", "Analysieren und Speichern von Inhalten im Suchindex."],
-    ["SERP", "Search Engine Results Page, also die Suchergebnisseite."],
-    ["SEO", "Optimierung für organische Sichtbarkeit in Suchmaschinen."],
-    ["SEA", "Bezahlte Suchmaschinenwerbung."],
-    ["Impression", "Gezählte Einblendung eines Werbemittels oder Suchergebnisses."],
-    ["CTR", "Anteil der Klicks an den Impressionen."],
-    ["CPC", "Durchschnittliche Werbekosten je Klick."],
-    ["Conversion", "Gewünschte Handlung, zum Beispiel Kauf oder Anmeldung."],
-    ["Conversion Rate", "Anteil der Conversions an Klicks oder Besuchen."],
-    ["CPO", "Werbekosten je Bestellung."],
-    ["ROAS", "Zugeordneter Umsatz geteilt durch Werbekosten."],
-    ["Retargeting", "Erneute Ansprache früherer Besucher oder Interessenten."],
-    ["Landingpage", "Zielseite, auf der ein Klick nach der Anzeige ankommt."],
-    ["Prompt", "Arbeitsauftrag beziehungsweise Eingabe für ein KI-System."]
+    {
+      id: "e-commerce",
+      term: "E-Commerce",
+      category: "Grundlagen",
+      summary: "Elektronischer Handel mit Waren oder Dienstleistungen über digitale Vertriebskanäle.",
+      detail: "E-Commerce umfasst mehr als einen Webshop. Dazu gehören Sortiment, Produktdaten, Zahlungsarten, Logistik, Kundenkommunikation, Marketing, Recht, Kennzahlen und technische Systeme.",
+      example: "Ein Unternehmen verkauft Pflegeprodukte im eigenen Shop und zusätzlich über einen Online-Marktplatz."
+    },
+    {
+      id: "online-vertriebskanal",
+      term: "Online-Vertriebskanal",
+      category: "Grundlagen",
+      summary: "Digitaler Weg, über den ein Unternehmen Produkte online anbietet und verkauft.",
+      detail: "Ein Online-Vertriebskanal kann der eigene Webshop, ein Marktplatz, eine App oder ein Social-Commerce-Kanal sein. Wichtig sind Reichweite, Kosten, Zielgruppe, Steuerbarkeit und technische Anbindung.",
+      example: "Ein Shop nutzt den eigenen Webshop für Stammkunden und einen Marktplatz zur Neukundengewinnung."
+    },
+    {
+      id: "online-vertriebssystem",
+      term: "Online-Vertriebssystem",
+      category: "Grundlagen",
+      summary: "Technische Plattform, mit der ein Online-Vertriebskanal betrieben wird.",
+      detail: "Das System bildet Produkte, Preise, Warenkorb, Checkout, Zahlungen, Kundendaten und Schnittstellen ab. Es verbindet kaufmännische Prozesse mit der sichtbaren Shopoberfläche.",
+      example: "Das Shopsystem übernimmt Produktseiten, Warenkorb, Bestellabschluss und Schnittstellen zum Warenwirtschaftssystem."
+    },
+    {
+      id: "geschaeftsmodell",
+      term: "Geschäftsmodell",
+      category: "Grundlagen",
+      summary: "Beschreibung, wie ein Unternehmen Nutzen schafft und damit Geld verdient.",
+      detail: "Im E-Commerce klärt das Geschäftsmodell Zielgruppe, Leistungsangebot, Vertriebskanäle, Erlösquellen, Kostenstruktur, Partner und besonderen Kundennutzen.",
+      example: "Ein Abo-Modell liefert Verbrauchsprodukte regelmäßig nach Hause und erzielt wiederkehrende Umsätze."
+    },
+    {
+      id: "zielgruppe",
+      term: "Zielgruppe",
+      category: "Grundlagen",
+      summary: "Personen- oder Unternehmensgruppe, die mit einem Angebot gezielt angesprochen werden soll.",
+      detail: "Zielgruppen werden nach Bedürfnissen, Verhalten, Kaufkraft, Situation oder Branche beschrieben. Je genauer das Kundenproblem verstanden wird, desto passender werden Sortiment, Ansprache und Service.",
+      example: "Berufspendler mit wenig Zeit sind eine Zielgruppe für schnelle Lieferoptionen und klare Produktvergleiche."
+    },
+    {
+      id: "online-sortiment",
+      term: "Online-Sortiment",
+      category: "Sortiment",
+      summary: "Gesamtheit der online angebotenen Waren und Dienstleistungen.",
+      detail: "Das Online-Sortiment muss nach Nachfrage, Konkurrenz, Verfügbarkeit, Marge, Suchbarkeit und Retourenrisiko gepflegt werden. Es unterscheidet sich oft vom stationären Sortiment.",
+      example: "Ein Shop erweitert sein Sortiment um Ersatzteile, weil Kundensuchen und Warenkörbe Nachfrage zeigen."
+    },
+    {
+      id: "sortimentsbreite",
+      term: "Sortimentsbreite",
+      category: "Sortiment",
+      summary: "Anzahl unterschiedlicher Produktgruppen im Sortiment.",
+      detail: "Eine große Sortimentsbreite bietet viele Warengruppen. Sie kann neue Zielgruppen erreichen, erhöht aber Pflegeaufwand, Datenkomplexität und Beschaffungsrisiko.",
+      example: "Ein Shop verkauft Schuhe, Kleidung, Taschen und Pflegeprodukte: Die Sortimentsbreite ist groß."
+    },
+    {
+      id: "sortimentstiefe",
+      term: "Sortimentstiefe",
+      category: "Sortiment",
+      summary: "Anzahl der Varianten innerhalb einer Produktgruppe.",
+      detail: "Sortimentstiefe entsteht durch Größen, Farben, Ausführungen oder Qualitätsstufen. Sie hilft bei genauer Kundenwahl, kann aber Lagerbestand und Datenpflege erhöhen.",
+      example: "Ein Laufschuh ist in acht Größen und fünf Farben verfügbar."
+    },
+    {
+      id: "produktdaten",
+      term: "Produktdaten",
+      category: "Sortiment",
+      summary: "Strukturierte Informationen, die ein Produkt beschreiben und verkaufbar machen.",
+      detail: "Produktdaten umfassen Titel, Beschreibung, Bilder, Preis, Maße, Material, Verfügbarkeit, Artikelnummer, Varianten und rechtlich notwendige Angaben. Gute Daten verbessern Auffindbarkeit und Kaufentscheidung.",
+      example: "Material, Maße, Pflegehinweise und Lieferzeit werden auf der Produktseite gepflegt."
+    },
+    {
+      id: "produktpraesentation",
+      term: "Produktpräsentation",
+      category: "Sortiment",
+      summary: "Verkaufsfördernde und rechtssichere Darstellung eines Produkts im Online-Kanal.",
+      detail: "Zur Produktpräsentation gehören Titel, Bilder, Beschreibung, Preisangaben, Nutzenargumente, Varianten, Hinweise und Vertrauen schaffende Informationen. Sie soll informieren und Retouren vermeiden.",
+      example: "Ein Produktvideo zeigt Größe und Anwendung, damit Kunden realistisch entscheiden können."
+    },
+    {
+      id: "produktkategorie",
+      term: "Produktkategorie",
+      category: "Sortiment",
+      summary: "Thematische Einordnung von Produkten zur Navigation und Suche im Shop.",
+      detail: "Produktkategorien strukturieren das Sortiment und beeinflussen Filter, Suchfunktionen, Beratung und SEO. Kategorien müssen aus Kundensicht verständlich sein.",
+      example: "Eine Trinkflasche wird in Outdoor, Schule und Zubehör eingeordnet."
+    },
+    {
+      id: "filter",
+      term: "Filter",
+      category: "Sortiment",
+      summary: "Funktion zum Eingrenzen von Such- oder Kategorietreffern nach Merkmalen.",
+      detail: "Filter helfen Kunden, große Sortimente schnell zu durchsuchen. Dafür müssen Produktdaten sauber gepflegt sein, zum Beispiel Größe, Farbe, Preis, Marke oder Lieferbarkeit.",
+      example: "Kunden filtern Schuhe nach Größe 42, Farbe schwarz und Lieferzeit zwei Tage."
+    },
+    {
+      id: "barrierefreiheit",
+      term: "Barrierefreiheit",
+      category: "Sortiment",
+      summary: "Gestaltung digitaler Angebote, damit möglichst viele Menschen sie nutzen können.",
+      detail: "Barrierefreiheit betrifft Kontraste, Tastaturbedienung, Alternativtexte, verständliche Struktur, Formulare und Sprache. Sie verbessert Zugang, Qualität und oft auch Suchmaschinenfreundlichkeit.",
+      example: "Produktbilder erhalten Alternativtexte, damit Screenreader sie beschreiben können."
+    },
+    {
+      id: "cross-selling",
+      term: "Cross-Selling",
+      category: "Sortiment",
+      summary: "Angebot ergänzender Produkte passend zum Hauptprodukt.",
+      detail: "Cross-Selling soll den Kundennutzen und den Warenkorbwert erhöhen. Die Empfehlungen müssen sinnvoll und nicht aufdringlich sein.",
+      example: "Zum Smartphone werden passende Hülle und Ladekabel angeboten."
+    },
+    {
+      id: "warenwirtschaftssystem",
+      term: "Warenwirtschaftssystem",
+      category: "Beschaffung",
+      summary: "System zur Verwaltung von Artikeln, Beständen, Preisen, Einkauf und Verkauf.",
+      detail: "Im E-Commerce ist das Warenwirtschaftssystem oft mit Shop und Lager verbunden. Es liefert Stammdaten, Verfügbarkeit, Preise und unterstützt Beschaffungsprozesse.",
+      example: "Wenn der Bestand sinkt, löst das System einen Bestellvorschlag aus."
+    },
+    {
+      id: "schnittstelle",
+      term: "Schnittstelle",
+      category: "Beschaffung",
+      summary: "Verbindung, über die Systeme Daten austauschen.",
+      detail: "Schnittstellen verbinden zum Beispiel Shop, Warenwirtschaft, Zahlungsdienstleister, Versanddienstleister und Marktplätze. Gute Schnittstellen verringern doppelte Dateneingaben.",
+      example: "Nach einer Bestellung sendet der Shop Bestelldaten automatisch an das Warenwirtschaftssystem."
+    },
+    {
+      id: "verfuegbarkeit",
+      term: "Verfügbarkeit",
+      category: "Beschaffung",
+      summary: "Information, ob und wann ein Produkt geliefert werden kann.",
+      detail: "Verfügbarkeit beeinflusst Kaufentscheidung, Kundenzufriedenheit und Retouren. Sie muss mit Lagerbestand, Nachlieferung und Lieferzeit abgestimmt sein.",
+      example: "Die Produktseite zeigt: verfügbar, Lieferung in zwei Werktagen."
+    },
+    {
+      id: "optimale-bestellmenge",
+      term: "Optimale Bestellmenge",
+      category: "Beschaffung",
+      summary: "Bestellmenge, bei der Bestell- und Lagerkosten möglichst günstig zusammenwirken.",
+      detail: "Viele kleine Bestellungen erhöhen Bestellkosten, große Bestellungen erhöhen Lagerbestand und Kapitalbindung. Die optimale Bestellmenge gleicht diesen Zielkonflikt aus.",
+      example: "Ein Shop bestellt nicht täglich 20 Stück, sondern alle zwei Wochen 280 Stück, weil die Gesamtkosten niedriger sind."
+    },
+    {
+      id: "checkout-prozess",
+      term: "Checkout-Prozess",
+      category: "Vertrag",
+      summary: "Schritte vom Warenkorb bis zum verbindlichen Abschluss der Bestellung.",
+      detail: "Ein guter Checkout ist übersichtlich, rechtssicher, mobil nutzbar und reduziert Abbrüche. Er umfasst Kundendaten, Versand, Zahlung, Prüfung und Bestellbutton.",
+      example: "Gastbestellung, klare Versandkosten und mehrere Zahlarten senken die Absprungrate."
+    },
+    {
+      id: "agb",
+      term: "AGB",
+      category: "Vertrag",
+      summary: "Allgemeine Geschäftsbedingungen für wiederkehrende Vertragsregeln.",
+      detail: "AGB enthalten standardisierte Bedingungen, etwa zu Lieferung, Zahlung, Eigentumsvorbehalt oder Haftung. Sie müssen wirksam einbezogen und rechtlich zulässig sein.",
+      example: "Der Shop verweist im Checkout auf die AGB und lässt sie vor der Bestellung akzeptieren."
+    },
+    {
+      id: "informationspflichten",
+      term: "Informationspflichten",
+      category: "Vertrag",
+      summary: "Rechtlich vorgeschriebene Informationen, die Kunden erhalten müssen.",
+      detail: "Informationspflichten betreffen unter anderem Anbieter, Produkt, Preis, Versandkosten, Widerruf, Zahlung und Vertragsschluss. Sie schaffen Transparenz und Rechtssicherheit.",
+      example: "Vor dem Kauf werden Gesamtpreis, Lieferkosten und Widerrufsrecht klar angezeigt."
+    },
+    {
+      id: "widerrufsbelehrung",
+      term: "Widerrufsbelehrung",
+      category: "Vertrag",
+      summary: "Information über das Recht, einen Fernabsatzvertrag innerhalb einer Frist zu widerrufen.",
+      detail: "Die Widerrufsbelehrung erklärt Frist, Voraussetzungen und Ablauf. Sie ist im Online-Handel besonders wichtig, weil Kunden Produkte vor dem Kauf meist nicht physisch prüfen können.",
+      example: "Nach der Bestellung erhält der Kunde eine Belehrung mit Link zum Widerrufsformular."
+    },
+    {
+      id: "bezahlverfahren",
+      term: "Bezahlverfahren",
+      category: "Vertrag",
+      summary: "Möglichkeit, eine Online-Bestellung zu bezahlen.",
+      detail: "Bezahlverfahren werden nach Zielgruppe, Kosten, Ausfallrisiko, Sicherheit und Nutzerfreundlichkeit ausgewählt. Beispiele sind Rechnung, Karte, Lastschrift oder digitale Zahlungsdienste.",
+      example: "Für Geschäftskunden wird Kauf auf Rechnung angeboten, für Neukunden zusätzlich Kartenzahlung."
+    },
+    {
+      id: "bonitaetspruefung",
+      term: "Bonitätsprüfung",
+      category: "Vertrag",
+      summary: "Prüfung, wie wahrscheinlich ein Kunde seine Zahlung leisten kann.",
+      detail: "Bonitätsprüfungen sollen Zahlungsausfälle vermeiden. Sie müssen verhältnismäßig sein und Datenschutzanforderungen beachten.",
+      example: "Vor Ratenkauf wird geprüft, ob das Ausfallrisiko vertretbar ist."
+    },
+    {
+      id: "b2b",
+      term: "B2B",
+      category: "Vertrag",
+      summary: "Geschäftsbeziehung zwischen Unternehmen.",
+      detail: "Business-to-Business unterscheidet sich im Online-Vertrieb oft durch größere Bestellmengen, individuelle Konditionen, andere Zahlungsarten und andere rechtliche Rahmenbedingungen.",
+      example: "Ein Großhändler verkauft Verpackungsmaterial an Online-Shops."
+    },
+    {
+      id: "b2c",
+      term: "B2C",
+      category: "Vertrag",
+      summary: "Geschäftsbeziehung zwischen Unternehmen und Privatkunden.",
+      detail: "Business-to-Consumer ist stark von Verbraucherrechten, Nutzerfreundlichkeit, Zahlungsoptionen, Versand und Servicekommunikation geprägt.",
+      example: "Ein Privatkunde bestellt Kopfhörer in einem Online-Shop."
+    },
+    {
+      id: "retoure",
+      term: "Retoure",
+      category: "Service",
+      summary: "Rücksendung eines Produkts durch den Kunden.",
+      detail: "Retouren verursachen Kosten und Aufwand, liefern aber auch Hinweise auf Probleme bei Produktdaten, Qualität, Größenberatung oder Kundenerwartung.",
+      example: "Viele Rücksendungen wegen falscher Größe können auf unklare Größentabellen hinweisen."
+    },
+    {
+      id: "retourenquote",
+      term: "Retourenquote",
+      category: "Service",
+      summary: "Anteil zurückgesendeter Artikel oder Bestellungen.",
+      detail: "Die Retourenquote hilft, Rückabwicklungen messbar zu machen. Sie sollte nach Produktgruppe, Ursache und Zeitraum ausgewertet werden.",
+      example: "Wenn 80 von 1.000 Bestellungen retourniert werden, beträgt die Retourenquote 8 Prozent."
+    },
+    {
+      id: "stornoquote",
+      term: "Stornoquote",
+      category: "Service",
+      summary: "Anteil der stornierten Bestellungen an allen Bestellungen.",
+      detail: "Eine hohe Stornoquote kann auf Lieferprobleme, unklare Informationen, lange Lieferzeiten oder falsche Erwartungen hinweisen.",
+      example: "Viele Stornos vor Versand zeigen, dass Lieferzeiten oder Preise überprüft werden sollten."
+    },
+    {
+      id: "lieferungsverzug",
+      term: "Lieferungsverzug",
+      category: "Service",
+      summary: "Leistungsstörung, bei der die Lieferung nicht rechtzeitig erfolgt.",
+      detail: "Bei Lieferungsverzug muss das Unternehmen kundenorientiert und rechtssicher reagieren. Mögliche Maßnahmen sind Information, Nachfrist, Ersatzlösung oder Rückabwicklung.",
+      example: "Ein Shop informiert aktiv, wenn sich die Lieferung wegen Lieferantenproblemen verzögert."
+    },
+    {
+      id: "zahlungsverzug",
+      term: "Zahlungsverzug",
+      category: "Service",
+      summary: "Situation, in der eine fällige Zahlung nicht rechtzeitig eingeht.",
+      detail: "Beim Zahlungsverzug werden Mahnungen und weitere Schritte nötig. Dabei sollten rechtliche Vorgaben und Kundenbeziehung berücksichtigt werden.",
+      example: "Nach Ablauf der Zahlungsfrist wird eine freundliche Zahlungserinnerung versendet."
+    },
+    {
+      id: "after-sales-service",
+      term: "After-Sales-Service",
+      category: "Service",
+      summary: "Betreuung von Kunden nach dem Kauf.",
+      detail: "After-Sales-Service umfasst Fragen zur Nutzung, Reklamationen, Ersatzteile, Retouren, Bewertungen und Folgeangebote. Er kann Kundenbindung deutlich stärken.",
+      example: "Nach dem Kauf erhält der Kunde eine Anleitung und Hilfe bei Rückfragen."
+    },
+    {
+      id: "kundenbindung",
+      term: "Kundenbindung",
+      category: "Service",
+      summary: "Maßnahmen, die Kunden zu weiteren Käufen und langfristiger Beziehung bewegen.",
+      detail: "Kundenbindung entsteht durch gute Produkte, verlässlichen Service, passende Kommunikation, Vertrauen und sinnvolle Angebote. Sie ist oft günstiger als reine Neukundengewinnung.",
+      example: "Ein Shop bietet personalisierte Nachkauf-Erinnerungen und schnellen Service."
+    },
+    {
+      id: "servicekommunikation",
+      term: "Servicekommunikation",
+      category: "Service",
+      summary: "Kundenorientierte Kommunikation vor, während und nach dem Kauf.",
+      detail: "Servicekommunikation nutzt passende Kanäle wie E-Mail, Chat, Telefon oder Messenger. Sie soll Anliegen lösen, Vertrauen schaffen und Informationen für Verbesserungen liefern.",
+      example: "Ein Chat klärt vor dem Kauf, ob ein Ersatzteil zum Gerät passt."
+    },
+    {
+      id: "wertestrom",
+      term: "Wertestrom",
+      category: "Kennzahlen",
+      summary: "Fluss von Waren, Dienstleistungen, Informationen und Geld in Geschäftsprozessen.",
+      detail: "Werteströme zeigen, wie Leistungen entstehen und bezahlt werden. Sie sind Grundlage für Buchhaltung, Prozessanalyse und wirtschaftliche Beurteilung.",
+      example: "Bestellung, Versand, Rechnung und Zahlung bilden zusammen einen Wertestrom."
+    },
+    {
+      id: "beleg",
+      term: "Beleg",
+      category: "Kennzahlen",
+      summary: "Nachweis eines Geschäftsvorfalls.",
+      detail: "Belege dokumentieren Werteströme und sind Grundlage der Buchführung. Beispiele sind Rechnungen, Quittungen, Lieferscheine oder Gutschriften.",
+      example: "Eine Eingangsrechnung belegt den Einkauf von Verpackungsmaterial."
+    },
+    {
+      id: "umsatzsteuer",
+      term: "Umsatzsteuer",
+      category: "Kennzahlen",
+      summary: "Steuer auf den Verkauf von Waren und Dienstleistungen.",
+      detail: "Im Online-Shop müssen Netto- und Bruttopreise sowie geltende Umsatzsteuersätze korrekt berücksichtigt werden. Fehler können rechtliche und kaufmännische Folgen haben.",
+      example: "Ein Nettopreis von 100 Euro ergibt bei 19 Prozent Umsatzsteuer einen Bruttopreis von 119 Euro."
+    },
+    {
+      id: "rohertrag",
+      term: "Rohertrag",
+      category: "Kennzahlen",
+      summary: "Differenz zwischen Umsatzerlösen und Waren- beziehungsweise Materialeinsatz.",
+      detail: "Der Rohertrag zeigt, welcher Betrag nach Abzug des Wareneinsatzes zur Deckung weiterer Kosten und für Gewinn verbleibt.",
+      example: "Verkauf 80 Euro, Wareneinsatz 50 Euro: Rohertrag 30 Euro."
+    },
+    {
+      id: "liquiditaet",
+      term: "Liquidität",
+      category: "Kennzahlen",
+      summary: "Fähigkeit eines Unternehmens, fällige Zahlungen leisten zu können.",
+      detail: "Liquidität ist überlebenswichtig. Ein Unternehmen kann profitabel wirken und trotzdem zahlungsunfähig werden, wenn Geld zu spät eingeht.",
+      example: "Genügend Bankguthaben für Lieferantenrechnungen zeigt kurzfristige Zahlungsfähigkeit."
+    },
+    {
+      id: "rentabilitaet",
+      term: "Rentabilität",
+      category: "Kennzahlen",
+      summary: "Verhältnis von Erfolg zu eingesetztem Kapital oder Umsatz.",
+      detail: "Rentabilität zeigt, wie wirtschaftlich ein Unternehmen arbeitet. Im Unterricht sind etwa Eigenkapital- und Umsatzrentabilität relevant.",
+      example: "Ein Gewinn von 10.000 Euro bei 100.000 Euro Umsatz entspricht 10 Prozent Umsatzrentabilität."
+    },
+    {
+      id: "kpi",
+      term: "KPI",
+      category: "Kennzahlen",
+      summary: "Key Performance Indicator, also eine Schlüsselkennzahl zur Steuerung.",
+      detail: "KPIs helfen, Ziele messbar zu machen. Eine gute KPI passt zum Ziel, hat eine klare Berechnung und führt zu möglichen Maßnahmen.",
+      example: "Für Kampagnen kann die Conversion Rate eine KPI sein."
+    },
+    {
+      id: "customer-journey",
+      term: "Customer Journey",
+      category: "Marketing",
+      summary: "Weg eines Kunden von erstem Kontakt bis Kauf und Nachbetreuung.",
+      detail: "Die Customer Journey betrachtet Kontaktpunkte wie Anzeige, Suche, Produktseite, Warenkorb, Checkout, Lieferung und Service. Schwachstellen können gezielt optimiert werden.",
+      example: "Eine Anzeige führt zur Landingpage, dann zum Produktvergleich, Warenkorb und Kauf."
+    },
+    {
+      id: "targeting",
+      term: "Targeting",
+      category: "Marketing",
+      summary: "Gezielte Ansprache ausgewählter Zielgruppen mit passenden Werbemitteln.",
+      detail: "Targeting nutzt zum Beispiel Kontext, Ort, Interessen oder Verhalten. Es soll Relevanz erhöhen, Streuverluste senken und verantwortungsvoll mit Daten umgehen.",
+      example: "Eine Anzeige für Laufschuhe wird Personen gezeigt, die sich für Training interessieren."
+    },
+    {
+      id: "retargeting",
+      term: "Retargeting",
+      category: "Marketing",
+      summary: "Erneute Ansprache früherer Besucher oder Interessenten.",
+      detail: "Retargeting erinnert Personen an Produkte oder Warenkörbe, mit denen sie bereits Kontakt hatten. Es kann wirksam sein, darf aber nicht aufdringlich werden.",
+      example: "Ein Kunde sieht später erneut eine Anzeige für den verlassenen Warenkorb."
+    },
+    {
+      id: "seo",
+      term: "SEO",
+      category: "Marketing",
+      summary: "Optimierung für organische Sichtbarkeit in Suchmaschinen.",
+      detail: "SEO umfasst hilfreiche Inhalte, technische Qualität, klare Struktur und externe Signale. Es kauft keine Klicks, sondern verbessert Voraussetzungen für unbezahlte Treffer.",
+      example: "Eine Produktberatung beantwortet Suchfragen und verlinkt passende Produktseiten."
+    },
+    {
+      id: "sea",
+      term: "SEA",
+      category: "Marketing",
+      summary: "Bezahlte Suchmaschinenwerbung.",
+      detail: "SEA nutzt Anzeigen bei Suchmaschinen. Kampagnen werden über Keywords, Anzeigen, Gebote, Budgets, Zielseiten und Kennzahlen gesteuert.",
+      example: "Für das Keyword 'ergonomischer Bürostuhl' wird eine Suchanzeige geschaltet."
+    },
+    {
+      id: "serp",
+      term: "SERP",
+      category: "Marketing",
+      summary: "Search Engine Results Page, also die Suchergebnisseite.",
+      detail: "Eine SERP kann organische Ergebnisse, Anzeigen, Bilder, Karten, Shopping-Elemente oder direkte Antworten enthalten. Ihre Darstellung hängt von Anfrage und Kontext ab.",
+      example: "Bei einer Produktsuche erscheinen Anzeigen, organische Treffer und Shopping-Kacheln."
+    },
+    {
+      id: "conversion",
+      term: "Conversion",
+      category: "Marketing",
+      summary: "Gewünschte Handlung eines Nutzers.",
+      detail: "Eine Conversion muss zum Ziel passen. Sie kann Kauf, Registrierung, Download, Kontaktanfrage, Newsletter-Anmeldung oder Warenkorbabschluss sein.",
+      example: "Aus einem Klick wird eine Bestellung: Das ist eine Conversion."
+    },
+    {
+      id: "ctr",
+      term: "CTR",
+      category: "Marketing",
+      summary: "Click-Through-Rate: Anteil der Klicks an den Impressionen.",
+      detail: "Die CTR zeigt, wie gut ein Suchergebnis oder eine Anzeige zum Klick motiviert. Sie wird mit Klicks durch Impressionen mal 100 berechnet.",
+      example: "2.000 Klicks bei 100.000 Impressionen ergeben 2 Prozent CTR."
+    },
+    {
+      id: "cpc",
+      term: "CPC",
+      category: "Marketing",
+      summary: "Cost per Click, also durchschnittliche Kosten je Klick.",
+      detail: "Der CPC verteilt die Werbekosten auf die erzielten Klicks. Er sagt noch nicht, ob diese Klicks auch zu Umsatz geführt haben.",
+      example: "900 Euro Kosten bei 1.500 Klicks ergeben 0,60 Euro CPC."
+    },
+    {
+      id: "cpo",
+      term: "CPO",
+      category: "Marketing",
+      summary: "Cost per Order, also Werbekosten je Bestellung.",
+      detail: "Der CPO hilft, Kampagnen wirtschaftlich zu bewerten. Er sollte mit Warenkorbwert, Marge und Zielkosten verglichen werden.",
+      example: "1.200 Euro Werbekosten bei 80 Bestellungen ergeben 15 Euro CPO."
+    },
+    {
+      id: "roas",
+      term: "ROAS",
+      category: "Marketing",
+      summary: "Return on Advertising Spend: Umsatz im Verhältnis zu Werbekosten.",
+      detail: "Der ROAS zeigt, wie viel Umsatz je Werbe-Euro entsteht. Für eine echte Entscheidung müssen zusätzlich Marge, Retouren und Fixkosten betrachtet werden.",
+      example: "4.800 Euro Umsatz bei 1.200 Euro Kosten ergeben einen ROAS von 4,0."
+    },
+    {
+      id: "online-marktplatz",
+      term: "Online-Marktplatz",
+      category: "Vertriebskanäle",
+      summary: "Plattform, auf der viele Anbieter ihre Produkte online verkaufen.",
+      detail: "Marktplätze bieten Reichweite und Vertrauen, können aber Gebühren, Abhängigkeiten und weniger Kontrolle über Kundendaten mit sich bringen.",
+      example: "Ein Händler verkauft zusätzlich zum eigenen Shop auf einem Marktplatz."
+    },
+    {
+      id: "usability",
+      term: "Usability",
+      category: "Vertriebskanäle",
+      summary: "Benutzerfreundlichkeit eines digitalen Angebots.",
+      detail: "Gute Usability macht Navigation, Suche, Produktvergleich, Warenkorb und Checkout verständlich. Schlechte Usability erhöht Absprungraten und Serviceaufwand.",
+      example: "Ein gut sichtbarer Warenkorb und klare Fehlermeldungen verbessern die Usability."
+    },
+    {
+      id: "ab-test",
+      term: "A/B-Test",
+      category: "Vertriebskanäle",
+      summary: "Vergleich zweier Varianten, um Wirkung anhand von Daten zu prüfen.",
+      detail: "Beim A/B-Test sehen Nutzer unterschiedliche Versionen, zum Beispiel einer Produktseite. Danach wird gemessen, welche Variante ein Ziel besser erreicht.",
+      example: "Zwei Buttontexte werden getestet, um die höhere Klickrate zu finden."
+    },
+    {
+      id: "prozessoptimierung",
+      term: "Prozessoptimierung",
+      category: "Vertriebskanäle",
+      summary: "Gezielte Verbesserung von Abläufen nach Analyse von Schwachstellen.",
+      detail: "Im E-Commerce können Produktdatenpflege, Bestellabwicklung, Versand, Retouren, Service oder Marketingprozesse optimiert werden. Ziel sind Qualität, Effizienz und Kundennutzen.",
+      example: "Retourengründe werden ausgewertet und die Größentabelle verbessert."
+    },
+    {
+      id: "kundenwertanalyse",
+      term: "Kundenwertanalyse",
+      category: "Vertriebskanäle",
+      summary: "Bewertung, welchen wirtschaftlichen und strategischen Wert Kundengruppen haben.",
+      detail: "Kundenwert kann Umsatz, Marge, Wiederkaufrate, Servicekosten, Retouren und Weiterempfehlung berücksichtigen. Er hilft bei Prioritäten in Marketing und Service.",
+      example: "Stammkunden mit hoher Wiederkaufrate erhalten gezielte Serviceangebote."
+    },
+    {
+      id: "soziale-marktwirtschaft",
+      term: "Soziale Marktwirtschaft",
+      category: "Wirtschaft",
+      summary: "Wirtschaftsordnung, die Wettbewerb mit sozialem Ausgleich verbindet.",
+      detail: "Unternehmen handeln marktorientiert, der Staat setzt aber Regeln und Ausgleichsmechanismen. Für E-Commerce sind Wettbewerb, Verbraucherschutz und Innovation relevant.",
+      example: "Der Staat schützt Verbraucherrechte, während Unternehmen frei um Kunden konkurrieren."
+    },
+    {
+      id: "wirtschaftskreislauf",
+      term: "Wirtschaftskreislauf",
+      category: "Wirtschaft",
+      summary: "Modell der Geld- und Güterströme zwischen Wirtschaftsteilnehmern.",
+      detail: "Der erweiterte Wirtschaftskreislauf betrachtet Haushalte, Unternehmen, Staat, Banken und Ausland. Er hilft, gesamtwirtschaftliche Einflüsse auf Unternehmen zu verstehen.",
+      example: "Haushalte kaufen Produkte, Unternehmen zahlen Löhne und Steuern fließen an den Staat."
+    },
+    {
+      id: "oekonomisches-prinzip",
+      term: "Ökonomisches Prinzip",
+      category: "Wirtschaft",
+      summary: "Grundsatz, mit knappen Mitteln möglichst wirtschaftlich umzugehen.",
+      detail: "Beim Minimalprinzip wird ein Ziel mit möglichst geringem Mitteleinsatz erreicht. Beim Maximalprinzip wird mit gegebenen Mitteln ein möglichst großer Erfolg angestrebt.",
+      example: "Mit einem festen Werbebudget soll möglichst viel qualifizierter Umsatz erzielt werden."
+    },
+    {
+      id: "nachhaltigkeit",
+      term: "Nachhaltigkeit",
+      category: "Wirtschaft",
+      summary: "Berücksichtigung ökonomischer, ökologischer und sozialer Wirkungen.",
+      detail: "Im E-Commerce betrifft Nachhaltigkeit Versand, Verpackung, Retouren, Lieferketten, Energieverbrauch, Arbeitsbedingungen und langfristige Wirtschaftlichkeit.",
+      example: "Ein Shop reduziert Retouren durch bessere Produktinformationen und spart dadurch Kosten und Ressourcen."
+    },
+    {
+      id: "projektauftrag",
+      term: "Projektauftrag",
+      category: "Projekt",
+      summary: "Vereinbarung über Ziel, Umfang, Rahmenbedingungen und Ergebnis eines Projekts.",
+      detail: "Ein klarer Projektauftrag verhindert Missverständnisse. Er beschreibt Ausgangslage, Ziel, Auftraggeber, Termine, Ressourcen, Risiken und erwartete Ergebnisse.",
+      example: "Ein Projektauftrag legt fest, dass der Checkout bis Ende Mai verbessert werden soll."
+    },
+    {
+      id: "agiles-projektmanagement",
+      term: "Agiles Projektmanagement",
+      category: "Projekt",
+      summary: "Flexible Projektvorgehensweise mit kurzen Arbeitszyklen und regelmäßigem Feedback.",
+      detail: "Agiles Vorgehen eignet sich, wenn Anforderungen noch unsicher sind oder sich ändern. Ergebnisse werden schrittweise entwickelt und laufend geprüft.",
+      example: "Das Team testet jede Woche eine neue Shopfunktion mit Nutzerfeedback."
+    },
+    {
+      id: "projektstatus",
+      term: "Projektstatus",
+      category: "Projekt",
+      summary: "Aktueller Stand eines Projekts bezogen auf Ziel, Zeit, Kosten, Qualität und Risiken.",
+      detail: "Der Projektstatus macht Fortschritt sichtbar und zeigt, ob Anpassungen nötig sind. Er unterstützt Kommunikation im Team und mit Auftraggebern.",
+      example: "Der Statusbericht zeigt: Zeitplan grün, Budget gelb, Risiko bei externer Schnittstelle."
+    },
+    {
+      id: "datenschutz",
+      term: "Datenschutz",
+      category: "Recht & Daten",
+      summary: "Schutz personenbezogener Daten vor unzulässiger Nutzung.",
+      detail: "Datenschutz ist im E-Commerce zentral, weil Kundendaten, Zahlungsdaten, Nutzungsdaten und Kommunikationsdaten verarbeitet werden. Er verlangt Zweckbindung, Transparenz und Sicherheit.",
+      example: "Newsletter dürfen nur mit zulässiger Einwilligung versendet werden."
+    },
+    {
+      id: "datensicherheit",
+      term: "Datensicherheit",
+      category: "Recht & Daten",
+      summary: "Technische und organisatorische Maßnahmen zum Schutz von Daten.",
+      detail: "Datensicherheit schützt vor Verlust, Manipulation und unbefugtem Zugriff. Dazu gehören Rechtekonzepte, Verschlüsselung, Backups und sichere Schnittstellen.",
+      example: "Mitarbeiter erhalten nur Zugriff auf Daten, die sie für ihre Aufgabe benötigen."
+    },
+    {
+      id: "urheberrecht",
+      term: "Urheberrecht",
+      category: "Recht & Daten",
+      summary: "Schutz geistiger Werke wie Texte, Bilder, Videos oder Grafiken.",
+      detail: "Im Online-Shop dürfen Medien nur verwendet werden, wenn die Nutzungsrechte geklärt sind. Verstöße können Abmahnungen und Kosten verursachen.",
+      example: "Produktbilder eines Herstellers werden nur genutzt, wenn die Nutzung erlaubt ist."
+    },
+    {
+      id: "markenrecht",
+      term: "Markenrecht",
+      category: "Recht & Daten",
+      summary: "Rechtlicher Schutz von Kennzeichen wie Markenname oder Logo.",
+      detail: "Markenrecht schützt vor Verwechslung und unberechtigter Nutzung. Bei Produktpräsentation, Anzeigen und Keywords muss sorgfältig geprüft werden.",
+      example: "Ein Händler darf fremde Marken nicht so einsetzen, dass Kunden über die Herkunft getäuscht werden."
+    },
+    {
+      id: "unlauterer-wettbewerb",
+      term: "Unlauterer Wettbewerb",
+      category: "Recht & Daten",
+      summary: "Unfaire geschäftliche Handlung im Wettbewerb.",
+      detail: "Unlauter kann zum Beispiel irreführende Werbung, aggressive Ansprache oder Verschleierung wichtiger Informationen sein. Im E-Commerce betrifft das besonders Produktseiten und Werbung.",
+      example: "Ein künstlich verknappter Countdown ohne echte Grundlage kann problematisch sein."
+    }
   ]
 };

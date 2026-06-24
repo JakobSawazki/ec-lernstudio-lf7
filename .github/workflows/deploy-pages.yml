@@ -35,6 +35,7 @@ jobs:
           test -f website/manifest.webmanifest
           test -f website/icon.svg
           test -f website/assets/lf7-marketing-lab.png
+          test -f website/assets/ecommerce-consultation-hero.png
 
   deploy:
     environment:

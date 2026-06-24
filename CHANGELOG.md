@@ -2,6 +2,19 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.1.0 – 24. Juni 2026
+
+- menschlicheres Hero-Bild mit E-Commerce-Beratungssituation integriert
+- eigenen Glossar-Reiter in Desktop- und Mobilnavigation ergänzt
+- ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und
+  Mini-Quiz umgesetzt
+- Glossar-Fortschritt im Lernstand gespeichert und mit 10 XP je Begriff
+  bewertet
+- neues Abzeichen für zehn gelöste Glossar-Checks ergänzt
+- lokalen `assets/`-Ordner mit Bildungsplan-Dateien von der Veröffentlichung
+  ausgeschlossen
+- Offline-Cache und Dokumentation auf den neuen Stand gebracht
+
 ## 1.0.0 – 10. Juni 2026
 
 - erste produktive Fassung für Lernfeld 7 erstellt

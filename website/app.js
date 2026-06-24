@@ -14,6 +14,7 @@
   const defaultState = {
     name: "",
     answered: {},
+    glossaryAnswered: {},
     mistakes: [],
     unlockedBadges: [],
     streak: 0,
@@ -33,6 +34,8 @@
   let state = loadState();
   let currentView = "dashboard";
   let session = null;
+  let glossaryFilter = "all";
+  let glossarySearch = "";
 
   function questionById(id) {
     return content.questions.find((question) => question.id === id);
@@ -40,6 +43,10 @@
 
   function moduleById(id) {
     return content.modules.find((module) => module.id === id);
+  }
+
+  function glossaryById(id) {
+    return content.glossary.find((entry) => entry.id === id);
   }
 
   function validNumber(value, fallback = 0) {
@@ -70,6 +77,29 @@
           )
         : {};
 
+    const glossaryAnswered =
+      candidate.glossaryAnswered &&
+      typeof candidate.glossaryAnswered === "object" &&
+      !Array.isArray(candidate.glossaryAnswered)
+        ? Object.fromEntries(
+            Object.entries(candidate.glossaryAnswered)
+              .filter(
+                ([id, entry]) =>
+                  glossaryById(id) &&
+                  entry &&
+                  typeof entry === "object" &&
+                  entry.correct === true
+              )
+              .map(([id, entry]) => [
+                id,
+                {
+                  correct: true,
+                  solvedAt: typeof entry.solvedAt === "string" ? entry.solvedAt : ""
+                }
+              ])
+          )
+        : {};
+
     const draft = candidate.labDraft && typeof candidate.labDraft === "object"
       ? candidate.labDraft
       : defaultState.labDraft;
@@ -78,6 +108,7 @@
       ...defaultState,
       name: typeof candidate.name === "string" ? candidate.name.trim().slice(0, 24) : "",
       answered,
+      glossaryAnswered,
       mistakes: Array.isArray(candidate.mistakes)
         ? [...new Set(candidate.mistakes.filter((id) => questionById(id)))]
         : [],
@@ -138,8 +169,12 @@
     return Object.values(state.answered).filter((entry) => entry.correct).length;
   }
 
+  function glossarySolvedCount() {
+    return Object.values(state.glossaryAnswered).filter((entry) => entry.correct).length;
+  }
+
   function totalXp() {
-    return solvedCount() * 25;
+    return solvedCount() * 25 + glossarySolvedCount() * 10;
   }
 
   function levelInfo() {
@@ -184,7 +219,10 @@
   }
 
   function setActiveNavigation(view) {
-    const navigationView = view === "module" || view === "glossary" ? "modules" : view;
+    const navigationView =
+      view === "module" ? "modules" :
+      view === "glossary" || view === "glossaryTerm" ? "glossary" :
+      view;
     document.querySelectorAll("[data-view]").forEach((button) => {
       button.classList.toggle("is-active", button.dataset.view === navigationView);
     });
@@ -202,6 +240,7 @@
     if (view === "mistakes") renderMistakes();
     if (view === "achievements") renderAchievements();
     if (view === "glossary") renderGlossary();
+    if (view === "glossaryTerm") renderGlossaryTerm(options.termId);
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -217,14 +256,14 @@
 
     app.innerHTML = `
       <section class="hero">
-        <div class="hero-image" role="img" aria-label="Abstraktes Online-Marketing-Dashboard mit Suchergebnissen, Zielgruppen und Kennzahlen"></div>
+        <div class="hero-image" role="img" aria-label="E-Commerce-Beratungsgespräch mit Laptop, Produkten und Versandkartons"></div>
         <div class="hero-overlay"></div>
         <div class="page-shell hero-content">
           <p class="eyebrow light">Lernfeld 7 · Datenverarbeitung</p>
           <h1>Online-Marketing<br><em>verstehen, messen, entscheiden.</em></h1>
           <p>
-            Von Targeting über SEO und SEA bis zur KI: Arbeite dich durch
-            realistische Fälle und verwandle Kampagnendaten in gute Entscheidungen.
+            Online-Handel ist mehr als Klicks: Verstehe Kunden, Sortiment,
+            Kanäle und Kennzahlen und verwandle Daten in gute Entscheidungen.
           </p>
           <div class="hero-actions">
             <button class="primary-button bright" data-action="open-module" data-module="${nextModule.id}">
@@ -233,7 +272,8 @@
             <button class="ghost-button" data-action="sprint">Praxischeck starten</button>
           </div>
           <div class="hero-meta">
-            <span>6 Module</span>
+            <span>6 LF7-Module</span>
+            <span>${content.glossary.length} Glossarbegriffe</span>
             <span>${content.questions.length} Aufgaben</span>
             <span>lokale Datenspeicherung</span>
           </div>
@@ -313,8 +353,8 @@
           <span class="focus-index">02</span>
           <div>
             <p class="eyebrow">Nachschlagen</p>
-            <h2>15 Begriffe, die sitzen müssen.</h2>
-            <p>Von Crawling und SERP bis CPO, ROAS und Prompt.</p>
+            <h2>Ausbildungsglossar mit ${content.glossary.length} Begriffen.</h2>
+            <p>Von Sortiment und Checkout bis SEO, Retouren, Recht und Projektarbeit.</p>
           </div>
           <button class="secondary-button" data-action="glossary">Glossar öffnen</button>
         </article>
@@ -919,7 +959,7 @@
         <p class="eyebrow">Erfolge</p>
         <h1>Fortschritt,<br>der sichtbar bleibt.</h1>
         <p>
-          XP werden aus den erstmals richtig gelösten Aufgaben berechnet.
+          XP werden aus erstmals richtig gelösten Aufgaben und Glossar-Checks berechnet.
           So bleibt der Lernstand auch nach einem Datei-Import konsistent.
         </p>
       </section>
@@ -933,7 +973,7 @@
         <article>
           <span>Gesamt-XP</span>
           <strong>${formatNumber(info.xp)}</strong>
-          <small>durch erstmals gelöste Aufgaben</small>
+          <small>durch Aufgaben und Glossar-Checks</small>
         </article>
         <article>
           <span>Module</span>
@@ -972,42 +1012,251 @@
   }
 
   function renderGlossary() {
+    const categories = ["all", ...new Set(content.glossary.map((entry) => entry.category))];
+    const query = glossarySearch.trim().toLocaleLowerCase("de-DE");
+    const entries = content.glossary.filter((entry) => {
+      const matchesCategory = glossaryFilter === "all" || entry.category === glossaryFilter;
+      const haystack = [entry.term, entry.category, entry.summary, entry.detail]
+        .join(" ")
+        .toLocaleLowerCase("de-DE");
+      return matchesCategory && (!query || haystack.includes(query));
+    });
+
     app.innerHTML = `
       <section class="page-shell page-intro">
         <p class="eyebrow">Glossar</p>
-        <h1>15 Begriffe.<br>Eine gemeinsame Sprache.</h1>
+        <h1>E-Commerce-Glossar.<br>Von Sortiment bis Projekt.</h1>
         <p>
-          Nutze die Übersicht zum Wiederholen, für Fachgespräche und als
-          Kontrolle bei der Auswertung von Kampagnenfällen.
+          Nutze die Übersicht für Fachgespräche, Wiederholung und kurze
+          Wissenschecks. Die Begriffe decken Lernfeld 7 und zentrale Themen
+          der gesamten Ausbildung Kaufmann/Kauffrau im E-Commerce ab.
         </p>
       </section>
+
+      <section class="page-shell glossary-tools section-block">
+        <label class="glossary-search" for="glossary-search">
+          <span>Begriff suchen</span>
+          <input
+            id="glossary-search"
+            type="search"
+            autocomplete="off"
+            placeholder="z. B. Checkout, SEO, Retoure ..."
+            value="${escapeHtml(glossarySearch)}"
+          >
+        </label>
+        <div class="glossary-filter-row" aria-label="Glossar nach Kategorie filtern">
+          ${categories.map((category) => `
+            <button
+              class="filter-chip ${glossaryFilter === category ? "is-active" : ""}"
+              type="button"
+              data-glossary-category="${escapeHtml(category)}"
+            >
+              ${category === "all" ? "Alle" : escapeHtml(category)}
+            </button>
+          `).join("")}
+        </div>
+      </section>
+
       <section class="page-shell glossary-grid section-block">
-        ${content.glossary.map(([term, definition], index) => `
-          <article>
-            <span>${String(index + 1).padStart(2, "0")}</span>
-            <h2>${term}</h2>
-            <p>${definition}</p>
-          </article>
-        `).join("")}
+        ${entries.length ? entries.map((entry, index) => `
+          <button class="glossary-term-card" type="button" data-action="open-glossary-term" data-term="${entry.id}">
+            <span class="term-number">${String(index + 1).padStart(2, "0")}</span>
+            <span class="term-category">${escapeHtml(entry.category)}</span>
+            <strong>${escapeHtml(entry.term)}</strong>
+            <p>${escapeHtml(entry.summary)}</p>
+            <small>${state.glossaryAnswered[entry.id]?.correct ? "Quiz gelöst · +10 XP" : "Erklärung und Quiz öffnen"}</small>
+          </button>
+        `).join("") : `
+          <div class="empty-state glossary-empty">
+            <span aria-hidden="true">?</span>
+            <h2>Kein Begriff gefunden.</h2>
+            <p>Versuche einen allgemeineren Suchbegriff oder wähle eine andere Kategorie.</p>
+          </div>
+        `}
       </section>
       <section class="page-shell reference-strip">
         <div>
-          <p class="eyebrow light">Zurück zur Anwendung</p>
-          <h2>Begriffe sitzen? Dann ab ins Training.</h2>
+          <p class="eyebrow light">Wissensstand</p>
+          <h2>${glossarySolvedCount()} von ${content.glossary.length} Glossar-Checks gelöst.</h2>
         </div>
         <button class="light-button" data-action="all-modules">Lernpfad öffnen</button>
       </section>
       <footer class="page-shell portal-footer">
-        <span>LF7-Glossar</span>
-        <span>${content.glossary.length} Kernbegriffe</span>
+        <span>Ausbildungsglossar E-Commerce</span>
+        <span>${entries.length} von ${content.glossary.length} Begriffen sichtbar</span>
       </footer>
     `;
+
     bindAppActions();
+
+    const searchInput = document.getElementById("glossary-search");
+    searchInput.addEventListener("input", (event) => {
+      glossarySearch = event.currentTarget.value;
+      renderGlossary();
+      const nextInput = document.getElementById("glossary-search");
+      nextInput.focus();
+      nextInput.setSelectionRange(nextInput.value.length, nextInput.value.length);
+    });
+
+    app.querySelectorAll("[data-glossary-category]").forEach((button) => {
+      button.addEventListener("click", () => {
+        glossaryFilter = button.dataset.glossaryCategory;
+        renderGlossary();
+      });
+    });
+  }
+
+  function hashString(value) {
+    return [...String(value)].reduce((hash, character) => {
+      return ((hash << 5) - hash + character.charCodeAt(0)) | 0;
+    }, 0);
+  }
+
+  function glossaryQuizOptions(term) {
+    const pool = content.glossary.filter((entry) => entry.id !== term.id);
+    const offset = Math.abs(hashString(term.id)) % pool.length;
+    const distractors = [];
+
+    for (let index = 0; distractors.length < 3 && index < pool.length * 2; index += 1) {
+      const candidate = pool[(offset + index * 7) % pool.length];
+      if (!distractors.includes(candidate)) distractors.push(candidate);
+    }
+
+    const options = [
+      ...distractors.map((entry) => ({ text: entry.summary, correct: false })),
+      { text: term.summary, correct: true }
+    ];
+    const answerOffset = Math.abs(hashString(`${term.id}-answer`)) % options.length;
+    return options.map((_, index) => options[(index + answerOffset) % options.length]);
+  }
+
+  function renderGlossaryTerm(termId) {
+    const term = glossaryById(termId);
+    if (!term) {
+      navigate("glossary");
+      return;
+    }
+
+    const options = glossaryQuizOptions(term);
+    const solved = state.glossaryAnswered[term.id]?.correct;
+
+    app.innerHTML = `
+      <section class="page-shell term-detail-hero">
+        <button class="back-button" data-action="glossary">← Zurück zum Glossar</button>
+        <div class="term-detail-grid">
+          <div>
+            <p class="eyebrow">${escapeHtml(term.category)}</p>
+            <h1>${escapeHtml(term.term)}</h1>
+            <p>${escapeHtml(term.summary)}</p>
+          </div>
+          <aside class="term-summary-card">
+            <span>${solved ? "Quiz gelöst" : "10 XP möglich"}</span>
+            <strong>${escapeHtml(term.category)}</strong>
+            <small>${solved ? "Dieser Begriff zählt bereits zu deinem Glossar-Fortschritt." : "Löse den kurzen Check, um den Begriff zu festigen."}</small>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-shell term-detail-layout section-block">
+        <article class="term-detail-card">
+          <p class="eyebrow">Einordnung</p>
+          <h2>Was bedeutet das im E-Commerce?</h2>
+          <p>${escapeHtml(term.detail)}</p>
+          <div class="term-example">
+            <span>Beispiel</span>
+            <p>${escapeHtml(term.example)}</p>
+          </div>
+        </article>
+
+        <article class="term-quiz-card">
+          <p class="eyebrow">Mini-Quiz</p>
+          <h2>Welche Kurzbeschreibung passt zu „${escapeHtml(term.term)}“?</h2>
+          <form id="glossary-quiz-form">
+            <fieldset class="choice-list glossary-choice-list">
+              <legend class="sr-only">Wähle eine Antwort</legend>
+              ${options.map((option, index) => `
+                <label class="choice-option">
+                  <input type="radio" name="answer" value="${index}" required>
+                  <span class="choice-letter">${String.fromCharCode(65 + index)}</span>
+                  <span>${escapeHtml(option.text)}</span>
+                </label>
+              `).join("")}
+            </fieldset>
+            <button class="primary-button answer-button" type="submit">
+              Antwort prüfen
+            </button>
+          </form>
+          <div id="glossary-feedback" class="feedback glossary-feedback" ${solved ? "" : "hidden"}>
+            ${solved ? `
+              <div>
+                <strong>Schon gelöst.</strong>
+                <p>Du kannst den Check jederzeit wiederholen. XP gibt es pro Begriff einmal.</p>
+              </div>
+            ` : ""}
+          </div>
+        </article>
+      </section>
+
+      <footer class="page-shell portal-footer">
+        <span>${escapeHtml(term.term)}</span>
+        <span>${glossarySolvedCount()} Glossar-Checks gelöst</span>
+      </footer>
+    `;
+
+    bindAppActions();
+    document.getElementById("glossary-quiz-form").addEventListener("submit", (event) => {
+      checkGlossaryAnswer(event, term.id, options);
+    });
+  }
+
+  function checkGlossaryAnswer(event, termId, options) {
+    event.preventDefault();
+
+    const term = glossaryById(termId);
+    const form = new FormData(event.currentTarget);
+    const selected = Number(form.get("answer"));
+    const selectedOption = options[selected];
+    const isCorrect = selectedOption?.correct === true;
+    const firstCorrect = term && isCorrect && !state.glossaryAnswered[term.id]?.correct;
+    const feedback = document.getElementById("glossary-feedback");
+
+    feedback.hidden = false;
+    feedback.className = `feedback glossary-feedback ${isCorrect ? "correct" : "incorrect"}`;
+
+    if (isCorrect && term) {
+      state.glossaryAnswered[term.id] = {
+        correct: true,
+        solvedAt: new Date().toISOString()
+      };
+      if (firstCorrect) updateStreak();
+      checkBadges();
+      saveState();
+
+      feedback.innerHTML = `
+        <div>
+          <strong>${firstCorrect ? "Richtig! +10 XP" : "Richtig gelöst!"}</strong>
+          <p>${escapeHtml(term.summary)} ${firstCorrect ? "Der Begriff zählt jetzt zu deinem Glossar-Fortschritt." : "Du hattest diesen Begriff bereits sicher."}</p>
+        </div>
+        <button class="secondary-button" type="button" data-action="glossary">Zur Glossarübersicht</button>
+      `;
+      feedback.querySelector("[data-action='glossary']").addEventListener("click", () => navigate("glossary"));
+      event.currentTarget.querySelectorAll("input, button").forEach((element) => {
+        element.disabled = true;
+      });
+    } else {
+      feedback.innerHTML = `
+        <div>
+          <strong>Noch nicht ganz.</strong>
+          <p>Lies die Einordnung und das Beispiel noch einmal. Danach kannst du direkt neu wählen.</p>
+        </div>
+      `;
+    }
   }
 
   function badgeConditionMet(badge) {
     if (badge.condition === "xp") return totalXp() >= badge.value;
     if (badge.condition === "correct") return solvedCount() >= badge.value;
+    if (badge.condition === "glossary") return glossarySolvedCount() >= badge.value;
     if (badge.condition === "module") return moduleProgress(badge.value).percent === 100;
     if (badge.condition === "moduleSet") {
       return badge.value.every((moduleId) => moduleProgress(moduleId).percent === 100);
@@ -1063,6 +1312,9 @@
         if (action === "dashboard") navigate("dashboard");
         if (action === "lab") navigate("lab");
         if (action === "glossary") navigate("glossary");
+        if (action === "open-glossary-term") {
+          navigate("glossaryTerm", { termId: button.dataset.term });
+        }
         if (action === "practice-module") {
           const module = moduleById(button.dataset.module);
           const ids = content.questions
@@ -1081,7 +1333,8 @@
     document.getElementById("settings-name").value = state.name;
     document.getElementById("settings-stats").innerHTML = `
       <div><strong>${totalXp()}</strong><span>XP</span></div>
-      <div><strong>${solvedCount()}</strong><span>gelöst</span></div>
+      <div><strong>${solvedCount()}</strong><span>Aufgaben</span></div>
+      <div><strong>${glossarySolvedCount()}</strong><span>Glossar</span></div>
       <div><strong>${state.unlockedBadges.length}</strong><span>Abzeichen</span></div>
     `;
     settingsModal.hidden = false;

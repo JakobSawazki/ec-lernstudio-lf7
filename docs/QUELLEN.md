@@ -1,6 +1,6 @@
 # Quellen und Veröffentlichungsgrenzen
 
-Stand: 10. Juni 2026
+Stand: 24. Juni 2026
 
 ## Private Unterrichtsquellen
 
@@ -35,6 +35,18 @@ Die BiBox ist kontogebunden. Sie wird ausschließlich zum fachlichen Abgleich
 verwendet. Zugangsdaten, Buchseiten und Screenshots gehören nicht in dieses
 Repository.
 
+### Lokale Bildungsplan-Dateien
+
+Ablage: `assets/`
+
+- `Rahmenlehrplan.pdf`
+- `2024-05-06 Information BG.pdf`
+
+Der KMK-Rahmenlehrplan wurde am 24. Juni 2026 zur Erweiterung des Glossars auf
+ausbildungsweite E-Commerce-Begriffe ausgewertet. Die lokalen PDFs bleiben
+private Arbeitsquellen und sind per `.gitignore` von der Veröffentlichung
+ausgeschlossen.
+
 ## Öffentliche Fachgrundlage
 
 Die Portaltexte verwenden allgemeine und eigenständig formulierte
@@ -47,6 +59,8 @@ Online-Marketing-Grundlagen:
 - CTR, CPC, Conversion Rate, CPO und ROAS
 - Grundbegriffe zu KI, maschinellem Lernen, generativer KI und menschlicher
   Qualitätskontrolle
+- ausbildungsweite Grundbegriffe zu Sortiment, Vertriebskanälen, Checkout,
+  Retouren, Service, Recht, Kennzahlen, Wirtschaft und Projektarbeit
 
 Bei späteren rechtlichen Vertiefungen müssen aktuelle Primärquellen geprüft
 werden. Das Portal enthält derzeit bewusst keine detaillierte Rechtsberatung.
@@ -70,11 +84,24 @@ Zulässig:
 
 ## Bildquelle
 
+`website/assets/ecommerce-consultation-hero.png`
+
+- Erzeugt: 24. Juni 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: aktuelles Titelbild der Plattform
+- Motiv: menschliche E-Commerce-Beratungssituation mit Laptop, Produktmustern,
+  Versandkartons und warmer Shop-Atmosphäre
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Texte
+
+Früheres Projektbild:
+
 `website/assets/lf7-marketing-lab.png`
 
 - Erzeugt: 10. Juni 2026
 - Werkzeug: integrierter OpenAI-Bildgenerator
-- Zweck: Titelbild der Plattform
+- Zweck: ursprüngliches Titelbild der Plattform, weiterhin als Projektasset
+  vorhanden
 - Motiv: abstrakter E-Commerce-Arbeitsplatz mit Suchergebnissen, Funnel,
   Zielgruppenringen, Kennzahlen und KI-Netzwerk
 - Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
