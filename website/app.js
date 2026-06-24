@@ -13,6 +13,7 @@
 
   const defaultState = {
     name: "",
+    activeField: "LF7",
     answered: {},
     glossaryAnswered: {},
     mistakes: [],
@@ -43,6 +44,37 @@
 
   function moduleById(id) {
     return content.modules.find((module) => module.id === id);
+  }
+
+  function fieldById(id) {
+    return (content.learningFields || []).find((field) => field.id === id);
+  }
+
+  function moduleField(module) {
+    return module?.field || "LF7";
+  }
+
+  function activeFieldInfo() {
+    return fieldById(state.activeField) || fieldById("LF7") || {
+      id: "LF7",
+      label: "LF7",
+      title: "Lernfeld 7",
+      subtitle: "Online-Marketing-Maßnahmen umsetzen und bewerten",
+      heroTitle: "Online-Marketing",
+      heroEmphasis: "verstehen, messen, entscheiden.",
+      heroText: "Arbeite dich durch die DV-Inhalte und sichere deinen Lernstand.",
+      modulesTitle: "Dein Lernpfad.",
+      modulesText: "Wähle ein Modul und starte mit dem Training."
+    };
+  }
+
+  function modulesForField(fieldId = state.activeField) {
+    return content.modules.filter((module) => moduleField(module) === fieldId);
+  }
+
+  function questionsForField(fieldId = null) {
+    if (!fieldId) return content.questions;
+    return content.questions.filter((question) => moduleField(moduleById(question.module)) === fieldId);
   }
 
   function glossaryById(id) {
@@ -107,6 +139,7 @@
     return {
       ...defaultState,
       name: typeof candidate.name === "string" ? candidate.name.trim().slice(0, 24) : "",
+      activeField: fieldById(candidate.activeField) ? candidate.activeField : "LF7",
       answered,
       glossaryAnswered,
       mistakes: Array.isArray(candidate.mistakes)
@@ -194,19 +227,21 @@
     };
   }
 
-  function totalProgress() {
-    const solved = solvedCount();
+  function totalProgress(fieldId = null) {
+    const questions = questionsForField(fieldId);
+    const solved = questions.filter((question) => state.answered[question.id]?.correct).length;
     return {
       solved,
-      total: content.questions.length,
-      percent: content.questions.length
-        ? Math.round((solved / content.questions.length) * 100)
+      total: questions.length,
+      percent: questions.length
+        ? Math.round((solved / questions.length) * 100)
         : 0
     };
   }
 
-  function completedModules() {
-    return content.modules.filter((module) => moduleProgress(module.id).percent === 100).length;
+  function completedModules(fieldId = null) {
+    const modules = fieldId ? modulesForField(fieldId) : content.modules;
+    return modules.filter((module) => moduleProgress(module.id).percent === 100).length;
   }
 
   function updateHeader() {
@@ -216,6 +251,9 @@
     document.getElementById("header-avatar").textContent = name.slice(0, 1).toUpperCase();
     document.getElementById("header-xp").textContent = formatNumber(info.xp);
     document.getElementById("header-level").textContent = info.level;
+    document.querySelectorAll("[data-field]").forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.field === state.activeField);
+    });
   }
 
   function setActiveNavigation(view) {
@@ -246,11 +284,14 @@
   }
 
   function renderDashboard() {
-    const progress = totalProgress();
+    const field = activeFieldInfo();
+    const fieldModules = modulesForField(field.id);
+    const progress = totalProgress(field.id);
     const info = levelInfo();
     const nextModule =
-      content.modules.find((module) => moduleProgress(module.id).percent < 100) ||
-      moduleById(state.lastModuleId) ||
+      fieldModules.find((module) => moduleProgress(module.id).percent < 100) ||
+      fieldModules.find((module) => module.id === state.lastModuleId) ||
+      fieldModules[0] ||
       content.modules[0];
     const angle = Math.round((info.current / info.target) * 360);
 
@@ -259,11 +300,10 @@
         <div class="hero-image" role="img" aria-label="E-Commerce-Beratungsgespräch mit Laptop, Produkten und Versandkartons"></div>
         <div class="hero-overlay"></div>
         <div class="page-shell hero-content">
-          <p class="eyebrow light">Lernfeld 7 · Datenverarbeitung</p>
-          <h1>Online-Marketing<br><em>verstehen, messen, entscheiden.</em></h1>
+          <p class="eyebrow light">${field.title} · Datenverarbeitung</p>
+          <h1>${field.heroTitle}<br><em>${field.heroEmphasis}</em></h1>
           <p>
-            Online-Handel ist mehr als Klicks: Verstehe Kunden, Sortiment,
-            Kanäle und Kennzahlen und verwandle Daten in gute Entscheidungen.
+            ${field.heroText}
           </p>
           <div class="hero-actions">
             <button class="primary-button bright" data-action="open-module" data-module="${nextModule.id}">
@@ -272,9 +312,9 @@
             <button class="ghost-button" data-action="sprint">Praxischeck starten</button>
           </div>
           <div class="hero-meta">
-            <span>6 LF7-Module</span>
+            <span>${fieldModules.length} ${fieldModules.length === 1 ? "Modul" : "Module"}</span>
             <span>${content.glossary.length} Glossarbegriffe</span>
-            <span>${content.questions.length} Aufgaben</span>
+            <span>${progress.total} Aufgaben</span>
             <span>lokale Datenspeicherung</span>
           </div>
         </div>
@@ -311,33 +351,54 @@
       <section class="page-shell section-block">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Der LF7-Lernpfad</p>
-            <h2>Sechs Perspektiven auf wirksames Marketing.</h2>
+            <p class="eyebrow">Der ${field.label}-Lernpfad</p>
+            <h2>${field.modulesTitle}</h2>
           </div>
           <button class="text-link" data-action="all-modules">Alle Module ansehen →</button>
         </div>
         <div class="module-grid">
-          ${content.modules.slice(0, 3).map(moduleCard).join("")}
+          ${fieldModules.slice(0, 3).map(moduleCard).join("")}
         </div>
       </section>
 
-      <section class="page-shell lab-teaser section-block">
-        <div class="lab-teaser-copy">
-          <p class="eyebrow light">Interaktives Kennzahlen-Labor</p>
-          <h2>Was sagen 100.000 Impressionen wirklich?</h2>
-          <p>
-            Gib Kampagnendaten ein und berechne CTR, CPC, Conversion Rate,
-            CPO und ROAS. Das Labor zeigt nicht nur Ergebnisse, sondern auch,
-            welche Frage jede Kennzahl beantwortet.
-          </p>
-          <button class="light-button" data-action="lab">Labor öffnen</button>
-        </div>
-        <div class="metric-stack" aria-hidden="true">
-          <div><span>CTR</span><strong>2,0 %</strong><i style="--bar: 68%"></i></div>
-          <div><span>CPC</span><strong>0,60 €</strong><i style="--bar: 46%"></i></div>
-          <div><span>ROAS</span><strong>4,0x</strong><i style="--bar: 84%"></i></div>
-        </div>
-      </section>
+      ${field.id === "LF2" ? `
+        <section class="page-shell lab-teaser section-block">
+          <div class="lab-teaser-copy">
+            <p class="eyebrow light">Impressums-Werkstatt</p>
+            <h2>Wer steckt hinter diesem Shop?</h2>
+            <p>
+              Prüfe Anbieter, Kontakt, Registerangaben und Sichtbarkeit. Danach
+              baust du dein eigenes Impressum in das Webshop-Projekt ein.
+            </p>
+            <button class="light-button" data-action="open-module" data-module="lf2-impressum">
+              LF2 2.4 öffnen
+            </button>
+          </div>
+          <div class="metric-stack" aria-hidden="true">
+            <div><span>01</span><strong>Anbieter</strong><i style="--bar: 72%"></i></div>
+            <div><span>02</span><strong>Kontakt</strong><i style="--bar: 58%"></i></div>
+            <div><span>03</span><strong>Footer</strong><i style="--bar: 86%"></i></div>
+          </div>
+        </section>
+      ` : `
+        <section class="page-shell lab-teaser section-block">
+          <div class="lab-teaser-copy">
+            <p class="eyebrow light">Interaktives Kennzahlen-Labor</p>
+            <h2>Was sagen 100.000 Impressionen wirklich?</h2>
+            <p>
+              Gib Kampagnendaten ein und berechne CTR, CPC, Conversion Rate,
+              CPO und ROAS. Das Labor zeigt nicht nur Ergebnisse, sondern auch,
+              welche Frage jede Kennzahl beantwortet.
+            </p>
+            <button class="light-button" data-action="lab">Labor öffnen</button>
+          </div>
+          <div class="metric-stack" aria-hidden="true">
+            <div><span>CTR</span><strong>2,0 %</strong><i style="--bar: 68%"></i></div>
+            <div><span>CPC</span><strong>0,60 €</strong><i style="--bar: 46%"></i></div>
+            <div><span>ROAS</span><strong>4,0x</strong><i style="--bar: 84%"></i></div>
+          </div>
+        </section>
+      `}
 
       <section class="page-shell two-column section-block">
         <article class="focus-card mistake-card">
@@ -361,7 +422,7 @@
       </section>
 
       <footer class="page-shell portal-footer">
-        <span>EC Lernstudio · LF7</span>
+        <span>EC Lernstudio · ${field.label}</span>
         <span>Konzept und Umsetzung: <a href="https://jakobsawazki.github.io/sawazki-electronics/" target="_blank" rel="noopener">Sawazki Electronics</a></span>
       </footer>
     `;
@@ -391,14 +452,15 @@
   }
 
   function renderModules() {
-    const progress = totalProgress();
+    const field = activeFieldInfo();
+    const fieldModules = modulesForField(field.id);
+    const progress = totalProgress(field.id);
     app.innerHTML = `
       <section class="page-shell page-intro">
-        <p class="eyebrow">Lernpfad</p>
-        <h1>Vom passenden Kontakt<br>zur messbaren Wirkung.</h1>
+        <p class="eyebrow">Lernpfad · ${field.label}</p>
+        <h1>${field.modulesTitle}</h1>
         <p>
-          Die Module folgen der DV-Auswahl für Lernfeld 7. Du kannst sie der
-          Reihe nach bearbeiten oder gezielt in ein aktuelles Unterrichtsthema einsteigen.
+          ${field.modulesText}
         </p>
         <div class="overall-progress">
           <strong>${progress.percent}%</strong>
@@ -410,7 +472,7 @@
       </section>
       <section class="page-shell section-block">
         <div class="module-grid">
-          ${content.modules.map(moduleCard).join("")}
+          ${fieldModules.map(moduleCard).join("")}
         </div>
       </section>
       <section class="page-shell reference-strip">
@@ -421,7 +483,7 @@
         <button class="light-button" data-action="glossary">Glossar öffnen</button>
       </section>
       <footer class="page-shell portal-footer">
-        <span>EC Lernstudio · LF7</span>
+        <span>EC Lernstudio · ${field.label}</span>
         <span>Lernstand lokal und als JSON-Datei sicherbar</span>
       </footer>
     `;
@@ -435,6 +497,7 @@
       return;
     }
 
+    state.activeField = moduleField(module);
     state.lastModuleId = module.id;
     saveState();
     const progress = moduleProgress(module.id);
@@ -496,6 +559,42 @@
           ${module.takeaways.map((item) => `<li>${item}</li>`).join("")}
         </ul>
       </section>
+
+      ${module.resources?.length ? `
+        <section class="page-shell resource-panel section-block">
+          <div>
+            <p class="eyebrow light">Material</p>
+            <h2>Dokumente für die Unterrichtsstunde.</h2>
+            <p>Die Materialien sind eigenständig für das Lernstudio formuliert und können direkt geöffnet oder heruntergeladen werden.</p>
+          </div>
+          <div class="resource-list">
+            ${module.resources.map((resource) => `
+              <a class="resource-card" href="${escapeHtml(resource.href)}" target="_blank" rel="noopener">
+                <span>${escapeHtml(resource.type)}</span>
+                <strong>${escapeHtml(resource.title)}</strong>
+                <small>${escapeHtml(resource.description)}</small>
+              </a>
+            `).join("")}
+          </div>
+        </section>
+      ` : ""}
+
+      ${module.projectSteps?.length ? `
+        <section class="page-shell project-steps section-block">
+          <div class="lesson-heading">
+            <p class="eyebrow">Projektauftrag</p>
+            <h2>Vom Wissen in deinen Webshop.</h2>
+          </div>
+          <div class="step-list">
+            ${module.projectSteps.map((step, index) => `
+              <article>
+                <span>${String(index + 1).padStart(2, "0")}</span>
+                <p>${escapeHtml(step)}</p>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      ` : ""}
 
       <section class="page-shell practice-callout section-block">
         <div>
@@ -895,8 +994,9 @@
   }
 
   function startSprint() {
-    const ids = shuffled(content.questions.map((question) => question.id)).slice(0, 12);
-    startPractice(ids, "LF7-Praxischeck", "sprint");
+    const field = activeFieldInfo();
+    const ids = shuffled(questionsForField(field.id).map((question) => question.id)).slice(0, 12);
+    startPractice(ids, `${field.label}-Praxischeck`, "sprint");
   }
 
   function renderMistakes() {
@@ -1028,8 +1128,8 @@
         <h1>E-Commerce-Glossar.<br>Von Sortiment bis Projekt.</h1>
         <p>
           Nutze die Übersicht für Fachgespräche, Wiederholung und kurze
-          Wissenschecks. Die Begriffe decken Lernfeld 7 und zentrale Themen
-          der gesamten Ausbildung Kaufmann/Kauffrau im E-Commerce ab.
+          Wissenschecks. Die Begriffe decken zentrale Themen aus LF2, LF7
+          und der gesamten Ausbildung Kaufmann/Kauffrau im E-Commerce ab.
         </p>
       </section>
 
@@ -1261,7 +1361,7 @@
     if (badge.condition === "moduleSet") {
       return badge.value.every((moduleId) => moduleProgress(moduleId).percent === 100);
     }
-    if (badge.condition === "allModules") return completedModules() >= badge.value;
+    if (badge.condition === "allModules") return completedModules(badge.field || null) >= badge.value;
     if (badge.condition === "labRuns") return state.labRuns >= badge.value;
     if (badge.condition === "sprints") return state.sprints >= badge.value;
     return false;
@@ -1369,7 +1469,7 @@
   }
 
   async function exportProgress() {
-    const fileName = `ec-lf7-lernstand-${new Date().toISOString().slice(0, 10)}.json`;
+    const fileName = `ec-lernstudio-lernstand-${new Date().toISOString().slice(0, 10)}.json`;
     const contents = JSON.stringify(createProgressExport(), null, 2);
 
     if ("showSaveFilePicker" in window) {
@@ -1379,7 +1479,7 @@
           startIn: "desktop",
           types: [
             {
-              description: "EC-LF7-Lernstand",
+              description: "EC-Lernstudio-Lernstand",
               accept: { "application/json": [".json"] }
             }
           ]
@@ -1457,7 +1557,7 @@
 
   function resetProgress() {
     const confirmed = window.confirm(
-      "Möchtest du deinen gesamten LF7-Lernstand auf diesem Gerät löschen?"
+      "Möchtest du deinen gesamten EC-Lernstudio-Lernstand auf diesem Gerät löschen?"
     );
     if (!confirmed) return;
     state = normalizeState({ name: state.name });
@@ -1469,6 +1569,18 @@
 
   document.querySelectorAll("[data-view]").forEach((button) => {
     button.addEventListener("click", () => navigate(button.dataset.view));
+  });
+
+  document.querySelectorAll("[data-field]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!fieldById(button.dataset.field)) return;
+      state.activeField = button.dataset.field;
+      saveState();
+      const refreshView = currentView === "module" || currentView === "glossaryTerm"
+        ? "modules"
+        : currentView;
+      navigate(refreshView);
+    });
   });
 
   document.getElementById("profile-button").addEventListener("click", openSettings);

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="EC Lernstudio: Interaktive Lernplattform zu Online-Marketing, SEO, SEA, Targeting, Kennzahlen und KI in Lernfeld 7."
+      content="EC Lernstudio: Interaktive Lernplattform für ausgewählte E-Commerce-Lernfelder in Datenverarbeitung, darunter LF2 und LF7."
     >
     <meta name="theme-color" content="#071827">
-    <title>EC Lernstudio · Lernfeld 7</title>
+    <title>EC Lernstudio · E-Commerce-Lernfelder</title>
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
@@ -21,18 +21,24 @@
         <span class="brand-mark" aria-hidden="true">EC</span>
         <span class="brand-copy">
           <strong>EC Lernstudio</strong>
-          <small>LF7 · Online-Marketing</small>
+          <small>LF2 · LF7 · Datenverarbeitung</small>
         </span>
       </a>
 
-      <nav class="desktop-nav" aria-label="Hauptnavigation">
-        <button class="nav-link is-active" type="button" data-view="dashboard">Start</button>
-        <button class="nav-link" type="button" data-view="modules">Lernpfad</button>
-        <button class="nav-link" type="button" data-view="glossary">Glossar</button>
-        <button class="nav-link" type="button" data-view="lab">Kennzahlen-Labor</button>
-        <button class="nav-link" type="button" data-view="mistakes">Fehlertraining</button>
-        <button class="nav-link" type="button" data-view="achievements">Erfolge</button>
-      </nav>
+      <div class="header-center">
+        <nav class="desktop-nav" aria-label="Hauptnavigation">
+          <button class="nav-link is-active" type="button" data-view="dashboard">Start</button>
+          <button class="nav-link" type="button" data-view="modules">Lernpfad</button>
+          <button class="nav-link" type="button" data-view="glossary">Glossar</button>
+          <button class="nav-link" type="button" data-view="lab">Kennzahlen-Labor</button>
+          <button class="nav-link" type="button" data-view="mistakes">Fehlertraining</button>
+          <button class="nav-link" type="button" data-view="achievements">Erfolge</button>
+        </nav>
+        <nav class="field-nav" aria-label="Lernfelder">
+          <button class="field-link" type="button" data-field="LF2">LF2</button>
+          <button class="field-link is-active" type="button" data-field="LF7">LF7</button>
+        </nav>
+      </div>
 
       <button
         class="profile-chip"

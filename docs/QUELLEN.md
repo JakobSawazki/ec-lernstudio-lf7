@@ -41,11 +41,19 @@ Ablage: `assets/`
 
 - `Rahmenlehrplan.pdf`
 - `2024-05-06 Information BG.pdf`
+- `LF2/Inhaltsverzeichnis.pdf`
+- `LF2/2.4 Das Impressum.pdf`
 
 Der KMK-Rahmenlehrplan wurde am 24. Juni 2026 zur Erweiterung des Glossars auf
 ausbildungsweite E-Commerce-Begriffe ausgewertet. Die lokalen PDFs bleiben
 private Arbeitsquellen und sind per `.gitignore` von der Veröffentlichung
 ausgeschlossen.
+
+Das lokale PDF `LF2/2.4 Das Impressum.pdf` wurde nur zur Orientierung geprüft.
+Es wirkt wie Lehrwerksmaterial und wird deshalb nicht über GitHub Pages
+ausgeliefert. Das veröffentlichte Material
+`website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf` ist eigenständig
+formuliert.
 
 ## Öffentliche Fachgrundlage
 
@@ -61,6 +69,17 @@ Online-Marketing-Grundlagen:
   Qualitätskontrolle
 - ausbildungsweite Grundbegriffe zu Sortiment, Vertriebskanälen, Checkout,
   Retouren, Service, Recht, Kennzahlen, Wirtschaft und Projektarbeit
+- Anbieterkennzeichnung und Impressum für Webshop-Projekte auf Basis aktueller
+  öffentlich zugänglicher Rechtsquellen
+
+Für LF2 2.4 wurden am 24. Juni 2026 geprüft:
+
+- § 5 Digitale-Dienste-Gesetz (DDG):
+  <https://www.gesetze-im-internet.de/ddg/__5.html>
+- § 18 Medienstaatsvertrag (MStV):
+  <https://www.gesetze-bayern.de/Content/Document/MStV-18>
+- IHK Düsseldorf zur veralteten Bezugnahme auf § 55 RStV:
+  <https://www.ihk.de/duesseldorf/recht-und-steuern/recht/internetrecht/impressum-5109750>
 
 Bei späteren rechtlichen Vertiefungen müssen aktuelle Primärquellen geprüft
 werden. Das Portal enthält derzeit bewusst keine detaillierte Rechtsberatung.

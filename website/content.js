@@ -1,6 +1,80 @@
 window.EC_CONTENT = {
-  version: "1.1.0",
+  version: "1.2.0",
+  learningFields: [
+    {
+      id: "LF2",
+      label: "LF2",
+      title: "Lernfeld 2",
+      subtitle: "Sortimente im Onlinevertrieb gestalten und die Beschaffung unterstützen",
+      short: "Webshop-Seiten, Produktdarstellung, Recht, Preisangaben und Warenwirtschaft.",
+      heroTitle: "Webshops gestalten",
+      heroEmphasis: "sichtbar, nutzbar, rechtssicher.",
+      heroText: "Im ersten Ausbildungsjahr geht es darum, Sortiment, Produktseiten, Preisangaben und technische Shop-Strukturen so aufzubauen, dass Kunden Orientierung finden und das Projekt sauber umgesetzt wird.",
+      modulesTitle: "Vom Shop-Layout zur rechtssicheren Produktseite.",
+      modulesText: "Die DV-Auswahl für LF2 startet hier mit dem Impressum. Weitere Kapitel können später als eigene Module ergänzt werden."
+    },
+    {
+      id: "LF7",
+      label: "LF7",
+      title: "Lernfeld 7",
+      subtitle: "Online-Marketing-Maßnahmen umsetzen und bewerten",
+      short: "Targeting, Suchmaschinen, SEO, SEA, Kennzahlen und KI.",
+      heroTitle: "Online-Marketing",
+      heroEmphasis: "verstehen, messen, entscheiden.",
+      heroText: "Online-Handel ist mehr als Klicks: Verstehe Kunden, Sortiment, Kanäle und Kennzahlen und verwandle Daten in gute Entscheidungen.",
+      modulesTitle: "Vom passenden Kontakt zur messbaren Wirkung.",
+      modulesText: "Die Module folgen der DV-Auswahl für Lernfeld 7. Du kannst sie der Reihe nach bearbeiten oder gezielt in ein aktuelles Unterrichtsthema einsteigen."
+    }
+  ],
   modules: [
+    {
+      id: "lf2-impressum",
+      field: "LF2",
+      code: "2.4",
+      mark: "IMP",
+      title: "Das Impressum",
+      short: "Anbieterkennzeichnung verstehen, Pflichtangaben prüfen und im eigenen Webshop sichtbar integrieren.",
+      color: "orange",
+      mission: "Baue für dein Webshop-Projekt ein klares, auffindbares und plausibles Impressum.",
+      lessons: [
+        {
+          title: "Warum ein Impressum wichtig ist",
+          text: "Ein Impressum zeigt, wer für eine geschäftliche Webseite verantwortlich ist. Es schafft Transparenz, ermöglicht Kontakt und hilft Kunden, den Anbieter einzuordnen."
+        },
+        {
+          title: "Aktueller Rechtsstand",
+          text: "Viele ältere Materialien nennen noch § 5 TMG oder § 55 RStV. Für neue Impressen sind insbesondere § 5 DDG und bei journalistisch-redaktionellen Inhalten § 18 MStV relevant."
+        },
+        {
+          title: "Typische Pflichtangaben",
+          text: "Je nach Anbieter gehören Name oder Firma, ladungsfähige Anschrift, Kontakt, Vertretungsberechtigte, Registerangaben und Umsatzsteuer-ID in ein Impressum."
+        },
+        {
+          title: "Projektintegration",
+          text: "Das Impressum muss eindeutig benannt, leicht erkennbar, unmittelbar erreichbar und dauerhaft verfügbar sein. Im Webshop-Projekt eignet sich eine eigene Seite mit Link im Footer."
+        }
+      ],
+      takeaways: [
+        "Ein Webshop braucht eine klare Anbieterkennzeichnung.",
+        "Impressum nicht verstecken: Link eindeutig als „Impressum“ benennen.",
+        "Aktuelle Quellen prüfen: DDG statt TMG, MStV statt RStV.",
+        "Für Unterrichtsprojekte fiktive Daten verwenden, keine privaten Echtdaten."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.4 Das Impressum",
+          description: "Kurzüberblick, Checkliste, Aufgaben und Mustergerüst für dein Webshop-Projekt.",
+          href: "assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Lies das Arbeitsblatt und markiere die Angaben, die dein fiktiver Shop braucht.",
+        "Untersuche zwei Webshops: Wo ist das Impressum verlinkt und welche Angaben findest du?",
+        "Erstelle ein Impressum mit fiktiven Daten für dein eigenes Webshop-Projekt.",
+        "Verlinke es in deinem Projekt gut sichtbar, zum Beispiel im Footer."
+      ]
+    },
     {
       id: "targeting",
       code: "7.5",
@@ -664,6 +738,90 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Mustererkennung und vorbereitende Analysen sind typische unterstützende Anwendungen."
+    },
+    {
+      id: "lf2-impressum-01",
+      module: "lf2-impressum",
+      type: "choice",
+      prompt: "Welche Hauptfunktion hat ein Impressum in einem geschäftlichen Webshop?",
+      options: [
+        "Es macht Anbieter, Anschrift und Kontaktmöglichkeiten transparent.",
+        "Es ersetzt die Datenschutzerklärung vollständig.",
+        "Es versteckt rechtliche Angaben vor Kunden.",
+        "Es dient nur als gestalterisches Element im Footer."
+      ],
+      answer: 0,
+      explanation: "Das Impressum ist die Anbieterkennzeichnung und hilft Besuchern, den Verantwortlichen der Webseite zu erkennen und zu erreichen."
+    },
+    {
+      id: "lf2-impressum-02",
+      module: "lf2-impressum",
+      type: "choice",
+      prompt: "Welche Rechtsgrundlage ist für allgemeine Informationspflichten heute aktueller als der alte Hinweis auf § 5 TMG?",
+      options: [
+        "§ 5 DDG",
+        "§ 55 RStV",
+        "Nur die AGB des Shops",
+        "Die Bildbeschreibung der Produktseite"
+      ],
+      answer: 0,
+      explanation: "Das Digitale-Dienste-Gesetz hat das TMG abgelöst. Für die Unterrichtsformulierung sollte deshalb § 5 DDG genannt und geprüft werden."
+    },
+    {
+      id: "lf2-impressum-03",
+      module: "lf2-impressum",
+      type: "choice",
+      prompt: "Wo sollte ein Impressum in einem Webshop verlinkt sein?",
+      options: [
+        "Eindeutig erkennbar und von wichtigen Seiten aus erreichbar, zum Beispiel im Footer.",
+        "Nur als versteckter Kommentar im HTML-Code.",
+        "Nur innerhalb eines Produktbildes.",
+        "Ausschließlich nach Abschluss einer Bestellung."
+      ],
+      answer: 0,
+      explanation: "Die Anbieterkennzeichnung muss leicht erkennbar, unmittelbar erreichbar und dauerhaft verfügbar sein."
+    },
+    {
+      id: "lf2-impressum-04",
+      module: "lf2-impressum",
+      type: "choice",
+      prompt: "Welche Angabe gehört typischerweise in ein Impressum eines fiktiven Webshops?",
+      options: [
+        "Name oder Firma, Anschrift und Kontaktmöglichkeiten",
+        "Die Lieblingsfarbe des Shopbetreibers",
+        "Nur ein Social-Media-Handle ohne Anschrift",
+        "Eine Liste aller privaten Passwörter"
+      ],
+      answer: 0,
+      explanation: "Name beziehungsweise Firma, ladungsfähige Anschrift und Kontakt sind zentrale Bausteine. Je nach Fall kommen weitere Angaben hinzu."
+    },
+    {
+      id: "lf2-impressum-05",
+      module: "lf2-impressum",
+      type: "choice",
+      prompt: "Was ist im Unterrichtsprojekt beim Erstellen eines Impressums besonders wichtig?",
+      options: [
+        "Realistische, aber erfundene Daten verwenden.",
+        "Private Echtdaten von Mitschülerinnen und Mitschülern eintragen.",
+        "Das Impressum absichtlich unvollständig lassen.",
+        "Den Link so benennen, dass niemand ihn erkennt."
+      ],
+      answer: 0,
+      explanation: "Im Projekt geht es um fachlich plausibles Arbeiten. Private Daten gehören nicht in fiktive Schüler-Webshops."
+    },
+    {
+      id: "lf2-impressum-06",
+      module: "lf2-impressum",
+      type: "choice",
+      prompt: "Wann kann zusätzlich ein Verantwortlicher nach § 18 Abs. 2 MStV relevant sein?",
+      options: [
+        "Bei journalistisch-redaktionell gestalteten Angeboten.",
+        "Immer bei jedem einzelnen Produktfoto.",
+        "Nur wenn der Shop keine Preise anzeigt.",
+        "Nur bei rein privaten Familienseiten."
+      ],
+      answer: 0,
+      explanation: "Bei journalistisch-redaktionellen Inhalten kann eine zusätzliche verantwortliche Person nach § 18 Abs. 2 MStV relevant sein."
     }
   ],
   badges: [
@@ -673,6 +831,13 @@ window.EC_CONTENT = {
       description: "Die erste Aufgabe richtig gelöst.",
       condition: "correct",
       value: 1
+    },
+    {
+      id: "lf2-impressum-ready",
+      title: "Impressum sicher",
+      description: "Das LF2-Modul zum Impressum vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-impressum"
     },
     {
       id: "targeting-ready",
@@ -714,6 +879,7 @@ window.EC_CONTENT = {
       title: "LF7 komplett",
       description: "Alle sechs Module vollständig abgeschlossen.",
       condition: "allModules",
+      field: "LF7",
       value: 6
     },
     {
@@ -1243,6 +1409,38 @@ window.EC_CONTENT = {
       summary: "Aktueller Stand eines Projekts bezogen auf Ziel, Zeit, Kosten, Qualität und Risiken.",
       detail: "Der Projektstatus macht Fortschritt sichtbar und zeigt, ob Anpassungen nötig sind. Er unterstützt Kommunikation im Team und mit Auftraggebern.",
       example: "Der Statusbericht zeigt: Zeitplan grün, Budget gelb, Risiko bei externer Schnittstelle."
+    },
+    {
+      id: "impressum",
+      term: "Impressum",
+      category: "Recht & Daten",
+      summary: "Anbieterkennzeichnung einer geschäftlichen Webseite.",
+      detail: "Das Impressum zeigt, wer für eine Webseite verantwortlich ist und wie der Anbieter erreichbar ist. Im Webshop muss es eindeutig benannt, gut auffindbar und dauerhaft verfügbar sein.",
+      example: "Im Footer eines Shops führt ein Link „Impressum“ zu Name, Anschrift, E-Mail und weiteren Pflichtangaben."
+    },
+    {
+      id: "anbieterkennzeichnung",
+      term: "Anbieterkennzeichnung",
+      category: "Recht & Daten",
+      summary: "Pflichtangaben, die den Anbieter eines digitalen Dienstes erkennbar machen.",
+      detail: "Die Anbieterkennzeichnung umfasst je nach Fall Name oder Firma, Anschrift, Kontakt, Vertretungsberechtigte, Registerangaben und Umsatzsteuer-ID. Sie ist eng mit dem Impressum verbunden.",
+      example: "Eine GmbH nennt Firma, Sitz, Geschäftsführung, Registergericht und Registernummer."
+    },
+    {
+      id: "ddg",
+      term: "DDG",
+      category: "Recht & Daten",
+      summary: "Digitale-Dienste-Gesetz; aktuelle Grundlage für allgemeine Informationspflichten.",
+      detail: "Das DDG löst frühere Bezüge zum Telemediengesetz in diesem Bereich ab. Für Impressumsangaben ist insbesondere § 5 DDG relevant.",
+      example: "Ein aktuelles Arbeitsblatt verweist auf § 5 DDG statt pauschal auf § 5 TMG."
+    },
+    {
+      id: "mstv",
+      term: "MStV",
+      category: "Recht & Daten",
+      summary: "Medienstaatsvertrag; enthält Regeln für bestimmte Medienangebote.",
+      detail: "Für journalistisch-redaktionell gestaltete Angebote kann nach § 18 Abs. 2 MStV eine verantwortliche Person anzugeben sein. Nicht jeder einfache Webshop braucht diese Zusatzangabe.",
+      example: "Ein Shop mit redaktionellem Magazin prüft, ob eine verantwortliche Person nach MStV genannt werden muss."
     },
     {
       id: "datenschutz",

@@ -1,7 +1,7 @@
 {
-  "name": "EC Lernstudio · Lernfeld 7",
+  "name": "EC Lernstudio · E-Commerce-Lernfelder",
   "short_name": "EC Lernstudio",
-  "description": "Interaktive Lernplattform zu Online-Marketing, SEO, SEA, Targeting, Kennzahlen und KI.",
+  "description": "Interaktive Lernplattform für ausgewählte E-Commerce-Lernfelder in Datenverarbeitung.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f3f7f8",

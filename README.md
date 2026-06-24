@@ -1,10 +1,10 @@
-# EC Lernstudio · Lernfeld 7
+# EC Lernstudio · E-Commerce-Lernfelder
 
 Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
-erste Ausbaustufe behandelt die in Datenverarbeitung vorgesehenen Inhalte aus
-Lernfeld 7 „Online-Marketing-Maßnahmen umsetzen und bewerten“.
+Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
+aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
 
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Dokumentationsstand:** 24. Juni 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -26,6 +26,18 @@ Lehrkraft.
 
 ## Fachlicher Umfang
 
+Für Datenverarbeitung werden derzeit die Lernfelder `LF2` und `LF7` als
+umschaltbare Bereiche geführt.
+
+Für LF2 ist zunächst folgendes Kapitel eingebunden:
+
+| Abschnitt | Thema | Portalmodul |
+| --- | --- | --- |
+| 2.4 | Das Impressum | Das Impressum |
+
+Weitere LF2-Kapitel wie Webshop-Layout, Produktdetailseite, Preisgestaltung
+oder ERP/Warenwirtschaft können später als eigene Module ergänzt werden.
+
 Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 
 | Abschnitt | Thema | Portalmodul |
@@ -43,12 +55,14 @@ KI-Baustein enthalten.
 
 ## Funktionsumfang
 
-- sechs Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 36 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- Lernfeld-Umschalter für `LF2` und `LF7`
+- sieben Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 42 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- abrufbares LF2-Arbeitsblatt `2.4 Das Impressum` als eigenständig formuliertes PDF
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
-- gemischter LF7-Praxischeck mit zwölf zufälligen Aufgaben
+- lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
-- XP, Level, Lernserie und neun Abzeichen
+- XP, Level, Lernserie und zehn Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
@@ -61,6 +75,7 @@ Der Lernstand liegt unter dem Browser-Schlüssel `ec-lernstudio-lf7-v1`.
 Gespeichert werden:
 
 - Anzeigename oder Kürzel
+- aktives Lernfeld
 - richtig gelöste Aufgaben
 - gelöste Glossar-Checks
 - offene Fehler
@@ -89,7 +104,7 @@ Private Referenzen:
 
 - OneNote-Abschnitt `EC/LF7` der Kaufmännischen Schule Nagold
 - BiBox Westermann, Buch-ID `3943`, Einstieg um Seite `240`
-- vom Auftraggeber festgelegte DV-Auswahl für LF7
+- vom Auftraggeber festgelegte DV-Auswahl für LF2 und LF7
 - lokal bereitgestellter KMK-Rahmenlehrplan unter `assets/Rahmenlehrplan.pdf`
 
 Die privaten Quellen dienen der fachlichen Orientierung. Originalseiten,
@@ -101,6 +116,10 @@ Die OneNote-Übersicht wurde am 10. Juni 2026 geöffnet und bestätigte die
 Abschnitte 7.5, 7.7, 7.8, 7.9, 7.19 und 7.20. Die BiBox erfordert ein
 persönliches Westermann-Login und ist nicht Bestandteil des Repositories.
 Die lokale Quellenablage `assets/` ist per `.gitignore` ausgeschlossen.
+Das lokale Lehrwerks-PDF zu LF2 2.4 wird wegen Veröffentlichungs- und
+Nutzungsrechten nicht öffentlich ausgeliefert. Stattdessen enthält die Website
+ein eigenständig formuliertes Arbeitsblatt unter
+`website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
 Das aktuelle Titelbild `website/assets/ecommerce-consultation-hero.png` wurde
@@ -122,6 +141,7 @@ Build-Schritt. GitHub Pages veröffentlicht den Ordner `website/`.
 | `website/app.js` | Navigation, Quiz, Labor, Lernstand, Export und Import |
 | `website/service-worker.js` | lokaler Offline-Cache |
 | `website/assets/` | projektbezogene Bildmedien |
+| `website/assets/materials/` | veröffentlichte, eigenständig erstellte Unterrichtsmaterialien |
 | `assets/` | lokale private Quellenablage, per `.gitignore` ausgeschlossen |
 | `.github/workflows/deploy-pages.yml` | Prüfung und GitHub-Pages-Deployment |
 | `docs/` | Quellen, Übergabe und Deployment |
@@ -151,6 +171,8 @@ EC/
     |-- service-worker.js
     |-- styles.css
     `-- assets/
+        |-- materials/
+        |   `-- lf2-2-4-impressum-arbeitsblatt.pdf
         |-- ecommerce-consultation-hero.png
         `-- lf7-marketing-lab.png
 ```
@@ -182,7 +204,9 @@ git diff --check
 Zusätzlich manuell oder automatisiert prüfen:
 
 - Onboarding mit Name und Gastmodus
-- Navigation in alle sechs Module
+- Lernfeld-Umschalter `LF2`/`LF7`
+- Navigation in alle sieben Module
+- LF2-Arbeitsblatt öffnen
 - Multiple-Choice- und Zahlenaufgabe
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
@@ -212,7 +236,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.1.0`
+Aktueller Stand: `1.2.0`
 
 ## Offene Weiterentwicklung
 
@@ -245,8 +269,8 @@ Optional:
 
 Empfohlener Startprompt:
 
-> Arbeite im Projekt EC Lernstudio LF7. Lies README.md, AGENTS.md und
+> Arbeite im Projekt EC Lernstudio. Lies README.md, AGENTS.md und
 > docs/UEBERGABE.md. Prüfe danach Git-Status, Website und Live-Version.
-> Bearbeite die offenen LF7-Aufgaben in der vorhandenen statischen Architektur,
+> Bearbeite die offenen LF2/LF7-Aufgaben in der vorhandenen statischen Architektur,
 > teste Desktop und Mobilansicht und veröffentliche den geprüften Stand wieder
 > über GitHub Pages.

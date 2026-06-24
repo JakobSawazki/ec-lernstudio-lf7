@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-lf7-v2";
+const CACHE_NAME = "ec-lernstudio-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -8,7 +8,8 @@ const APP_SHELL = [
   "./icon.svg",
   "./manifest.webmanifest",
   "./assets/lf7-marketing-lab.png",
-  "./assets/ecommerce-consultation-hero.png"
+  "./assets/ecommerce-consultation-hero.png",
+  "./assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf"
 ];
 
 self.addEventListener("install", (event) => {

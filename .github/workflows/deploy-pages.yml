@@ -36,6 +36,7 @@ jobs:
           test -f website/icon.svg
           test -f website/assets/lf7-marketing-lab.png
           test -f website/assets/ecommerce-consultation-hero.png
+          test -f website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf
 
   deploy:
     environment:

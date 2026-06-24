@@ -2,6 +2,19 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.2.0 – 24. Juni 2026
+
+- Lernfeld-Umschalter für `LF2` und `LF7` ergänzt
+- LF2-Modul `2.4 Das Impressum` mit vier Erklärbausteinen, Projektauftrag und
+  sechs Aufgaben eingebunden
+- eigenes LF2-Arbeitsblatt zum Impressum als veröffentlichtes PDF erstellt
+- Impressumsinhalte auf aktuelle Rechtsbezüge `§ 5 DDG` und `§ 18 MStV`
+  ausgerichtet
+- Praxischeck filtert Aufgaben nach aktivem Lernfeld
+- lokales Lehrwerks-PDF bewusst nicht veröffentlicht und Quellenstatus
+  dokumentiert
+- Offline-Cache, README, Quellen und Übergabe aktualisiert
+
 ## 1.1.0 – 24. Juni 2026
 
 - menschlicheres Hero-Bild mit E-Commerce-Beratungssituation integriert

@@ -3,3 +3,4 @@ tasks.txt
 Thumbs.db
 *.log
 /assets/
+/tmp/
