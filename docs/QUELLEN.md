@@ -1,6 +1,6 @@
 # Quellen und Veröffentlichungsgrenzen
 
-Stand: 24. Juni 2026
+Stand: 2. Juli 2026
 
 ## Private Unterrichtsquellen
 
@@ -35,25 +35,29 @@ Die BiBox ist kontogebunden. Sie wird ausschließlich zum fachlichen Abgleich
 verwendet. Zugangsdaten, Buchseiten und Screenshots gehören nicht in dieses
 Repository.
 
-### Lokale Bildungsplan-Dateien
+### Lokale Bildungsplan- und LF2-Dateien
 
-Ablage: `assets/`
+Ablagen: `assets/` und `LF2/`
 
 - `Rahmenlehrplan.pdf`
 - `2024-05-06 Information BG.pdf`
 - `LF2/Inhaltsverzeichnis.pdf`
 - `LF2/2.4 Das Impressum.pdf`
+- `LF2/Lehrbuch/LF2 DV.docx`
+- `LF2/Lehrbuch/Inhaltsverzeichnis.pdf`
+- `LF2/Lehrbuch/2.2 Das Layout der Internetseiten eines Webshops.pdf`
 
 Der KMK-Rahmenlehrplan wurde am 24. Juni 2026 zur Erweiterung des Glossars auf
 ausbildungsweite E-Commerce-Begriffe ausgewertet. Die lokalen PDFs bleiben
 private Arbeitsquellen und sind per `.gitignore` von der Veröffentlichung
 ausgeschlossen.
 
-Das lokale PDF `LF2/2.4 Das Impressum.pdf` wurde nur zur Orientierung geprüft.
-Es wirkt wie Lehrwerksmaterial und wird deshalb nicht über GitHub Pages
-ausgeliefert. Das veröffentlichte Material
-`website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf` ist eigenständig
-formuliert.
+Die lokalen PDFs zu LF2 2.2 und LF2 2.4 wurden nur zur Orientierung geprüft.
+Sie wirken wie Lehrwerksmaterial und werden deshalb nicht über GitHub Pages
+ausgeliefert. Die veröffentlichten Materialien
+`website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
+`website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf` sind
+eigenständig formuliert.
 
 ## Öffentliche Fachgrundlage
 

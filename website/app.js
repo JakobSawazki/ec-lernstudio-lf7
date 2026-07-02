@@ -433,7 +433,7 @@
   function moduleCard(module) {
     const progress = moduleProgress(module.id);
     return `
-      <article class="module-card ${module.color}">
+      <button class="module-card ${module.color}" type="button" data-action="open-module" data-module="${module.id}" aria-label="Modul ${module.code}: ${module.title} öffnen">
         <div class="module-topline">
           <span class="module-code">${module.code}</span>
           <span class="module-mark" aria-hidden="true">${module.mark}</span>
@@ -444,10 +444,7 @@
           <div class="progress-track"><span style="width: ${progress.percent}%"></span></div>
           <small>${progress.solved}/${progress.total} gelöst · ${progress.percent}%</small>
         </div>
-        <button class="card-link" data-action="open-module" data-module="${module.id}">
-          Modul öffnen <span aria-hidden="true">→</span>
-        </button>
-      </article>
+      </button>
     `;
   }
 

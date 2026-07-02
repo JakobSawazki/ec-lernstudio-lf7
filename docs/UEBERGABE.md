@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 24. Juni 2026
-Version: `1.2.0`
+Stand: 2. Juli 2026
+Version: `1.3.0`
 
 ## Auftrag und Ergebnis
 
@@ -20,13 +20,14 @@ Build-Schritt.
 - Repository: `https://github.com/JakobSawazki/ec-lernstudio-lf7`
 - GitHub Pages: `https://jakobsawazki.github.io/ec-lernstudio-lf7/`
 - produktive Dateien: `website/`
-- lokale Quellenablage: `assets/`, bewusst per `.gitignore` ausgeschlossen
+- lokale Quellenablagen: `assets/` und `LF2/`, bewusst per `.gitignore` ausgeschlossen
 - temporäre Renderdateien: `tmp/`, bewusst per `.gitignore` ausgeschlossen
 
 ## Umgesetzte Inhalte
 
 LF2:
 
+- 2.2 Das Layout der Internetseiten eines Webshops
 - 2.4 Das Impressum
 
 LF7:
@@ -39,7 +40,7 @@ LF7:
 - 7.20 KI - Entstehung und praktische Anwendung
 
 Je Modul existieren vier Erklärungskarten, vier Merksätze und sechs Aufgaben.
-Das ergibt aktuell sieben Module und 42 Aufgaben.
+Das ergibt aktuell acht Module und 48 Aufgaben.
 
 ## Besondere Funktionen
 
@@ -47,13 +48,15 @@ Das ergibt aktuell sieben Module und 42 Aufgaben.
 - Kennzahlen-Labor mit Plausibilitätsprüfung
 - Praxischeck mit zufälligen Fragen aus dem aktiven Lernfeld
 - Fehlertraining
-- XP und zehn Abzeichen
+- XP und elf Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
 - versionierter Datei-Export und -Import
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
-- LF2-Arbeitsblatt: `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`
+- LF2-Arbeitsblätter:
+  `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
+  `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`
 
 ## Zustandsmodell
 
@@ -128,10 +131,13 @@ Der lokal abgelegte KMK-Rahmenlehrplan `assets/Rahmenlehrplan.pdf` wurde zur
 Ausweitung des Glossars auf die gesamte Ausbildung ausgewertet. Die Datei wird
 nicht veröffentlicht.
 
-Das lokale PDF `assets/LF2/2.4 Das Impressum.pdf` wirkt wie Lehrwerksmaterial
-und wird nicht öffentlich ausgeliefert. Für die Website wurde stattdessen ein
-eigenständig formuliertes Arbeitsblatt erzeugt. Rechtsstand im Arbeitsblatt:
-§ 5 DDG und § 18 MStV, Stand 24.06.2026.
+Die lokal bereitgestellten Lehrbuchdateien zu LF2 liegen unter
+`LF2/Lehrbuch/`, darunter `LF2 DV.docx` und
+`2.2 Das Layout der Internetseiten eines Webshops.pdf`. Diese Dateien dienen
+nur als private Unterrichtsquellen und werden nicht öffentlich ausgeliefert.
+Für die Website wurden stattdessen eigenständig formulierte Arbeitsblätter
+erzeugt. Rechtsstand im Impressums-Arbeitsblatt: § 5 DDG und § 18 MStV,
+Stand 24.06.2026.
 
 Der nächste fachliche Schritt ist ein vollständiger Abgleich der eigenständig
 formulierten Inhalte mit den BiBox-Unterkapiteln, ohne geschützte Texte zu
@@ -153,7 +159,7 @@ Danach lokal über HTTP starten und im Browser prüfen:
 - Onboarding
 - Lernfeld-Umschalter `LF2`/`LF7`
 - LF2- und LF7-Module
-- LF2-Arbeitsblatt öffnen
+- LF2-Arbeitsblätter öffnen
 - Zahlen- und Auswahlaufgabe
 - Fehlertraining
 - Kennzahlen-Labor

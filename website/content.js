@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.2.0",
+  version: "1.3.0",
   learningFields: [
     {
       id: "LF2",
@@ -11,7 +11,7 @@ window.EC_CONTENT = {
       heroEmphasis: "sichtbar, nutzbar, rechtssicher.",
       heroText: "Im ersten Ausbildungsjahr geht es darum, Sortiment, Produktseiten, Preisangaben und technische Shop-Strukturen so aufzubauen, dass Kunden Orientierung finden und das Projekt sauber umgesetzt wird.",
       modulesTitle: "Vom Shop-Layout zur rechtssicheren Produktseite.",
-      modulesText: "Die DV-Auswahl für LF2 startet hier mit dem Impressum. Weitere Kapitel können später als eigene Module ergänzt werden."
+      modulesText: "Die DV-Auswahl für LF2 startet mit Webshop-Layout und Impressum. Weitere Kapitel können später als eigene Module ergänzt werden."
     },
     {
       id: "LF7",
@@ -27,6 +27,54 @@ window.EC_CONTENT = {
     }
   ],
   modules: [
+    {
+      id: "lf2-layout",
+      field: "LF2",
+      code: "2.2",
+      mark: "LAY",
+      title: "Das Layout der Internetseiten eines Webshops",
+      short: "Startseite, Produktseite, Navigation und Seitenbereiche so gestalten, dass Kunden schnell Orientierung finden.",
+      color: "mint",
+      mission: "Entwirf für dein Webshop-Projekt eine klare Seitenstruktur und setze sie mit HTML und CSS nachvollziehbar um.",
+      lessons: [
+        {
+          title: "Layout ist Kundenführung",
+          text: "Ein Webshop-Layout ordnet Informationen so, dass Besucher schnell verstehen, wo sie sind, was angeboten wird und welcher nächste Schritt sinnvoll ist."
+        },
+        {
+          title: "Wichtige Seitenbereiche",
+          text: "Typische Bereiche sind Header mit Logo und Suche, Navigation mit Kategorien, Hauptbereich mit Produkten oder Informationen und Footer mit rechtlichen Links und Servicehinweisen."
+        },
+        {
+          title: "Vom Bildschirm zum Verhalten",
+          text: "Farben, Abstände, Schriftgrößen, Produktbilder und Call-to-Action-Elemente beeinflussen, ob Kunden Vertrauen aufbauen und weiterklicken."
+        },
+        {
+          title: "Technisch sauber umsetzen",
+          text: "Ein gutes Unterrichtsprojekt nutzt semantisches HTML, eine gemeinsame CSS-Datei, responsive Breakpoints, Alternativtexte und gut lesbare Kontraste."
+        }
+      ],
+      takeaways: [
+        "Layout ist nicht Dekoration, sondern Orientierung für Kunden.",
+        "Header, Navigation, Content-Bereich und Footer sollten in jedem Shop bewusst geplant werden.",
+        "Produktseiten brauchen klare Bilder, verständliche Texte, Preise und sichtbare Handlungsaufforderungen.",
+        "Responsive Design, Ladezeit und Barrierefreiheit gehören zur technischen Qualität."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.2 Webshop-Layout",
+          description: "Analyseauftrag, HTML/CSS-Transfer, Projektcheck und Mini-Reflexion für dein Webshop-Projekt.",
+          href: "assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Skizziere Header, Navigation, Inhaltsbereich und Footer deines Webshops.",
+        "Analysiere zwei echte Webshops: Welche Elemente helfen dir sofort bei der Orientierung?",
+        "Baue eine Startseite und mindestens eine Produktseite mit HTML und einer gemeinsamen CSS-Datei.",
+        "Dokumentiere kurz, wo du KI eingesetzt hast und welche Entscheidungen du selbst getroffen hast."
+      ]
+    },
     {
       id: "lf2-impressum",
       field: "LF2",
@@ -740,6 +788,90 @@ window.EC_CONTENT = {
       explanation: "Mustererkennung und vorbereitende Analysen sind typische unterstützende Anwendungen."
     },
     {
+      id: "lf2-layout-01",
+      module: "lf2-layout",
+      type: "choice",
+      prompt: "Welche Aufgabe hat das Layout eines Webshops besonders?",
+      options: [
+        "Es führt Kunden durch Inhalte, Produkte und nächste Handlungsschritte.",
+        "Es ersetzt Produktdaten und rechtliche Angaben vollständig.",
+        "Es soll möglichst viele Elemente ohne Ordnung auf eine Seite bringen.",
+        "Es ist nur für die Farbe des Hintergrunds zuständig."
+      ],
+      answer: 0,
+      explanation: "Layout strukturiert die Oberfläche und hilft Kunden, schnell Orientierung und Vertrauen zu finden."
+    },
+    {
+      id: "lf2-layout-02",
+      module: "lf2-layout",
+      type: "choice",
+      prompt: "Welche Elemente gehören typischerweise in den Header eines Webshops?",
+      options: [
+        "Logo, Suche, Navigation oder Warenkorbzugang",
+        "Nur das Impressum und alle AGB im Volltext",
+        "Ausschließlich Produktbewertungen",
+        "Nur eine unsichtbare Überschrift"
+      ],
+      answer: 0,
+      explanation: "Der Header bietet schnelle Wiedererkennung und zentrale Einstiege wie Suche, Kategorien oder Warenkorb."
+    },
+    {
+      id: "lf2-layout-03",
+      module: "lf2-layout",
+      type: "choice",
+      prompt: "Warum ist Responsive Design für einen Webshop wichtig?",
+      options: [
+        "Weil der Shop auf Smartphone, Tablet und Desktop sinnvoll nutzbar sein soll.",
+        "Weil dadurch automatisch alle Preise rechtlich geprüft werden.",
+        "Weil Produktbilder dadurch nicht mehr benötigt werden.",
+        "Weil die Seite dann nur noch auf großen Monitoren funktioniert."
+      ],
+      answer: 0,
+      explanation: "Kunden nutzen unterschiedliche Geräte. Layout, Schrift, Navigation und Produktdarstellung müssen darauf reagieren."
+    },
+    {
+      id: "lf2-layout-04",
+      module: "lf2-layout",
+      type: "choice",
+      prompt: "Was ist ein Call-to-Action auf einer Produktseite?",
+      options: [
+        "Eine klare Handlungsaufforderung wie 'In den Warenkorb'.",
+        "Ein zufällig gewählter Dateiname.",
+        "Eine rechtliche Unternehmensform.",
+        "Eine interne Notiz im CSS-Code."
+      ],
+      answer: 0,
+      explanation: "Ein Call-to-Action zeigt, welche Handlung Kunden als Nächstes ausführen können."
+    },
+    {
+      id: "lf2-layout-05",
+      module: "lf2-layout",
+      type: "choice",
+      prompt: "Welche technische Umsetzung passt gut zu einem Webshop-Projekt im Unterricht?",
+      options: [
+        "Semantisches HTML, eine gemeinsame CSS-Datei und gut benannte Bereiche.",
+        "Alle Inhalte nur als ein großes Bild ohne Alternativtext.",
+        "Jede Seite mit völlig anderer Navigation.",
+        "Private Kundendaten als Beispielinhalt veröffentlichen."
+      ],
+      answer: 0,
+      explanation: "Semantisches HTML und konsistentes CSS machen das Projekt wartbar, verständlich und besser zugänglich."
+    },
+    {
+      id: "lf2-layout-06",
+      module: "lf2-layout",
+      type: "choice",
+      prompt: "Welche Angabe sollte bei erlaubtem KI-Einsatz im Projekt transparent gemacht werden?",
+      options: [
+        "Wofür KI genutzt wurde und welche Ergebnisse eigenständig geprüft wurden.",
+        "Dass KI-Einsatz grundsätzlich geheim bleiben muss.",
+        "Nur der Name des Browsers.",
+        "Ausschließlich die Bildschirmgröße des Laptops."
+      ],
+      answer: 0,
+      explanation: "Die Projekt-Dokumentation sollte zeigen, welche Hilfen verwendet wurden und welche fachlichen Entscheidungen selbst verantwortet werden."
+    },
+    {
       id: "lf2-impressum-01",
       module: "lf2-impressum",
       type: "choice",
@@ -831,6 +963,13 @@ window.EC_CONTENT = {
       description: "Die erste Aufgabe richtig gelöst.",
       condition: "correct",
       value: 1
+    },
+    {
+      id: "lf2-layout-ready",
+      title: "Layoutpilot",
+      description: "Das LF2-Modul zum Webshop-Layout vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-layout"
     },
     {
       id: "lf2-impressum-ready",
@@ -977,6 +1116,46 @@ window.EC_CONTENT = {
       summary: "Verkaufsfördernde und rechtssichere Darstellung eines Produkts im Online-Kanal.",
       detail: "Zur Produktpräsentation gehören Titel, Bilder, Beschreibung, Preisangaben, Nutzenargumente, Varianten, Hinweise und Vertrauen schaffende Informationen. Sie soll informieren und Retouren vermeiden.",
       example: "Ein Produktvideo zeigt Größe und Anwendung, damit Kunden realistisch entscheiden können."
+    },
+    {
+      id: "webshop-layout",
+      term: "Webshop-Layout",
+      category: "Sortiment",
+      summary: "Anordnung der sichtbaren Bereiche eines Webshops.",
+      detail: "Das Layout legt fest, wo Logo, Navigation, Suche, Produktbereiche, Warenkorb, Hinweise und Footer erscheinen. Es steuert Orientierung, Vertrauen und die nächsten Handlungsschritte.",
+      example: "Eine klare Startseite zeigt oben Suche und Kategorien, darunter wichtige Angebote und am Ende Service-Links."
+    },
+    {
+      id: "header",
+      term: "Header",
+      category: "Sortiment",
+      summary: "Oberer Seitenbereich mit Wiedererkennung und zentraler Orientierung.",
+      detail: "Im Header stehen häufig Logo, Suchfeld, Navigation, Login und Warenkorb. Er sollte auf allen wichtigen Seiten ähnlich aufgebaut sein.",
+      example: "Kunden finden im Header sofort die Suche und den Warenkorb."
+    },
+    {
+      id: "footer",
+      term: "Footer",
+      category: "Sortiment",
+      summary: "Unterer Seitenbereich mit Service- und Pflichtinformationen.",
+      detail: "Der Footer enthält oft Impressum, Datenschutz, Kontakt, Zahlungsarten, Versandhinweise und Service-Links. Er hilft, wiederkehrende Informationen verlässlich zu finden.",
+      example: "Das Impressum ist im Footer eindeutig verlinkt."
+    },
+    {
+      id: "call-to-action",
+      term: "Call-to-Action",
+      category: "Sortiment",
+      summary: "Sichtbare Aufforderung zu einer gewünschten Handlung.",
+      detail: "Ein Call-to-Action führt Nutzer zum nächsten Schritt, etwa Produkt ansehen, in den Warenkorb legen oder Anfrage senden. Er muss klar benannt und gut erreichbar sein.",
+      example: "Der Button 'In den Warenkorb' ist ein Call-to-Action."
+    },
+    {
+      id: "responsive-design",
+      term: "Responsive Design",
+      category: "Sortiment",
+      summary: "Gestaltung, die sich an unterschiedliche Bildschirmgrößen anpasst.",
+      detail: "Responsive Design sorgt dafür, dass Inhalte auf Smartphone, Tablet und Desktop gut lesbar und bedienbar bleiben. Dazu gehören flexible Layouts, passende Schriftgrößen und angepasste Navigation.",
+      example: "Auf dem Smartphone wird die Produktnavigation untereinander statt nebeneinander angezeigt."
     },
     {
       id: "produktkategorie",

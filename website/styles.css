@@ -629,15 +629,25 @@ h3 {
   flex-direction: column;
   min-height: 390px;
   padding: 26px;
+  width: 100%;
   border: 1px solid rgba(11, 32, 48, 0.1);
   border-radius: var(--radius-medium) var(--radius-medium) var(--radius-medium) 7px;
   box-shadow: 0 16px 45px rgba(7, 24, 39, 0.08);
+  color: var(--night);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .module-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 24px 55px rgba(7, 24, 39, 0.13);
+}
+
+.module-card:focus-visible {
+  outline: 4px solid rgba(120, 226, 223, 0.72);
+  outline-offset: 4px;
 }
 
 .module-card.cyan,

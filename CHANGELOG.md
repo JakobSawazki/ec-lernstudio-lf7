@@ -2,6 +2,20 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.3.0 - 2. Juli 2026
+
+- LF2-Modul `2.2 Das Layout der Internetseiten eines Webshops` mit vier
+  Erklärbausteinen, Projektauftrag, sechs Aufgaben und eigenem Abzeichen ergänzt
+- neues LF2-Arbeitsblatt zum Webshop-Layout als eigenständig formuliertes PDF
+  veröffentlicht
+- bestehendes Impressums-Arbeitsblatt mit eingebetteter Schrift neu erzeugt,
+  damit Umlaute und Sonderzeichen korrekt dargestellt werden
+- Modulkarten vollständig klickbar gemacht und den separaten Button
+  `Modul öffnen` entfernt
+- Glossar um Webshop-Layout, Header, Footer, Call-to-Action und Responsive
+  Design erweitert
+- Offline-Cache, Deployment-Prüfung, README, Quellen und Übergabe aktualisiert
+
 ## 1.2.0 – 24. Juni 2026
 
 - Lernfeld-Umschalter für `LF2` und `LF7` ergänzt

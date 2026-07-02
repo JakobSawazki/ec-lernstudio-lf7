@@ -4,8 +4,8 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
 
-**Version:** `1.2.0`
-**Dokumentationsstand:** 24. Juni 2026
+**Version:** `1.3.0`
+**Dokumentationsstand:** 2. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -29,14 +29,15 @@ Lehrkraft.
 Für Datenverarbeitung werden derzeit die Lernfelder `LF2` und `LF7` als
 umschaltbare Bereiche geführt.
 
-Für LF2 ist zunächst folgendes Kapitel eingebunden:
+Für LF2 sind zunächst folgende Kapitel eingebunden:
 
 | Abschnitt | Thema | Portalmodul |
 | --- | --- | --- |
+| 2.2 | Das Layout der Internetseiten eines Webshops | Webshop-Layout |
 | 2.4 | Das Impressum | Das Impressum |
 
-Weitere LF2-Kapitel wie Webshop-Layout, Produktdetailseite, Preisgestaltung
-oder ERP/Warenwirtschaft können später als eigene Module ergänzt werden.
+Weitere LF2-Kapitel wie Produktdetailseite, Preisgestaltung oder
+ERP/Warenwirtschaft können später als eigene Module ergänzt werden.
 
 Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 
@@ -56,13 +57,14 @@ KI-Baustein enthalten.
 ## Funktionsumfang
 
 - Lernfeld-Umschalter für `LF2` und `LF7`
-- sieben Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 42 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
-- abrufbares LF2-Arbeitsblatt `2.4 Das Impressum` als eigenständig formuliertes PDF
+- acht Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 48 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout` und `2.4 Das Impressum`
+  als eigenständig formulierte PDFs
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
 - lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
-- XP, Level, Lernserie und zehn Abzeichen
+- XP, Level, Lernserie und elf Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
@@ -115,10 +117,12 @@ eigenständig formuliert.
 Die OneNote-Übersicht wurde am 10. Juni 2026 geöffnet und bestätigte die
 Abschnitte 7.5, 7.7, 7.8, 7.9, 7.19 und 7.20. Die BiBox erfordert ein
 persönliches Westermann-Login und ist nicht Bestandteil des Repositories.
-Die lokale Quellenablage `assets/` ist per `.gitignore` ausgeschlossen.
-Das lokale Lehrwerks-PDF zu LF2 2.4 wird wegen Veröffentlichungs- und
-Nutzungsrechten nicht öffentlich ausgeliefert. Stattdessen enthält die Website
-ein eigenständig formuliertes Arbeitsblatt unter
+Die lokalen Quellenablagen `assets/` und `LF2/` sind per `.gitignore`
+ausgeschlossen.
+Die lokalen Lehrwerksdateien zu LF2 2.2 und LF2 2.4 werden wegen
+Veröffentlichungs- und Nutzungsrechten nicht öffentlich ausgeliefert.
+Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
+`website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
 `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
@@ -143,6 +147,7 @@ Build-Schritt. GitHub Pages veröffentlicht den Ordner `website/`.
 | `website/assets/` | projektbezogene Bildmedien |
 | `website/assets/materials/` | veröffentlichte, eigenständig erstellte Unterrichtsmaterialien |
 | `assets/` | lokale private Quellenablage, per `.gitignore` ausgeschlossen |
+| `LF2/` | lokale private LF2-Lehrbuch- und Unterrichtsquellen, per `.gitignore` ausgeschlossen |
 | `.github/workflows/deploy-pages.yml` | Prüfung und GitHub-Pages-Deployment |
 | `docs/` | Quellen, Übergabe und Deployment |
 
@@ -172,6 +177,7 @@ EC/
     |-- styles.css
     `-- assets/
         |-- materials/
+        |   |-- lf2-2-2-webshop-layout-arbeitsblatt.pdf
         |   `-- lf2-2-4-impressum-arbeitsblatt.pdf
         |-- ecommerce-consultation-hero.png
         `-- lf7-marketing-lab.png
@@ -205,8 +211,8 @@ Zusätzlich manuell oder automatisiert prüfen:
 
 - Onboarding mit Name und Gastmodus
 - Lernfeld-Umschalter `LF2`/`LF7`
-- Navigation in alle sieben Module
-- LF2-Arbeitsblatt öffnen
+- Navigation in alle acht Module
+- LF2-Arbeitsblätter öffnen
 - Multiple-Choice- und Zahlenaufgabe
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
@@ -236,7 +242,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.2.0`
+Aktueller Stand: `1.3.0`
 
 ## Offene Weiterentwicklung
 
