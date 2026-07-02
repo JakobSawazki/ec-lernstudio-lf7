@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,11 +18,13 @@
 
     <header class="site-header">
       <a class="brand" href="#dashboard" aria-label="EC Lernstudio Startseite">
-        <span class="brand-mark" aria-hidden="true">EC</span>
-        <span class="brand-copy">
-          <strong>EC Lernstudio</strong>
-          <small>LF2 · LF7 · Datenverarbeitung</small>
-        </span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/ec-lernstudio-logo.svg" alt="">
+          </span>
+          <span class="brand-copy">
+            <strong>EC Lernstudio</strong>
+          <small>Datenverarbeitung</small>
+          </span>
       </a>
 
       <div class="header-center">
@@ -40,18 +42,29 @@
         </nav>
       </div>
 
-      <button
-        class="profile-chip"
-        id="profile-button"
-        type="button"
-        aria-label="Profil und Lernstand öffnen"
-      >
-        <span class="profile-avatar" id="header-avatar" aria-hidden="true">G</span>
-        <span class="profile-copy">
-          <strong id="header-name">Gast</strong>
-          <small><span id="header-xp">0</span> XP · Level <span id="header-level">1</span></small>
-        </span>
-      </button>
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Light Mode aktivieren"
+          aria-pressed="true"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="profile-chip"
+          id="profile-button"
+          type="button"
+          aria-label="Profil und Lernstand öffnen"
+        >
+          <span class="profile-avatar" id="header-avatar" aria-hidden="true">G</span>
+          <span class="profile-copy">
+            <strong id="header-name">Gast</strong>
+            <small><span id="header-xp">0</span> XP · Level <span id="header-level">1</span></small>
+          </span>
+        </button>
+      </div>
     </header>
 
     <main id="app" tabindex="-1"></main>

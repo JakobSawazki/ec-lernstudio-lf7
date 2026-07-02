@@ -2,6 +2,7 @@
   "use strict";
 
   const STORAGE_KEY = "ec-lernstudio-lf7-v1";
+  const THEME_STORAGE_KEY = "ec-lernstudio-theme";
   const EXPORT_FORMAT = "ec-lernstudio-lf7-progress";
   const EXPORT_VERSION = 1;
   const POINTS_PER_LEVEL = 200;
@@ -10,6 +11,7 @@
   const welcomeModal = document.getElementById("welcome-modal");
   const settingsModal = document.getElementById("settings-modal");
   const toastRegion = document.getElementById("toast-region");
+  const themeToggle = document.getElementById("theme-toggle");
 
   const defaultState = {
     name: "",
@@ -33,10 +35,55 @@
   };
 
   let state = loadState();
+  let theme = loadTheme();
   let currentView = "dashboard";
   let session = null;
   let glossaryFilter = "all";
   let glossarySearch = "";
+
+  function loadTheme() {
+    try {
+      return localStorage.getItem(THEME_STORAGE_KEY) === "light" ? "light" : "dark";
+    } catch (error) {
+      return "dark";
+    }
+  }
+
+  function applyTheme(value) {
+    theme = value === "light" ? "light" : "dark";
+    document.documentElement.dataset.theme = theme;
+    document.body.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+      "content",
+      theme === "dark" ? "#071827" : "#f3f7f8"
+    );
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren"
+      );
+      themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+      themeToggle.title = theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren";
+    }
+  }
+
+  function toggleTheme() {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    } catch (error) {
+      // Theme is visual only; if storage is unavailable, the session can still switch.
+    }
+    applyTheme(nextTheme);
+  }
+
+  function renderPortalFooter() {
+    return `
+      <footer class="page-shell portal-footer">
+        <span>© 2026 · Designed by <a href="https://jakobsawazki.github.io/sawazki-electronics/" target="_blank" rel="noopener">Sawazki Electronics</a></span>
+      </footer>
+    `;
+  }
 
   function questionById(id) {
     return content.questions.find((question) => question.id === id);
@@ -421,10 +468,7 @@
         </article>
       </section>
 
-      <footer class="page-shell portal-footer">
-        <span>EC Lernstudio · ${field.label}</span>
-        <span>Konzept und Umsetzung: <a href="https://jakobsawazki.github.io/sawazki-electronics/" target="_blank" rel="noopener">Sawazki Electronics</a></span>
-      </footer>
+      ${renderPortalFooter()}
     `;
 
     bindAppActions();
@@ -479,10 +523,7 @@
         </div>
         <button class="light-button" data-action="glossary">Glossar öffnen</button>
       </section>
-      <footer class="page-shell portal-footer">
-        <span>EC Lernstudio · ${field.label}</span>
-        <span>Lernstand lokal und als JSON-Datei sicherbar</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
     bindAppActions();
   }
@@ -603,10 +644,7 @@
           Training starten
         </button>
       </section>
-      <footer class="page-shell portal-footer">
-        <span>${module.code} · ${module.title}</span>
-        <span>${progress.percent}% abgeschlossen</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
     bindAppActions();
   }
@@ -671,10 +709,7 @@
           Gesamtbeitrag liefern als eine größere Kampagne mit etwas niedrigerer Effizienz.
         </p>
       </section>
-      <footer class="page-shell portal-footer">
-        <span>Kennzahlen-Labor · ${state.labRuns} Berechnungen</span>
-        <span>Ergebnisse werden erst nach einer Berechnung lokal gespeichert</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
 
     document.getElementById("lab-form").addEventListener("submit", calculateLab);
@@ -1039,10 +1074,7 @@
           </div>
         `}
       </section>
-      <footer class="page-shell portal-footer">
-        <span>Fehlertraining</span>
-        <span>Richtig gelöste Aufgaben werden automatisch entfernt</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
     bindAppActions();
   }
@@ -1101,10 +1133,7 @@
           }).join("")}
         </div>
       </section>
-      <footer class="page-shell portal-footer">
-        <span>${state.unlockedBadges.length} von ${content.badges.length} Abzeichen</span>
-        <span>${info.xp} XP gesammelt</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
   }
 
@@ -1178,10 +1207,7 @@
         </div>
         <button class="light-button" data-action="all-modules">Lernpfad öffnen</button>
       </section>
-      <footer class="page-shell portal-footer">
-        <span>Ausbildungsglossar E-Commerce</span>
-        <span>${entries.length} von ${content.glossary.length} Begriffen sichtbar</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
 
     bindAppActions();
@@ -1294,10 +1320,7 @@
         </article>
       </section>
 
-      <footer class="page-shell portal-footer">
-        <span>${escapeHtml(term.term)}</span>
-        <span>${glossarySolvedCount()} Glossar-Checks gelöst</span>
-      </footer>
+      ${renderPortalFooter()}
     `;
 
     bindAppActions();
@@ -1593,6 +1616,7 @@
   document.getElementById("export-progress").addEventListener("click", exportProgress);
   document.getElementById("import-progress").addEventListener("change", importProgress);
   document.getElementById("reset-progress").addEventListener("click", resetProgress);
+  themeToggle?.addEventListener("click", toggleTheme);
 
   document.getElementById("start-button").addEventListener("click", () => {
     const value = document.getElementById("student-name").value.trim();
@@ -1627,6 +1651,7 @@
     });
   }
 
+  applyTheme(theme);
   updateHeader();
   renderDashboard();
   if (!state.name) {

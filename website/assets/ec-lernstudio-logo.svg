@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">EC Lernstudio Logo</title>
   <defs>
     <linearGradient id="tile" x1="18" x2="110" y1="14" y2="116" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#78e2df"/>

@@ -2,6 +2,19 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.4.0 - 2. Juli 2026
+
+- EC-Lernstudio-Logo als eigenes SVG-Asset erstellt und im Header sowie als
+  App-Icon eingebunden
+- Header-Untertitel auf `Datenverarbeitung` reduziert, damit weitere
+  Lernfelder später ohne Umbenennung ergänzt werden können
+- Black Mode als Standard eingeführt und Light Mode per Toggle im Header
+  umschaltbar gemacht
+- Footer bereinigt: Standorttext entfernt und einheitlich
+  `© 2026 · Designed by Sawazki Electronics` eingesetzt
+- `TASKS.md` als laufende Aufgaben-, Ideen- und Übergabedatei ergänzt
+- EduCloud-Link geprüft und als möglicher externer Materialpfad dokumentiert
+
 ## 1.3.0 - 2. Juli 2026
 
 - LF2-Modul `2.2 Das Layout der Internetseiten eines Webshops` mit vier

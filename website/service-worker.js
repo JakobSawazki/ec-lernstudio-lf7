@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v4";
+const CACHE_NAME = "ec-lernstudio-v5";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -7,6 +7,7 @@ const APP_SHELL = [
   "./app.js",
   "./icon.svg",
   "./manifest.webmanifest",
+  "./assets/ec-lernstudio-logo.svg",
   "./assets/lf7-marketing-lab.png",
   "./assets/ecommerce-consultation-hero.png",
   "./assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf",

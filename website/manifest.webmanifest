@@ -4,7 +4,7 @@
   "description": "Interaktive Lernplattform für ausgewählte E-Commerce-Lernfelder in Datenverarbeitung.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f3f7f8",
+  "background_color": "#071827",
   "theme_color": "#071827",
   "icons": [
     {

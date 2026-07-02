@@ -37,7 +37,7 @@ Repository.
 
 ### Lokale Bildungsplan- und LF2-Dateien
 
-Ablagen: `assets/` und `LF2/`
+Ablage: `assets/`
 
 - `Rahmenlehrplan.pdf`
 - `2024-05-06 Information BG.pdf`
@@ -52,12 +52,28 @@ ausbildungsweite E-Commerce-Begriffe ausgewertet. Die lokalen PDFs bleiben
 private Arbeitsquellen und sind per `.gitignore` von der Veröffentlichung
 ausgeschlossen.
 
+Falls gleichnamige Dateien lokal noch außerhalb von `assets/` liegen, gelten
+sie nur als ältere Zwischenablage. Für neue Arbeiten ist `assets/` die
+verbindliche private Quellenablage.
+
 Die lokalen PDFs zu LF2 2.2 und LF2 2.4 wurden nur zur Orientierung geprüft.
 Sie wirken wie Lehrwerksmaterial und werden deshalb nicht über GitHub Pages
 ausgeliefert. Die veröffentlichten Materialien
 `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
 `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf` sind
 eigenständig formuliert.
+
+### Schulinterne EduCloud / OneDrive
+
+Geprüfter EduCloud-Link:
+
+<https://educloud.ks-nagold.de/s/WGAKGsT5E8ziaBT>
+
+Am 2. Juli 2026 war der Link erreichbar. Die Seite zeigte einen Ordner `EC`,
+aber keine sichtbare Dateiliste. Technisch können solche schulischen Links im
+Lernstudio als externe Ressourcen verlinkt werden. Vorher müssen Zugriff,
+Lizenz-/Nutzungsrechte und Schülerperspektive über das Schulprofil geprüft
+werden.
 
 ## Öffentliche Fachgrundlage
 
@@ -106,6 +122,15 @@ Zulässig:
 - eigens erzeugte Grafiken und Screenshots der eigenen Plattform
 
 ## Bildquelle
+
+Logo:
+
+`website/assets/ec-lernstudio-logo.svg`
+
+- Erstellt: 2. Juli 2026
+- Werkzeug: manuell als SVG im Projekt erstellt
+- Zweck: Header-Logo und visuelle Wiedererkennung des EC Lernstudios
+- Rechte-/Veröffentlichungsstatus: eigenes Projektasset
 
 `website/assets/ecommerce-consultation-hero.png`
 

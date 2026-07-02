@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 2. Juli 2026
-Version: `1.3.0`
+Version: `1.4.0`
 
 ## Auftrag und Ergebnis
 
@@ -20,7 +20,8 @@ Build-Schritt.
 - Repository: `https://github.com/JakobSawazki/ec-lernstudio-lf7`
 - GitHub Pages: `https://jakobsawazki.github.io/ec-lernstudio-lf7/`
 - produktive Dateien: `website/`
-- lokale Quellenablagen: `assets/` und `LF2/`, bewusst per `.gitignore` ausgeschlossen
+- zentrale lokale Quellenablage: `assets/`, bewusst per `.gitignore` ausgeschlossen
+- `LF2/` ist nur noch eine ältere lokale Zwischenablage und ebenfalls ignoriert
 - temporäre Renderdateien: `tmp/`, bewusst per `.gitignore` ausgeschlossen
 
 ## Umgesetzte Inhalte
@@ -54,6 +55,9 @@ Das ergibt aktuell acht Module und 48 Aufgaben.
 - lokaler Offline-Cache
 - versionierter Datei-Export und -Import
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
+- EC-Lernstudio-Logo: `website/assets/ec-lernstudio-logo.svg`
+- Black Mode als Standard und Light Mode per Header-Toggle
+- bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`
 - LF2-Arbeitsblätter:
   `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
   `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`
@@ -131,13 +135,18 @@ Der lokal abgelegte KMK-Rahmenlehrplan `assets/Rahmenlehrplan.pdf` wurde zur
 Ausweitung des Glossars auf die gesamte Ausbildung ausgewertet. Die Datei wird
 nicht veröffentlicht.
 
-Die lokal bereitgestellten Lehrbuchdateien zu LF2 liegen unter
-`LF2/Lehrbuch/`, darunter `LF2 DV.docx` und
-`2.2 Das Layout der Internetseiten eines Webshops.pdf`. Diese Dateien dienen
-nur als private Unterrichtsquellen und werden nicht öffentlich ausgeliefert.
+Die lokal bereitgestellten Lehrbuchdateien zu LF2 sollen einheitlich unter
+`assets/` liegen. Falls ältere Dateien noch unter `LF2/` vorhanden sind, gelten
+sie nur als private Zwischenablage und werden ebenfalls nicht veröffentlicht.
 Für die Website wurden stattdessen eigenständig formulierte Arbeitsblätter
 erzeugt. Rechtsstand im Impressums-Arbeitsblatt: § 5 DDG und § 18 MStV,
 Stand 24.06.2026.
+
+Ein EduCloud-Link wurde am 2. Juli 2026 geprüft:
+`https://educloud.ks-nagold.de/s/WGAKGsT5E8ziaBT`. Der Link war erreichbar,
+zeigte aber keine sichtbaren Dateien im Ordner `EC`. Eine spätere Verlinkung
+ist technisch möglich, sollte aber erst nach Befüllung und schulischer
+Rechteklärung erfolgen.
 
 Der nächste fachliche Schritt ist ein vollständiger Abgleich der eigenständig
 formulierten Inhalte mit den BiBox-Unterkapiteln, ohne geschützte Texte zu
@@ -180,7 +189,7 @@ Danach lokal über HTTP starten und im Browser prüfen:
 
 ## Sinnvolle Nächste Schritte
 
-1. Weitere LF2-Kapitel als Module ergänzen, zum Beispiel 2.2 bis 2.13 und 2.16.
+1. `TASKS.md` prüfen und die nächste priorisierte LF2-Aufgabe auswählen.
 2. BiBox-Abgleich abschließen.
 3. Zwei bis drei zusammenhängende Webshop-Fälle mit Produktseite, Impressum und Warenwirtschaft ergänzen.
 4. Kompetenzraster mit Ich-kann-Aussagen erstellen.

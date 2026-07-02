@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
 
-**Version:** `1.3.0`
+**Version:** `1.4.0`
 **Dokumentationsstand:** 2. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -66,6 +66,8 @@ KI-Baustein enthalten.
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
 - XP, Level, Lernserie und elf Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
+- eigenes EC-Lernstudio-Logo und reduzierter Header `Datenverarbeitung`
+- Black Mode als Standard und Light Mode per Toggle im Header
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
 - versionierter JSON-Export und -Import des Lernstands
@@ -117,8 +119,9 @@ eigenständig formuliert.
 Die OneNote-Übersicht wurde am 10. Juni 2026 geöffnet und bestätigte die
 Abschnitte 7.5, 7.7, 7.8, 7.9, 7.19 und 7.20. Die BiBox erfordert ein
 persönliches Westermann-Login und ist nicht Bestandteil des Repositories.
-Die lokalen Quellenablagen `assets/` und `LF2/` sind per `.gitignore`
-ausgeschlossen.
+Die zentrale lokale Quellenablage ist `assets/` und per `.gitignore`
+ausgeschlossen. Ein eventuell vorhandener lokaler Ordner `LF2/` gilt nur noch
+als ältere Zwischenablage und wird ebenfalls ignoriert.
 Die lokalen Lehrwerksdateien zu LF2 2.2 und LF2 2.4 werden wegen
 Veröffentlichungs- und Nutzungsrechten nicht öffentlich ausgeliefert.
 Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
@@ -131,6 +134,8 @@ am 24. Juni 2026 mit dem integrierten OpenAI-Bildgenerator eigens für dieses
 Projekt erzeugt. Es zeigt eine E-Commerce-Beratungssituation ohne Logos,
 Markenoberflächen oder lesbare Fremdtexte. Das frühere Titelbild
 `website/assets/lf7-marketing-lab.png` bleibt als Projektasset erhalten.
+Das Logo `website/assets/ec-lernstudio-logo.svg` wurde am 2. Juli 2026 als
+eigenes SVG für das EC Lernstudio erstellt.
 
 ## Technische Architektur
 
@@ -146,8 +151,8 @@ Build-Schritt. GitHub Pages veröffentlicht den Ordner `website/`.
 | `website/service-worker.js` | lokaler Offline-Cache |
 | `website/assets/` | projektbezogene Bildmedien |
 | `website/assets/materials/` | veröffentlichte, eigenständig erstellte Unterrichtsmaterialien |
-| `assets/` | lokale private Quellenablage, per `.gitignore` ausgeschlossen |
-| `LF2/` | lokale private LF2-Lehrbuch- und Unterrichtsquellen, per `.gitignore` ausgeschlossen |
+| `assets/` | zentrale lokale private Quellenablage, per `.gitignore` ausgeschlossen |
+| `TASKS.md` | laufende Aufgaben-, Ideen- und Übergabedatei |
 | `.github/workflows/deploy-pages.yml` | Prüfung und GitHub-Pages-Deployment |
 | `docs/` | Quellen, Übergabe und Deployment |
 
@@ -162,6 +167,7 @@ EC/
 |-- AGENTS.md
 |-- CHANGELOG.md
 |-- README.md
+|-- TASKS.md
 |-- docs/
 |   |-- DEPLOYMENT.md
 |   |-- QUELLEN.md
@@ -179,6 +185,7 @@ EC/
         |-- materials/
         |   |-- lf2-2-2-webshop-layout-arbeitsblatt.pdf
         |   `-- lf2-2-4-impressum-arbeitsblatt.pdf
+        |-- ec-lernstudio-logo.svg
         |-- ecommerce-consultation-hero.png
         `-- lf7-marketing-lab.png
 ```
@@ -211,6 +218,7 @@ Zusätzlich manuell oder automatisiert prüfen:
 
 - Onboarding mit Name und Gastmodus
 - Lernfeld-Umschalter `LF2`/`LF7`
+- Black/Light Mode im Header
 - Navigation in alle acht Module
 - LF2-Arbeitsblätter öffnen
 - Multiple-Choice- und Zahlenaufgabe
@@ -242,7 +250,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.3.0`
+Aktueller Stand: `1.4.0`
 
 ## Offene Weiterentwicklung
 
@@ -262,7 +270,7 @@ Optional:
 
 ## Einstieg für einen weiteren Agenten
 
-1. `README.md`, `AGENTS.md` und `docs/UEBERGABE.md` vollständig lesen.
+1. `README.md`, `TASKS.md`, `AGENTS.md` und `docs/UEBERGABE.md` vollständig lesen.
 2. `git status -sb` und `git log --oneline -5` prüfen.
 3. Private OneNote- und BiBox-Quellen nur als Referenz nutzen.
 4. Geschützte Texte niemals wörtlich in das öffentliche Repository kopieren.

@@ -34,6 +34,7 @@ jobs:
           test -f website/styles.css
           test -f website/manifest.webmanifest
           test -f website/icon.svg
+          test -f website/assets/ec-lernstudio-logo.svg
           test -f website/assets/lf7-marketing-lab.png
           test -f website/assets/ecommerce-consultation-hero.png
           test -f website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf
