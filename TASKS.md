@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
-Stand: 2. Juli 2026  
-Aktuelle Version: `1.4.0`  
+Stand: 3. Juli 2026<br>
+Aktuelle Version: `1.4.1`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -26,6 +26,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.4.0 | 02.07.2026 | Header vereinfachen | Untertitel auf `Datenverarbeitung` reduziert |
 | Erledigt | 1.4.0 | 02.07.2026 | Footer bereinigen | Nur noch `© 2026 · Designed by Sawazki Electronics` |
 | Erledigt | 1.4.0 | 02.07.2026 | Black/Light Mode | Black Mode als Standard, Light Mode per Header-Toggle |
+| Erledigt | 1.4.1 | 03.07.2026 | Theme-Toggle einreihen | Schalter in Desktop-Navigation verschoben und SE-Stil angepasst |
 
 ## In Arbeit
 

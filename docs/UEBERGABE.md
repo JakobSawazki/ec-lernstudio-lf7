@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 2. Juli 2026
-Version: `1.4.0`
+Stand: 3. Juli 2026
+Version: `1.4.1`
 
 ## Auftrag und Ergebnis
 
@@ -56,7 +56,7 @@ Das ergibt aktuell acht Module und 48 Aufgaben.
 - versionierter Datei-Export und -Import
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
 - EC-Lernstudio-Logo: `website/assets/ec-lernstudio-logo.svg`
-- Black Mode als Standard und Light Mode per Header-Toggle
+- Black Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`
 - LF2-Arbeitsblätter:
   `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und

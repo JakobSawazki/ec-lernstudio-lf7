@@ -2,6 +2,13 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.4.1 - 3. Juli 2026
+
+- Black-/Light-Mode-Schalter in die zentrale Desktop-Navigation verschoben
+- Toggle-Grafik an den Stil der Sawazki-Electronics-Homepage angepasst
+- separaten mobilen Theme-Schalter für kleinere Ansichten ergänzt
+- Offline-Cache aktualisiert
+
 ## 1.4.0 - 2. Juli 2026
 
 - EC-Lernstudio-Logo als eigenes SVG-Asset erstellt und im Header sowie als

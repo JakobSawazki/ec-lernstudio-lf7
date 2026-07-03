@@ -18,13 +18,13 @@
 
     <header class="site-header">
       <a class="brand" href="#dashboard" aria-label="EC Lernstudio Startseite">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="assets/ec-lernstudio-logo.svg" alt="">
-          </span>
-          <span class="brand-copy">
-            <strong>EC Lernstudio</strong>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/ec-lernstudio-logo.svg" alt="">
+        </span>
+        <span class="brand-copy">
+          <strong>EC Lernstudio</strong>
           <small>Datenverarbeitung</small>
-          </span>
+        </span>
       </a>
 
       <div class="header-center">
@@ -35,6 +35,21 @@
           <button class="nav-link" type="button" data-view="lab">Kennzahlen-Labor</button>
           <button class="nav-link" type="button" data-view="mistakes">Fehlertraining</button>
           <button class="nav-link" type="button" data-view="achievements">Erfolge</button>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Light Mode aktivieren"
+            aria-pressed="true"
+          >
+            <svg class="theme-toggle-icon moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.3 15.1A8.2 8.2 0 0 1 8.9 3.7 8.7 8.7 0 1 0 20.3 15.1Z"/>
+            </svg>
+            <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.1"/>
+              <path d="M12 2.7v2.1M12 19.2v2.1M4.5 4.5 6 6M18 18l1.5 1.5M2.7 12h2.1M19.2 12h2.1M4.5 19.5 6 18M18 6l1.5-1.5"/>
+            </svg>
+          </button>
         </nav>
         <nav class="field-nav" aria-label="Lernfelder">
           <button class="field-link" type="button" data-field="LF2">LF2</button>
@@ -44,13 +59,19 @@
 
       <div class="header-actions">
         <button
-          class="theme-toggle"
-          id="theme-toggle"
+          class="theme-toggle theme-toggle-mobile"
+          id="theme-toggle-mobile"
           type="button"
           aria-label="Light Mode aktivieren"
           aria-pressed="true"
         >
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <svg class="theme-toggle-icon moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 15.1A8.2 8.2 0 0 1 8.9 3.7 8.7 8.7 0 1 0 20.3 15.1Z"/>
+          </svg>
+          <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.1"/>
+            <path d="M12 2.7v2.1M12 19.2v2.1M4.5 4.5 6 6M18 18l1.5 1.5M2.7 12h2.1M19.2 12h2.1M4.5 19.5 6 18M18 6l1.5-1.5"/>
+          </svg>
         </button>
         <button
           class="profile-chip"

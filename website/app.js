@@ -11,7 +11,10 @@
   const welcomeModal = document.getElementById("welcome-modal");
   const settingsModal = document.getElementById("settings-modal");
   const toastRegion = document.getElementById("toast-region");
-  const themeToggle = document.getElementById("theme-toggle");
+  const themeToggles = [
+    document.getElementById("theme-toggle"),
+    document.getElementById("theme-toggle-mobile")
+  ].filter(Boolean);
 
   const defaultState = {
     name: "",
@@ -57,14 +60,14 @@
       "content",
       theme === "dark" ? "#071827" : "#f3f7f8"
     );
-    if (themeToggle) {
-      themeToggle.setAttribute(
+    themeToggles.forEach((toggle) => {
+      toggle.setAttribute(
         "aria-label",
         theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren"
       );
-      themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
-      themeToggle.title = theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren";
-    }
+      toggle.setAttribute("aria-pressed", String(theme === "dark"));
+      toggle.title = theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren";
+    });
   }
 
   function toggleTheme() {
@@ -1616,7 +1619,7 @@
   document.getElementById("export-progress").addEventListener("click", exportProgress);
   document.getElementById("import-progress").addEventListener("change", importProgress);
   document.getElementById("reset-progress").addEventListener("click", resetProgress);
-  themeToggle?.addEventListener("click", toggleTheme);
+  themeToggles.forEach((toggle) => toggle.addEventListener("click", toggleTheme));
 
   document.getElementById("start-button").addEventListener("click", () => {
     const value = document.getElementById("student-name").value.trim();

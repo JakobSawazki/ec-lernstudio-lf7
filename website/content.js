@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.4.0",
+  version: "1.4.1",
   learningFields: [
     {
       id: "LF2",
