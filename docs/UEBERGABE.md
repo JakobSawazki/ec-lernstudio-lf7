@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 3. Juli 2026
-Version: `1.4.1`
+Stand: 8. Juli 2026
+Version: `1.8.2`
 
 ## Auftrag und Ergebnis
 
@@ -16,20 +16,29 @@ Build-Schritt.
 
 ## Ablage und Veröffentlichung
 
-- Arbeitsordner: `G:\Meine Ablage\Lehramt\Lernfelder\EC`
+- Arbeitsordner: `D:\Google Drive\Lehramt\Lernfelder\EC`
 - Repository: `https://github.com/JakobSawazki/ec-lernstudio-lf7`
 - GitHub Pages: `https://jakobsawazki.github.io/ec-lernstudio-lf7/`
 - produktive Dateien: `website/`
 - zentrale lokale Quellenablage: `assets/`, bewusst per `.gitignore` ausgeschlossen
 - `LF2/` ist nur noch eine ältere lokale Zwischenablage und ebenfalls ignoriert
 - temporäre Renderdateien: `tmp/`, bewusst per `.gitignore` ausgeschlossen
+- Entwicklungsrhythmus: lokal arbeiten, Änderungen in README/Changelog/TASKS
+  und den Übergabedateien dokumentieren, GitHub erst bei geprüften klaren
+  Versionsständen pushen
+- ein Push nach `main` aktualisiert die GitHub-Pages-Seite und sollte daher
+  bewusst als Online-Stellung verstanden werden
 
 ## Umgesetzte Inhalte
 
 LF2:
 
 - 2.2 Das Layout der Internetseiten eines Webshops
+- 2.3 Die Seiten des Webshops zur Darstellung des Sortiments
 - 2.4 Das Impressum
+- 2.5 Die Haftung für die Inhalte der Webseite
+- 2.6 Produktdetailseite: Informationsmöglichkeiten über Waren
+- 2.7 Produktdetailseite: Informationen für Kunden
 
 LF7:
 
@@ -40,8 +49,9 @@ LF7:
 - 7.19 Auswertung der Onlinemarketing-Maßnahmen
 - 7.20 KI - Entstehung und praktische Anwendung
 
-Je Modul existieren vier Erklärungskarten, vier Merksätze und sechs Aufgaben.
-Das ergibt aktuell acht Module und 48 Aufgaben.
+Je Modul existieren vier Erklärungskarten, vier Merksätze und mindestens sechs
+Aufgaben; die Module 2.5 und 2.7 haben acht Aufgaben. Das ergibt aktuell zwölf
+Module und 76 Aufgaben.
 
 ## Besondere Funktionen
 
@@ -49,18 +59,32 @@ Das ergibt aktuell acht Module und 48 Aufgaben.
 - Kennzahlen-Labor mit Plausibilitätsprüfung
 - Praxischeck mit zufälligen Fragen aus dem aktiven Lernfeld
 - Fehlertraining
-- XP und elf Abzeichen
+- XP und fünfzehn Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
-- versionierter Datei-Export und -Import
+- anonymes Login-Kürzel im Schema `vor.nac`, z. B. `jak.saw`
+- versionierter Datei-Export und -Import mit Desktop-Vorschlag in unterstützten Browsern
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
-- EC-Lernstudio-Logo: `website/assets/ec-lernstudio-logo.svg`
-- Black Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
+- fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich
+  und dezenter Hover-Animation: `website/assets/ec-lernstudio-logo.png`
+- fotorealistische LF2-Kapitelbilder:
+  `website/assets/module-icons/lf2-2-2-layout.png`,
+  `website/assets/module-icons/lf2-2-3-sortiment.png`,
+  `website/assets/module-icons/lf2-2-4-impressum.png`,
+  `website/assets/module-icons/lf2-2-5-haftung.png`,
+  `website/assets/module-icons/lf2-2-6-produktdetailseite.png` und
+  `website/assets/module-icons/lf2-2-7-kundeninformationen.png`
+- kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
+- Dark Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`
 - LF2-Arbeitsblätter:
-  `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
-  `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`
+  `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf`,
+  `website/assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf`,
+  `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`,
+  `website/assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf` und
+  `website/assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf` sowie
+  `website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf`
 
 ## Zustandsmodell
 
@@ -108,7 +132,7 @@ Neue Module:
 
 1. Modulobjekt in `website/content.js` ergänzen,
 2. `field: "LFx"` setzen,
-3. sechs Aufgaben mit passender `module`-ID ergänzen,
+3. mindestens sechs Aufgaben mit passender `module`-ID ergänzen,
 4. optionale `resources` und `projectSteps` pflegen,
 5. Abzeichenbedingungen prüfen.
 
@@ -139,8 +163,17 @@ Die lokal bereitgestellten Lehrbuchdateien zu LF2 sollen einheitlich unter
 `assets/` liegen. Falls ältere Dateien noch unter `LF2/` vorhanden sind, gelten
 sie nur als private Zwischenablage und werden ebenfalls nicht veröffentlicht.
 Für die Website wurden stattdessen eigenständig formulierte Arbeitsblätter
-erzeugt. Rechtsstand im Impressums-Arbeitsblatt: § 5 DDG und § 18 MStV,
-Stand 24.06.2026.
+erzeugt. Die PDF zu LF2 2.3 wurde am 8. Juli 2026 nur zur fachlichen
+Orientierung visuell geprüft und nicht veröffentlicht. Rechtsstand im
+Impressums-Arbeitsblatt: § 5 DDG und § 18 MStV, Stand 24.06.2026.
+Die PDFs zu LF2 2.5, 2.6 und 2.7 wurden am 8. Juli 2026 ebenfalls nur zur
+fachlichen Orientierung gelesen und nicht veröffentlicht. Rechtsstand im
+Haftungs-Modul: Haftungsregeln der früheren §§ 7-10 TMG gelten heute über
+Art. 4-8 DSA in Verbindung mit dem DDG, geprüft am 08.07.2026.
+Zusätzlich wurden vom Auftraggeber bereitgestellte eigene OneNote-Notizen zu
+2.5, 2.6 und 2.7 (Lernziele, Fallanalysen, Beispiel „Bürostuhl X1000“,
+Sortimentsaufbau und Produktinformationen) eingearbeitet; Musterlösungen daraus
+werden nicht veröffentlicht.
 
 Ein EduCloud-Link wurde am 2. Juli 2026 geprüft:
 `https://educloud.ks-nagold.de/s/WGAKGsT5E8ziaBT`. Der Link war erreichbar,
@@ -191,5 +224,5 @@ Danach lokal über HTTP starten und im Browser prüfen:
 
 1. `TASKS.md` prüfen und die nächste priorisierte LF2-Aufgabe auswählen.
 2. BiBox-Abgleich abschließen.
-3. Zwei bis drei zusammenhängende Webshop-Fälle mit Produktseite, Impressum und Warenwirtschaft ergänzen.
+3. Den Produktseiten-Lernpfad mit LF2 2.8 bis 2.11 ergänzen.
 4. Kompetenzraster mit Ich-kann-Aussagen erstellen.

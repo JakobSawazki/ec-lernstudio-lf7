@@ -2,6 +2,112 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.8.2 - 8. Juli 2026
+
+- fotorealistische Kapitelbilder für LF2 `2.5 Haftung für Webseiteninhalte`
+  und `2.6 Produktdetailseite: Informationsmöglichkeiten über Waren` erzeugt
+  und in den Modulkarten eingebunden
+- Offline-Cache um `lf2-2-5-haftung.png` und
+  `lf2-2-6-produktdetailseite.png` erweitert und auf
+  `ec-lernstudio-v14` erhöht
+- Header-Logo-Hover dezenter gestaltet: kleinerer Skalierungseffekt,
+  reduzierter Glow und zurückgenommener Lichtschimmer
+- Veröffentlichungsrhythmus dokumentiert: lokal weiterarbeiten, Änderungen
+  versionieren und GitHub bei geprüften klaren Versionsständen aktualisieren
+
+## 1.8.1 - 8. Juli 2026
+
+- Header-Logo als Home-Link abgesichert: Klick auf das Logo navigiert aus jeder
+  Ansicht zurück zur Startseite des EC Lernstudios
+- Hover-Animation für das Header-Logo ergänzt, inklusive Glow, leichtem
+  Anheben und kurzem Lichtschimmer
+- schwarzen Außenhintergrund des PNG-Logos transparent freigestellt und
+  `icon.png` synchronisiert
+- Offline-Cache auf `ec-lernstudio-v13` erhöht
+
+## 1.8.0 - 8. Juli 2026
+
+- LF2-Modul `2.7 Produktdetailseite: Informationen für Kunden` mit vier
+  Erklärbausteinen, Projektauftrag, acht Aufgaben und eigenem Abzeichen
+  `Kundeninformant` ergänzt
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf2-2-7-kundeninformationen-arbeitsblatt.pdf` mit Sortimentsbegriffen,
+  Produktmerkmal-Tabelle, Herkunfts-/Zeichen-Check und Projektcheck erstellt
+- Glossar um Sorte, Artikel, Warengruppe, Kernsortiment, Randsortiment,
+  Produktmerkmal, Herkunftsangabe, Gütezeichen, Typenschild und
+  Handling-Informationen erweitert
+- fotorealistisches Kapitelbild
+  `lf2-2-7-kundeninformationen.png` erzeugt und im Modul eingebunden
+- LF2-Beschreibungstext und Offline-Cache auf sechs LF2-Module erweitert
+
+## 1.7.0 - 8. Juli 2026
+
+- LF2-Modul `2.6 Produktdetailseite: Informationsmöglichkeiten über Waren`
+  mit vier Erklärbausteinen (Warenwissen, Informationsquellen, Seitenelemente,
+  Produktdatenmanagement), Projektauftrag, sechs Aufgaben und Abzeichen
+  `Warenkenner` ergänzt
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf2-2-6-produktdetailseite-arbeitsblatt.pdf` mit Analyse-Tabelle,
+  Quellen-Spickzettel, Bauplan „Bürostuhl X1000“ und CSV-Minikatalog
+- Modul 2.5 nach OneNote-Notizen erweitert: Persönlichkeitsrechte und
+  Nutzerbewertungen in den Erklärtexten, zwei neue Aufgaben (Haftung für
+  Kundenbewertungen, DSGVO-Verstoß), Projektschritt Datenschutzhinweis
+- Arbeitsblatt 2.5 erweitert: zwei neue Fälle (Bewertung, Newsletter-Daten),
+  Datenschutz-Mustergerüst und Mini-Präsentationsauftrag
+- Glossar um Up-Selling, Warenkenntnisse, Elektronischer Katalog,
+  Katalogaustauschformat, PIM-System und Produktklassifikation erweitert
+- Offline-Cache erweitert und LF2-Beschreibungstext auf fünf Module
+  aktualisiert
+
+## 1.6.0 - 8. Juli 2026
+
+- LF2-Modul `2.5 Die Haftung für die Inhalte der Webseite` mit vier
+  Erklärbausteinen, Projektauftrag, sechs Aufgaben und eigenem Abzeichen
+  `Haftungs-Profi` ergänzt
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf2-2-5-haftung-arbeitsblatt.pdf` mit Fallanalyse, CC-Spickzettel und
+  Mustergerüst veröffentlicht
+- Glossar um Disclaimer, Abmahnung, Creative Commons, Zitatrecht, Deep Link
+  und Hotlink erweitert
+- Rechtsstand geprüft und schülergerecht eingeordnet: Haftungsregeln der
+  §§ 7-10 TMG gelten heute über Art. 4-8 DSA, das DDG hat das TMG abgelöst
+- LF2-Beschreibungstext auf vier Module aktualisiert und Offline-Cache
+  erweitert
+- Dark-Mode-Kontraste in Quiz und Glossar-Detail repariert: Antwortkarten,
+  Zahleneingabe, Feedback-Boxen, Begriffskarten und Beispielkästen nutzen
+  jetzt Theme-Variablen statt festem Weiß; Light Mode unverändert
+
+## 1.5.1 - 8. Juli 2026
+
+- anonymes Login-Kürzel eingeführt: aus Vor- und Nachname wird automatisch ein
+  Kürzel wie `jak.saw`
+- Startdialog lässt sich jetzt direkt mit `Esc` ohne Login schließen
+- Lernstand-Export nutzt das Login-Kürzel im JSON-Dateinamen und schlägt in
+  unterstützten Browsern weiterhin den Desktop als Speicherort vor
+- fotorealistisches PNG-Logo neu erzeugt und als Header-/App-Icon eingebunden
+- fotorealistische Kapitelbilder für LF2 2.2, 2.3 und 2.4 ergänzt
+- Dark Mode und Light Mode klarer getrennt: dunkle Modulflächen im Standardmodus,
+  helle Modulflächen im Light Mode und bessere Kontraste
+
+## 1.5.0 - 8. Juli 2026
+
+- LF2-Modul `2.3 Die Seiten des Webshops zur Darstellung des Sortiments`
+  mit vier Erklärbausteinen, Projektauftrag, sechs Aufgaben und eigenem
+  Abzeichen ergänzt
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf2-2-3-webshop-seiten-arbeitsblatt.pdf` veröffentlicht
+- Glossar um Startseite, Produktkategorieseite, Landing Page,
+  Produktdetailseite, Sortierung und Paginierung erweitert
+- Hero-Schrift auf der Startseite kompakter und links begrenzt, damit das
+  Foto weniger verdeckt wird
+- PNG-Homepage-Icon im Header größer dargestellt und Offline-Cache erweitert
+
+## 1.4.2 - 8. Juli 2026
+
+- neues EC-Homepage-Icon als optimiertes PNG eingebunden
+- Header-Logo im Desktop- und Mobilheader größer dargestellt
+- Favicon, Web-App-Manifest und Offline-Cache auf das neue Icon umgestellt
+
 ## 1.4.1 - 3. Juli 2026
 
 - Black-/Light-Mode-Schalter in die zentrale Desktop-Navigation verschoben

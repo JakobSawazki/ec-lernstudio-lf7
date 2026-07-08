@@ -4,8 +4,8 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
 
-**Version:** `1.4.1`
-**Dokumentationsstand:** 3. Juli 2026
+**Version:** `1.8.2`
+**Dokumentationsstand:** 8. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -34,10 +34,14 @@ Für LF2 sind zunächst folgende Kapitel eingebunden:
 | Abschnitt | Thema | Portalmodul |
 | --- | --- | --- |
 | 2.2 | Das Layout der Internetseiten eines Webshops | Webshop-Layout |
+| 2.3 | Die Seiten des Webshops zur Darstellung des Sortiments | Webshop-Seiten |
 | 2.4 | Das Impressum | Das Impressum |
+| 2.5 | Die Haftung für die Inhalte der Webseite | Haftung für Webseiteninhalte |
+| 2.6 | Produktdetailseite: Informationsmöglichkeiten über Waren | Produktdetailseite |
+| 2.7 | Produktdetailseite: Informationen für Kunden | Kundeninformationen |
 
-Weitere LF2-Kapitel wie Produktdetailseite, Preisgestaltung oder
-ERP/Warenwirtschaft können später als eigene Module ergänzt werden.
+Weitere LF2-Kapitel wie Preisgestaltung oder ERP/Warenwirtschaft können später
+als eigene Module ergänzt werden.
 
 Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 
@@ -57,17 +61,21 @@ KI-Baustein enthalten.
 ## Funktionsumfang
 
 - Lernfeld-Umschalter für `LF2` und `LF7`
-- acht Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 48 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
-- abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout` und `2.4 Das Impressum`
-  als eigenständig formulierte PDFs
+- zwölf Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 76 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout`, `2.3 Webshop-Seiten`,
+  `2.4 Das Impressum`, `2.5 Haftung für Webseiteninhalte` und
+  `2.6 Produktdetailseite` sowie `2.7 Informationen für Kunden` als
+  eigenständig formulierte PDFs
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
 - lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
-- XP, Level, Lernserie und elf Abzeichen
+- XP, Level, Lernserie und fünfzehn Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
-- eigenes EC-Lernstudio-Logo und reduzierter Header `Datenverarbeitung`
-- Black Mode als Standard und Light Mode per Toggle im Header
+- fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
+  dezenter Hover-Animation und reduziertem Header `Datenverarbeitung`
+- fotorealistische Kapitelbilder für alle eingebundenen LF2-Module 2.2 bis 2.7
+- Dark Mode als Standard und Light Mode per Toggle im Header
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
 - versionierter JSON-Export und -Import des Lernstands
@@ -78,7 +86,7 @@ KI-Baustein enthalten.
 Der Lernstand liegt unter dem Browser-Schlüssel `ec-lernstudio-lf7-v1`.
 Gespeichert werden:
 
-- Anzeigename oder Kürzel
+- anonymes Login-Kürzel, z. B. `jak.saw`
 - aktives Lernfeld
 - richtig gelöste Aufgaben
 - gelöste Glossar-Checks
@@ -93,6 +101,10 @@ Es gibt kein Backend, kein Tracking und keine zentrale Schülerdatenbank. Der
 Browserstand kann bei Profilbereinigung, Gastkonten oder einem Gerätewechsel
 verloren gehen. Über das Profil oben rechts lässt sich deshalb der vollständige
 Stand als JSON-Datei speichern und später wieder laden.
+
+Bei der Eingabe kann auch Vor- und Nachname verwendet werden; gespeichert wird
+daraus nur das gekürzte Login im Schema `vor.nac`, zum Beispiel `jak.saw`.
+Der Startdialog lässt sich mit `Esc` ohne Login schließen.
 
 In Browsern mit File System Access API öffnet sich ein Speicherdialog mit dem
 Desktop als Vorschlag. Andere Browser speichern die Datei üblicherweise im
@@ -110,6 +122,7 @@ Private Referenzen:
 - BiBox Westermann, Buch-ID `3943`, Einstieg um Seite `240`
 - vom Auftraggeber festgelegte DV-Auswahl für LF2 und LF7
 - lokal bereitgestellter KMK-Rahmenlehrplan unter `assets/Rahmenlehrplan.pdf`
+- lokale LF2-Lehrwerksdateien unter `assets/LF2/`
 
 Die privaten Quellen dienen der fachlichen Orientierung. Originalseiten,
 Screenshots, Buchtexte, Musterlösungen und personenbezogene Inhalte werden
@@ -122,11 +135,15 @@ persönliches Westermann-Login und ist nicht Bestandteil des Repositories.
 Die zentrale lokale Quellenablage ist `assets/` und per `.gitignore`
 ausgeschlossen. Ein eventuell vorhandener lokaler Ordner `LF2/` gilt nur noch
 als ältere Zwischenablage und wird ebenfalls ignoriert.
-Die lokalen Lehrwerksdateien zu LF2 2.2 und LF2 2.4 werden wegen
+Die lokalen Lehrwerksdateien zu LF2 2.2 bis 2.7 werden wegen
 Veröffentlichungs- und Nutzungsrechten nicht öffentlich ausgeliefert.
 Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
-`website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf` und
-`website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`.
+`website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf` und
+`website/assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf` sowie
+`website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
 Das aktuelle Titelbild `website/assets/ecommerce-consultation-hero.png` wurde
@@ -134,8 +151,15 @@ am 24. Juni 2026 mit dem integrierten OpenAI-Bildgenerator eigens für dieses
 Projekt erzeugt. Es zeigt eine E-Commerce-Beratungssituation ohne Logos,
 Markenoberflächen oder lesbare Fremdtexte. Das frühere Titelbild
 `website/assets/lf7-marketing-lab.png` bleibt als Projektasset erhalten.
-Das Logo `website/assets/ec-lernstudio-logo.svg` wurde am 2. Juli 2026 als
-eigenes SVG für das EC Lernstudio erstellt.
+Das Homepage-Icon `website/assets/ec-lernstudio-logo.png` wurde am 8. Juli
+2026 als fotorealistisches PNG für Header, Favicon und Web-App-Manifest
+eingebunden. Die LF2-Kapitelbilder liegen unter
+`website/assets/module-icons/`.
+
+Der Arbeitsstand wird lokal unter `D:\Google Drive\Lehramt\Lernfelder\EC`
+geführt und zusätzlich über Google Drive synchronisiert. GitHub wird bewusst
+bei geprüften, klar benannten Versionsständen aktualisiert; ein Push nach
+`main` ist zugleich die Online-Aktualisierung über GitHub Pages.
 
 ## Technische Architektur
 
@@ -176,16 +200,27 @@ EC/
     |-- .nojekyll
     |-- app.js
     |-- content.js
-    |-- icon.svg
+    |-- icon.png
     |-- index.html
     |-- manifest.webmanifest
     |-- service-worker.js
     |-- styles.css
     `-- assets/
+        |-- module-icons/
+        |   |-- lf2-2-2-layout.png
+        |   |-- lf2-2-3-sortiment.png
+        |   |-- lf2-2-4-impressum.png
+        |   |-- lf2-2-5-haftung.png
+        |   |-- lf2-2-6-produktdetailseite.png
+        |   `-- lf2-2-7-kundeninformationen.png
         |-- materials/
         |   |-- lf2-2-2-webshop-layout-arbeitsblatt.pdf
-        |   `-- lf2-2-4-impressum-arbeitsblatt.pdf
-        |-- ec-lernstudio-logo.svg
+        |   |-- lf2-2-3-webshop-seiten-arbeitsblatt.pdf
+        |   |-- lf2-2-4-impressum-arbeitsblatt.pdf
+        |   |-- lf2-2-5-haftung-arbeitsblatt.pdf
+        |   |-- lf2-2-6-produktdetailseite-arbeitsblatt.pdf
+        |   `-- lf2-2-7-kundeninformationen-arbeitsblatt.pdf
+        |-- ec-lernstudio-logo.png
         |-- ecommerce-consultation-hero.png
         `-- lf7-marketing-lab.png
 ```
@@ -218,8 +253,8 @@ Zusätzlich manuell oder automatisiert prüfen:
 
 - Onboarding mit Name und Gastmodus
 - Lernfeld-Umschalter `LF2`/`LF7`
-- Black/Light Mode im Header
-- Navigation in alle acht Module
+- Dark/Light Mode im Header
+- Navigation in alle zwölf Module
 - LF2-Arbeitsblätter öffnen
 - Multiple-Choice- und Zahlenaufgabe
 - deutsche Zahleneingabe mit Komma und Punkt
@@ -250,7 +285,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.4.1`
+Aktueller Stand: `1.8.2`
 
 ## Offene Weiterentwicklung
 

@@ -1,17 +1,27 @@
-const CACHE_NAME = "ec-lernstudio-v6";
+const CACHE_NAME = "ec-lernstudio-v14";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
   "./content.js",
   "./app.js",
-  "./icon.svg",
+  "./icon.png",
   "./manifest.webmanifest",
-  "./assets/ec-lernstudio-logo.svg",
+  "./assets/ec-lernstudio-logo.png",
+  "./assets/module-icons/lf2-2-2-layout.png",
+  "./assets/module-icons/lf2-2-3-sortiment.png",
+  "./assets/module-icons/lf2-2-4-impressum.png",
+  "./assets/module-icons/lf2-2-5-haftung.png",
+  "./assets/module-icons/lf2-2-6-produktdetailseite.png",
+  "./assets/module-icons/lf2-2-7-kundeninformationen.png",
   "./assets/lf7-marketing-lab.png",
   "./assets/ecommerce-consultation-hero.png",
   "./assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf",
-  "./assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf"
+  "./assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf"
 ];
 
 self.addEventListener("install", (event) => {

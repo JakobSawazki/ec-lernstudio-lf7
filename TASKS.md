@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
-Stand: 3. Juli 2026<br>
-Aktuelle Version: `1.4.1`<br>
+Stand: 8. Juli 2026<br>
+Aktuelle Version: `1.8.2`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -9,7 +9,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
 - `Offen`: noch nicht begonnen
 - `In Arbeit`: fachlich oder technisch vorbereitet, aber noch nicht final
-- `Erledigt`: umgesetzt, getestet und veröffentlicht
+- `Erledigt`: lokal umgesetzt und getestet; Veröffentlichung erfolgt separat bei einem klaren Versionsstand
 
 ## Erledigt
 
@@ -27,21 +27,30 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.4.0 | 02.07.2026 | Footer bereinigen | Nur noch `© 2026 · Designed by Sawazki Electronics` |
 | Erledigt | 1.4.0 | 02.07.2026 | Black/Light Mode | Black Mode als Standard, Light Mode per Header-Toggle |
 | Erledigt | 1.4.1 | 03.07.2026 | Theme-Toggle einreihen | Schalter in Desktop-Navigation verschoben und SE-Stil angepasst |
+| Erledigt | 1.4.2 | 08.07.2026 | Homepage-Icon ersetzen | Neues PNG-Icon oben links, als Favicon und im Offline-Cache eingebunden |
+| Erledigt | 1.5.0 | 08.07.2026 | Hero-Schrift und Logo verfeinern | Startseiten-Headline kompakter gesetzt, PNG-Logo oben links größer dargestellt |
+| Erledigt | 1.5.0 | 08.07.2026 | LF2 2.3 Seiten des Webshops | Modul, Aufgaben, Glossarbegriffe und eigenes Arbeitsblatt lokal eingebunden |
+| Erledigt | 1.5.1 | 08.07.2026 | Login, Theme und Kapitelbilder | Anonymes Kürzel-Login, ESC-Start, fotorealistische PNG-Bilder und bessere Dark/Light-Kontraste lokal umgesetzt |
+| Erledigt | 1.6.0 | 08.07.2026 | LF2 2.5 Haftung für Webseiteninhalte | Modul, sechs Aufgaben, Abzeichen, sechs Glossarbegriffe und eigenes Arbeitsblatt lokal eingebunden |
+| Erledigt | 1.6.0 | 08.07.2026 | Dark-Mode-Kontraste Quiz und Glossar | Antwortkarten, Zahleneingabe, Feedback-Boxen und Glossar-Detailkarten von festem Weiß auf Theme-Variablen umgestellt |
+| Erledigt | 1.7.0 | 08.07.2026 | LF2 2.5 nach OneNote-Notizen erweitert | Persönlichkeitsrechte, Bewertungs-Haftung und DSGVO als Erklärtexte, zwei Zusatzaufgaben und Datenschutz-Baustein im Arbeitsblatt |
+| Erledigt | 1.7.0 | 08.07.2026 | LF2 2.6 Produktdetailseite | Modul, sechs Aufgaben, Abzeichen, sechs Glossarbegriffe und eigenes Arbeitsblatt lokal eingebunden |
+| Erledigt | 1.8.0 | 08.07.2026 | LF2 2.7 Produktdetailseite: Informationen für Kunden | Modul, acht Aufgaben, Abzeichen, zehn Glossarbegriffe, eigenes Arbeitsblatt und Kapitelbild lokal eingebunden |
+| Erledigt | 1.8.1 | 08.07.2026 | Header-Logo verfeinern | Logo-Hintergrund transparent freigestellt, Hover-Animation ergänzt und Klick als Startseiten-Navigation abgesichert |
+| Erledigt | 1.8.2 | 08.07.2026 | Kapitelbilder und Logo-Hover abrunden | Fotorealistische Modulbilder für LF2 2.5 und 2.6 eingebunden, Offline-Cache aktualisiert und Logo-Lichteffekt dezenter gestaltet |
 
 ## In Arbeit
 
 | Status | Version | Datum | Aufgabe | Nächster Schritt |
 | --- | --- | --- | --- | --- |
-| In Arbeit | 1.4.x | 02.07.2026 | Externe Lehrbuchausschnitte verlinken | EduCloud/OneDrive-Ordner befüllen, Rechte schulisch klären und dann als externe Ressource verlinken |
-| In Arbeit | 1.4.x | 02.07.2026 | Grafiken für eigene Arbeitsblätter | Eigene Illustrationen in `assets/` sammeln oder erzeugen lassen und anschließend in neue PDF-Materialien übernehmen |
+| In Arbeit | 1.5.x | 02.07.2026 | Externe Lehrbuchausschnitte verlinken | EduCloud/OneDrive-Ordner befüllen, Rechte schulisch klären und dann als externe Ressource verlinken |
+| In Arbeit | 1.5.x | 02.07.2026 | Grafiken für eigene Arbeitsblätter | Eigene Illustrationen in `assets/` sammeln oder erzeugen lassen und anschließend in neue PDF-Materialien übernehmen |
 
 ## Offen
 
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
-| Offen | Hoch | LF2 2.3 Seiten des Webshops | Nächstes sinnvolles DV-Modul nach Layout und Impressum |
-| Offen | Hoch | LF2 2.5 Haftung für Webseiteninhalte | Rechtlich nah am Impressum, gut als Transfermodul |
-| Offen | Mittel | LF2 2.6 bis 2.11 Produktdetailseite | Als zusammenhängender Produktseiten-Lernpfad denkbar |
+| Offen | Mittel | LF2 2.8 bis 2.11 weitere Produktseiten-Kapitel | 2.7 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
 | Offen | Mittel | LF2 2.12 Preisgestaltung und Preisdarstellung | Mit kleinen Rechen-/Prüfaufgaben verbinden |
 | Offen | Mittel | LF2 2.16 ERP- und Warenwirtschaftssysteme | DV-nah, später gut mit Datenflussdiagramm |
 | Offen | Niedrig | Lehrerbereich für eigene Aufgaben | Erst sinnvoll, wenn mehr Module stabil sind |
@@ -49,12 +58,19 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
 ## Material- und Rechte-Regeln
 
-- Private Quellen liegen einheitlich unter `G:\Meine Ablage\Lehramt\Lernfelder\EC\assets`.
+- Private Quellen liegen einheitlich unter `D:\Google Drive\Lehramt\Lernfelder\EC\assets`.
 - `assets/` ist per `.gitignore` ausgeschlossen und wird nicht veröffentlicht.
 - Lehrbuch-PDFs nicht direkt in `website/` kopieren und nicht über GitHub Pages ausliefern.
 - Eigene Arbeitsblätter, Grafiken und Aufgaben dürfen in `website/assets/materials/` veröffentlicht werden.
 - Schulinterne EduCloud-/OneDrive-Links können technisch verlinkt werden, wenn die Schule bzw. Lizenz dies für die Lerngruppe erlaubt.
 - Externe Materiallinks sollten als `target="_blank"` mit Hinweis auf schulische Anmeldung/Zugriffsschutz eingebunden werden.
+
+## Arbeits- und Veröffentlichungsrhythmus
+
+- Während der Entwicklung wird lokal unter `D:\Google Drive\Lehramt\Lernfelder\EC` gearbeitet; Google Drive synchronisiert diesen Arbeitsstand zusätzlich.
+- Inhaltliche und technische Änderungen werden in `CHANGELOG.md`, `TASKS.md`, `README.md` sowie den Übergabe-/Quellendateien dokumentiert.
+- GitHub wird nicht nach jedem kleinen Zwischenschritt aktualisiert, sondern bei einem geprüften, klar benannten Versionsstand.
+- Ein Push nach `main` aktualisiert die GitHub-Pages-Seite und sollte deshalb erst erfolgen, wenn der Stand wirklich online gehen soll.
 
 ## EduCloud-Notiz
 

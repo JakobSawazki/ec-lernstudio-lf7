@@ -1,17 +1,17 @@
 window.EC_CONTENT = {
-  version: "1.4.1",
+  version: "1.8.2",
   learningFields: [
     {
       id: "LF2",
       label: "LF2",
       title: "Lernfeld 2",
       subtitle: "Sortimente im Onlinevertrieb gestalten und die Beschaffung unterstützen",
-      short: "Webshop-Seiten, Produktdarstellung, Recht, Preisangaben und Warenwirtschaft.",
+      short: "Webshop-Seiten, Produktdarstellung, Kundeninformationen, Recht, Preisangaben und Warenwirtschaft.",
       heroTitle: "Webshops gestalten",
       heroEmphasis: "sichtbar, nutzbar, rechtssicher.",
       heroText: "Im ersten Ausbildungsjahr geht es darum, Sortiment, Produktseiten, Preisangaben und technische Shop-Strukturen so aufzubauen, dass Kunden Orientierung finden und das Projekt sauber umgesetzt wird.",
-      modulesTitle: "Vom Shop-Layout zur rechtssicheren Produktseite.",
-      modulesText: "Die DV-Auswahl für LF2 startet mit Webshop-Layout und Impressum. Weitere Kapitel können später als eigene Module ergänzt werden."
+      modulesTitle: "Vom Shop-Layout zur informativen Produktseite.",
+      modulesText: "Die DV-Auswahl für LF2 umfasst Webshop-Layout, Webshop-Seiten zur Sortimentsdarstellung, Impressum, Haftung für Webseiteninhalte sowie Produktdetailseiten mit Informationsquellen und Kundeninformationen. Weitere Kapitel können später als eigene Module ergänzt werden."
     },
     {
       id: "LF7",
@@ -35,6 +35,7 @@ window.EC_CONTENT = {
       title: "Das Layout der Internetseiten eines Webshops",
       short: "Startseite, Produktseite, Navigation und Seitenbereiche so gestalten, dass Kunden schnell Orientierung finden.",
       color: "mint",
+      image: "assets/module-icons/lf2-2-2-layout.png",
       mission: "Entwirf für dein Webshop-Projekt eine klare Seitenstruktur und setze sie mit HTML und CSS nachvollziehbar um.",
       lessons: [
         {
@@ -76,6 +77,55 @@ window.EC_CONTENT = {
       ]
     },
     {
+      id: "lf2-webshop-seiten",
+      field: "LF2",
+      code: "2.3",
+      mark: "WEB",
+      title: "Die Seiten des Webshops zur Darstellung des Sortiments",
+      short: "Startseite, Kategorienseite, Landing Page und Produktdetailseite gezielt unterscheiden und für Kundenführung einsetzen.",
+      color: "blue",
+      image: "assets/module-icons/lf2-2-3-sortiment.png",
+      mission: "Plane für dein Webshop-Projekt, welche Seite welche Aufgabe übernimmt und wie Kunden vom Einstieg bis zur Produktentscheidung geführt werden.",
+      lessons: [
+        {
+          title: "Jede Shopseite hat eine Aufgabe",
+          text: "Ein Webshop besteht aus mehreren Seitentypen. Startseite, Produktkategorienseite, Landing Page und Produktdetailseite erfüllen unterschiedliche Aufgaben, sollen aber gemeinsam zur passenden Kaufentscheidung führen."
+        },
+        {
+          title: "Startseite schafft Orientierung",
+          text: "Die Startseite erklärt Sinn und Angebot des Shops, zeigt wichtige Sortimentseinstiege und macht zentrale Bereiche wie Suche, Navigation, Warenkorb, Konto, Service und Vertrauen schaffende Hinweise erreichbar."
+        },
+        {
+          title: "Kategorienseiten grenzen Auswahl ein",
+          text: "Produktkategorienseiten zeigen einen Überblick über eine Warengruppe. Kategorien, Unterkategorien, Warenwelten, Sortierung, Filter und Paginierung helfen Kunden, aus vielen Artikeln eine passende Auswahl zu bilden."
+        },
+        {
+          title: "Landing Page und Produktdetailseite verkaufen gezielt",
+          text: "Eine Landing Page passt zu einer Anzeige, Suche oder E-Mail und führt zu einer klaren Aktion. Die Produktdetailseite liefert danach die kaufentscheidenden Informationen wie Bilder, Beschreibung, Varianten, Bewertungen, Preis und Call-to-Action."
+        }
+      ],
+      takeaways: [
+        "Die Startseite soll den Shop schnell erkennbar machen und sinnvolle Wege ins Sortiment anbieten.",
+        "Produktkategorienseiten brauchen verständliche Kategorien, Sortierung, Filter und bei großen Trefferlisten Paginierung.",
+        "Landing Pages richten sich an ein konkretes Interesse und führen zu einer klaren Handlung.",
+        "Produktdetailseiten bündeln die Informationen, die für Auswahl, Vertrauen und Kaufentscheidung wichtig sind."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.3 Webshop-Seiten",
+          description: "Seitentypen unterscheiden, Produktkategorie planen, Landing Page skizzieren und Projektcheck durchführen.",
+          href: "assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Lege für dein Webshop-Projekt mindestens Startseite, Kategorienseite und Produktdetailseite als eigene HTML-Seiten an.",
+        "Ordne dein Sortiment in verständliche Produktkategorien oder Warenwelten ein.",
+        "Plane Filter- und Sortiermöglichkeiten, die zu deinen Produktdaten passen.",
+        "Skizziere eine Landing Page für eine Anzeige, einen Newsletter oder eine Suchmaschinenkampagne."
+      ]
+    },
+    {
       id: "lf2-impressum",
       field: "LF2",
       code: "2.4",
@@ -83,6 +133,7 @@ window.EC_CONTENT = {
       title: "Das Impressum",
       short: "Anbieterkennzeichnung verstehen, Pflichtangaben prüfen und im eigenen Webshop sichtbar integrieren.",
       color: "orange",
+      image: "assets/module-icons/lf2-2-4-impressum.png",
       mission: "Baue für dein Webshop-Projekt ein klares, auffindbares und plausibles Impressum.",
       lessons: [
         {
@@ -121,6 +172,155 @@ window.EC_CONTENT = {
         "Untersuche zwei Webshops: Wo ist das Impressum verlinkt und welche Angaben findest du?",
         "Erstelle ein Impressum mit fiktiven Daten für dein eigenes Webshop-Projekt.",
         "Verlinke es in deinem Projekt gut sichtbar, zum Beispiel im Footer."
+      ]
+    },
+    {
+      id: "lf2-haftung",
+      field: "LF2",
+      code: "2.5",
+      mark: "HAF",
+      title: "Die Haftung für die Inhalte der Webseite",
+      short: "Wer haftet für eigene und verlinkte Inhalte? Disclaimer, Urheberrecht und Creative Commons verstehen und im Projekt sauber anwenden.",
+      color: "violet",
+      image: "assets/module-icons/lf2-2-5-haftung.png",
+      mission: "Mach deinen Webshop rechtlich wetterfest: Prüfe eigene Inhalte, kennzeichne externe Links und verwende nur Bilder und Texte, die du wirklich nutzen darfst.",
+      lessons: [
+        {
+          title: "Eigene Inhalte: volle Verantwortung",
+          text: "Für alles, was du selbst auf deiner Webseite veröffentlichst, haftest du grundsätzlich selbst – das betrifft Richtigkeit, Rechtmäßigkeit und Aktualität. Wer in einem Text eine Person beleidigt oder falsche Behauptungen aufstellt, kann dafür zivil- und sogar strafrechtlich verantwortlich gemacht werden. Auch Persönlichkeitsrechte zählen dazu: Fotos von Personen oder Kundendaten dürfen nicht ohne Zustimmung veröffentlicht werden."
+        },
+        {
+          title: "Fremde Inhalte und der Disclaimer-Mythos",
+          text: "Viele Webseiten nutzen einen Disclaimer (von englisch „to disclaim“ = etwas abstreiten), um sich von verlinkten Inhalten zu distanzieren. Der Haken: Ein pauschaler Disclaimer schließt die Haftung nicht zuverlässig aus. Wer einen Link setzt, empfiehlt die Zielseite ja gerade – sich gleichzeitig von ihr zu distanzieren, ist widersprüchlich. Wichtiger ist das richtige Verhalten: Zielseiten vor dem Verlinken prüfen, externe Links klar kennzeichnen und rechtswidrige Links sofort entfernen, sobald man davon erfährt. Ähnliches gilt für Kundenbewertungen und Kommentare: Grundsätzlich haftet der Verfasser – der Betreiber muss rechtswidrige Beiträge aber löschen, sobald er darauf hingewiesen wird."
+        },
+        {
+          title: "Urheberrecht im Internet",
+          text: "Das Urheberrechtsgesetz (UrhG) schützt Texte, Fotos, Musik und Videos – auch ohne Copyright-Vermerk. Der Grundsatz lautet: Nicht alles, was funktioniert, ist auch erlaubt! Wer fremde Werke nutzen will, braucht das Einverständnis des Urhebers. Ausnahmen sind die Privatkopie ohne Veröffentlichung und das Zitatrecht mit klarer Quellenangabe. Verstöße wie „Bilderklau“ können Abmahnung, Schadensersatz, Anwalts- und Gutachterkosten nach sich ziehen."
+        },
+        {
+          title: "Creative Commons und aktueller Rechtsstand",
+          text: "Creative-Commons-Lizenzen (CC) sind vorgefertigte Lizenzverträge, mit denen Urheber die Nutzung ihrer Werke freigeben – von CC BY (Namensnennung genügt) bis CC0 (fast völlig frei). Für dein Projekt sind sie eine faire Quelle für Bilder und Medien. Beachte beim Rechtsstand: Ältere Materialien nennen für die Haftung noch §§ 7 bis 10 TMG. Diese Regeln stehen heute im europäischen Digital Services Act (Art. 4 bis 8 DSA); das DDG hat das TMG abgelöst."
+        }
+      ],
+      takeaways: [
+        "Für eigene Inhalte haftet der Betreiber der Webseite immer selbst.",
+        "Ein Disclaimer ersetzt keine Sorgfalt: Links vor dem Setzen prüfen, klar kennzeichnen und bei Kenntnis von Rechtsverstößen sofort entfernen.",
+        "Werke sind auch ohne Copyright-Vermerk urheberrechtlich geschützt – für fremde Inhalte brauchst du das Einverständnis des Urhebers.",
+        "Creative-Commons-Lizenzen zeigen dir genau, was du mit einem Werk tun darfst – die Bedingungen wie Namensnennung musst du einhalten."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.5 Haftung für Webseiteninhalte",
+          description: "Fallanalyse zu eigenen und fremden Inhalten, Disclaimer-Check, Urheberrechts-Quiz und CC-Lizenz-Übung für dein Webshop-Projekt.",
+          href: "assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Prüfe alle Bilder und Texte deines Webshop-Projekts: Was hast du selbst erstellt, was stammt aus fremden Quellen?",
+        "Ersetze unklare Fundstücke durch eigene Werke oder passend lizenzierte CC-Inhalte und notiere Quelle und Lizenz.",
+        "Kennzeichne externe Links in deinem Projekt eindeutig und halte fest, wann du die Zielseite geprüft hast.",
+        "Formuliere für deinen Shop einen kurzen, ehrlichen Hinweis zu verlinkten Inhalten – ohne leere Disclaimer-Floskeln.",
+        "Ergänze neben dem Impressum einen kurzen Datenschutzhinweis: Welche Daten speichert dein Shop, wozu – und wo finden Kunden die vollständige Datenschutzerklärung?"
+      ]
+    },
+    {
+      id: "lf2-produktdetailseite",
+      field: "LF2",
+      code: "2.6",
+      mark: "PDS",
+      title: "Produktdetailseite: Informationsmöglichkeiten über Waren",
+      short: "Warenwissen aus guten Quellen sammeln, überzeugende Produktdetailseiten bauen und Produktdaten professionell verwalten.",
+      color: "cyan",
+      image: "assets/module-icons/lf2-2-6-produktdetailseite.png",
+      mission: "Werde zum Warenprofi: Sammle belastbares Wissen über dein Produkt, baue daraus eine Produktdetailseite, die informiert und verkauft – und halte deine Produktdaten sauber im Griff.",
+      lessons: [
+        {
+          title: "Warenwissen ist Verkaufsargument",
+          text: "Eine gute Produktdetailseite steht und fällt mit echtem Warenwissen. Die Ware darf keine „Black Box“ bleiben: Wer nur Name und Preis kennt, kann Kunden weder beraten noch überzeugen. Gutes Warenwissen liefert faire Argumente, orientiert sich am Preis-Leistungs-Verhältnis für den Kunden – und hilft ganz nebenbei, Retouren zu vermeiden."
+        },
+        {
+          title: "Informationsquellen clever nutzen",
+          text: "Warenwissen kommt aus vielen Quellen: eigene Warenprüfung im Wareneingang, Herstellerinformationen wie Kataloge und Gebrauchsanweisungen, Messen und Ausstellungen, Fachzeitschriften, Konkurrenzbeobachtung und Kundenrückmeldungen. Unabhängige Anlaufstellen wie Stiftung Warentest und Verbraucherzentralen liefern neutrale Testurteile, Preisdatenbanken und Verbraucherforen zeigen Marktpreise und echte Nutzererfahrungen."
+        },
+        {
+          title: "Elemente einer überzeugenden Produktdetailseite",
+          text: "Kunden entscheiden auf der Produktdetailseite. Dorthin gehören: prägnanter Produktname mit Kurzbeschreibung, hochwertige Bilder oder Videos, eine detaillierte Beschreibung, Preisangaben inklusive Umsatzsteuer und Versandkosten, Verfügbarkeit und Lieferzeit, technische Daten, Bewertungen, rechtliche Hinweise wie Garantie und Rückgaberecht, passende Cross-Selling- und Up-Selling-Empfehlungen – und ein klarer Call-to-Action wie „In den Warenkorb“."
+        },
+        {
+          title: "Produktdaten professionell verwalten",
+          text: "Bei vielen Artikeln wird händisches Pflegen von Produktdaten schnell fehleranfällig. Elektronische Kataloge bündeln Produktdaten in einer Datenbank, Katalogaustauschformate wie BMEcat oder einfaches CSV machen den Austausch mit Lieferanten leichter, und Produktinformationsmanagementsysteme (PIM) pflegen alle Daten zentral für Shop, Marktplatz und Werbung. Klassifikationsstandards wie eCl@ss ordnen Artikel einheitlich ein und machen sie vergleichbar."
+        }
+      ],
+      takeaways: [
+        "Die Ware darf keine Black Box sein: Ohne Warenwissen keine überzeugende Produktdetailseite.",
+        "Mehrere Quellen kombinieren – Herstellerangaben sind nützlich, unabhängige Tests und Kundenfeedback machen das Bild ehrlich.",
+        "Eine vollständige Produktdetailseite informiert (Beschreibung, Daten, Preis inkl. MwSt. und Versand) und verkauft (Bilder, Bewertungen, Cross-Selling, Call-to-Action).",
+        "Produktdaten zentral und strukturiert pflegen: elektronische Kataloge, Austauschformate und PIM-Systeme sparen Aufwand und verhindern veraltete Angaben."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.6 Produktdetailseite",
+          description: "Quellen-Recherche, Analyse echter Produktseiten, Bauplan für die eigene Produktdetailseite und Mini-Produktkatalog als CSV.",
+          href: "assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Analysiere eine Produktdetailseite eines großen Shops: Verständlichkeit, Bildqualität, Auffindbarkeit wichtiger Informationen und verkaufsfördernde Maßnahmen.",
+        "Sammle für ein eigenes Produkt Informationen aus mindestens zwei Quellen (z. B. Herstellerseite, Testbericht, Preisvergleich) und notiere die Quellen.",
+        "Baue eine vollständige Produktdetailseite als HTML/CSS-Entwurf oder Wireframe – mit allen Elementen inklusive Preisangabe mit MwSt. und Versandhinweis.",
+        "Lege deine Produktdaten strukturiert an, zum Beispiel als kleine CSV-Tabelle mit Artikelnummer, Bezeichnung und Preis – und vergleiche dein Ergebnis mit echten Vorbildern."
+      ]
+    },
+    {
+      id: "lf2-kundeninformationen",
+      field: "LF2",
+      code: "2.7",
+      mark: "INF",
+      title: "Produktdetailseite: Informationen für Kunden",
+      short: "Sortiment, Produktmerkmale, Herkunfts- und Qualitätsangaben so aufbereiten, dass Kunden sicher vergleichen und entscheiden können.",
+      color: "pink",
+      image: "assets/module-icons/lf2-2-7-kundeninformationen.png",
+      mission: "Verwandle Warenwissen in klare Kundeninformationen: Beschreibe Artikel, Sorten, Merkmale, Herkunft, Zeichen und Handling so, dass deine Produktdetailseite Orientierung und Vertrauen schafft.",
+      lessons: [
+        {
+          title: "Sortiment verständlich einordnen",
+          text: "Kunden brauchen Orientierung: Eine Warengruppe bündelt ähnliche Artikel, ein Artikel beschreibt eine handelbare Produktlinie und Sorten zeigen konkrete Ausprägungen wie Größe, Farbe oder Material. Auch die Sortimentsbreite und Sortimentstiefe helfen, das Angebot zu erklären: Viele Warengruppen bedeuten Breite, viele Varianten innerhalb einer Warengruppe bedeuten Tiefe."
+        },
+        {
+          title: "Produktmerkmale kundengerecht beschreiben",
+          text: "Produktmerkmale sind Eigenschaften, mit denen Kunden vergleichen und entscheiden. Dazu gehören materielle Merkmale wie Material und Gewicht, gestalterische Merkmale wie Farbe und Form, funktionale Merkmale wie Einsatzbereich, Qualitätsmerkmale wie Haltbarkeit oder Zertifizierung, wirtschaftliche Merkmale wie Preis und Marke sowie Verpackungsmerkmale."
+        },
+        {
+          title: "Herkunft, Marke und Zeichen einordnen",
+          text: "Herstellungs- und Herkunftsangaben können Produktionsort, Fertigungsmethode, Hersteller, Zeitraum oder Charge erklären. Marken schaffen Wiedererkennung und Vertrauen. Testzeichen, Gütezeichen, Typenschilder und Schutzzeichen erfüllen unterschiedliche Aufgaben: Sie können Prüfung, Qualität, technische Identifikation oder rechtlichen Markenschutz sichtbar machen."
+        },
+        {
+          title: "Kundeninformationen auf der Detailseite nutzbar machen",
+          text: "Gute Produktdetailseiten übersetzen Produktwissen in konkrete Entscheidungshilfen: Maßangaben mit Zahlenwert und Einheit, Pflege-, Montage-, Lagerungs-, Sicherheits- und Entsorgungshinweise, klare Tabellen, verständliche Varianten und ehrliche Nutzenargumente. So sinkt Unsicherheit, und Kunden wissen besser, ob das Produkt wirklich passt."
+        }
+      ],
+      takeaways: [
+        "Warengruppe, Artikel und Sorte helfen, Produkte sauber zu ordnen und Varianten verständlich zu zeigen.",
+        "Produktmerkmale werden erst wertvoll, wenn sie als Kundennutzen und Vergleichskriterium erklärt werden.",
+        "Herkunfts-, Marken-, Test- und Güteangaben müssen korrekt eingeordnet werden – nicht jedes Symbol bedeutet dasselbe.",
+        "Handling-Informationen wie Lagerung, Pflege, Montage, Sicherheit und Entsorgung gehören auf die Produktdetailseite, wenn sie für die Nutzung wichtig sind."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.7 Informationen für Kunden",
+          description: "Sortimentsbegriffe, Produktmerkmale, Herkunfts- und Zeichenangaben sowie ein Bauplan für kundengerechte Produktinformationen.",
+          href: "assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Wähle ein Produkt aus deinem Webshop-Projekt und ordne es Warengruppe, Artikel und Sorte zu.",
+        "Erstelle eine Merkmalstabelle mit Material, Maßeinheiten, Farbe/Form, Funktion, Qualität, Preis-/Serviceangaben und Verpackung.",
+        "Prüfe, ob Herkunftsangaben, Marken, Testzeichen, Gütezeichen, Typenschild oder Schutzzeichen für dein Produkt relevant sind.",
+        "Ergänze auf deiner Produktdetailseite klare Handling-Informationen, zum Beispiel zu Lagerung, Pflege, Montage, Sicherheit oder Entsorgung.",
+        "Bereite kurz vor, wie du Sortimentsbreite, Sortimentstiefe sowie Kern- und Randsortiment deines Ausbildungsunternehmens erklären würdest."
       ]
     },
     {
@@ -872,6 +1072,90 @@ window.EC_CONTENT = {
       explanation: "Die Projekt-Dokumentation sollte zeigen, welche Hilfen verwendet wurden und welche fachlichen Entscheidungen selbst verantwortet werden."
     },
     {
+      id: "lf2-webshop-seiten-01",
+      module: "lf2-webshop-seiten",
+      type: "choice",
+      prompt: "Welche Aufgabe übernimmt die Startseite eines Webshops besonders?",
+      options: [
+        "Sie macht Zweck, Angebot und wichtige Einstiege des Shops schnell erkennbar.",
+        "Sie ersetzt jede Produktdetailseite vollständig.",
+        "Sie zeigt ausschließlich rechtliche Pflichttexte.",
+        "Sie darf keine Navigation enthalten."
+      ],
+      answer: 0,
+      explanation: "Die Startseite soll Vertrauen und Orientierung schaffen und Kunden zu passenden Bereichen des Sortiments weiterführen."
+    },
+    {
+      id: "lf2-webshop-seiten-02",
+      module: "lf2-webshop-seiten",
+      type: "choice",
+      prompt: "Woran erkennt man eine Produktkategorienseite?",
+      options: [
+        "Sie zeigt eine Auswahl zusammengehöriger Artikel und hilft beim Vergleichen und Eingrenzen.",
+        "Sie enthält nur eine einzelne Rechnungsnummer.",
+        "Sie ist ausschließlich für das Impressum zuständig.",
+        "Sie besteht immer nur aus einem Kontaktformular."
+      ],
+      answer: 0,
+      explanation: "Produktkategorienseiten strukturieren das Sortiment und führen Kunden zu passenden Produktdetailseiten."
+    },
+    {
+      id: "lf2-webshop-seiten-03",
+      module: "lf2-webshop-seiten",
+      type: "choice",
+      prompt: "Welche Kombination passt gut zu einer großen Produktkategorie?",
+      options: [
+        "Filter, Sortierung und bei Bedarf Paginierung",
+        "Keine Kategorien, keine Suche und zufällige Reihenfolge",
+        "Nur ein einziges Produktbild ohne Text",
+        "Ein versteckter Warenkorb ohne Produktliste"
+      ],
+      answer: 0,
+      explanation: "Bei vielen Artikeln helfen Filter, Sortierung und Seitenaufteilung, damit Kunden nicht endlos suchen müssen."
+    },
+    {
+      id: "lf2-webshop-seiten-04",
+      module: "lf2-webshop-seiten",
+      type: "choice",
+      prompt: "Was ist der Kern einer Landing Page im Webshop?",
+      options: [
+        "Sie nimmt ein konkretes Interesse auf und führt zu einer klaren Handlung.",
+        "Sie zeigt wahllos alle internen Dateien des Shops.",
+        "Sie darf keinen Call-to-Action enthalten.",
+        "Sie wird nur für Mitarbeitende im Lager genutzt."
+      ],
+      answer: 0,
+      explanation: "Landing Pages passen oft zu Anzeigen, Suchanfragen oder E-Mails und sollen Besucher gezielt zur nächsten Aktion führen."
+    },
+    {
+      id: "lf2-webshop-seiten-05",
+      module: "lf2-webshop-seiten",
+      type: "choice",
+      prompt: "Welche Information gehört typischerweise auf eine Produktdetailseite?",
+      options: [
+        "Produktbeschreibung, Bilder, Preis, Varianten und eine klare Kauf- oder Anfragehandlung",
+        "Nur der Seitenname ohne Produktdaten",
+        "Ausschließlich eine Liste aller internen CSS-Klassen",
+        "Nur der Stundenplan der Klasse"
+      ],
+      answer: 0,
+      explanation: "Die Produktdetailseite liefert die Informationen, die Kunden für Auswahl, Vertrauen und Kaufentscheidung brauchen."
+    },
+    {
+      id: "lf2-webshop-seiten-06",
+      module: "lf2-webshop-seiten",
+      type: "choice",
+      prompt: "Was ist ein sinnvolles Filterkriterium für eine Produktkategorienseite?",
+      options: [
+        "Preis, Marke, Farbe, Größe oder Verfügbarkeit",
+        "Die private Handynummer der Lehrkraft",
+        "Die zufällige Hintergrundfarbe des Browsers",
+        "Der Dateiname der CSS-Datei"
+      ],
+      answer: 0,
+      explanation: "Filter müssen zu echten Produktmerkmalen passen. Dafür sind gepflegte Produktdaten nötig."
+    },
+    {
       id: "lf2-impressum-01",
       module: "lf2-impressum",
       type: "choice",
@@ -954,6 +1238,314 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Bei journalistisch-redaktionellen Inhalten kann eine zusätzliche verantwortliche Person nach § 18 Abs. 2 MStV relevant sein."
+    },
+    {
+      id: "lf2-haftung-01",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "In einem Blogbeitrag seines Webshops beleidigt ein Betreiber einen Konkurrenten. Wer ist dafür verantwortlich?",
+      options: [
+        "Der Hostprovider, weil er die Seite speichert.",
+        "Der Betreiber selbst, denn für eigene Inhalte haftet er grundsätzlich.",
+        "Niemand, weil das Internet ein rechtsfreier Raum ist.",
+        "Die Besucher, die den Beitrag gelesen haben."
+      ],
+      answer: 1,
+      explanation: "Für selbst veröffentlichte Inhalte haftet der Betreiber der Webseite – bei Beleidigungen sogar strafrechtlich."
+    },
+    {
+      id: "lf2-haftung-02",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Was stimmt über einen pauschalen Disclaimer wie „Für alle Links übernehmen wir keine Haftung“?",
+      options: [
+        "Er schließt jede Haftung für verlinkte Seiten sicher aus.",
+        "Er ist gesetzlich für jede Webseite vorgeschrieben.",
+        "Er schützt nicht zuverlässig – wichtiger sind Prüfung, Kennzeichnung und schnelles Entfernen problematischer Links.",
+        "Er macht verlinkte Inhalte automatisch zu eigenen Inhalten."
+      ],
+      answer: 2,
+      explanation: "Wer verlinkt, empfiehlt die Zielseite. Eine pauschale Distanzierung ist widersprüchlich und rechtlich kaum wirksam – entscheidend ist sorgfältiges Verhalten."
+    },
+    {
+      id: "lf2-haftung-03",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Du erfährst, dass eine von dir verlinkte Seite inzwischen rechtswidrige Inhalte zeigt. Was ist die richtige Reaktion?",
+      options: [
+        "Den Link sofort entfernen.",
+        "Abwarten, ob sich jemand beschwert.",
+        "Den Link nur optisch kleiner darstellen.",
+        "Einen zusätzlichen Disclaimer unter den Link schreiben."
+      ],
+      answer: 0,
+      explanation: "Ab Kenntnis der Rechtswidrigkeit muss der Link unverzüglich entfernt werden – sonst droht eine Mithaftung."
+    },
+    {
+      id: "lf2-haftung-04",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Ein Schüler findet ein tolles Produktfoto ohne Copyright-Vermerk im Netz und will es in seinen Webshop übernehmen. Was gilt?",
+      options: [
+        "Ohne ©-Zeichen ist das Foto frei verwendbar.",
+        "Fotos sind auch ohne Copyright-Vermerk urheberrechtlich geschützt – er braucht das Einverständnis des Urhebers.",
+        "Nach 14 Tagen im Internet erlischt das Urheberrecht.",
+        "Hauptsache, er verkleinert das Bild vor der Nutzung."
+      ],
+      answer: 1,
+      explanation: "Werke sind automatisch durch das UrhG geschützt. Für die Nutzung fremder Werke ist grundsätzlich die Zustimmung des Urhebers nötig."
+    },
+    {
+      id: "lf2-haftung-05",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Welche Folgen kann eine Urheberrechtsverletzung im Webshop haben?",
+      options: [
+        "Höchstens eine freundliche Erinnerungs-E-Mail.",
+        "Nur ein schlechteres Suchmaschinen-Ranking.",
+        "Gar keine, solange der Shop klein ist.",
+        "Abmahnung, Unterlassung, Schadensersatz sowie Anwalts- und Gutachterkosten."
+      ],
+      answer: 3,
+      explanation: "Urheberrechtsverletzungen können teuer werden: Neben Beseitigung und Unterlassung drohen Schadensersatz und erhebliche Verfahrenskosten."
+    },
+    {
+      id: "lf2-haftung-06",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Ein Bild steht unter der Lizenz CC BY. Was bedeutet das für dein Webshop-Projekt?",
+      options: [
+        "Du darfst es gar nicht verwenden.",
+        "Du darfst es nur privat, aber nie online nutzen.",
+        "Du darfst es nutzen, wenn du den Urheber wie gefordert namentlich nennst.",
+        "Du musst dem Urheber eine Lizenzgebühr überweisen."
+      ],
+      answer: 2,
+      explanation: "CC BY erlaubt die Nutzung unter der Bedingung der Namensnennung. Creative-Commons-Lizenzen legen genau fest, was erlaubt ist."
+    },
+    {
+      id: "lf2-haftung-07",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Ein Kunde hinterlässt in deinem Webshop eine beleidigende Bewertung über eine andere Person. Was gilt?",
+      options: [
+        "Der Betreiber haftet sofort wie für einen eigenen Text und muss den Shop schließen.",
+        "Bewertungen sind Meinungsfreiheit, da darf nie etwas gelöscht werden.",
+        "Grundsätzlich haftet der Verfasser – der Betreiber muss den Beitrag aber entfernen, sobald er darauf hingewiesen wird.",
+        "Der Betreiber muss den Kunden öffentlich zurückbeleidigen."
+      ],
+      answer: 2,
+      explanation: "Für fremde Nutzerinhalte haftet zunächst der Verfasser. Ab Kenntnis muss der Betreiber rechtswidrige Beiträge aber löschen, sonst haftet er mit."
+    },
+    {
+      id: "lf2-haftung-08",
+      module: "lf2-haftung",
+      type: "choice",
+      prompt: "Ein Webshop speichert Kundendaten für einen Newsletter, ohne darüber zu informieren oder eine Einwilligung einzuholen. Wie ist das zu bewerten?",
+      options: [
+        "Unproblematisch, solange die Daten nicht weiterverkauft werden.",
+        "Nur für große Konzerne relevant, kleine Shops sind ausgenommen.",
+        "Erlaubt, wenn der Newsletter kostenlos ist.",
+        "Ein Verstoß gegen die DSGVO – nötig sind transparente Information und eine Einwilligung."
+      ],
+      answer: 3,
+      explanation: "Personenbezogene Daten dürfen nur transparent und mit Rechtsgrundlage verarbeitet werden. Für Newsletter braucht es eine Einwilligung und eine Datenschutzerklärung."
+    },
+    {
+      id: "lf2-produktdetailseite-01",
+      module: "lf2-produktdetailseite",
+      type: "choice",
+      prompt: "Warum darf die Ware für Webshop-Mitarbeiter keine „Black Box“ sein?",
+      options: [
+        "Weil nur mit echtem Warenwissen überzeugend und fair auf der Produktdetailseite argumentiert werden kann.",
+        "Weil schwarze Verpackungen im Onlinehandel verboten sind.",
+        "Weil Kunden grundsätzlich keine Produktinformationen lesen.",
+        "Weil Suchmaschinen Produktseiten ohne Preis löschen."
+      ],
+      answer: 0,
+      explanation: "Wer nur Name und Preis kennt, kann weder beraten noch überzeugen. Warenwissen liefert die Argumente für eine gute Produktdetailseite."
+    },
+    {
+      id: "lf2-produktdetailseite-02",
+      module: "lf2-produktdetailseite",
+      type: "choice",
+      prompt: "Welche Quelle liefert besonders unabhängige, vergleichende Warentests?",
+      options: [
+        "Die Werbebroschüre des Herstellers",
+        "Die Stiftung Warentest",
+        "Der eigene Instagram-Kanal des Shops",
+        "Die Produktbeschreibung des günstigsten Konkurrenten"
+      ],
+      answer: 1,
+      explanation: "Die Stiftung Warentest ist ein unabhängiges Institut für vergleichende Waren- und Dienstleistungstests. Herstellerangaben sind dagegen nie neutral."
+    },
+    {
+      id: "lf2-produktdetailseite-03",
+      module: "lf2-produktdetailseite",
+      type: "choice",
+      prompt: "Welche Angaben gehören zu einer vollständigen Preisdarstellung auf der Produktdetailseite?",
+      options: [
+        "Nur der Nettopreis, Steuern rechnet der Kunde selbst.",
+        "Ein Preis ohne weitere Hinweise, damit die Seite aufgeräumt wirkt.",
+        "Gesamtpreis inklusive Umsatzsteuer plus Hinweis auf Versandkosten.",
+        "Ausschließlich der Rabatt in Prozent."
+      ],
+      answer: 2,
+      explanation: "Kunden müssen den Gesamtpreis inklusive Umsatzsteuer sehen und erkennen können, welche Versandkosten dazukommen."
+    },
+    {
+      id: "lf2-produktdetailseite-04",
+      module: "lf2-produktdetailseite",
+      type: "choice",
+      prompt: "Zum Bürostuhl wird ein passendes Sitzkissen empfohlen, alternativ das teurere Premium-Modell. Wie heißen diese beiden Maßnahmen?",
+      options: [
+        "Retargeting und Geotargeting",
+        "Cross-Selling (Sitzkissen) und Up-Selling (Premium-Modell)",
+        "Crawling und Indexierung",
+        "Paginierung und Sortierung"
+      ],
+      answer: 1,
+      explanation: "Cross-Selling empfiehlt ergänzende Produkte, Up-Selling eine höherwertige Alternative. Beide steigern Kundennutzen und Warenkorbwert."
+    },
+    {
+      id: "lf2-produktdetailseite-05",
+      module: "lf2-produktdetailseite",
+      type: "choice",
+      prompt: "Wozu dienen Katalogaustauschformate wie BMEcat oder CSV?",
+      options: [
+        "Sie machen Produktfotos automatisch schöner.",
+        "Sie ersetzen das Impressum eines Webshops.",
+        "Sie verhindern, dass Kunden Preise vergleichen können.",
+        "Sie übertragen Produktdaten standardisiert zwischen Lieferanten, Webshops und Marktplätzen."
+      ],
+      answer: 3,
+      explanation: "Standardisierte Austauschformate sorgen dafür, dass Produktdaten ohne aufwendige Handarbeit in Shops, Marktplätze und Beschaffungssysteme übernommen werden können."
+    },
+    {
+      id: "lf2-produktdetailseite-06",
+      module: "lf2-produktdetailseite",
+      type: "choice",
+      prompt: "Was ist die Hauptaufgabe eines Produktinformationsmanagementsystems (PIM)?",
+      options: [
+        "Produktdaten zentral pflegen und für Shop, Marktplätze und Werbung einheitlich bereitstellen.",
+        "Die Buchhaltung des Unternehmens erledigen.",
+        "Kundenbewertungen automatisch positiv umschreiben.",
+        "Das Lager physisch umräumen."
+      ],
+      answer: 0,
+      explanation: "Ein PIM-System speichert Produktdaten zentral und standardisiert, damit alle Kanäle dieselben aktuellen Informationen nutzen."
+    },
+    {
+      id: "lf2-kundeninformationen-01",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Was beschreibt eine Sorte im Sortiment besonders passend?",
+      options: [
+        "Eine konkrete Ausprägung eines Artikels, zum Beispiel Farbe, Größe oder Material.",
+        "Den gesamten Webshop mit allen rechtlichen Pflichtseiten.",
+        "Nur den Nettopreis eines Produkts.",
+        "Eine zufällige Sortierung in der Kategorienseite."
+      ],
+      answer: 0,
+      explanation: "Eine Sorte ist eine Variante oder Ausprägung eines Artikels, etwa ein T-Shirt in Blau und Größe M."
+    },
+    {
+      id: "lf2-kundeninformationen-02",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Woran erkennt man eine Warengruppe?",
+      options: [
+        "Sie bündelt mehrere ähnliche oder zusammengehörige Artikel.",
+        "Sie ist immer eine einzelne Farbe eines Produkts.",
+        "Sie ersetzt das Impressum des Shops.",
+        "Sie ist ein einmaliger Rabattcode."
+      ],
+      answer: 0,
+      explanation: "Warengruppen strukturieren das Sortiment, zum Beispiel Oberbekleidung, Zubehör oder Ersatzteile."
+    },
+    {
+      id: "lf2-kundeninformationen-03",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Ein Shop verkauft Bekleidung, Elektronik, Sportartikel und Haushaltswaren. Was ist daran besonders hoch?",
+      options: [
+        "Die Sortimentsbreite.",
+        "Die Schriftgröße der Produktseite.",
+        "Die Paginierung.",
+        "Die Rückgabefrist."
+      ],
+      answer: 0,
+      explanation: "Viele unterschiedliche Warengruppen bedeuten eine hohe Sortimentsbreite."
+    },
+    {
+      id: "lf2-kundeninformationen-04",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Wodurch ist ein tiefes Sortiment gekennzeichnet?",
+      options: [
+        "Durch viele Varianten innerhalb einer Warengruppe oder eines Artikels.",
+        "Durch besonders lange rechtliche Texte.",
+        "Durch möglichst wenige Produktmerkmale.",
+        "Durch eine Produktseite ohne Bilder."
+      ],
+      answer: 0,
+      explanation: "Sortimentstiefe entsteht durch viele Ausführungen, Größen, Farben, Materialien oder Qualitätsstufen innerhalb eines Bereichs."
+    },
+    {
+      id: "lf2-kundeninformationen-05",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Was ist ein Produktmerkmal?",
+      options: [
+        "Eine Eigenschaft eines Produkts, die es beschreibt oder unterscheidbar macht.",
+        "Ein beliebiger Link im Footer.",
+        "Nur die interne CSS-Klasse eines Buttons.",
+        "Ein Kommentar im HTML-Code."
+      ],
+      answer: 0,
+      explanation: "Produktmerkmale können Material, Größe, Farbe, Funktion, Qualität, Marke, Verpackung oder Serviceangaben sein."
+    },
+    {
+      id: "lf2-kundeninformationen-06",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Aus welchen Bestandteilen besteht eine Maßangabe wie 250 ml?",
+      options: [
+        "Aus Zahlenwert und Einheit.",
+        "Aus Marke und Claim.",
+        "Aus Header und Footer.",
+        "Aus Impressum und Datenschutz."
+      ],
+      answer: 0,
+      explanation: "Bei 250 ml ist 250 der Zahlenwert und ml die Einheit. Beides muss verständlich und korrekt angegeben werden."
+    },
+    {
+      id: "lf2-kundeninformationen-07",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Welche Aussage passt zu Testzeichen, Gütezeichen und Typenschild?",
+      options: [
+        "Sie liefern unterschiedliche Informationen zu Prüfung, Qualität oder technischer Identifikation.",
+        "Sie sind immer frei erfundene Werbesymbole ohne Bedeutung.",
+        "Sie ersetzen die Produktbeschreibung vollständig.",
+        "Sie dürfen auf Produktdetailseiten nie erwähnt werden."
+      ],
+      answer: 0,
+      explanation: "Testzeichen bestätigen Prüfungen, Gütezeichen stehen für Qualitätsanforderungen, Typenschilder liefern technische Identifikationsdaten."
+    },
+    {
+      id: "lf2-kundeninformationen-08",
+      module: "lf2-kundeninformationen",
+      type: "choice",
+      prompt: "Welche Information gehört zu Handling-Informationen auf einer Produktdetailseite?",
+      options: [
+        "Lagerung, Pflege, Montage, Sicherheit oder Entsorgung.",
+        "Nur der Name des Webdesigners.",
+        "Ausschließlich die Anzahl der Besucher auf der Startseite.",
+        "Der Dateipfad der CSS-Datei."
+      ],
+      answer: 0,
+      explanation: "Handling-Informationen helfen Kunden beim sachgerechten Umgang mit der Ware und vermeiden Fehlkäufe oder falsche Nutzung."
     }
   ],
   badges: [
@@ -972,11 +1564,39 @@ window.EC_CONTENT = {
       value: "lf2-layout"
     },
     {
+      id: "lf2-webshop-seiten-ready",
+      title: "Shop-Navigator",
+      description: "Das LF2-Modul zu Webshop-Seiten vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-webshop-seiten"
+    },
+    {
       id: "lf2-impressum-ready",
       title: "Impressum sicher",
       description: "Das LF2-Modul zum Impressum vollständig abgeschlossen.",
       condition: "module",
       value: "lf2-impressum"
+    },
+    {
+      id: "lf2-haftung-ready",
+      title: "Haftungs-Profi",
+      description: "Das LF2-Modul zur Haftung für Webseiteninhalte vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-haftung"
+    },
+    {
+      id: "lf2-produktdetailseite-ready",
+      title: "Warenkenner",
+      description: "Das LF2-Modul zur Produktdetailseite vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-produktdetailseite"
+    },
+    {
+      id: "lf2-kundeninformationen-ready",
+      title: "Kundeninformant",
+      description: "Das LF2-Modul zu Kundeninformationen auf Produktdetailseiten vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-kundeninformationen"
     },
     {
       id: "targeting-ready",
@@ -1102,6 +1722,86 @@ window.EC_CONTENT = {
       example: "Ein Laufschuh ist in acht Größen und fünf Farben verfügbar."
     },
     {
+      id: "sorte",
+      term: "Sorte",
+      category: "Sortiment",
+      summary: "Konkrete Ausprägung eines Artikels.",
+      detail: "Eine Sorte unterscheidet sich durch Merkmale wie Farbe, Größe, Material, Ausführung oder Qualität. Sorten machen Varianten auf Produktdetailseiten vergleichbar.",
+      example: "Ein T-Shirt gibt es in den Sorten Blau, Schwarz und Weiß sowie in mehreren Größen."
+    },
+    {
+      id: "artikel",
+      term: "Artikel",
+      category: "Sortiment",
+      summary: "Handelbare Produktlinie mit eindeutiger Identifikation.",
+      detail: "Ein Artikel kann über Artikelnummer, EAN oder andere Stammdaten identifiziert werden. Zu einem Artikel können mehrere Sorten oder Varianten gehören.",
+      example: "Der Artikel 'Classic T-Shirt' umfasst verschiedene Farben und Größen."
+    },
+    {
+      id: "warengruppe",
+      term: "Warengruppe",
+      category: "Sortiment",
+      summary: "Gruppe ähnlicher oder zusammengehöriger Artikel.",
+      detail: "Warengruppen strukturieren das Sortiment und erleichtern Kunden Navigation, Suche und Vergleich. Sie sind auch für Beschaffung, Lager und Auswertung wichtig.",
+      example: "Oberbekleidung ist eine Warengruppe mit T-Shirts, Hemden und Pullovern."
+    },
+    {
+      id: "kernsortiment",
+      term: "Kernsortiment",
+      category: "Sortiment",
+      summary: "Zentrale, strategisch wichtige Artikel eines Shops.",
+      detail: "Das Kernsortiment enthält die Produkte, für die ein Shop besonders stehen möchte. Es umfasst häufig Bestseller, Stammkundenartikel oder margenstarke Angebote.",
+      example: "Ein Laufschuh-Shop führt seine wichtigsten Trainingsschuhe dauerhaft im Kernsortiment."
+    },
+    {
+      id: "randsortiment",
+      term: "Randsortiment",
+      category: "Sortiment",
+      summary: "Ergänzende Produkte neben dem Kernsortiment.",
+      detail: "Das Randsortiment ergänzt die Hauptartikel um Zubehör, Nischenprodukte oder Zusatzangebote. Es kann Cross-Selling fördern und neue Kundengruppen ansprechen.",
+      example: "Zum Kernsortiment Laufschuhe kommen Trinkflaschen, Reflektoren und Pflegeprodukte als Randsortiment."
+    },
+    {
+      id: "produktmerkmal",
+      term: "Produktmerkmal",
+      category: "Sortiment",
+      summary: "Eigenschaft, die ein Produkt beschreibt und vergleichbar macht.",
+      detail: "Produktmerkmale können materiell, gestalterisch, funktional, qualitativ, wirtschaftlich oder verpackungsbezogen sein. Sie bilden die Grundlage für Filter, Tabellen und Produkttexte.",
+      example: "Material, Gewicht, Farbe, Wasserdichtigkeit, Marke und Garantie sind Produktmerkmale."
+    },
+    {
+      id: "herkunftsangabe",
+      term: "Herkunftsangabe",
+      category: "Sortiment",
+      summary: "Information zur räumlichen, personellen oder zeitlichen Herkunft eines Produkts.",
+      detail: "Herkunftsangaben können Region, Hersteller, Fertigungsbetrieb, Produktionszeitraum oder Charge erklären. Sie können Qualität, Vertrauen und Rückverfolgbarkeit unterstützen.",
+      example: "Eine Produktseite nennt die Region, die Manufaktur und das Produktionsjahr."
+    },
+    {
+      id: "guetezeichen",
+      term: "Gütezeichen",
+      category: "Sortiment",
+      summary: "Zeichen für geprüfte oder überwachte Qualität.",
+      detail: "Gütezeichen stehen für festgelegte Qualitätsanforderungen und häufig für externe Überwachung. Sie unterscheiden sich von reinen Marken- oder Schutzzeichen.",
+      example: "Ein Gütezeichen signalisiert, dass ein Produkt bestimmte Qualitätsanforderungen erfüllt."
+    },
+    {
+      id: "typenschild",
+      term: "Typenschild",
+      category: "Sortiment",
+      summary: "Technisches Schild zur Identifikation eines Produkts.",
+      detail: "Ein Typenschild enthält oft Modell, Typ, Seriennummer, Leistung, Hersteller- und Zulassungsangaben. Es hilft bei Wartung, Ersatzteilen und sicherer Nutzung.",
+      example: "Auf einem Netzteil stehen Spannung, Leistung, Modellnummer und Hersteller auf dem Typenschild."
+    },
+    {
+      id: "handling-informationen",
+      term: "Handling-Informationen",
+      category: "Sortiment",
+      summary: "Hinweise zum sachgerechten Umgang mit einer Ware.",
+      detail: "Handling-Informationen betreffen Transport, Lagerung, Montage, Pflege, Wartung, Sicherheit und Entsorgung. Sie helfen Kunden, Produkte richtig zu nutzen und Schäden zu vermeiden.",
+      example: "Die Produktdetailseite nennt frostfreie Lagerung, Reinigungsweise und Recyclinghinweise."
+    },
+    {
       id: "produktdaten",
       term: "Produktdaten",
       category: "Sortiment",
@@ -1158,6 +1858,54 @@ window.EC_CONTENT = {
       example: "Auf dem Smartphone wird die Produktnavigation untereinander statt nebeneinander angezeigt."
     },
     {
+      id: "startseite",
+      term: "Startseite",
+      category: "Sortiment",
+      summary: "Erste zentrale Einstiegsseite eines Webshops.",
+      detail: "Die Startseite macht erkennbar, wofür der Shop steht, welche Sortimentsbereiche wichtig sind und wie Kunden weiterkommen. Sie verbindet Wiedererkennung, Navigation, Suche, Teaser und Vertrauen.",
+      example: "Die Startseite zeigt Kategorien, aktuelle Angebote, Suchfeld, Warenkorb und Servicehinweise."
+    },
+    {
+      id: "produktkategorieseite",
+      term: "Produktkategorieseite",
+      category: "Sortiment",
+      summary: "Seite mit einer Auswahl zusammengehöriger Produkte.",
+      detail: "Eine Produktkategorieseite gibt Überblick über eine Warengruppe oder Warenwelt. Sie unterstützt Vergleich, Eingrenzung und den Wechsel zur passenden Produktdetailseite.",
+      example: "Die Kategorie 'Rucksäcke' zeigt mehrere Modelle mit Bild, Preis, Filter und Sortierung."
+    },
+    {
+      id: "landing-page",
+      term: "Landing Page",
+      category: "Marketing",
+      summary: "Zielseite für ein konkretes Besucherinteresse.",
+      detail: "Eine Landing Page wird häufig aus Anzeigen, Suchergebnissen, Newslettern oder Kampagnen heraus aufgerufen. Sie soll ein bestimmtes Angebot erklären und zu einer klaren Handlung führen.",
+      example: "Eine Anzeige für Schulrucksäcke führt direkt auf eine Landing Page mit passendem Angebot und Button."
+    },
+    {
+      id: "produktdetailseite",
+      term: "Produktdetailseite",
+      category: "Sortiment",
+      summary: "Einzelseite mit kaufrelevanten Informationen zu einem Artikel.",
+      detail: "Produktdetailseiten enthalten typischerweise Bilder, Beschreibung, Preis, Varianten, Lieferinformationen, Bewertungen, Vertrauen schaffende Elemente und den Call-to-Action.",
+      example: "Eine Produktdetailseite zeigt Größe, Material, Farbe, Produktfotos, Verfügbarkeit und den Warenkorb-Button."
+    },
+    {
+      id: "sortierung",
+      term: "Sortierung",
+      category: "Sortiment",
+      summary: "Reihenfolge, in der Treffer oder Produkte angezeigt werden.",
+      detail: "Sortierung hilft Kunden, Treffer nach passenden Kriterien zu ordnen. Typische Sortierungen sind Preis aufsteigend, Beliebtheit, Bewertung, Neuheiten oder Relevanz.",
+      example: "Ein Kunde sortiert Sneaker zuerst nach niedrigstem Preis."
+    },
+    {
+      id: "paginierung",
+      term: "Paginierung",
+      category: "Sortiment",
+      summary: "Aufteilung langer Produktlisten auf mehrere Seiten.",
+      detail: "Paginierung verhindert sehr lange Trefferlisten und macht große Kategorien überschaubarer. Alternativ können Shops auch 'Mehr laden' oder endloses Scrollen verwenden.",
+      example: "Nach 24 Produkten wechselt der Kunde mit 'Seite 2' zur nächsten Trefferliste."
+    },
+    {
       id: "produktkategorie",
       term: "Produktkategorie",
       category: "Sortiment",
@@ -1188,6 +1936,54 @@ window.EC_CONTENT = {
       summary: "Angebot ergänzender Produkte passend zum Hauptprodukt.",
       detail: "Cross-Selling soll den Kundennutzen und den Warenkorbwert erhöhen. Die Empfehlungen müssen sinnvoll und nicht aufdringlich sein.",
       example: "Zum Smartphone werden passende Hülle und Ladekabel angeboten."
+    },
+    {
+      id: "up-selling",
+      term: "Up-Selling",
+      category: "Sortiment",
+      summary: "Angebot einer höherwertigen Alternative zum betrachteten Produkt.",
+      detail: "Up-Selling zeigt dem Kunden ein besseres oder umfangreicheres Modell mit höherem Preis. Es funktioniert nur, wenn der Mehrwert ehrlich erkennbar ist – sonst wirkt es aufdringlich.",
+      example: "Auf der Seite des Bürostuhls X1000 wird das Premium-Modell X2000 mit besserer Ausstattung vorgeschlagen."
+    },
+    {
+      id: "warenkenntnisse",
+      term: "Warenkenntnisse",
+      category: "Sortiment",
+      summary: "Fundiertes Wissen über Eigenschaften, Nutzen und Grenzen der angebotenen Waren.",
+      detail: "Warenkenntnisse entstehen aus Warenprüfung, Herstellerinformationen, Messen, Fachmedien, Tests und Kundenrückmeldungen. Sie ermöglichen faire Beratung am Preis-Leistungs-Verhältnis und überzeugende Produktdetailseiten.",
+      example: "Ein Mitarbeiter prüft eine Funktionsjacke im Wareneingang und liest zusätzlich einen unabhängigen Warentest."
+    },
+    {
+      id: "elektronischer-katalog",
+      term: "Elektronischer Katalog",
+      category: "Sortiment",
+      summary: "Datenbank, in der Produktdaten samt Medien und Preisen gebündelt vorliegen.",
+      detail: "Elektronische Kataloge fassen Produktdaten, Grafiken, Videos, Preis- und Bestellinformationen zusammen. Lieferanten stellen sie bereit, Webshops prüfen die Daten und übernehmen sie in das eigene System (Katalogmanagement).",
+      example: "Ein Händler übernimmt den elektronischen Katalog seines Lieferanten statt hunderte Artikel von Hand einzupflegen."
+    },
+    {
+      id: "katalogaustauschformat",
+      term: "Katalogaustauschformat",
+      category: "Beschaffung",
+      summary: "Standardformat für die Übertragung von Produktkatalogen zwischen Unternehmen.",
+      detail: "Formate wie BMEcat, ONIX, xCBL, cXML oder einfaches CSV strukturieren Produktdaten einheitlich. So können Lieferanten, Webshops und Marktplätze Kataloge automatisiert austauschen und pflegen.",
+      example: "Ein Lieferant liefert seine Produktdaten als BMEcat-Datei, der Shop liest sie automatisiert ein."
+    },
+    {
+      id: "pim-system",
+      term: "PIM-System",
+      category: "Sortiment",
+      summary: "Produktinformationsmanagementsystem; pflegt Produktdaten zentral für alle Kanäle.",
+      detail: "Ein PIM-System erfasst, pflegt und verteilt Produktdaten systemneutral an Webshop, Marktplätze, Kataloge und Werbung. Es verhindert widersprüchliche Datenversionen in verschiedenen Abteilungen und erleichtert Aktualisierungen.",
+      example: "Eine geänderte Produktbeschreibung wird einmal im PIM gepflegt und erscheint danach in Shop und Marktplatz gleichzeitig."
+    },
+    {
+      id: "produktklassifikation",
+      term: "Produktklassifikation",
+      category: "Sortiment",
+      summary: "Einheitliche Einordnung von Artikeln nach einem Klassifikationsstandard.",
+      detail: "Standards wie eCl@ss oder ETIM ordnen Produkte hierarchisch in Klassen mit definierten Merkmalen. Das macht Artikel eindeutig identifizierbar, vergleichbar und erleichtert die elektronische Kommunikation mit Geschäftspartnern.",
+      example: "Ein Koaxialkabel ist im Standard eCl@ss der Klasse „Kabel und Leitungen“ zugeordnet und über das Synonym „Erdkabel“ auffindbar."
     },
     {
       id: "warenwirtschaftssystem",
@@ -1660,6 +2456,54 @@ window.EC_CONTENT = {
       summary: "Unfaire geschäftliche Handlung im Wettbewerb.",
       detail: "Unlauter kann zum Beispiel irreführende Werbung, aggressive Ansprache oder Verschleierung wichtiger Informationen sein. Im E-Commerce betrifft das besonders Produktseiten und Werbung.",
       example: "Ein künstlich verknappter Countdown ohne echte Grundlage kann problematisch sein."
+    },
+    {
+      id: "disclaimer",
+      term: "Disclaimer",
+      category: "Recht & Daten",
+      summary: "Hinweis, mit dem sich Webseitenbetreiber von fremden Inhalten distanzieren wollen.",
+      detail: "Ein Disclaimer soll klarstellen, dass verlinkte Inhalte nicht zu eigen gemacht werden. Ein pauschaler Textbaustein schließt die Haftung aber nicht zuverlässig aus. Wichtiger sind die Prüfung von Zielseiten, klare Kennzeichnung externer Links und schnelles Entfernen problematischer Verlinkungen.",
+      example: "Statt einer leeren Floskel schreibt ein Shop, dass Links bei Kenntnis von Rechtsverstößen umgehend entfernt werden – und tut das auch."
+    },
+    {
+      id: "abmahnung",
+      term: "Abmahnung",
+      category: "Recht & Daten",
+      summary: "Formale Aufforderung, einen Rechtsverstoß zu beenden und künftig zu unterlassen.",
+      detail: "Mit einer Abmahnung verlangt ein Rechteinhaber oder Wettbewerber, ein rechtswidriges Verhalten zu stoppen, meist verbunden mit einer Unterlassungserklärung und Kostenerstattung. Im E-Commerce sind fehlerhafte Impressen, Urheberrechtsverstöße und irreführende Werbung häufige Anlässe.",
+      example: "Ein Händler nutzt ein fremdes Produktfoto ohne Erlaubnis und erhält eine kostenpflichtige Abmahnung des Fotografen."
+    },
+    {
+      id: "creative-commons",
+      term: "Creative Commons",
+      category: "Recht & Daten",
+      summary: "System vorgefertigter Lizenzen, mit denen Urheber die Nutzung ihrer Werke freigeben.",
+      detail: "Creative-Commons-Lizenzen kombinieren Bausteine wie BY (Namensnennung), SA (Weitergabe unter gleichen Bedingungen), NC (nicht kommerziell) und ND (keine Bearbeitung). CC0 verzichtet weitgehend auf Rechte. Die Lizenzangabe zeigt genau, was mit einem Werk erlaubt ist.",
+      example: "Ein Schüler nutzt für sein Webshop-Projekt ein CC-BY-Foto und nennt dafür den Fotografen unter dem Bild."
+    },
+    {
+      id: "zitatrecht",
+      term: "Zitatrecht",
+      category: "Recht & Daten",
+      summary: "Erlaubnis, fremde Textstellen mit klarer Quellenangabe einzubinden.",
+      detail: "Das Zitatrecht ist eine Ausnahme vom Urheberrecht: Kurze Auszüge dürfen übernommen werden, wenn sie einen inhaltlichen Zweck erfüllen und der Urheber deutlich genannt wird. Ein Zitat ersetzt keine eigene Leistung und darf nicht beliebig lang sein.",
+      example: "Ein Blogartikel übernimmt zwei Sätze aus einem Fachbuch und nennt Autor, Titel, Jahr und Seite."
+    },
+    {
+      id: "deep-link",
+      term: "Deep Link",
+      category: "Recht & Daten",
+      summary: "Link, der direkt auf eine Unterseite einer fremden Website führt.",
+      detail: "Deep Links (tiefe Verknüpfungen) verweisen nicht auf die Startseite, sondern direkt auf einzelne Inhalte. Gerichte haben bestätigt, dass Deep Links grundsätzlich zulässig sind. Externe Links sollten trotzdem klar als solche gekennzeichnet werden.",
+      example: "Ein Shop verlinkt direkt auf die Pflegehinweis-Seite eines Herstellers statt auf dessen Startseite."
+    },
+    {
+      id: "hotlink",
+      term: "Hotlink",
+      category: "Recht & Daten",
+      summary: "Einbindung fremder Dateien, die direkt vom fremden Server geladen werden.",
+      detail: "Beim Hotlinking wird zum Beispiel ein Bild über ein HTML-Attribut eingebunden und von einem fremden Server geladen. Besucher erkennen die fremde Herkunft nicht – rechtlich und technisch problematisch, da Urheberrechte verletzt und fremde Ressourcen belastet werden können.",
+      example: "Statt ein Bild per Hotlink einzubetten, klärt ein Händler die Rechte und lädt es auf den eigenen Server."
     }
   ]
 };

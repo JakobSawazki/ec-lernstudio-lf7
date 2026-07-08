@@ -63,10 +63,10 @@
     themeToggles.forEach((toggle) => {
       toggle.setAttribute(
         "aria-label",
-        theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren"
+        theme === "dark" ? "Light Mode aktivieren" : "Dark Mode aktivieren"
       );
       toggle.setAttribute("aria-pressed", String(theme === "dark"));
-      toggle.title = theme === "dark" ? "Light Mode aktivieren" : "Black Mode aktivieren";
+      toggle.title = theme === "dark" ? "Light Mode aktivieren" : "Dark Mode aktivieren";
     });
   }
 
@@ -136,6 +136,39 @@
     return Number.isFinite(number) && number >= 0 ? number : fallback;
   }
 
+  function normalizeLogin(value, fallback = "Gast") {
+    const raw = String(value || "").trim();
+    if (!raw) return fallback;
+    if (raw.toLowerCase() === "gast") return "Gast";
+
+    const normalized = raw
+      .toLowerCase()
+      .replaceAll("ß", "ss")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z.\s-]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const compact = normalized.replace(/\s+/g, "");
+
+    if (/^[a-z]{2,3}\.[a-z]{2,3}$/.test(compact)) return compact;
+
+    const parts = normalized.split(/[\s.-]+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return `${parts[0].slice(0, 3)}.${parts[parts.length - 1].slice(0, 3)}`;
+    }
+    if (parts.length === 1) return parts[0].slice(0, 7);
+    return fallback;
+  }
+
+  function loginFilePart(value) {
+    return normalizeLogin(value, "gast")
+      .toLowerCase()
+      .replace(/[^a-z0-9.-]/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "") || "gast";
+  }
+
   function normalizeState(value) {
     const candidate = value && typeof value === "object" && !Array.isArray(value) ? value : {};
     const answered =
@@ -188,7 +221,7 @@
 
     return {
       ...defaultState,
-      name: typeof candidate.name === "string" ? candidate.name.trim().slice(0, 24) : "",
+      name: typeof candidate.name === "string" ? normalizeLogin(candidate.name, "").slice(0, 32) : "",
       activeField: fieldById(candidate.activeField) ? candidate.activeField : "LF7",
       answered,
       glossaryAnswered,
@@ -316,6 +349,13 @@
     });
   }
 
+  function jumpToTop() {
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  }
+
   function navigate(view, options = {}) {
     currentView = view;
     session = null;
@@ -330,7 +370,7 @@
     if (view === "glossary") renderGlossary();
     if (view === "glossaryTerm") renderGlossaryTerm(options.termId);
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    jumpToTop();
   }
 
   function renderDashboard() {
@@ -479,12 +519,20 @@
 
   function moduleCard(module) {
     const progress = moduleProgress(module.id);
+    const moduleImage = module.image
+      ? `
+        <div class="module-card-media" aria-hidden="true">
+          <img src="${escapeHtml(module.image)}" alt="" loading="lazy">
+        </div>
+      `
+      : "";
     return `
-      <button class="module-card ${module.color}" type="button" data-action="open-module" data-module="${module.id}" aria-label="Modul ${module.code}: ${module.title} öffnen">
+      <button class="module-card ${module.color}${module.image ? " has-media" : ""}" type="button" data-action="open-module" data-module="${module.id}" aria-label="Modul ${module.code}: ${module.title} öffnen">
         <div class="module-topline">
           <span class="module-code">${module.code}</span>
           <span class="module-mark" aria-hidden="true">${module.mark}</span>
         </div>
+        ${moduleImage}
         <h3>${module.title}</h3>
         <p>${module.short}</p>
         <div class="module-progress">
@@ -543,6 +591,24 @@
     saveState();
     const progress = moduleProgress(module.id);
     const questions = content.questions.filter((question) => question.module === module.id);
+    const heroVisual = module.image
+      ? `
+            <div class="module-hero-visual" aria-hidden="true">
+              <img src="${escapeHtml(module.image)}" alt="">
+              <div class="module-hero-badge">
+                <span>${module.code}</span>
+                <strong>${module.mark}</strong>
+              </div>
+              <i style="--progress: ${progress.percent * 3.6}deg"></i>
+            </div>
+      `
+      : `
+            <div class="module-hero-mark" aria-hidden="true">
+              <span>${module.code}</span>
+              <strong>${module.mark}</strong>
+              <i style="--progress: ${progress.percent * 3.6}deg"></i>
+            </div>
+      `;
 
     app.innerHTML = `
       <section class="module-hero ${module.color}">
@@ -564,11 +630,7 @@
                 <span class="module-status">${progress.solved}/${progress.total} Aufgaben gelöst</span>
               </div>
             </div>
-            <div class="module-hero-mark" aria-hidden="true">
-              <span>${module.code}</span>
-              <strong>${module.mark}</strong>
-              <i style="--progress: ${progress.percent * 3.6}deg"></i>
-            </div>
+            ${heroVisual}
           </div>
         </div>
       </section>
@@ -1468,6 +1530,17 @@
     settingsModal.hidden = true;
   }
 
+  function startWithLogin(login) {
+    state.name = normalizeLogin(login);
+    saveState();
+    welcomeModal.hidden = true;
+    renderDashboard();
+  }
+
+  function startAsGuest() {
+    startWithLogin("Gast");
+  }
+
   function createProgressExport() {
     return {
       format: EXPORT_FORMAT,
@@ -1492,7 +1565,7 @@
   }
 
   async function exportProgress() {
-    const fileName = `ec-lernstudio-lernstand-${new Date().toISOString().slice(0, 10)}.json`;
+    const fileName = `ec-lernstudio-${loginFilePart(state.name)}-lernstand-${new Date().toISOString().slice(0, 10)}.json`;
     const contents = JSON.stringify(createProgressExport(), null, 2);
 
     if ("showSaveFilePicker" in window) {
@@ -1591,7 +1664,15 @@
   }
 
   document.querySelectorAll("[data-view]").forEach((button) => {
-    button.addEventListener("click", () => navigate(button.dataset.view));
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      navigate(button.dataset.view);
+    });
+  });
+
+  document.getElementById("home-link")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigate("dashboard");
   });
 
   document.querySelectorAll("[data-field]").forEach((button) => {
@@ -1609,12 +1690,12 @@
   document.getElementById("profile-button").addEventListener("click", openSettings);
   document.getElementById("settings-close").addEventListener("click", closeSettings);
   document.getElementById("save-name").addEventListener("click", () => {
-    const value = document.getElementById("settings-name").value.trim();
-    state.name = value || "Gast";
+    const value = document.getElementById("settings-name").value;
+    state.name = normalizeLogin(value);
     saveState();
     closeSettings();
     if (currentView === "dashboard") renderDashboard();
-    showToast("Name gespeichert.");
+    showToast("Login-Kürzel gespeichert.");
   });
   document.getElementById("export-progress").addEventListener("click", exportProgress);
   document.getElementById("import-progress").addEventListener("change", importProgress);
@@ -1622,22 +1703,22 @@
   themeToggles.forEach((toggle) => toggle.addEventListener("click", toggleTheme));
 
   document.getElementById("start-button").addEventListener("click", () => {
-    const value = document.getElementById("student-name").value.trim();
-    state.name = value || "Gast";
-    saveState();
-    welcomeModal.hidden = true;
-    renderDashboard();
+    startWithLogin(document.getElementById("student-name").value);
   });
 
   document.getElementById("guest-button").addEventListener("click", () => {
-    state.name = "Gast";
-    saveState();
-    welcomeModal.hidden = true;
-    renderDashboard();
+    startAsGuest();
   });
 
   document.getElementById("student-name").addEventListener("keydown", (event) => {
-    if (event.key === "Enter") document.getElementById("start-button").click();
+    if (event.key === "Enter") {
+      event.preventDefault();
+      startWithLogin(event.currentTarget.value);
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      startAsGuest();
+    }
   });
 
   settingsModal.addEventListener("click", (event) => {
@@ -1645,7 +1726,13 @@
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !settingsModal.hidden) closeSettings();
+    if (event.key !== "Escape") return;
+    if (!welcomeModal.hidden) {
+      event.preventDefault();
+      startAsGuest();
+      return;
+    }
+    if (!settingsModal.hidden) closeSettings();
   });
 
   if ("serviceWorker" in navigator && location.protocol !== "file:") {
