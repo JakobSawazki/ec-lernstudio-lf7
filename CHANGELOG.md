@@ -14,6 +14,8 @@ Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
   reduzierter Glow und zurückgenommener Lichtschimmer
 - Veröffentlichungsrhythmus dokumentiert: lokal weiterarbeiten, Änderungen
   versionieren und GitHub bei geprüften klaren Versionsständen aktualisieren
+- GitHub-Pages-Workflow auf die neuen PNG-Assets und LF2-Materialien
+  aktualisiert
 
 ## 1.8.1 - 8. Juli 2026
 

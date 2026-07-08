@@ -33,12 +33,22 @@ jobs:
           test -f website/index.html
           test -f website/styles.css
           test -f website/manifest.webmanifest
-          test -f website/icon.svg
-          test -f website/assets/ec-lernstudio-logo.svg
+          test -f website/icon.png
+          test -f website/assets/ec-lernstudio-logo.png
           test -f website/assets/lf7-marketing-lab.png
           test -f website/assets/ecommerce-consultation-hero.png
+          test -f website/assets/module-icons/lf2-2-2-layout.png
+          test -f website/assets/module-icons/lf2-2-3-sortiment.png
+          test -f website/assets/module-icons/lf2-2-4-impressum.png
+          test -f website/assets/module-icons/lf2-2-5-haftung.png
+          test -f website/assets/module-icons/lf2-2-6-produktdetailseite.png
+          test -f website/assets/module-icons/lf2-2-7-kundeninformationen.png
           test -f website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf
 
   deploy:
     environment:
