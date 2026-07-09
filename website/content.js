@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.16.0",
+  version: "1.17.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",
@@ -500,6 +500,7 @@ window.EC_CONTENT = {
       title: "Preisgestaltung und -darstellung in Webshops",
       short: "Preise kalkulieren, Preispsychologie verstehen, Dynamic Pricing einordnen und Preisangaben rechtssicher nach PAngV darstellen.",
       color: "violet",
+      image: "assets/module-icons/lf2-2-12-preisgestaltung.png",
       mission: "Werde zum Preisprofi: Kalkuliere deinen Verkaufspreis, nutze faire psychologische Effekte, verstehe dynamische Preise – und zeichne alle Preise in deinem Webshop-Projekt rechtssicher aus.",
       lessons: [
         {
@@ -549,6 +550,7 @@ window.EC_CONTENT = {
       title: "ERP- und Warenwirtschaftssysteme",
       short: "Waren- und Informationsflüsse verstehen, Artikelnummern und GTIN einsetzen und erkennen, wie Warenwirtschafts- und ERP-Systeme den Shop im Hintergrund steuern.",
       color: "cyan",
+      image: "assets/module-icons/lf2-2-16-warenwirtschaft.png",
       mission: "Blicke hinter die Kulissen deines Webshops: Verfolge, wie Ware und Informationen durch das Unternehmen fließen – und wie Warenwirtschafts- und ERP-Systeme daraus einen reibungslosen Ablauf machen.",
       lessons: [
         {

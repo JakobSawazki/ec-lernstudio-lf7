@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v22";
+const CACHE_NAME = "ec-lernstudio-v23";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -17,6 +17,8 @@ const APP_SHELL = [
   "./assets/module-icons/lf2-2-8-produktbeschreibung.png",
   "./assets/module-icons/lf2-2-9-artikelauswahl.png",
   "./assets/module-icons/lf2-2-10-visualisierungen.png",
+  "./assets/module-icons/lf2-2-12-preisgestaltung.png",
+  "./assets/module-icons/lf2-2-16-warenwirtschaft.png",
   "./assets/lf7-marketing-lab.png",
   "./assets/ecommerce-consultation-hero.png",
   "./assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf",

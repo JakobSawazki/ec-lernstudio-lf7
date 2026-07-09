@@ -345,3 +345,24 @@ LF2-Kapitelbilder:
   Thumbnails, 360-Grad-Hinweis und Produktvideo-Vorschau auf einem Tablet
 - Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
   lesbaren Fremdtexte, keine Personen
+
+`website/assets/module-icons/lf2-2-12-preisgestaltung.png`
+
+- Erzeugt: 9. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF2 2.12
+  `Preisgestaltung und -darstellung in Webshops`
+- Motiv: fotorealistischer Webshop-Arbeitsplatz mit Produktseite,
+  Preisvergleich, Rabatt-/Preisanhängern und Kalkulationsrechner
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen
+
+`website/assets/module-icons/lf2-2-16-warenwirtschaft.png`
+
+- Erzeugt: 9. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF2 2.16 `ERP- und Warenwirtschaftssysteme`
+- Motiv: fotorealistischer Warenwirtschafts- und ERP-Arbeitsplatz mit
+  Dashboard, Paketen, Barcode-Scanner, Lagerregal und Warenfluss-Karten
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen

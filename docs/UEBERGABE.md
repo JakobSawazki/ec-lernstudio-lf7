@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 9. Juli 2026
-Version: `1.16.0`
+Version: `1.17.0`
 
 ## Auftrag und Ergebnis
 
@@ -91,9 +91,9 @@ alle LF2-Kapitel mit vorhandener Quellen-PDF umgesetzt.
   `website/assets/module-icons/lf2-2-7-kundeninformationen.png` sowie
   `website/assets/module-icons/lf2-2-8-produktbeschreibung.png` und
   `website/assets/module-icons/lf2-2-9-artikelauswahl.png` und
-  `website/assets/module-icons/lf2-2-10-visualisierungen.png`;
-  die Module 2.12 und 2.16 haben noch keine Kapitelbilder und zeigen bis zur
-  Icon-Erzeugung die Kürzel `PRE` und `ERP` (siehe `TASKS.md`)
+  `website/assets/module-icons/lf2-2-10-visualisierungen.png` sowie
+  `website/assets/module-icons/lf2-2-12-preisgestaltung.png` und
+  `website/assets/module-icons/lf2-2-16-warenwirtschaft.png`
 - kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
 - Dark Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`

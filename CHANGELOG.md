@@ -2,6 +2,15 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.17.0 - 9. Juli 2026
+
+- fotorealistische Kapitelbilder für LF2 `2.12 Preisgestaltung und
+  -darstellung in Webshops` sowie `2.16 ERP- und Warenwirtschaftssysteme`
+  erzeugt und als PNG-Dateien eingebunden
+- Modulkarten `lf2-preisgestaltung` und `lf2-warenwirtschaft` nutzen nun
+  eigene Bildmotive statt reiner Kürzelkarten
+- Offline-Cache auf `ec-lernstudio-v23` erhöht und Dokumentation aktualisiert
+
 ## 1.16.0 - 9. Juli 2026
 
 - LF7-Modul `7.19+ Webanalyse: Messen, Testen, Datenschutz` mit vier
