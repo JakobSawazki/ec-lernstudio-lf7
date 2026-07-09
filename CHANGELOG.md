@@ -2,6 +2,15 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.18.0 - 9. Juli 2026
+
+- LF7-Transferfall `SEO/SEA-Kampagne` als eigenständiges PDF-Material
+  `lf7-seo-sea-transferfall.pdf` erstellt
+- Material in den Modulen `Suchmaschinenoptimierung` und
+  `Suchmaschinenwerbung` verlinkt
+- Offline-Cache auf `ec-lernstudio-v24` erhöht und Deployment-Prüfung um das
+  neue PDF erweitert
+
 ## 1.17.0 - 9. Juli 2026
 
 - fotorealistische Kapitelbilder für LF2 `2.12 Preisgestaltung und

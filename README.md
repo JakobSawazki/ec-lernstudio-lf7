@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
 
-**Version:** `1.17.0`
+**Version:** `1.18.0`
 **Dokumentationsstand:** 9. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -82,6 +82,8 @@ KI-Baustein enthalten.
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
 - LF7-Webanalyse-Modul mit Messkonzept, UTM-Parametern, A/B-Test und
   Consent-/Datenschutz-Check
+- LF7-SEO/SEA-Transferfall als PDF-Material mit Suchintention,
+  Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
 - lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
 - XP, Level, Lernserie und einundzwanzig Abzeichen
@@ -163,6 +165,7 @@ Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
 `website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf` und
 `website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf`,
+`website/assets/materials/lf7-seo-sea-transferfall.pdf`,
 `website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
 `website/assets/materials/dv-lehrplan-kompass.pdf`.
@@ -257,6 +260,7 @@ EC/
         |   |-- lf2-2-10-visualisierungen-arbeitsblatt.pdf
         |   |-- lf2-2-12-preisgestaltung-arbeitsblatt.pdf
         |   |-- lf2-2-16-warenwirtschaft-arbeitsblatt.pdf
+        |   |-- lf7-seo-sea-transferfall.pdf
         |   |-- lf7-webanalyse-arbeitsblatt.pdf
         |   |-- lf2-projektidee-ecommerce-homepage.pdf
         |   `-- dv-lehrplan-kompass.pdf
@@ -325,7 +329,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.17.0`
+Aktueller Stand: `1.18.0`
 
 ## Offene Weiterentwicklung
 

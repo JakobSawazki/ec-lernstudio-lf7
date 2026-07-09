@@ -59,6 +59,7 @@ jobs:
           test -f website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf
+          test -f website/assets/materials/lf7-seo-sea-transferfall.pdf
           test -f website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf
           test -f website/assets/materials/dv-lehrplan-kompass.pdf

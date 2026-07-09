@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 9. Juli 2026
-Version: `1.17.0`
+Version: `1.18.0`
 
 ## Auftrag und Ergebnis
 
@@ -78,6 +78,8 @@ alle LF2-Kapitel mit vorhandener Quellen-PDF umgesetzt.
 - LF2-Projektauftrag `E-Commerce-Homepage mit Marketing-Optimierung` als
   Startseiten-Callout und eigenes PDF-Material
 - DV-Lehrplan-Kompass als Startseiten-Karte und eigenes PDF-Material
+- LF7-SEO/SEA-Transferfall als eigenes PDF-Material für Suchintention,
+  Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
 - LF7-Webanalyse-Arbeitsblatt als eigenes PDF-Material
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich
@@ -109,6 +111,7 @@ alle LF2-Kapitel mit vorhandener Quellen-PDF umgesetzt.
   `website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf`,
   `website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf` und
   `website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf` sowie
+  `website/assets/materials/lf7-seo-sea-transferfall.pdf` und
   `website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
   `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` und
   `website/assets/materials/dv-lehrplan-kompass.pdf`

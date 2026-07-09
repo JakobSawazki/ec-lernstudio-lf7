@@ -89,6 +89,7 @@ ausgeliefert. Die veröffentlichten Materialien
 `website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf` und
 `website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf`,
+`website/assets/materials/lf7-seo-sea-transferfall.pdf`,
 `website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
 `website/assets/materials/dv-lehrplan-kompass.pdf` sind eigenständig
@@ -175,6 +176,24 @@ Offizieller Rahmenlehrplan:
 - KMK-Downloadbereich Rahmenlehrpläne, Eintrag `Kaufmann im E-Commerce und
   Kauffrau im E-Commerce`, Beschlussdatum 24.11.2017:
   <https://www.kmk.org/themen/berufliche-schulen/duale-berufsausbildung/downloadbereich-rahmenlehrplaene.html>
+
+Für den LF7-SEO/SEA-Transferfall wurden am 9. Juli 2026 geprüft:
+
+- Google Search Central, SEO Starter Guide:
+  <https://developers.google.com/search/docs/fundamentals/seo-starter-guide>
+- Google Search Central, Search Essentials:
+  <https://developers.google.com/search/docs/essentials>
+- Google Ads Help, Keyword-Optionen:
+  <https://support.google.com/google-ads/answer/7478529>
+- Google Ads Help, negative Keywords:
+  <https://support.google.com/google-ads/answer/2453972>
+- Google Ads Help, Quality Score für Suchkampagnen:
+  <https://support.google.com/google-ads/answer/2454010>
+
+Ergebnis: Das Arbeitsblatt formuliert die Grundlagen eigenständig und
+unterrichtsnah: hilfreiche Inhalte, Suchintention, Keyword-Steuerung,
+negative Keywords, Anzeigenrelevanz, Zielseitenerlebnis und Kennzahlen werden
+als zusammenhängender Kampagnenfall geübt.
 
 Für LF2 2.4 wurden am 24. Juni 2026 geprüft:
 

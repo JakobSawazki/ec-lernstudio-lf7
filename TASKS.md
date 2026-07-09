@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 9. Juli 2026<br>
-Aktuelle Version: `1.17.0`<br>
+Aktuelle Version: `1.18.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -47,6 +47,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.15.0 | 09.07.2026 | LF2 2.16 ERP und Warenwirtschaft | Modul, acht Aufgaben, Abzeichen, acht Glossarbegriffe und eigenes Arbeitsblatt mit Flussdiagramm-Auftrag lokal eingebunden; alle LF2-Kapitel mit Quellen-PDF sind damit umgesetzt |
 | Erledigt | 1.16.0 | 09.07.2026 | LF7 Webanalyse | Modul, acht Aufgaben, Abzeichen, acht Glossarbegriffe und eigenes Arbeitsblatt zu Messkonzept, UTM, A/B-Test und Consent-/Datenschutz-Check lokal eingebunden |
 | Erledigt | 1.17.0 | 09.07.2026 | Kapitelbilder für LF2 2.12 und 2.16 | Fotorealistische PNG-Modulbilder für Preisgestaltung sowie ERP/Warenwirtschaft erzeugt, eingebunden und in den Offline-Cache aufgenommen |
+| Erledigt | 1.18.0 | 09.07.2026 | LF7 SEO/SEA-Transferfall | Eigenständiges PDF-Material zu Suchintention, SEO-Landingpage, SEA-Anzeige und KPI-Vergleich erstellt und in den Modulen SEO/SEA verlinkt |
 
 ## In Arbeit
 
@@ -60,7 +61,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
-| Offen | Mittel | LF6/LF7-Ausbau laut ideas.txt | LF6-Servicekanäle sowie SEO/SEA-Vertiefung; Zuordnung siehe DV-Lehrplan-Kompass |
+| Offen | Mittel | LF6-Servicekanäle laut ideas.txt | Videokonferenz, E-Mail, Anschreiben und Newsletter als möglicher neuer Lernfeldbereich; Zuordnung siehe DV-Lehrplan-Kompass |
 | Offen | Niedrig | Lehrerbereich für eigene Aufgaben | Erst sinnvoll, wenn mehr Module stabil sind |
 | Offen | Niedrig | Druckansicht für Arbeitsphasen | Optional für Unterricht ohne Geräte |
 

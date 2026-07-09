@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.17.0",
+  version: "1.18.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",
@@ -689,6 +689,14 @@ window.EC_CONTENT = {
         "Keywords natürlich und passend zur Suchintention einsetzen.",
         "Gute Technik macht gute Inhalte auffindbar und nutzbar.",
         "Erfolg über Sichtbarkeit, qualifizierten Traffic und Conversions bewerten."
+      ],
+      resources: [
+        {
+          title: "Transferfall: SEO/SEA-Kampagne",
+          description: "Suchintentionen sortieren, SEO-Landingpage briefen, SEA-Anzeige planen und Kampagnenkennzahlen vergleichen.",
+          href: "assets/materials/lf7-seo-sea-transferfall.pdf",
+          type: "PDF"
+        }
       ]
     },
     {
@@ -722,6 +730,14 @@ window.EC_CONTENT = {
         "Relevanz und Qualität gehören neben dem Gebot zur Kampagnensteuerung.",
         "Ausschließende Keywords reduzieren unnötige Klicks.",
         "Klicks sind nur ein Zwischenschritt; entscheidend ist das Kampagnenziel."
+      ],
+      resources: [
+        {
+          title: "Transferfall: SEO/SEA-Kampagne",
+          description: "Suchintentionen sortieren, SEO-Landingpage briefen, SEA-Anzeige planen und Kampagnenkennzahlen vergleichen.",
+          href: "assets/materials/lf7-seo-sea-transferfall.pdf",
+          type: "PDF"
+        }
       ]
     },
     {
