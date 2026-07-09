@@ -43,12 +43,23 @@ jobs:
           test -f website/assets/module-icons/lf2-2-5-haftung.png
           test -f website/assets/module-icons/lf2-2-6-produktdetailseite.png
           test -f website/assets/module-icons/lf2-2-7-kundeninformationen.png
+          test -f website/assets/module-icons/lf2-2-8-produktbeschreibung.png
+          test -f website/assets/module-icons/lf2-2-9-artikelauswahl.png
+          test -f website/assets/module-icons/lf2-2-10-visualisierungen.png
           test -f website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-8-produktbeschreibung-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-9-artikelauswahl-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf
+          test -f website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf
+          test -f website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf
+          test -f website/assets/materials/dv-lehrplan-kompass.pdf
 
   deploy:
     environment:

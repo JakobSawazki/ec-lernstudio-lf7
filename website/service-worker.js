@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v14";
+const CACHE_NAME = "ec-lernstudio-v22";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -14,6 +14,9 @@ const APP_SHELL = [
   "./assets/module-icons/lf2-2-5-haftung.png",
   "./assets/module-icons/lf2-2-6-produktdetailseite.png",
   "./assets/module-icons/lf2-2-7-kundeninformationen.png",
+  "./assets/module-icons/lf2-2-8-produktbeschreibung.png",
+  "./assets/module-icons/lf2-2-9-artikelauswahl.png",
+  "./assets/module-icons/lf2-2-10-visualisierungen.png",
   "./assets/lf7-marketing-lab.png",
   "./assets/ecommerce-consultation-hero.png",
   "./assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf",
@@ -21,7 +24,15 @@ const APP_SHELL = [
   "./assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf",
   "./assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf",
   "./assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf",
-  "./assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf"
+  "./assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-8-produktbeschreibung-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-9-artikelauswahl-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf",
+  "./assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf",
+  "./assets/materials/lf7-webanalyse-arbeitsblatt.pdf",
+  "./assets/materials/lf2-projektidee-ecommerce-homepage.pdf",
+  "./assets/materials/dv-lehrplan-kompass.pdf"
 ];
 
 self.addEventListener("install", (event) => {

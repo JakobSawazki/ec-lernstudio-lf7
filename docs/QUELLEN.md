@@ -1,6 +1,6 @@
 # Quellen und Veröffentlichungsgrenzen
 
-Stand: 8. Juli 2026
+Stand: 9. Juli 2026
 
 ## Private Unterrichtsquellen
 
@@ -39,6 +39,8 @@ Repository.
 
 Ablage: `assets/`
 
+Zusätzliche geordnete Ablage seit 9. Juli 2026: `assets/Lehrplan/`
+
 - `Rahmenlehrplan.pdf`
 - `2024-05-06 Information BG.pdf`
 - `Inhaltsverzeichnis LF1-LF4.pdf`
@@ -49,17 +51,31 @@ Ablage: `assets/`
 - `LF2/2.5 Die Haftung für die Inhalte der Webseite.pdf`
 - `LF2/2.6 Produktdetailseite Informationsmöglichkeiten über Waren.pdf`
 - `LF2/2.7 Produktdetailseite Informationen für Kunden.pdf`
+- `LF2/2.8 Die Produktbeschreibung auf der Produktdetailseite.pdf`
+- `LF2/2.9 Die Auswahl des Artikels auf der Produktdetailseite.pdf`
+- `LF2/2.10 Visualisierungen auf der Produktdetailseite.pdf`
+- `LF2/2.12 Preisgestaltung und -darstellung in Webshops.pdf`
+- `LF2/2.16 ERP- und Warenwirtschaftssysteme.pdf`
+- `LF2/Projektidee LF2.pdf`
+- `Lehrplan/KMK_Rahmenlehrplan_Kaufmann_Kauffrau_E-Commerce_2017-11-24.pdf`
+- `Lehrplan/DV_Uebersicht_Lehrplan.pdf`
+- `Lehrplan/DV_LP_komplett.pdf`
+- `Lehrplan/DV_Anforderungen.pdf`
+- `Lehrplan/DV_Inhalte.pdf`
+- `Lehrplan/DV_Lernfelder_BFK.pdf`
+- `Lehrplan/README.md`
 
 Der KMK-Rahmenlehrplan wurde am 24. Juni 2026 zur Erweiterung des Glossars auf
-ausbildungsweite E-Commerce-Begriffe ausgewertet. Die lokalen PDFs bleiben
-private Arbeitsquellen und sind per `.gitignore` von der Veröffentlichung
-ausgeschlossen.
+ausbildungsweite E-Commerce-Begriffe ausgewertet. Am 9. Juli 2026 wurde die
+lokale Lehrplanablage in `assets/Lehrplan/` strukturiert. Die lokalen PDFs
+bleiben private Arbeitsquellen und sind per `.gitignore` von der
+Veröffentlichung ausgeschlossen.
 
 Falls gleichnamige Dateien lokal noch außerhalb von `assets/` liegen, gelten
 sie nur als ältere Zwischenablage. Für neue Arbeiten ist `assets/` die
 verbindliche private Quellenablage.
 
-Die lokalen PDFs zu LF2 2.2 bis 2.7 wurden nur zur Orientierung geprüft.
+Die lokalen PDFs zu LF2 2.2 bis 2.16 wurden nur zur Orientierung geprüft.
 Sie wirken wie Lehrwerksmaterial und werden deshalb nicht über GitHub Pages
 ausgeliefert. Die veröffentlichten Materialien
 `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf`,
@@ -67,14 +83,33 @@ ausgeliefert. Die veröffentlichten Materialien
 `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf` und
 `website/assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf` sowie
-`website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf` sind
-eigenständig formuliert.
+`website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf` und
+`website/assets/materials/lf2-2-8-produktbeschreibung-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-9-artikelauswahl-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf` und
+`website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf`,
+`website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
+`website/assets/materials/dv-lehrplan-kompass.pdf` sind eigenständig
+formuliert.
 
 Zusätzlich stellte der Auftraggeber am 8. Juli 2026 eigene OneNote-Notizen zu
 den Abschnitten 2.5, 2.6 und 2.7 bereit (Lernziele, Aufgaben, Fallanalysen,
 Beispiel „Bürostuhl X1000“, Sortimentsaufbau und Produktinformationen). Diese
-eigenen Notizen wurden in Module und Arbeitsblätter eingearbeitet. Enthaltene
-Musterlösungen bleiben unveröffentlicht und dienen nur dem fachlichen Abgleich.
+eigenen Notizen wurden in Module und Arbeitsblätter eingearbeitet. Für 2.8,
+2.9 und 2.10 lagen private Aufgaben-/Projektideen in `ideas.txt` vor.
+Enthaltene Musterlösungen bleiben unveröffentlicht und dienen nur dem
+fachlichen Abgleich. Die zu 2.10 notierte Idee eines kollaborativen
+Dokuments/Whiteboards wurde noch nicht eingebunden und bleibt eine mögliche
+spätere Unterrichtsfunktion. Die Projektidee zu einer E-Commerce-Homepage
+wurde am 9. Juli 2026 aus `assets/LF2/Projektidee LF2.pdf` als eigenständiger
+Projektbrief abgeleitet und auf der LF2-Startseite verlinkt.
+
+Der `dv-lehrplan-kompass.pdf` wurde am 9. Juli 2026 als eigenständige
+Orientierung aus dem offiziellen KMK-Rahmenlehrplan, den lokalen
+DV-Unterlagen und den privaten Arbeitsnotizen abgeleitet. Die Original-PDFs
+werden nicht öffentlich ausgeliefert.
 
 ### Schulinterne EduCloud / OneDrive
 
@@ -100,6 +135,9 @@ Online-Marketing-Grundlagen:
 - CTR, CPC, Conversion Rate, CPO und ROAS
 - Grundbegriffe zu KI, maschinellem Lernen, generativer KI und menschlicher
   Qualitätskontrolle
+- Webanalyse-Grundlagen: Messziele, Sitzungen, Absprungrate, Conversions,
+  UTM-Parameter, A/B-Tests, Consent, Datensparsamkeit und Grenzen von
+  Tracking-Daten
 - ausbildungsweite Grundbegriffe zu Sortiment, Vertriebskanälen, Checkout,
   Retouren, Service, Recht, Kennzahlen, Wirtschaft und Projektarbeit
 - Webshop-Seitentypen zur Sortimentsdarstellung: Startseite,
@@ -115,6 +153,28 @@ Online-Marketing-Grundlagen:
 - Kundeninformationen auf Produktdetailseiten: Sortimentsbegriffe,
   Produktmerkmale, Herstellungs- und Herkunftsangaben, Maßeinheiten, Marken-,
   Test-, Güte-, Schutz- und Typenschildangaben sowie Handling-Informationen
+- Produktbeschreibungen auf Produktdetailseiten: Produkttitel, Kurz- und
+  Langbeschreibung, Bullet Points, Nutzenargumente, aktive Sprache, natürliche
+  Keyword-Nutzung, Unique Content sowie Kommunikationsstörer und
+  Kommunikationsförderer
+- Artikelauswahl auf Produktdetailseiten: Variantenwahl, Verfügbarkeit,
+  Lieferzeit, Versand- und Abholhinweise, Auswahlhilfen, Produktvergleiche,
+  Cross-Selling, Buy-Box, Warenkorb-Layer und Call-to-Action
+- Visualisierungen auf Produktdetailseiten: Produktfotos, Thumbnails,
+  Zoom-Funktionen, 360-Grad-Ansichten, Bildgröße, Auflösung, Dateigröße,
+  Dateiformate, Komprimierung und Produktvideos
+- projektorientierte E-Commerce-Homepage: HTML/CSS-Grundstruktur,
+  Seitenplanung, Produktpräsentation, Marketing-Optimierung, Dokumentation und
+  Präsentation
+- DV-Lehrplan-Orientierung: offizieller Rahmenlehrplan,
+  Unterrichtsplanung, Prüfungsbezug und interne DV-Zuordnung als
+  eigenständig formulierter Kompass
+
+Offizieller Rahmenlehrplan:
+
+- KMK-Downloadbereich Rahmenlehrpläne, Eintrag `Kaufmann im E-Commerce und
+  Kauffrau im E-Commerce`, Beschlussdatum 24.11.2017:
+  <https://www.kmk.org/themen/berufliche-schulen/duale-berufsausbildung/downloadbereich-rahmenlehrplaene.html>
 
 Für LF2 2.4 wurden am 24. Juni 2026 geprüft:
 
@@ -124,6 +184,29 @@ Für LF2 2.4 wurden am 24. Juni 2026 geprüft:
   <https://www.gesetze-bayern.de/Content/Document/MStV-18>
 - IHK Düsseldorf zur veralteten Bezugnahme auf § 55 RStV:
   <https://www.ihk.de/duesseldorf/recht-und-steuern/recht/internetrecht/impressum-5109750>
+
+Für LF2 2.12 wurden am 9. Juli 2026 geprüft:
+
+- § 11 PAngV (niedrigster Gesamtpreis der letzten 30 Tage bei
+  Preisermäßigungen, in Kraft seit 28.05.2022):
+  <https://www.gesetze-im-internet.de/pangv_2022/__11.html>
+- Kanzlei Plutte zur Preisangabenverordnung 2022:
+  <https://www.ra-plutte.de/preisangabenverordnung-2022-was-unternehmen-wissen-muessen/>
+
+Ergebnis: Endpreis- und Grundpreispflicht gelten unverändert; neu gegenüber
+älteren Lehrmaterialien ist die 30-Tage-Bestpreis-Regel bei Streichpreisen.
+Das Modul nennt diese Regel ausdrücklich.
+
+Für LF7 Webanalyse wurden am 9. Juli 2026 geprüft:
+
+- § 25 TDDDG (Schutz der Privatsphäre bei Endeinrichtungen):
+  <https://www.gesetze-im-internet.de/ttdsg/__25.html>
+
+Ergebnis: Tracking-Cookies und vergleichbare Speicher- oder Auslesevorgänge
+auf dem Endgerät benötigen grundsätzlich eine informierte Einwilligung;
+Ausnahmen gelten insbesondere für unbedingt erforderliche Dienste. Das Modul
+stellt diese Regel als Unterrichtsorientierung dar und ersetzt keine
+Rechtsberatung.
 
 Für LF2 2.5 wurden am 8. Juli 2026 geprüft:
 
@@ -229,3 +312,36 @@ LF2-Kapitelbilder:
   Produktdaten, Qualitäts- und Servicehinweisen
 - Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
   lesbaren Fremdtexte
+
+`website/assets/module-icons/lf2-2-8-produktbeschreibung.png`
+
+- Erzeugt: 8. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF2 2.8
+  `Die Produktbeschreibung auf der Produktdetailseite`
+- Motiv: fotorealistische Arbeit an Produktbeschreibung, Bullet Points,
+  Nutzenargumenten und SEO-Elementen einer Produktdetailseite
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte
+
+`website/assets/module-icons/lf2-2-9-artikelauswahl.png`
+
+- Erzeugt: 9. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF2 2.9
+  `Die Auswahl des Artikels auf der Produktdetailseite`
+- Motiv: fotorealistische Produktdetailseite mit Variantenwahl,
+  Verfügbarkeits- und Lieferhinweisen, Buy-Box, Vergleich und Cross-Selling
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen
+
+`website/assets/module-icons/lf2-2-10-visualisierungen.png`
+
+- Erzeugt: 9. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF2 2.10
+  `Visualisierungen auf der Produktdetailseite`
+- Motiv: fotorealistische Produktdetailseite mit großer Bildgalerie,
+  Thumbnails, 360-Grad-Hinweis und Produktvideo-Vorschau auf einem Tablet
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen

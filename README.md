@@ -4,8 +4,8 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
 
-**Version:** `1.8.2`
-**Dokumentationsstand:** 8. Juli 2026
+**Version:** `1.16.0`
+**Dokumentationsstand:** 9. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -39,9 +39,14 @@ Für LF2 sind zunächst folgende Kapitel eingebunden:
 | 2.5 | Die Haftung für die Inhalte der Webseite | Haftung für Webseiteninhalte |
 | 2.6 | Produktdetailseite: Informationsmöglichkeiten über Waren | Produktdetailseite |
 | 2.7 | Produktdetailseite: Informationen für Kunden | Kundeninformationen |
+| 2.8 | Die Produktbeschreibung auf der Produktdetailseite | Produktbeschreibung |
+| 2.9 | Die Auswahl des Artikels auf der Produktdetailseite | Artikelauswahl |
+| 2.10 | Visualisierungen auf der Produktdetailseite | Visualisierungen |
+| 2.12 | Preisgestaltung und -darstellung in Webshops | Preisgestaltung |
+| 2.16 | ERP- und Warenwirtschaftssysteme | ERP und Warenwirtschaft |
 
-Weitere LF2-Kapitel wie Preisgestaltung oder ERP/Warenwirtschaft können später
-als eigene Module ergänzt werden.
+Damit sind alle in der DV-Auswahl vorgesehenen LF2-Kapitel mit vorhandener
+Quellen-PDF als Module umgesetzt.
 
 Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 
@@ -52,6 +57,7 @@ Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 | 7.8 | Suchmaschinenoptimierung | SEO |
 | 7.9 | Suchmaschinenwerbung | SEA |
 | 7.19 | Auswertung der Onlinemarketing-Maßnahmen | Kennzahlen und Kampagnenauswertung |
+| 7.19+ | Webanalyse: Messen, Testen, Datenschutz | Webanalyse |
 | 7.20 | KI – Von der Entstehung bis zur praktischen Anwendung | KI im Online-Marketing |
 
 Die Abstimmung mit BE nennt insbesondere `7.5/7/8/9/19` als verbindliche
@@ -61,20 +67,29 @@ KI-Baustein enthalten.
 ## Funktionsumfang
 
 - Lernfeld-Umschalter für `LF2` und `LF7`
-- zwölf Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 76 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- achtzehn Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 124 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
 - abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout`, `2.3 Webshop-Seiten`,
   `2.4 Das Impressum`, `2.5 Haftung für Webseiteninhalte` und
-  `2.6 Produktdetailseite` sowie `2.7 Informationen für Kunden` als
+  `2.6 Produktdetailseite`, `2.7 Informationen für Kunden`,
+  `2.8 Produktbeschreibung`, `2.9 Artikelauswahl`, `2.10 Visualisierungen`,
+  `2.12 Preisgestaltung` sowie `2.16 ERP und Warenwirtschaft` als
   eigenständig formulierte PDFs
+- LF2-Projektbrief `E-Commerce-Homepage mit Marketing-Optimierung` als
+  sichtbarer Startseiten-Callout und eigenes PDF-Material
+- DV-Lehrplan-Kompass als eigener Startseiten-Zugriff mit privater
+  Quellenablage unter `assets/Lehrplan/`
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
+- LF7-Webanalyse-Modul mit Messkonzept, UTM-Parametern, A/B-Test und
+  Consent-/Datenschutz-Check
 - lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
-- XP, Level, Lernserie und fünfzehn Abzeichen
+- XP, Level, Lernserie und einundzwanzig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
   dezenter Hover-Animation und reduziertem Header `Datenverarbeitung`
-- fotorealistische Kapitelbilder für alle eingebundenen LF2-Module 2.2 bis 2.7
+- fotorealistische Kapitelbilder für die LF2-Module 2.2 bis 2.10; die Module
+  2.12 und 2.16 zeigen bis zur Icon-Erzeugung die Kürzel `PRE` und `ERP`
 - Dark Mode als Standard und Light Mode per Toggle im Header
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
@@ -135,7 +150,7 @@ persönliches Westermann-Login und ist nicht Bestandteil des Repositories.
 Die zentrale lokale Quellenablage ist `assets/` und per `.gitignore`
 ausgeschlossen. Ein eventuell vorhandener lokaler Ordner `LF2/` gilt nur noch
 als ältere Zwischenablage und wird ebenfalls ignoriert.
-Die lokalen Lehrwerksdateien zu LF2 2.2 bis 2.7 werden wegen
+Die lokalen Lehrwerksdateien zu LF2 2.2 bis 2.16 werden wegen
 Veröffentlichungs- und Nutzungsrechten nicht öffentlich ausgeliefert.
 Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
 `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf`,
@@ -143,7 +158,15 @@ Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
 `website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-2-5-haftung-arbeitsblatt.pdf` und
 `website/assets/materials/lf2-2-6-produktdetailseite-arbeitsblatt.pdf` sowie
-`website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf`.
+`website/assets/materials/lf2-2-7-kundeninformationen-arbeitsblatt.pdf` und
+`website/assets/materials/lf2-2-8-produktbeschreibung-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-9-artikelauswahl-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf` und
+`website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf`,
+`website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
+`website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
+`website/assets/materials/dv-lehrplan-kompass.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
 Das aktuelle Titelbild `website/assets/ecommerce-consultation-hero.png` wurde
@@ -155,6 +178,10 @@ Das Homepage-Icon `website/assets/ec-lernstudio-logo.png` wurde am 8. Juli
 2026 als fotorealistisches PNG für Header, Favicon und Web-App-Manifest
 eingebunden. Die LF2-Kapitelbilder liegen unter
 `website/assets/module-icons/`.
+
+Die privaten Lehrplan- und DV-Unterlagen sind zusätzlich strukturiert unter
+`assets/Lehrplan/` abgelegt. Dieser Ordner bleibt lokal und wird nicht über
+GitHub Pages veröffentlicht.
 
 Der Arbeitsstand wird lokal unter `D:\Google Drive\Lehramt\Lernfelder\EC`
 geführt und zusätzlich über Google Drive synchronisiert. GitHub wird bewusst
@@ -176,6 +203,7 @@ Build-Schritt. GitHub Pages veröffentlicht den Ordner `website/`.
 | `website/assets/` | projektbezogene Bildmedien |
 | `website/assets/materials/` | veröffentlichte, eigenständig erstellte Unterrichtsmaterialien |
 | `assets/` | zentrale lokale private Quellenablage, per `.gitignore` ausgeschlossen |
+| `assets/Lehrplan/` | private Lehrplan- und DV-Unterlagen, nicht veröffentlicht |
 | `TASKS.md` | laufende Aufgaben-, Ideen- und Übergabedatei |
 | `.github/workflows/deploy-pages.yml` | Prüfung und GitHub-Pages-Deployment |
 | `docs/` | Quellen, Übergabe und Deployment |
@@ -212,14 +240,25 @@ EC/
         |   |-- lf2-2-4-impressum.png
         |   |-- lf2-2-5-haftung.png
         |   |-- lf2-2-6-produktdetailseite.png
-        |   `-- lf2-2-7-kundeninformationen.png
+        |   |-- lf2-2-7-kundeninformationen.png
+        |   |-- lf2-2-8-produktbeschreibung.png
+        |   |-- lf2-2-9-artikelauswahl.png
+        |   `-- lf2-2-10-visualisierungen.png
         |-- materials/
         |   |-- lf2-2-2-webshop-layout-arbeitsblatt.pdf
         |   |-- lf2-2-3-webshop-seiten-arbeitsblatt.pdf
         |   |-- lf2-2-4-impressum-arbeitsblatt.pdf
         |   |-- lf2-2-5-haftung-arbeitsblatt.pdf
         |   |-- lf2-2-6-produktdetailseite-arbeitsblatt.pdf
-        |   `-- lf2-2-7-kundeninformationen-arbeitsblatt.pdf
+        |   |-- lf2-2-7-kundeninformationen-arbeitsblatt.pdf
+        |   |-- lf2-2-8-produktbeschreibung-arbeitsblatt.pdf
+        |   |-- lf2-2-9-artikelauswahl-arbeitsblatt.pdf
+        |   |-- lf2-2-10-visualisierungen-arbeitsblatt.pdf
+        |   |-- lf2-2-12-preisgestaltung-arbeitsblatt.pdf
+        |   |-- lf2-2-16-warenwirtschaft-arbeitsblatt.pdf
+        |   |-- lf7-webanalyse-arbeitsblatt.pdf
+        |   |-- lf2-projektidee-ecommerce-homepage.pdf
+        |   `-- dv-lehrplan-kompass.pdf
         |-- ec-lernstudio-logo.png
         |-- ecommerce-consultation-hero.png
         `-- lf7-marketing-lab.png
@@ -254,8 +293,8 @@ Zusätzlich manuell oder automatisiert prüfen:
 - Onboarding mit Name und Gastmodus
 - Lernfeld-Umschalter `LF2`/`LF7`
 - Dark/Light Mode im Header
-- Navigation in alle zwölf Module
-- LF2-Arbeitsblätter öffnen
+- Navigation in alle achtzehn Module
+- LF2- und LF7-Arbeitsblätter öffnen
 - Multiple-Choice- und Zahlenaufgabe
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
@@ -285,7 +324,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.8.2`
+Aktueller Stand: `1.16.0`
 
 ## Offene Weiterentwicklung
 

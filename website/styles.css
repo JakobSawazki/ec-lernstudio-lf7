@@ -622,11 +622,15 @@ h3 {
 .light-button,
 .ghost-button,
 .danger-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 48px;
   padding: 12px 20px;
   border: 0;
   border-radius: 999px;
   font-weight: 850;
+  text-decoration: none;
   cursor: pointer;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
@@ -865,13 +869,14 @@ h3 {
 
 .module-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 17px;
 }
 
 .module-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 390px;
   padding: 26px;
   width: 100%;
@@ -1023,8 +1028,10 @@ h3 {
 
 .module-card h3 {
   margin: 22px 0 12px;
-  font-size: clamp(1.7rem, 2.4vw, 2.2rem);
-  line-height: 1.02;
+  font-size: clamp(1.43rem, 1.55vw, 1.5rem);
+  line-height: 1.06;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .module-card p {
@@ -1163,16 +1170,23 @@ h3 {
 
 .two-column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
 .focus-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 410px;
   padding: 38px;
   border-radius: var(--radius-large) var(--radius-large) var(--radius-large) 10px;
+}
+
+.focus-card h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .focus-index {
@@ -1193,7 +1207,8 @@ h3 {
   color: var(--ink-soft);
 }
 
-.focus-card button {
+.focus-card button,
+.focus-card .secondary-button {
   align-self: flex-start;
   margin-top: 22px;
 }
@@ -1209,11 +1224,38 @@ h3 {
 }
 
 .glossary-card {
+  color: var(--night);
   background: var(--orange);
+}
+
+.glossary-card .eyebrow {
+  color: #075f73;
+}
+
+.glossary-card p:not(.eyebrow) {
+  color: rgba(11, 32, 48, 0.74);
 }
 
 .glossary-card .focus-index {
   border: 1px solid rgba(11, 32, 48, 0.25);
+}
+
+.curriculum-card {
+  color: var(--night);
+  background: var(--blue);
+}
+
+.curriculum-card .eyebrow {
+  color: #075f73;
+}
+
+.curriculum-card p:not(.eyebrow) {
+  color: rgba(11, 32, 48, 0.74);
+}
+
+.curriculum-card .focus-index {
+  color: var(--night);
+  background: var(--cyan);
 }
 
 .portal-footer {
@@ -1317,16 +1359,22 @@ h3 {
 
 .module-hero-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
   align-items: center;
-  gap: 55px;
+  gap: 45px;
   padding-top: 50px;
+}
+
+.module-hero-grid > div:first-child {
+  min-width: 0;
 }
 
 .module-hero h1 {
   margin-bottom: 18px;
-  font-size: clamp(3.8rem, 8vw, 7.7rem);
-  line-height: 0.92;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .module-hero .eyebrow {
@@ -1371,7 +1419,9 @@ h3 {
 
 .module-hero-visual {
   position: relative;
-  width: clamp(260px, 30vw, 420px);
+  justify-self: end;
+  width: 100%;
+  max-width: 360px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.08);
@@ -2905,7 +2955,7 @@ h3 {
 
   .module-grid,
   .glossary-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lab-workspace {
@@ -2976,7 +3026,7 @@ h3 {
     left: 10px;
     z-index: 70;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     padding: 7px;
     background: rgba(7, 24, 39, 0.96);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -2989,6 +3039,7 @@ h3 {
     display: grid;
     justify-items: center;
     gap: 2px;
+    min-width: 0;
     padding: 7px 2px;
     color: #9fb5c0;
     border-radius: 14px;
@@ -3059,7 +3110,7 @@ h3 {
   }
 
   .two-column {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .module-hero-grid {
@@ -3148,7 +3199,7 @@ h3 {
   .badge-grid,
   .achievement-summary,
   .lab-results {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .glossary-tools {
@@ -3226,7 +3277,8 @@ h3 {
   }
 
   .module-hero h1 {
-    font-size: clamp(3.2rem, 15vw, 5rem);
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.05;
   }
 
   .lesson-card {

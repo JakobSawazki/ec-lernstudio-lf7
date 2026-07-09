@@ -350,10 +350,26 @@
   }
 
   function jumpToTop() {
+    const scroller = document.scrollingElement || document.documentElement;
     const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    const previousBodyScrollBehavior = document.body.style.scrollBehavior;
     document.documentElement.style.scrollBehavior = "auto";
-    window.scrollTo(0, 0);
+    document.body.style.scrollBehavior = "auto";
+    scroller.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     document.documentElement.style.scrollBehavior = previousScrollBehavior;
+    document.body.style.scrollBehavior = previousBodyScrollBehavior;
+  }
+
+  function settleAtTop() {
+    jumpToTop();
+    setTimeout(jumpToTop, 0);
+    requestAnimationFrame(() => {
+      jumpToTop();
+      requestAnimationFrame(jumpToTop);
+    });
   }
 
   function navigate(view, options = {}) {
@@ -370,7 +386,7 @@
     if (view === "glossary") renderGlossary();
     if (view === "glossaryTerm") renderGlossaryTerm(options.termId);
 
-    jumpToTop();
+    settleAtTop();
   }
 
   function renderDashboard() {
@@ -451,23 +467,22 @@
         </div>
       </section>
 
-      ${field.id === "LF2" ? `
+      ${field.project ? `
         <section class="page-shell lab-teaser section-block">
           <div class="lab-teaser-copy">
-            <p class="eyebrow light">Impressums-Werkstatt</p>
-            <h2>Wer steckt hinter diesem Shop?</h2>
+            <p class="eyebrow light">${escapeHtml(field.project.eyebrow)}</p>
+            <h2>${escapeHtml(field.project.title)}</h2>
             <p>
-              Prüfe Anbieter, Kontakt, Registerangaben und Sichtbarkeit. Danach
-              baust du dein eigenes Impressum in das Webshop-Projekt ein.
+              ${escapeHtml(field.project.text)}
             </p>
-            <button class="light-button" data-action="open-module" data-module="lf2-impressum">
-              LF2 2.4 öffnen
-            </button>
+            <a class="light-button" href="${escapeHtml(field.project.href)}" target="_blank" rel="noopener">
+              ${escapeHtml(field.project.button)}
+            </a>
           </div>
           <div class="metric-stack" aria-hidden="true">
-            <div><span>01</span><strong>Anbieter</strong><i style="--bar: 72%"></i></div>
-            <div><span>02</span><strong>Kontakt</strong><i style="--bar: 58%"></i></div>
-            <div><span>03</span><strong>Footer</strong><i style="--bar: 86%"></i></div>
+            ${field.project.stats.map((item, index) => `
+              <div><span>${escapeHtml(item[0])}</span><strong>${escapeHtml(item[1])}</strong><i style="--bar: ${62 + index * 11}%"></i></div>
+            `).join("")}
           </div>
         </section>
       ` : `
@@ -509,6 +524,19 @@
           </div>
           <button class="secondary-button" data-action="glossary">Glossar öffnen</button>
         </article>
+        ${content.curriculum ? `
+          <article class="focus-card curriculum-card">
+            <span class="focus-index">03</span>
+            <div>
+              <p class="eyebrow">${escapeHtml(content.curriculum.eyebrow)}</p>
+              <h2>${escapeHtml(content.curriculum.title)}</h2>
+              <p>${escapeHtml(content.curriculum.text)}</p>
+            </div>
+            <a class="secondary-button" href="${escapeHtml(content.curriculum.href)}" target="_blank" rel="noopener">
+              ${escapeHtml(content.curriculum.button)}
+            </a>
+          </article>
+        ` : ""}
       </section>
 
       ${renderPortalFooter()}

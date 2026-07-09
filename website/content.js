@@ -1,29 +1,48 @@
 window.EC_CONTENT = {
-  version: "1.8.2",
+  version: "1.16.0",
+  curriculum: {
+    eyebrow: "Lehrplan-Kompass",
+    title: "DV-Fahrplan im Blick.",
+    text: "Ordnet LF2, LF7, Prüfungsbezüge und spätere Erweiterungen ein. Die Originalquellen bleiben privat, der Kompass ist eigenständig formuliert.",
+    href: "assets/materials/dv-lehrplan-kompass.pdf",
+    button: "Kompass öffnen"
+  },
   learningFields: [
     {
       id: "LF2",
       label: "LF2",
       title: "Lernfeld 2",
       subtitle: "Sortimente im Onlinevertrieb gestalten und die Beschaffung unterstützen",
-      short: "Webshop-Seiten, Produktdarstellung, Kundeninformationen, Recht, Preisangaben und Warenwirtschaft.",
+      short: "Webshop-Seiten, Produktdarstellung, Kundeninformationen, Produkttexte, Artikelauswahl, Visualisierung, Recht, Preisangaben und Warenwirtschaft.",
       heroTitle: "Webshops gestalten",
       heroEmphasis: "sichtbar, nutzbar, rechtssicher.",
-      heroText: "Im ersten Ausbildungsjahr geht es darum, Sortiment, Produktseiten, Preisangaben und technische Shop-Strukturen so aufzubauen, dass Kunden Orientierung finden und das Projekt sauber umgesetzt wird.",
-      modulesTitle: "Vom Shop-Layout zur informativen Produktseite.",
-      modulesText: "Die DV-Auswahl für LF2 umfasst Webshop-Layout, Webshop-Seiten zur Sortimentsdarstellung, Impressum, Haftung für Webseiteninhalte sowie Produktdetailseiten mit Informationsquellen und Kundeninformationen. Weitere Kapitel können später als eigene Module ergänzt werden."
+      heroText: "Im ersten Ausbildungsjahr geht es darum, Sortiment, Produktseiten, Produkttexte, Artikelauswahl, Produktvisualisierungen, Preisangaben und technische Shop-Strukturen so aufzubauen, dass Kunden Orientierung finden und das Projekt sauber umgesetzt wird.",
+      modulesTitle: "Vom Shop-Layout zur überzeugenden Produktdetailseite.",
+      modulesText: "Die DV-Auswahl für LF2 umfasst Webshop-Layout, Webshop-Seiten zur Sortimentsdarstellung, Impressum, Haftung für Webseiteninhalte, Produktdetailseiten mit Informationsquellen, Kundeninformationen, Produktbeschreibungen, Artikelauswahl und Visualisierungen, die Preisgestaltung sowie ERP- und Warenwirtschaftssysteme. Weitere Kapitel können später als eigene Module ergänzt werden.",
+      project: {
+        eyebrow: "LF2-Projektidee",
+        title: "E-Commerce-Homepage mit Marketing-Optimierung",
+        text: "Plane, baue, dokumentiere und präsentiere eine eigene E-Commerce-Homepage. Der Projektbrief verbindet HTML/CSS, Produktpräsentation, Kundenführung, Visualisierung, Auffindbarkeit und Reflexion.",
+        href: "assets/materials/lf2-projektidee-ecommerce-homepage.pdf",
+        button: "Projektbrief öffnen",
+        stats: [
+          ["01", "Konzept"],
+          ["02", "HTML/CSS"],
+          ["03", "Optimierung"]
+        ]
+      }
     },
     {
       id: "LF7",
       label: "LF7",
       title: "Lernfeld 7",
       subtitle: "Online-Marketing-Maßnahmen umsetzen und bewerten",
-      short: "Targeting, Suchmaschinen, SEO, SEA, Kennzahlen und KI.",
+      short: "Targeting, Suchmaschinen, SEO, SEA, Kennzahlen, Webanalyse und KI.",
       heroTitle: "Online-Marketing",
       heroEmphasis: "verstehen, messen, entscheiden.",
       heroText: "Online-Handel ist mehr als Klicks: Verstehe Kunden, Sortiment, Kanäle und Kennzahlen und verwandle Daten in gute Entscheidungen.",
       modulesTitle: "Vom passenden Kontakt zur messbaren Wirkung.",
-      modulesText: "Die Module folgen der DV-Auswahl für Lernfeld 7. Du kannst sie der Reihe nach bearbeiten oder gezielt in ein aktuelles Unterrichtsthema einsteigen."
+      modulesText: "Die Module folgen der DV-Auswahl für Lernfeld 7, ergänzt um eine Webanalyse-Vertiefung zu 7.19. Du kannst sie der Reihe nach bearbeiten oder gezielt in ein aktuelles Unterrichtsthema einsteigen."
     }
   ],
   modules: [
@@ -324,6 +343,254 @@ window.EC_CONTENT = {
       ]
     },
     {
+      id: "lf2-produktbeschreibung",
+      field: "LF2",
+      code: "2.8",
+      mark: "TXT",
+      title: "Die Produktbeschreibung auf der Produktdetailseite",
+      short: "Produkttexte so planen, strukturieren und formulieren, dass sie informieren, Vertrauen schaffen und in Suchmaschinen gefunden werden.",
+      color: "orange",
+      image: "assets/module-icons/lf2-2-8-produktbeschreibung.png",
+      mission: "Schreibe Produktbeschreibungen wie ein guter Verkaufsberater: verständlich, zielgruppengerecht, nutzenorientiert, strukturiert und suchmaschinenfreundlich.",
+      lessons: [
+        {
+          title: "Produktbeschreibung als Beratungstext verstehen",
+          text: "Eine Produktbeschreibung ist mehr als ein kopierter Herstellertext. Sie erklärt, welches Problem ein Produkt löst, welche Eigenschaften wichtig sind und warum es zur Zielgruppe passt. Sie informiert sachlich, wirkt zugleich verkaufsfördernd und hilft Suchmaschinen, die Produktseite richtig einzuordnen."
+        },
+        {
+          title: "Inhalte planen und sinnvoll strukturieren",
+          text: "Gute Texte entstehen nicht zufällig. Vor dem Schreiben werden Zielgruppe, Informationsbedarf, Nutzenversprechen, besondere Eigenschaften und mögliche Zusatzinformationen festgelegt. Danach wird der Text in gut scanbare Bereiche gegliedert: Titel, Kurzbeschreibung, Bullet Points, Fließtext, Tabellen, Zwischenüberschriften oder aufklappbare Bereiche."
+        },
+        {
+          title: "Kundengerecht und aktiv formulieren",
+          text: "Produkttexte sollten kurze Sätze, klare Wörter und aktive Formulierungen nutzen. Fremdwörter, leere Floskeln, aggressive Kaufbefehle und unnötig lange Satzketten stören. Besser sind positive Nutzenformulierungen: Ein Merkmal wird direkt damit verbunden, was Kundinnen und Kunden davon haben."
+        },
+        {
+          title: "SEO und Unique Content mitdenken",
+          text: "Suchmaschinen bewerten nicht nur einzelne Keywords, sondern auch Relevanz, Aktualität, Struktur und Eigenständigkeit. Einzigartige Produkttexte mit passenden Schlüsselwörtern, aussagekräftigen Überschriften und sinnvollen Listen helfen Kunden und verbessern zugleich die Auffindbarkeit."
+        }
+      ],
+      takeaways: [
+        "Gute Produktbeschreibungen verbinden Information, Verkauf und Suchmaschinenrelevanz.",
+        "Produkttexte müssen zur Zielgruppe passen und vor dem Schreiben geplant werden.",
+        "Kurze, aktive und positive Formulierungen wirken verständlicher als Fachjargon, Floskeln oder Drucksprache.",
+        "Unique Content, passende Keywords, Bullet Points und klare Zwischenüberschriften machen Produktseiten nutzbarer."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.8 Produktbeschreibung",
+          description: "Planung, Struktur, Kommunikationsregeln, Bullet Points, SEO-Keywords und Schreibauftrag für eigene Produkttexte.",
+          href: "assets/materials/lf2-2-8-produktbeschreibung-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Wähle ein Produkt aus deinem Webshop-Projekt und beschreibe Zielgruppe, Problem, wichtigsten Nutzen und Informationsbedarf.",
+        "Formuliere einen präzisen Produkttitel, drei bis fünf Bullet Points und eine kurze Beschreibung mit maximal 70 Wörtern.",
+        "Überarbeite deinen Text: Entferne Floskeln, unnötige Fachbegriffe, passive Formulierungen und aggressive Kaufaufforderungen.",
+        "Ergänze drei passende Keywords oder Suchbegriffe und baue sie natürlich in Titel, Zwischenüberschrift oder Beschreibung ein.",
+        "Entscheide, welche Informationen kurz sichtbar sein sollen und welche als Langbeschreibung, Tabelle oder aufklappbarer Abschnitt besser passen."
+      ]
+    },
+    {
+      id: "lf2-artikelauswahl",
+      field: "LF2",
+      code: "2.9",
+      mark: "VAR",
+      title: "Die Auswahl des Artikels auf der Produktdetailseite",
+      short: "Varianten, Lieferbarkeit, Auswahlhilfen, Produktvergleiche, Cross-Selling und Buy-Box so gestalten, dass Kunden sicher den passenden Artikel wählen.",
+      color: "blue",
+      image: "assets/module-icons/lf2-2-9-artikelauswahl.png",
+      mission: "Gestalte die Produktdetailseite so, dass Kunden den richtigen Artikel, die passende Variante und den nächsten Kaufschritt ohne Unsicherheit finden.",
+      lessons: [
+        {
+          title: "Varianten klar auswählbar machen",
+          text: "Viele Artikel werden in Varianten angeboten: Farbe, Größe, Modell, Material, Ausführung oder Menge. Die Produktdetailseite muss diese Varianten sichtbar, verständlich und leicht bedienbar machen. Nach der Auswahl sollten Bild, Preis, Lieferzeit und Verfügbarkeit zur gewählten Variante passen."
+        },
+        {
+          title: "Verfügbarkeit und Lieferzeit konkret zeigen",
+          text: "Kunden wollen wissen, ob ein Artikel lieferbar ist, wann er ankommt und ob Abholung oder kostenloser Versand möglich ist. Klare Angaben wie 'Lieferung in 2-3 Werktagen' helfen mehr als ungenaue Wörter wie 'voraussichtlich' oder 'ca.'. Künstlicher Kaufdruck sollte vermieden werden."
+        },
+        {
+          title: "Auswahlhilfen und Produktvergleiche anbieten",
+          text: "Unsichere Kunden brauchen Unterstützung: Größentabellen, Messhilfen, Infoblöcke, Symbole, Beratung, Chat oder Produktvergleiche. Ein guter Vergleich zeigt wesentliche Merkmale nebeneinander und macht Unterschiede schnell erfassbar, statt Kunden mit Daten zu überladen."
+        },
+        {
+          title: "Buy-Box, Cross-Selling und Warenkorb verbinden",
+          text: "Die Buy-Box bündelt Preis, Versandkosten, Varianten, Menge, Verfügbarkeit, Lieferzeit und den Call-to-Action. Ergänzende Produkte können als Cross-Selling angeboten werden. Nach dem Klick in den Warenkorb sollte klar bestätigt werden, was hinzugefügt wurde und wie Kunden weitergehen können."
+        }
+      ],
+      takeaways: [
+        "Artikelvarianten müssen so dargestellt werden, dass Kunden die passende Ausführung sicher wählen können.",
+        "Verfügbarkeit, Lieferzeit, Versand und Abholung gehören klar und möglichst konkret in die Kaufzone.",
+        "Auswahlhilfen, Beratung und Produktvergleiche senken Unsicherheit und können Retouren vermeiden.",
+        "Buy-Box, Cross-Selling und Warenkorb-Layer führen von der Entscheidung zum nächsten Kaufschritt."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.9 Artikelauswahl",
+          description: "Varianten, Lieferbarkeit, Auswahlhilfen, Produktvergleich, Cross-Selling, Buy-Box und Warenkorb-Layer für eigene Produktdetailseiten planen.",
+          href: "assets/materials/lf2-2-9-artikelauswahl-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Wähle ein Produkt mit mindestens zwei Varianten, zum Beispiel Farbe, Größe, Menge, Material oder Modell.",
+        "Plane, wie die Variantenauswahl auf deiner Produktdetailseite aussieht und welche Informationen sich nach der Auswahl ändern.",
+        "Ergänze konkrete Angaben zu Verfügbarkeit, Lieferzeit, Versandkosten, Abholung oder kostenfreiem Versand.",
+        "Entwickle eine Auswahlhilfe, etwa Größentabelle, Infoblock, Beratungshinweis oder Produktvergleich.",
+        "Skizziere deine Buy-Box mit Preis, Menge, Varianten, Verfügbarkeit, Lieferzeit und klarem Call-to-Action sowie einem passenden Warenkorb-Layer."
+      ]
+    },
+    {
+      id: "lf2-visualisierungen",
+      field: "LF2",
+      code: "2.10",
+      mark: "VIS",
+      title: "Visualisierungen auf der Produktdetailseite",
+      short: "Produktfotos, Zoom, 360-Ansichten, Videos, Dateiformate und Bildgrößen so wählen, dass Kunden Produkte realistisch beurteilen können.",
+      color: "mint",
+      image: "assets/module-icons/lf2-2-10-visualisierungen.png",
+      mission: "Mach Produkte sichtbar: Plane Bilder und Videos so, dass Kunden Details, Varianten und Nutzung besser einschätzen können, ohne die Seite langsam oder unübersichtlich zu machen.",
+      lessons: [
+        {
+          title: "Visualisierung ersetzt das Anfassen",
+          text: "Im Online-Shop können Kunden Produkte nicht direkt sehen, anfassen oder ausprobieren. Gute Produktfotos, Details, Variantenbilder, Zoom, Vollbildansichten und 360-Ansichten helfen, Größe, Material, Farbe und Qualität realistischer einzuschätzen."
+        },
+        {
+          title: "Produktfotos brauchen Konzept",
+          text: "Ein einzelnes Foto reicht selten. Sinnvoll sind mehrere Perspektiven, Detailaufnahmen, Bilder aller wichtigen Farb- oder Modellvarianten und ein einheitlicher Stil. Thumbnails helfen bei der Auswahl, während Zoom oder Vollbildansicht wichtige Details sichtbar machen."
+        },
+        {
+          title: "Bildqualität und Ladezeit austarieren",
+          text: "Bildgröße, Auflösung, Dateigröße, Farbtiefe und Dateiformat beeinflussen Darstellung und Ladezeit. Komprimierung spart Speicherplatz und beschleunigt Seiten, darf aber keine störenden Qualitätsverluste oder Kompressionsartefakte erzeugen."
+        },
+        {
+          title: "Produktvideos gezielt einsetzen",
+          text: "Videos können Funktionen, Nutzung, Größenverhältnisse und Erklärungen besonders anschaulich zeigen. Sie sollten relevant, kurz, rechtlich sauber eingebunden und nicht aufdringlich sein. Automatischer Start mit Ton wirkt oft störend."
+        }
+      ],
+      takeaways: [
+        "Gute Visualisierung hilft Kunden, ein Produkt trotz Distanz realistisch einzuschätzen.",
+        "Mehrere Perspektiven, Detailbilder, Variantenfotos und Zoom-Funktionen machen Produktmerkmale sichtbar.",
+        "Dateiformat, Bildgröße und Komprimierung müssen zur Nutzung passen: scharf genug, aber nicht unnötig langsam.",
+        "Produktvideos sind stark, wenn sie echten Zusatznutzen liefern und bewusst eingebunden werden."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.10 Visualisierungen",
+          description: "Bildkonzept, Dateiformate, Komprimierung, Produktvideo-Planung und Visualisierungscheck für eigene Produktdetailseiten.",
+          href: "assets/materials/lf2-2-10-visualisierungen-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Wähle ein Produkt aus deinem Webshop-Projekt und plane mindestens fünf passende Produktbilder: Gesamtansicht, Detail, Variante, Nutzung und Größenvergleich.",
+        "Lege fest, welche Bilder als Thumbnails, Zoomansicht oder Vollbildansicht angeboten werden.",
+        "Prüfe für deine Bilder Dateiformat, Bildgröße und Dateigröße. Reduziere die Datei nur so weit, dass Details noch sauber erkennbar bleiben.",
+        "Entscheide, ob ein Produktvideo sinnvoll ist. Beschreibe Ziel, Inhalt, Länge, Einbindung und Rechtefrage.",
+        "Ergänze deine Produktdetailseite um eine kurze Medienstrategie: Welche Visualisierung beantwortet welche Kundenfrage?"
+      ]
+    },
+    {
+      id: "lf2-preisgestaltung",
+      field: "LF2",
+      code: "2.12",
+      mark: "PRE",
+      title: "Preisgestaltung und -darstellung in Webshops",
+      short: "Preise kalkulieren, Preispsychologie verstehen, Dynamic Pricing einordnen und Preisangaben rechtssicher nach PAngV darstellen.",
+      color: "violet",
+      mission: "Werde zum Preisprofi: Kalkuliere deinen Verkaufspreis, nutze faire psychologische Effekte, verstehe dynamische Preise – und zeichne alle Preise in deinem Webshop-Projekt rechtssicher aus.",
+      lessons: [
+        {
+          title: "Preise entstehen nicht zufällig",
+          text: "Bei der Preisfestlegung wirken mehrere Einflussgrößen zusammen: die eigene Kostensituation (Bezugspreis plus Handlungskosten ergibt die Selbstkosten, mit Gewinnaufschlag entsteht die Preisuntergrenze), die Beschaffungskosten, unverbindliche Preisempfehlungen des Herstellers (UVP – der Händler ist daran nicht gebunden), die Konkurrenzsituation am Markt, das Verhalten der Kunden und gesetzliche Bestimmungen. Bei Grundnahrungsmitteln reagieren Kunden viel stärker auf Preisänderungen als bei Luxus- und Prestigeprodukten."
+        },
+        {
+          title: "Psychologie der Preiswahrnehmung",
+          text: "Kunden nehmen Preise nicht rein rechnerisch wahr. Händler nutzen deshalb den Preisrundungseffekt (7,99 € statt 8,00 €), Preisschwellen, die Tendenz zur Mitte (beim Angebot von drei Preisen wird oft der mittlere gewählt), den Schnäppcheneffekt bei Kombinationsangeboten, Eckpreisartikel (bekannte Warenkorb-Artikel, von denen Kunden auf das gesamte Preisniveau schließen) und künstliche Verknappung. Wichtig für dein Projekt: Diese Effekte kennen – und fair einsetzen."
+        },
+        {
+          title: "Dynamische Preise, Preisdifferenzierung und Rabatte",
+          text: "Beim Dynamic Pricing passt ein Algorithmus die Preise laufend an – je nach Tageszeit, Nachfrage, Standort oder verwendetem Gerät; große Shops ändern Preise mehrmals täglich. Preisdifferenzierung bedeutet, die gleiche Ware zu unterschiedlichen Preisen anzubieten: räumlich, personell, zeitlich oder mengenmäßig. Dazu kommen Rabatte (Mengen-, Treue-, Wiederverkäufer- und Personalrabatt, Skonto, Bonus) und Naturalrabatte: Bei der Draufgabe erhält der Kunde mehr Ware als bestellt, bei der Dreingabe zahlt er nur einen Teil der gewünschten Menge."
+        },
+        {
+          title: "Preisangabenverordnung: klare Regeln",
+          text: "Die Preisangabenverordnung (PAngV) schützt Verbraucher: Anzugeben ist immer der Endpreis inklusive Umsatzsteuer, Versandkosten müssen klar ausgewiesen werden (nicht nur in den AGB), bei Waren nach Gewicht oder Volumen zusätzlich der Grundpreis je Mengeneinheit. Preise müssen leicht erkennbar, deutlich lesbar und dem Angebot eindeutig zugeordnet sein. Seit 2022 gilt außerdem: Wer mit Streichpreisen wirbt, muss den niedrigsten Gesamtpreis der letzten 30 Tage angeben (§ 11 PAngV). Verstöße können ein Bußgeld bis zu 25.000 € kosten."
+        }
+      ],
+      takeaways: [
+        "Verkaufspreise entstehen aus Kosten, Konkurrenz, Kundenverhalten, Herstellerempfehlungen und gesetzlichen Regeln – die Selbstkosten markieren die langfristige Preisuntergrenze.",
+        "Preispsychologie wirkt: gebrochene Preise, Preisschwellen, Tendenz zur Mitte und Eckpreisartikel beeinflussen die Kaufentscheidung.",
+        "Dynamic Pricing und Preisdifferenzierung sind verbreitet – als Shopbetreiber bewusst einsetzen, als Kunde erkennen können.",
+        "PAngV beachten: Endpreis inkl. USt, Versandkosten-Hinweis, Grundpreis je Mengeneinheit und bei Streichpreisen der 30-Tage-Bestpreis."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.12 Preisgestaltung",
+          description: "Rechenwerkstatt zu Kalkulation, Umsatzvergleich und Grundpreisen, Preispsychologie-Zuordnung und PAngV-Check für dein Webshop-Projekt.",
+          href: "assets/materials/lf2-2-12-preisgestaltung-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Kalkuliere für ein Produkt deines Webshop-Projekts den Verkaufspreis: Bezugspreis, Handlungskosten, Gewinnaufschlag und Umsatzsteuer nachvollziehbar notieren.",
+        "Prüfe alle Preisangaben deines Projekts nach PAngV: Endpreis inkl. USt sichtbar, Versandkosten-Hinweis vorhanden, Grundpreis bei Mengenware angegeben.",
+        "Gestalte die Preisdarstellung verkaufswirksam: Preis deutlich abheben, Ersparnis bei Aktionen ehrlich ausweisen (30-Tage-Bestpreis beachten).",
+        "Untersuche einen echten Webshop zu zwei verschiedenen Zeitpunkten oder auf zwei Geräten: Findest du Hinweise auf Dynamic Pricing?",
+        "Entscheide für dein Sortiment: Wo wären Mengenrabatt, zeitliche Aktionen oder ein Kombinationsangebot sinnvoll – und wo eher nicht?"
+      ]
+    },
+    {
+      id: "lf2-warenwirtschaft",
+      field: "LF2",
+      code: "2.16",
+      mark: "ERP",
+      title: "ERP- und Warenwirtschaftssysteme",
+      short: "Waren- und Informationsflüsse verstehen, Artikelnummern und GTIN einsetzen und erkennen, wie Warenwirtschafts- und ERP-Systeme den Shop im Hintergrund steuern.",
+      color: "cyan",
+      mission: "Blicke hinter die Kulissen deines Webshops: Verfolge, wie Ware und Informationen durch das Unternehmen fließen – und wie Warenwirtschafts- und ERP-Systeme daraus einen reibungslosen Ablauf machen.",
+      lessons: [
+        {
+          title: "Warenwirtschaft: Ware und Information fließen",
+          text: "Die Warenwirtschaft umfasst alle Tätigkeiten rund um Beschaffung, Lagerung und Absatz der Ware. Dabei laufen zwei Ströme parallel: Im Warenfluss bewegt sich die Ware physisch durch das Unternehmen (prüfen, lagern, verpacken, versenden), im Informationsfluss wandern die Daten dazu (Lieferschein prüfen, Bestand buchen, Preis kalkulieren, Umsatz erfassen). Ziel ist, die richtige Ware zur rechten Zeit, in der richtigen Menge, zum richtigen Preis am richtigen Ort zu haben."
+        },
+        {
+          title: "Der Zielkonflikt – und wie Systeme helfen",
+          text: "Die Warenwirtschaft steckt in einem klassischen Zielkonflikt: Einerseits sollen Lagerbestände klein bleiben, weil Ware Kapital bindet und Lagerkosten verursacht. Andererseits sollen Kunden sofort beliefert werden können. Warenwirtschaftssysteme (WWS) steuern den Warendurchlauf lückenlos vom Wareneingang bis zum Warenausgang und liefern die Informationen und Kennzahlen, um diesen Konflikt zu entschärfen. Man unterscheidet geschlossene (alles per EDV), offene (nur teilweise per EDV) und integrierte Systeme, die auch Kunden, Lieferanten und Banken direkt einbinden."
+        },
+        {
+          title: "Artikelnummern, GTIN und Codes",
+          text: "Damit ein System jeden Verkauf artikelgenau erfassen kann, braucht jeder Artikel eine eindeutige Nummer: entweder eine hauseigene Artikelnummer oder die GTIN (Global Trade Item Number, früher EAN). Die 13-stellige GTIN besteht aus Länderkennzeichen, Unternehmensnummer, individueller Artikelnummer und Prüfziffer und begleitet den Artikel über alle Handelsstufen. Maschinenlesbar wird sie über Strichcodes; Matrixcodes (QR-Codes) sind zweidimensional und können deutlich mehr Informationen speichern."
+        },
+        {
+          title: "ERP: das Nervensystem des Unternehmens",
+          text: "ERP-Systeme (Enterprise Resource Planning) gehen über die Warenwirtschaft hinaus: Sie bilden die Geschäftsprozesse des ganzen Unternehmens ab – mit Modulen für Stammdaten, Warenwirtschaft, Verkauf, Finanzwesen, Controlling, Personal und Marketing. Alle Daten liegen in einer zentralen Datenbasis, Mehrfacherfassung entfällt. Nachteile sind Anpassungsaufwand (Customizing) und Herstellerabhängigkeit. Bekannte Anbieter sind SAP, Oracle und Microsoft Dynamics; der Trend geht zu Cloud- und webbasierten Systemen, die auch Lieferanten und Kunden einbinden (Supply Chain Management, CRM)."
+        }
+      ],
+      takeaways: [
+        "Warenwirtschaft heißt: Warenfluss und Informationsfluss gemeinsam denken – von der Beschaffung über die Lagerung bis zum Absatz.",
+        "Der Zielkonflikt „niedrige Bestände gegen sofortige Lieferfähigkeit“ lässt sich nur mit guten Daten aus dem Warenwirtschaftssystem steuern.",
+        "Eindeutige Artikelnummern oder die 13-stellige GTIN sind die Voraussetzung für artikelgenaue Erfassung – Strichcode und QR-Code machen sie maschinenlesbar.",
+        "ERP-Systeme bündeln alle Geschäftsprozesse in einer zentralen Datenbasis; das spart Mehrfacherfassung, kostet aber Anpassungsaufwand."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF2 2.16 ERP und Warenwirtschaft",
+          description: "Waren- oder Informationsfluss zuordnen, GTIN entschlüsseln, WWS-Arten vergleichen und den Datenfluss des eigenen Webshop-Projekts skizzieren.",
+          href: "assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Skizziere als Flussdiagramm, was in deinem Webshop-Projekt nach einer Bestellung passiert: von der Auftragsprüfung über Lager und Versand bis zur Rechnung.",
+        "Markiere in deinem Diagramm farblich, was Warenfluss und was Informationsfluss ist.",
+        "Vergib für dein Sortiment eindeutige Artikelnummern nach einem selbst festgelegten Schema und dokumentiere das Schema kurz.",
+        "Lege fest, welche Daten dein (gedachtes) Warenwirtschaftssystem an den Shop liefert: Bestand, Preis, Lieferzeit – und wo diese auf der Produktdetailseite erscheinen.",
+        "Recherchiere ein echtes ERP- oder WWS-Produkt und notiere, welche Module es für einen kleinen Webshop bietet."
+      ]
+    },
+    {
       id: "targeting",
       code: "7.5",
       mark: "TG",
@@ -486,6 +753,54 @@ window.EC_CONTENT = {
         "CPC = Werbekosten / Klicks.",
         "Conversion Rate = Conversions / Klicks × 100.",
         "CPO = Werbekosten / Bestellungen; ROAS = Umsatz / Werbekosten."
+      ]
+    },
+    {
+      id: "webanalyse",
+      code: "7.19+",
+      mark: "ANA",
+      title: "Webanalyse: Messen, Testen, Datenschutz",
+      short: "Besucherströme verstehen, A/B-Tests sauber durchführen und Tracking datenschutzkonform einsetzen – die Vertiefung zur Kampagnenauswertung.",
+      color: "mint",
+      mission: "Werde zur Datendetektivin oder zum Datendetektiv: Finde heraus, was Besucher auf deiner Seite wirklich tun, teste Verbesserungen fair – und respektiere dabei die Privatsphäre deiner Nutzer.",
+      lessons: [
+        {
+          title: "Was Webanalyse beantwortet",
+          text: "Webanalyse-Tools wie Google Analytics oder das selbst gehostete Matomo beantworten drei Grundfragen: Woher kommen die Besucher (Suchmaschine, Anzeige, Social Media, direkt)? Was tun sie auf der Seite (welche Seiten, wie lange, wo steigen sie aus)? Und führen sie die gewünschten Handlungen aus (Kauf, Anmeldung, Kontakt)? Ohne diese Antworten bleibt jede Optimierung ein Ratespiel."
+        },
+        {
+          title: "Vom Ziel zum Messkonzept",
+          text: "Gute Webanalyse beginnt nicht beim Tool, sondern beim Ziel: Erst festlegen, was Erfolg bedeutet, dann die passende Kennzahl wählen, dann messen. Wichtige Größen sind Sitzungen (Besuche), Nutzer, Seitenaufrufe, die Absprungrate (Besuche ohne weitere Interaktion) und Conversions. Kampagnenlinks werden mit UTM-Parametern markiert, damit erkennbar ist, welcher Kanal welche Besucher bringt."
+        },
+        {
+          title: "A/B-Tests: Entscheiden mit Daten statt Bauchgefühl",
+          text: "Beim A/B-Test sehen zufällig aufgeteilte Besuchergruppen zwei Varianten einer Seite – zum Beispiel unterschiedliche Buttontexte. Damit das Ergebnis aussagekräftig ist, gelten drei Regeln: nur ein Element pro Test ändern, die Besucher zufällig aufteilen und den Test lange genug laufen lassen. Wer nach zwanzig Besuchern abbricht oder Sieger kürt, misst Zufall statt Wirkung."
+        },
+        {
+          title: "Datenschutz und Grenzen der Zahlen",
+          text: "Tracking-Cookies und vergleichbare Techniken dürfen erst nach informierter Einwilligung gesetzt werden (§ 25 TDDDG, früher TTDSG, zusammen mit der DSGVO) – dafür gibt es Consent-Banner; unbedingt erforderliche Cookies wie der Warenkorb sind ausgenommen. Datensparsame Einstellungen wie IP-Kürzung und Pseudonymisierung gehören dazu. Und: Zahlen zeigen, was passiert, aber nicht warum – wer ablehnt, fehlt in den Daten, und Bot-Besuche können Statistiken verzerren."
+        }
+      ],
+      takeaways: [
+        "Webanalyse beantwortet: Woher kommen Besucher, was tun sie, und erreichen sie das Ziel?",
+        "Erst Ziel und Kennzahl festlegen, dann messen – Sitzungen, Absprungrate und Conversions sind die Basisgrößen, UTM-Parameter machen Kanäle unterscheidbar.",
+        "A/B-Tests brauchen Zufallsaufteilung, nur eine Änderung pro Test und ausreichend Daten – sonst gewinnt der Zufall.",
+        "Tracking nur mit Einwilligung (§ 25 TDDDG + DSGVO), datensparsam konfigurieren – und Zahlen immer als Hinweis, nicht als ganze Wahrheit lesen."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF7 Webanalyse",
+          description: "Kennzahlen-Rechenwerkstatt, A/B-Test-Planungsgerüst, Consent-Checkliste und Analyse-Auftrag für das eigene Webshop-Projekt.",
+          href: "assets/materials/lf7-webanalyse-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Definiere für dein Webshop-Projekt drei Messziele und wähle zu jedem die passende Kennzahl (z. B. Anteil der Besucher, die die Produktseite erreichen).",
+        "Plane einen A/B-Test für ein Element deiner Seite: Variante A und B, erwartete Wirkung, Messgröße und Mindestlaufzeit notieren.",
+        "Skizziere ein Consent-Banner für deinen Shop: Welche Cookies sind unbedingt erforderlich, welche brauchen eine Einwilligung?",
+        "Untersuche mit den Entwicklertools (F12, Reiter „Anwendung“/„Application“) eines echten Shops, welche Cookies vor und nach der Einwilligung gesetzt werden.",
+        "Formuliere zwei Fragen, die deine Webanalyse-Zahlen nicht beantworten können – und wie du sie stattdessen klären würdest (z. B. Kundenbefragung)."
       ]
     },
     {
@@ -986,6 +1301,110 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Mustererkennung und vorbereitende Analysen sind typische unterstützende Anwendungen."
+    },
+    {
+      id: "webanalyse-01",
+      module: "webanalyse",
+      type: "choice",
+      prompt: "Welche drei Grundfragen beantwortet die Webanalyse für einen Webshop?",
+      options: [
+        "Woher kommen Besucher, was tun sie auf der Seite und erreichen sie das Ziel?",
+        "Wie heißen die Besucher, wo wohnen sie und was verdienen sie?",
+        "Welche Farbe hat das Logo, wie groß ist die Schrift und wie teuer war das Design?",
+        "Wie viele Mitarbeiter hat der Shop, wer ist Chef und wann ist Feierabend?"
+      ],
+      answer: 0,
+      explanation: "Herkunft, Verhalten und Zielerreichung der Besucher sind die Kernfragen – personenbezogene Details wie Namen gehören ausdrücklich nicht dazu."
+    },
+    {
+      id: "webanalyse-02",
+      module: "webanalyse",
+      type: "number",
+      prompt: "Von 1.200 Sitzungen enden 420 ohne weitere Interaktion. Wie hoch ist die Absprungrate?",
+      suffix: "%",
+      answer: 35,
+      tolerance: 0.1,
+      explanation: "420 / 1.200 × 100 = 35 %. Eine hohe Absprungrate kann auf unpassende Erwartungen oder Probleme der Seite hinweisen."
+    },
+    {
+      id: "webanalyse-03",
+      module: "webanalyse",
+      type: "choice",
+      prompt: "Wozu dienen UTM-Parameter an Kampagnenlinks?",
+      options: [
+        "Sie verschlüsseln die Zahlungsdaten der Kunden.",
+        "Sie machen die Seite automatisch schneller.",
+        "Sie kennzeichnen, aus welchem Kanal oder welcher Kampagne ein Besucher kommt.",
+        "Sie ersetzen das Impressum bei Werbelinks."
+      ],
+      answer: 2,
+      explanation: "UTM-Parameter markieren Links, damit die Webanalyse Besucher dem richtigen Kanal zuordnen kann – etwa Newsletter oder Suchanzeige."
+    },
+    {
+      id: "webanalyse-04",
+      module: "webanalyse",
+      type: "choice",
+      prompt: "Welche Regel gehört zu einem sauberen A/B-Test?",
+      options: [
+        "Möglichst viele Elemente gleichzeitig ändern, um Zeit zu sparen.",
+        "Nur ein Element pro Test ändern und die Besucher zufällig aufteilen.",
+        "Nur Stammkunden in den Test aufnehmen.",
+        "Den Test beenden, sobald die Lieblingsvariante vorne liegt."
+      ],
+      answer: 1,
+      explanation: "Ändert man mehrere Elemente gleichzeitig, weiß man nicht, welche Änderung gewirkt hat. Zufallsaufteilung verhindert verzerrte Gruppen."
+    },
+    {
+      id: "webanalyse-05",
+      module: "webanalyse",
+      type: "number",
+      prompt: "Im A/B-Test erzielt Variante B bei 2.000 Besuchern 90 Bestellungen. Wie hoch ist ihre Conversion Rate?",
+      suffix: "%",
+      answer: 4.5,
+      tolerance: 0.01,
+      explanation: "90 / 2.000 × 100 = 4,5 %. Für ein belastbares Urteil braucht es zusätzlich die Rate der Variante A und genügend Daten."
+    },
+    {
+      id: "webanalyse-06",
+      module: "webanalyse",
+      type: "choice",
+      prompt: "Ein Test lief nur einen Vormittag mit 30 Besuchern; Variante B liegt knapp vorn. Was ist die richtige Schlussfolgerung?",
+      options: [
+        "B sofort für alle übernehmen, der Test ist eindeutig.",
+        "A löschen und nie wieder testen.",
+        "Das Ergebnis ist noch nicht belastbar – der Test braucht mehr Daten und Laufzeit.",
+        "Beide Varianten gleichzeitig allen Besuchern zeigen."
+      ],
+      answer: 2,
+      explanation: "Bei so wenigen Besuchern entscheidet der Zufall. A/B-Tests brauchen ausreichend Daten über einen längeren Zeitraum."
+    },
+    {
+      id: "webanalyse-07",
+      module: "webanalyse",
+      type: "choice",
+      prompt: "Wann dürfen Tracking-Cookies für die Webanalyse gesetzt werden?",
+      options: [
+        "Immer sofort beim Seitenaufruf, das ist Standard.",
+        "Erst nach informierter Einwilligung der Nutzer, etwa über ein Consent-Banner.",
+        "Nur nachts, wenn wenig Besucher da sind.",
+        "Sobald der Kunde etwas in den Warenkorb legt."
+      ],
+      answer: 1,
+      explanation: "Nach § 25 TDDDG (früher TTDSG) und DSGVO braucht Tracking eine Einwilligung. Nur unbedingt erforderliche Cookies – wie der Warenkorb – sind ausgenommen."
+    },
+    {
+      id: "webanalyse-08",
+      module: "webanalyse",
+      type: "choice",
+      prompt: "Warum sollten Webanalyse-Zahlen nie als „ganze Wahrheit“ gelesen werden?",
+      options: [
+        "Weil Zahlen grundsätzlich falsch sind.",
+        "Weil nur der Chef die Zahlen sehen darf.",
+        "Weil die Tools absichtlich falsche Werte anzeigen.",
+        "Weil sie zeigen, was passiert, aber nicht warum – und Nutzer ohne Einwilligung sowie Bots die Daten verzerren."
+      ],
+      answer: 3,
+      explanation: "Die Daten sind unvollständig und erklären keine Motive. Für das „Warum“ helfen z. B. Nutzerbefragungen oder Usability-Tests."
     },
     {
       id: "lf2-layout-01",
@@ -1546,6 +1965,550 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Handling-Informationen helfen Kunden beim sachgerechten Umgang mit der Ware und vermeiden Fehlkäufe oder falsche Nutzung."
+    },
+    {
+      id: "lf2-produktbeschreibung-01",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Warum ist eine gute Produktbeschreibung auf der Produktdetailseite wichtig?",
+      options: [
+        "Sie informiert Kunden, unterstützt die Kaufentscheidung und hilft bei der Auffindbarkeit.",
+        "Sie ersetzt grundsätzlich alle Produktbilder.",
+        "Sie muss immer aus dem Herstellerkatalog kopiert werden.",
+        "Sie ist nur für interne Mitarbeitende gedacht."
+      ],
+      answer: 0,
+      explanation: "Produktbeschreibungen verbinden sachliche Information, Verkaufswirkung und Suchmaschinenrelevanz."
+    },
+    {
+      id: "lf2-produktbeschreibung-02",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Was sind Bullet Points in einer Produktbeschreibung?",
+      options: [
+        "Kurze, übersichtliche Stichpunkte mit wichtigen Vorteilen oder Eigenschaften.",
+        "Lange juristische Pflichttexte im Footer.",
+        "Automatisch generierte Dateinamen für Produktbilder.",
+        "Zufällige Suchbegriffe ohne Zusammenhang zum Artikel."
+      ],
+      answer: 0,
+      explanation: "Bullet Points machen zentrale Informationen schnell erfassbar und helfen beim Scannen der Produktseite."
+    },
+    {
+      id: "lf2-produktbeschreibung-03",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Welche Formulierung ist für einen Produkttext am besten geeignet?",
+      options: [
+        "Die wasserabweisende Oberfläche schützt den Inhalt bei leichtem Regen.",
+        "Das Produkt ist halt irgendwie mega krass.",
+        "Greifen Sie sofort zu, sonst ist alles vorbei.",
+        "Hiermit wird von uns ein Nutzen ausgearbeitet."
+      ],
+      answer: 0,
+      explanation: "Gute Produkttexte sind konkret, aktiv, verständlich und verbinden ein Merkmal mit einem Kundennutzen."
+    },
+    {
+      id: "lf2-produktbeschreibung-04",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Was ist mit Unique Content auf einer Produktdetailseite gemeint?",
+      options: [
+        "Ein eigenständig formulierter Text, der nicht einfach von anderen Seiten kopiert wurde.",
+        "Ein Text, der nur aus Sonderzeichen besteht.",
+        "Ein beliebiger Herstellertext, der in jedem Shop identisch ist.",
+        "Eine Bilddatei ohne Produktinformationen."
+      ],
+      answer: 0,
+      explanation: "Unique Content macht die Seite für Kunden und Suchmaschinen wertvoller, weil er eigenständig und passend zur Zielgruppe formuliert ist."
+    },
+    {
+      id: "lf2-produktbeschreibung-05",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Welche Frage gehört in die Planung eines Produkttextes?",
+      options: [
+        "Welche Zielgruppe kauft den Artikel und welchen Nutzen erwartet sie?",
+        "Welche Farbe hat der Header der CSS-Datei?",
+        "Wie viele private Notizen stehen im Projektordner?",
+        "Wie kann der Text möglichst unverständlich werden?"
+      ],
+      answer: 0,
+      explanation: "Produkttexte sollten aus Zielgruppe, Informationsbedarf, Nutzen und Produkteigenschaften heraus geplant werden."
+    },
+    {
+      id: "lf2-produktbeschreibung-06",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Was ist ein Kommunikationsstörer in Produkttexten?",
+      options: [
+        "Unklare Fachsprache, lange Satzketten, leere Floskeln oder Drucksprache.",
+        "Eine klare Zwischenüberschrift.",
+        "Ein präziser Kundennutzen.",
+        "Eine kurze Liste mit Produkteigenschaften."
+      ],
+      answer: 0,
+      explanation: "Kommunikationsstörer erschweren das Verstehen oder wirken auf Kunden unangenehm."
+    },
+    {
+      id: "lf2-produktbeschreibung-07",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Welche Struktur hilft Kunden beim schnellen Erfassen einer Produktbeschreibung?",
+      options: [
+        "Titel, Kurzbeschreibung, Bullet Points, Zwischenüberschriften und bei Bedarf Langbeschreibung.",
+        "Ein einziger unstrukturierter Block ohne Absätze.",
+        "Nur ein Preis ohne weitere Informationen.",
+        "Eine zufällige Liste interner Dateipfade."
+      ],
+      answer: 0,
+      explanation: "Eine klare Struktur reduziert Suchaufwand und macht wichtige Informationen schneller sichtbar."
+    },
+    {
+      id: "lf2-produktbeschreibung-08",
+      module: "lf2-produktbeschreibung",
+      type: "choice",
+      prompt: "Wie sollten Keywords in Produktbeschreibungen eingesetzt werden?",
+      options: [
+        "Natürlich, passend zur Suchabsicht und ohne unnötige Wiederholung.",
+        "Hundertfach hintereinander am Seitenende.",
+        "Nur in weißer Schrift auf weißem Hintergrund.",
+        "Ausschließlich in internen Kommentaren."
+      ],
+      answer: 0,
+      explanation: "Keywords helfen nur, wenn sie sinnvoll zum Produkt, zur Zielgruppe und zum tatsächlichen Text passen."
+    },
+    {
+      id: "lf2-artikelauswahl-01",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Warum braucht die Produktdetailseite gute Auswahlmöglichkeiten für Artikelvarianten?",
+      options: [
+        "Damit Kunden die passende Ausführung auswählen können und weniger unsicher sind.",
+        "Damit der Warenkorb versteckt werden kann.",
+        "Damit Produktbilder grundsätzlich unnötig werden.",
+        "Damit alle Varianten denselben Preis und dieselbe Lieferzeit haben müssen."
+      ],
+      answer: 0,
+      explanation: "Varianten wie Farbe, Größe oder Modell müssen leicht auswählbar sein. Das reduziert Unsicherheit und unterstützt die Kaufentscheidung."
+    },
+    {
+      id: "lf2-artikelauswahl-02",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Welche Angaben sollten sich idealerweise anpassen, wenn ein Kunde eine andere Variante wählt?",
+      options: [
+        "Nur die interne Dateigröße des Produktbildes.",
+        "Bild, Preis, Verfügbarkeit, Lieferzeit und passende Produktdaten.",
+        "Das Impressum des Shops.",
+        "Die gesamte Navigation des Webshops ohne Bezug zum Produkt."
+      ],
+      answer: 1,
+      explanation: "Eine Variante kann andere Bilder, Preise, Lagerbestände oder Lieferzeiten haben. Diese Informationen sollten zur aktuellen Auswahl passen."
+    },
+    {
+      id: "lf2-artikelauswahl-03",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Welche Lieferzeitangabe ist für Kunden am hilfreichsten?",
+      options: [
+        "ca. irgendwann",
+        "voraussichtlich bald",
+        "Lieferung in 2-3 Werktagen",
+        "i. d. R. demnächst"
+      ],
+      answer: 2,
+      explanation: "Konkrete Lieferzeitangaben helfen Kunden, den Anlieferungstermin einzuschätzen. Ungefähre Wörter schaffen eher Unsicherheit."
+    },
+    {
+      id: "lf2-artikelauswahl-04",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Welche Maßnahme ist eine typische Auswahlhilfe auf einer Produktdetailseite?",
+      options: [
+        "Eine Größentabelle oder Messhilfe.",
+        "Ein versteckter Warenkorb ohne Inhalt.",
+        "Ein zufälliger Rabattcode ohne Erklärung.",
+        "Ein Footer ohne Kontaktmöglichkeit."
+      ],
+      answer: 0,
+      explanation: "Größentabellen, Messhilfen, Symbole, Infoblöcke oder Beratung helfen Kunden, die richtige Variante zu finden."
+    },
+    {
+      id: "lf2-artikelauswahl-05",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Wozu dient ein Produktvergleich?",
+      options: [
+        "Er zeigt wesentliche Produktmerkmale nebeneinander, damit Unterschiede schnell erkennbar werden.",
+        "Er verhindert, dass Kunden technische Daten sehen.",
+        "Er ersetzt grundsätzlich den Preis.",
+        "Er zeigt nur Werbung ohne Bezug zum Produkt."
+      ],
+      answer: 0,
+      explanation: "Produktvergleiche helfen bei ähnlichen Artikeln, indem wichtige Merkmale übersichtlich gegenübergestellt werden."
+    },
+    {
+      id: "lf2-artikelauswahl-06",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Was bedeutet Cross-Selling auf der Produktdetailseite?",
+      options: [
+        "Ergänzende oder passende Produkte zum betrachteten Artikel anbieten.",
+        "Kunden absichtlich zu einem falschen Artikel führen.",
+        "Die Produktbeschreibung löschen.",
+        "Die Lieferzeit verstecken."
+      ],
+      answer: 0,
+      explanation: "Cross-Selling empfiehlt sinnvolle Ergänzungsartikel oder passende Alternativen und kann Kundennutzen sowie Warenkorbwert erhöhen."
+    },
+    {
+      id: "lf2-artikelauswahl-07",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Welche Bestandteile gehören typischerweise in eine Buy-Box?",
+      options: [
+        "Preis, Versandkosten, Varianten, Menge, Verfügbarkeit, Lieferzeit und Call-to-Action.",
+        "Nur der Name der CSS-Datei.",
+        "Ausschließlich ein zufälliges Produktfoto.",
+        "Nur das Impressum des Unternehmens."
+      ],
+      answer: 0,
+      explanation: "Die Buy-Box bündelt die kaufentscheidenden Informationen und den nächsten Handlungsschritt, etwa 'In den Warenkorb'."
+    },
+    {
+      id: "lf2-artikelauswahl-08",
+      module: "lf2-artikelauswahl",
+      type: "choice",
+      prompt: "Was sollte nach dem Klick auf 'In den Warenkorb' deutlich werden?",
+      options: [
+        "Dass der Artikel hinzugefügt wurde und welche nächsten Schritte möglich sind.",
+        "Dass die Seite ohne Rückmeldung leer bleibt.",
+        "Dass der Kunde sofort zum Kauf gezwungen wird.",
+        "Dass alle Produktinformationen verschwinden."
+      ],
+      answer: 0,
+      explanation: "Eine Bestätigung oder ein Warenkorb-Layer zeigt den hinzugefügten Artikel, wichtige Eckdaten und Wege wie weiter einkaufen, Warenkorb ansehen oder zur Kasse gehen."
+    },
+    {
+      id: "lf2-visualisierungen-01",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Warum sind Produktfotos auf Produktdetailseiten besonders wichtig?",
+      options: [
+        "Weil Kunden das Produkt online nicht anfassen oder direkt begutachten können.",
+        "Weil Produkttexte dadurch grundsätzlich verboten sind.",
+        "Weil Bilder immer jede Dateigröße haben dürfen.",
+        "Weil Fotos rechtliche Pflichtangaben ersetzen."
+      ],
+      answer: 0,
+      explanation: "Produktbilder gleichen einen Nachteil des Online-Handels aus: Kunden müssen Produktmerkmale aus der Ferne beurteilen."
+    },
+    {
+      id: "lf2-visualisierungen-02",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Welche Kombination unterstützt Kunden bei der visuellen Produktbeurteilung am besten?",
+      options: [
+        "Ein unscharfes Bild ohne Varianten und ohne Details.",
+        "Mehrere Perspektiven, Detailaufnahmen, Variantenbilder und ein einheitlicher Stil.",
+        "Nur ein Herstellerlogo ohne Produktansicht.",
+        "Ausschließlich sehr kleine Vorschaubilder ohne Vergrößerung."
+      ],
+      answer: 1,
+      explanation: "Mehrere passende Ansichten zeigen Form, Material, Farbe, Details und Varianten deutlich besser als ein einzelnes Bild."
+    },
+    {
+      id: "lf2-visualisierungen-03",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Welche Aufgabe haben Thumbnails in einer Produktbild-Galerie?",
+      options: [
+        "Sie ersetzen die Produktdetailseite vollständig.",
+        "Sie zeigen kleine Vorschauen und ermöglichen den schnellen Wechsel zwischen Ansichten.",
+        "Sie erhöhen immer automatisch die Dateigröße.",
+        "Sie verhindern, dass Kunden Details erkennen."
+      ],
+      answer: 1,
+      explanation: "Thumbnails sind Vorschaubilder. Sie helfen Kunden, zwischen Gesamtansicht, Detail, Variante oder Nutzungssituation zu wechseln."
+    },
+    {
+      id: "lf2-visualisierungen-04",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Was beschreibt die Bildauflösung im Web-Kontext am treffendsten?",
+      options: [
+        "Die Anzahl der Bildpunkte, zum Beispiel Breite mal Höhe in Pixeln.",
+        "Den Verkaufspreis eines Artikels.",
+        "Die Lieferzeit eines Produkts.",
+        "Die Anzahl der Warenkorb-Schritte."
+      ],
+      answer: 0,
+      explanation: "Die Auflösung beschreibt, aus wie vielen Pixeln ein Bild besteht. Sie beeinflusst Detaildarstellung und mögliche Bildgröße."
+    },
+    {
+      id: "lf2-visualisierungen-05",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Warum sollten Produktbilder für den Webshop komprimiert werden?",
+      options: [
+        "Um Ladezeiten und Speicherbedarf zu verringern, ohne wichtige Details sichtbar zu verlieren.",
+        "Damit jedes Bild absichtlich unscharf wird.",
+        "Damit Kunden keine Bilder mehr sehen.",
+        "Damit die Produktbeschreibung gelöscht werden kann."
+      ],
+      answer: 0,
+      explanation: "Komprimierung reduziert Dateigröße. Sie ist sinnvoll, solange die sichtbare Qualität für Kunden ausreichend bleibt."
+    },
+    {
+      id: "lf2-visualisierungen-06",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Welches Dateiformat eignet sich typischerweise für Fotos im Webshop?",
+      options: [
+        "JPG oder WebP, wenn gute Qualität bei kleiner Dateigröße gebraucht wird.",
+        "Eine Textdatei mit der Endung .txt.",
+        "Nur ein Tabellenblatt ohne Bilddaten.",
+        "Ein beliebiger Dateiname ohne Format."
+      ],
+      answer: 0,
+      explanation: "Fotos werden häufig als JPG oder WebP genutzt. Für transparente Grafiken ist eher PNG geeignet."
+    },
+    {
+      id: "lf2-visualisierungen-07",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Wann ist ein Produktvideo auf der Produktdetailseite besonders sinnvoll?",
+      options: [
+        "Wenn Funktionen, Größenverhältnisse, Anwendung oder Montage besser gezeigt als beschrieben werden können.",
+        "Wenn es automatisch mit Ton starten und Kunden stören soll.",
+        "Wenn es keinerlei Bezug zum Produkt hat.",
+        "Wenn es alle rechtlichen und technischen Fragen verschleiert."
+      ],
+      answer: 0,
+      explanation: "Videos liefern Zusatznutzen, wenn sie Anwendung, Bewegung, Funktion oder erklärungsbedürftige Details verständlich machen."
+    },
+    {
+      id: "lf2-visualisierungen-08",
+      module: "lf2-visualisierungen",
+      type: "choice",
+      prompt: "Was sollte beim Einbinden von Produktvideos beachtet werden?",
+      options: [
+        "Relevanz, Rechte, Ladezeit, Einbindung und eine nicht aufdringliche Wiedergabe.",
+        "Nur möglichst viele Videos, egal ob sie zum Produkt passen.",
+        "Automatischer Tonstart ohne Nutzerentscheidung.",
+        "Dass Produktbilder und Texte danach entfernt werden."
+      ],
+      answer: 0,
+      explanation: "Videos sollten bewusst eingesetzt werden: rechtlich geklärt, technisch passend und für Kunden hilfreich."
+    },
+    {
+      id: "lf2-preisgestaltung-01",
+      module: "lf2-preisgestaltung",
+      type: "number",
+      prompt: "Ein Webshop kauft einen Artikel zum Bezugspreis von 10,00 € ein und kalkuliert 30 % Handlungskosten auf den Bezugspreis. Wie hoch sind die Selbstkosten je Stück?",
+      suffix: "€",
+      answer: 13,
+      tolerance: 0.01,
+      explanation: "10,00 € + 30 % Handlungskosten (3,00 €) = 13,00 € Selbstkosten. Sie markieren die langfristige Preisuntergrenze."
+    },
+    {
+      id: "lf2-preisgestaltung-02",
+      module: "lf2-preisgestaltung",
+      type: "number",
+      prompt: "Ein Artikel kostet 19,36 € netto und verkauft sich 100-mal im Monat. Nach einer Preissenkung auf 18,50 € werden 130 Stück verkauft. Wie hoch ist der Monatsumsatz nach der Senkung?",
+      suffix: "€",
+      answer: 2405,
+      tolerance: 0.5,
+      explanation: "18,50 € × 130 Stück = 2.405 € – deutlich mehr als vorher (19,36 € × 100 = 1.936 €). Eine Preissenkung kann sich über die Menge lohnen."
+    },
+    {
+      id: "lf2-preisgestaltung-03",
+      module: "lf2-preisgestaltung",
+      type: "number",
+      prompt: "Ein Duschgel mit 250 ml Inhalt kostet 2,50 €. Welchen Grundpreis je Liter muss der Webshop nach der Preisangabenverordnung angeben?",
+      suffix: "€ je Liter",
+      answer: 10,
+      tolerance: 0.01,
+      explanation: "2,50 € ÷ 0,25 l = 10,00 € je Liter. Der Grundpreis macht Angebote mit unterschiedlichen Packungsgrößen vergleichbar."
+    },
+    {
+      id: "lf2-preisgestaltung-04",
+      module: "lf2-preisgestaltung",
+      type: "choice",
+      prompt: "Ein Hersteller nennt für ein Produkt eine unverbindliche Preisempfehlung (UVP) von 49,99 €. Was bedeutet das für den Webshop?",
+      options: [
+        "Der Shop muss exakt diesen Preis verlangen.",
+        "Der Shop darf höchstens 10 % davon abweichen.",
+        "Der Shop ist an die Empfehlung nicht gebunden und legt seinen Preis selbst fest.",
+        "Der Shop darf das Produkt nur mit schriftlicher Genehmigung verkaufen."
+      ],
+      answer: 2,
+      explanation: "Unverbindliche Preisempfehlungen sind zulässig, aber nicht bindend. Eine verbindliche Preisbindung gibt es nur in Ausnahmen wie bei Verlagserzeugnissen."
+    },
+    {
+      id: "lf2-preisgestaltung-05",
+      module: "lf2-preisgestaltung",
+      type: "choice",
+      prompt: "Ein Shop bietet einen Weißwein für 7,99 € statt 8,00 € an. Welcher Effekt der Preiswahrnehmung wird hier genutzt?",
+      options: [
+        "Der Schnäppcheneffekt bei Kombinationsangeboten",
+        "Der Preisrundungs- und Preisschwelleneffekt",
+        "Die künstliche Verknappung",
+        "Der Eckpreisartikel-Effekt"
+      ],
+      answer: 1,
+      explanation: "Preise knapp unter ganzen Eurobeträgen wirken deutlich günstiger, weil das Unterbewusstsein Preisschwellen wahrnimmt."
+    },
+    {
+      id: "lf2-preisgestaltung-06",
+      module: "lf2-preisgestaltung",
+      type: "choice",
+      prompt: "Skier werden im Sommer deutlich günstiger angeboten als zur Weihnachtszeit. Welche Form der Preisdifferenzierung liegt vor?",
+      options: [
+        "Zeitliche Preisdifferenzierung",
+        "Räumliche Preisdifferenzierung",
+        "Personelle Preisdifferenzierung",
+        "Mengenmäßige Preisdifferenzierung"
+      ],
+      answer: 0,
+      explanation: "Die gleiche Ware wird zu verschiedenen Zeiten unterschiedlich bepreist – typisch für Saisonware."
+    },
+    {
+      id: "lf2-preisgestaltung-07",
+      module: "lf2-preisgestaltung",
+      type: "choice",
+      prompt: "Ein Kunde bestellt 100 Flaschen Wein, erhält 110 Flaschen und bezahlt 100. Wie heißt diese Rabattform?",
+      options: [
+        "Skonto",
+        "Treuerabatt",
+        "Dreingabe",
+        "Naturalrabatt als Draufgabe"
+      ],
+      answer: 3,
+      explanation: "Bei der Draufgabe gibt es mehr Ware als bestellt. Bei der Dreingabe erhält der Kunde die gewünschte Menge, bezahlt aber nur einen Teil."
+    },
+    {
+      id: "lf2-preisgestaltung-08",
+      module: "lf2-preisgestaltung",
+      type: "choice",
+      prompt: "Ein Webshop bewirbt einen Artikel mit „nur 39,99 € statt 59,99 €“. Was verlangt die Preisangabenverordnung seit 2022 zusätzlich?",
+      options: [
+        "Ein Gutachten über die Preiswürdigkeit des Artikels.",
+        "Die Angabe des niedrigsten Gesamtpreises der letzten 30 Tage.",
+        "Eine Genehmigung der Preissenkung durch die IHK.",
+        "Nichts – Streichpreise sind völlig frei gestaltbar."
+      ],
+      answer: 1,
+      explanation: "Nach § 11 PAngV muss bei Preisermäßigungen der niedrigste Preis der letzten 30 Tage genannt werden. Das verhindert Mondpreise vor Rabattaktionen."
+    },
+    {
+      id: "lf2-warenwirtschaft-01",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Was umfasst der Begriff Warenwirtschaft in einem Handelsunternehmen?",
+      options: [
+        "Nur die Buchhaltung des Unternehmens.",
+        "Alle Tätigkeiten rund um Beschaffung, Lagerung und Absatz der Ware.",
+        "Ausschließlich die Werbung für neue Produkte.",
+        "Nur die Gestaltung der Webshop-Startseite."
+      ],
+      answer: 1,
+      explanation: "Warenwirtschaft ist der gesamte Warenbereich des Unternehmens – von der Beschaffung über die Lagerung bis zum Absatz."
+    },
+    {
+      id: "lf2-warenwirtschaft-02",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Eine Mitarbeiterin kontrolliert die Rechnung eines Lieferanten und bucht den neuen Bestand ins System. Wozu gehören diese Tätigkeiten?",
+      options: [
+        "Zum Warenfluss, weil Ware bewegt wird.",
+        "Zu keinem der beiden Flüsse.",
+        "Zum Informationsfluss, weil mit Daten über Waren gearbeitet wird.",
+        "Zur Warenpräsentation im Shop."
+      ],
+      answer: 2,
+      explanation: "Beim Informationsfluss arbeiten Beschäftigte mit Informationen über Waren – etwa Belege prüfen und Bestände buchen. Der Warenfluss bewegt die Ware physisch."
+    },
+    {
+      id: "lf2-warenwirtschaft-03",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Welcher Zielkonflikt tritt in der Warenwirtschaft auf?",
+      options: [
+        "Niedrige Lagerbestände (wenig Kapitalbindung) gegen sofortige Lieferfähigkeit für Kunden.",
+        "Schöne Produktfotos gegen schnelle Ladezeiten.",
+        "Hohe Werbekosten gegen niedrige Personalkosten.",
+        "Viele Filialen gegen wenige Webshops."
+      ],
+      answer: 0,
+      explanation: "Ware bindet Kapital und verursacht Lagerkosten – gleichzeitig sollen Kunden sofort beliefert werden. Warenwirtschaftssysteme liefern die Daten, um diesen Konflikt zu steuern."
+    },
+    {
+      id: "lf2-warenwirtschaft-04",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Was zeichnet ein integriertes Warenwirtschaftssystem aus?",
+      options: [
+        "Es funktioniert komplett ohne Computer.",
+        "Es erfasst nur einen Teil der Warenwirtschaft per EDV.",
+        "Es dient ausschließlich der Kassenabrechnung.",
+        "Es bindet Kunden, Lieferanten und Banken ein – Daten fließen ohne Mehrfacherfassung direkt zwischen den Systemen."
+      ],
+      answer: 3,
+      explanation: "Integrierte Systeme verbinden die Partner elektronisch, sodass Daten nur einmal erfasst werden müssen. Geschlossene Systeme lösen alles intern per EDV, offene nur teilweise."
+    },
+    {
+      id: "lf2-warenwirtschaft-05",
+      module: "lf2-warenwirtschaft",
+      type: "number",
+      prompt: "Aus wie vielen Ziffern besteht eine GTIN (früher EAN), wie sie auf fast jeder Verpackung als Strichcode aufgedruckt ist?",
+      suffix: "Ziffern",
+      answer: 13,
+      tolerance: 0,
+      explanation: "Die klassische GTIN hat 13 Ziffern: Länderkennzeichen, Unternehmensnummer, individuelle Artikelnummer und Prüfziffer."
+    },
+    {
+      id: "lf2-warenwirtschaft-06",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Wozu dient die GTIN im Handel?",
+      options: [
+        "Sie ersetzt das Impressum des Herstellers.",
+        "Sie identifiziert jede Mengen- und Verpackungseinheit eindeutig und ermöglicht artikelgenaue Datenverarbeitung auf allen Handelsstufen.",
+        "Sie gibt den Verkaufspreis gesetzlich vor.",
+        "Sie ist nur eine Dekoration auf der Verpackung."
+      ],
+      answer: 1,
+      explanation: "Die GTIN begleitet den Artikel vom Hersteller bis zum Endverbraucher und macht Verkäufe artikelgenau erfassbar – etwa beim Scannen an der Kasse."
+    },
+    {
+      id: "lf2-warenwirtschaft-07",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Was ist der zentrale Vorteil eines ERP-Systems gegenüber vielen einzelnen Programmen?",
+      options: [
+        "Es ist immer kostenlos.",
+        "Es benötigt keinerlei Einarbeitung.",
+        "Alle Geschäftsbereiche arbeiten mit einer zentralen Datenbasis – einmal erfasste Daten stehen überall aktuell zur Verfügung.",
+        "Es funktioniert nur ohne Internetverbindung."
+      ],
+      answer: 2,
+      explanation: "ERP-Systeme verknüpfen Warenwirtschaft, Verkauf, Finanzen, Personal und mehr über eine gemeinsame Datenbasis und vermeiden Mehrfacherfassung."
+    },
+    {
+      id: "lf2-warenwirtschaft-08",
+      module: "lf2-warenwirtschaft",
+      type: "choice",
+      prompt: "Worin unterscheidet sich ein Matrixcode (QR-Code) vom klassischen Strichcode?",
+      options: [
+        "Er ist zweidimensional und kann deutlich mehr Informationen speichern.",
+        "Er kann nur von Spezialkameras der Polizei gelesen werden.",
+        "Er funktioniert ausschließlich auf Papier.",
+        "Er enthält immer den Verkaufspreis in Klartext."
+      ],
+      answer: 0,
+      explanation: "Matrixcodes speichern Informationen in zwei Dimensionen und fassen dadurch deutlich mehr Daten als eindimensionale Strichcodes."
     }
   ],
   badges: [
@@ -1599,6 +2562,41 @@ window.EC_CONTENT = {
       value: "lf2-kundeninformationen"
     },
     {
+      id: "lf2-produktbeschreibung-ready",
+      title: "Textprofi",
+      description: "Das LF2-Modul zur Produktbeschreibung vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-produktbeschreibung"
+    },
+    {
+      id: "lf2-artikelauswahl-ready",
+      title: "Variantenlotse",
+      description: "Das LF2-Modul zur Artikelauswahl auf Produktdetailseiten vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-artikelauswahl"
+    },
+    {
+      id: "lf2-visualisierungen-ready",
+      title: "Visualisierer",
+      description: "Das LF2-Modul zu Visualisierungen auf Produktdetailseiten vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-visualisierungen"
+    },
+    {
+      id: "lf2-preisgestaltung-ready",
+      title: "Preis-Stratege",
+      description: "Das LF2-Modul zur Preisgestaltung und -darstellung vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-preisgestaltung"
+    },
+    {
+      id: "lf2-warenwirtschaft-ready",
+      title: "ERP-Lotse",
+      description: "Das LF2-Modul zu ERP- und Warenwirtschaftssystemen vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf2-warenwirtschaft"
+    },
+    {
       id: "targeting-ready",
       title: "Zielgruppenblick",
       description: "Das Targeting-Modul vollständig abgeschlossen.",
@@ -1620,6 +2618,13 @@ window.EC_CONTENT = {
       value: "analytics"
     },
     {
+      id: "webanalyse-ready",
+      title: "Datendetektiv",
+      description: "Das Webanalyse-Modul vollständig abgeschlossen.",
+      condition: "module",
+      value: "webanalyse"
+    },
+    {
       id: "lab-user",
       title: "Laborleitung",
       description: "Drei Kampagnenszenarien im Kennzahlen-Labor berechnet.",
@@ -1636,10 +2641,10 @@ window.EC_CONTENT = {
     {
       id: "all-modules",
       title: "LF7 komplett",
-      description: "Alle sechs Module vollständig abgeschlossen.",
+      description: "Alle sieben Module vollständig abgeschlossen.",
       condition: "allModules",
       field: "LF7",
-      value: 6
+      value: 7
     },
     {
       id: "sprint",
@@ -1800,6 +2805,190 @@ window.EC_CONTENT = {
       summary: "Hinweise zum sachgerechten Umgang mit einer Ware.",
       detail: "Handling-Informationen betreffen Transport, Lagerung, Montage, Pflege, Wartung, Sicherheit und Entsorgung. Sie helfen Kunden, Produkte richtig zu nutzen und Schäden zu vermeiden.",
       example: "Die Produktdetailseite nennt frostfreie Lagerung, Reinigungsweise und Recyclinghinweise."
+    },
+    {
+      id: "produktbeschreibung",
+      term: "Produktbeschreibung",
+      category: "Sortiment",
+      summary: "Text auf der Produktdetailseite, der ein Produkt erklärt und einordnet.",
+      detail: "Eine Produktbeschreibung verbindet sachliche Informationen mit Nutzenargumenten. Sie beantwortet Kundenfragen, macht Eigenschaften verständlich und kann zugleich die Auffindbarkeit in Suchmaschinen verbessern.",
+      example: "Ein Rucksack wird nicht nur als grau beschrieben, sondern als wasserabweisend, gepolstert und passend für ein 15-Zoll-Notebook."
+    },
+    {
+      id: "bullet-points",
+      term: "Bullet Points",
+      category: "Sortiment",
+      summary: "Kurze Stichpunkte mit zentralen Produktvorteilen oder Eigenschaften.",
+      detail: "Bullet Points helfen Kunden, die wichtigsten Informationen schnell zu erfassen. Sie eignen sich besonders für Vorteile, Maße, Lieferumfang, Material oder besondere Funktionen.",
+      example: "Eine Produktseite nennt in fünf Stichpunkten Material, Volumen, Notebookfach, Gewicht und Pflegehinweis."
+    },
+    {
+      id: "unique-content",
+      term: "Unique Content",
+      category: "Marketing",
+      summary: "Eigenständiger Inhalt, der nicht einfach von anderen Seiten kopiert wurde.",
+      detail: "Unique Content ist für Webshops wichtig, weil kopierte Herstellertexte Kunden selten einen Mehrwert bieten und Suchmaschinen identische Inhalte schwerer bewerten können. Eigene Texte passen besser zur Zielgruppe.",
+      example: "Ein Shop formuliert eine eigene Produktbeschreibung statt den Standardtext des Herstellers unverändert zu übernehmen."
+    },
+    {
+      id: "kommunikationsstoerer",
+      term: "Kommunikationsstörer",
+      category: "Sortiment",
+      summary: "Formulierungen, die das Verstehen oder Vertrauen stören.",
+      detail: "Kommunikationsstörer sind zum Beispiel unnötige Fachwörter, lange Satzketten, leere Floskeln, aggressive Kaufbefehle oder unklare Aussagen. Sie erschweren Kunden die Entscheidung.",
+      example: "Statt 'ultimativ bestes Produkt' wirkt eine konkrete Aussage wie 'gepolsterte Schultergurte entlasten den Rücken' glaubwürdiger."
+    },
+    {
+      id: "kommunikationsfoerderer",
+      term: "Kommunikationsförderer",
+      category: "Sortiment",
+      summary: "Formulierungen, die Verständlichkeit und Vertrauen fördern.",
+      detail: "Kommunikationsförderer sind klare Wörter, kurze Sätze, aktive Verben, positive Aussagen und konkrete Nutzenformulierungen. Sie helfen, Produktinformationen wie ein gutes Verkaufsgespräch wirken zu lassen.",
+      example: "Die Aussage 'Das Fach schützt dein Notebook vor Kratzern' ist aktiver und hilfreicher als eine abstrakte Materialbeschreibung."
+    },
+    {
+      id: "vorteilformulierung",
+      term: "Vorteilformulierung",
+      category: "Sortiment",
+      summary: "Verbindung eines Produktmerkmals mit einem konkreten Kundennutzen.",
+      detail: "Eine Vorteilformulierung erklärt nicht nur, was ein Produkt hat, sondern warum das für Kunden nützlich ist. Dadurch wird aus einem Merkmal ein überzeugendes Argument.",
+      example: "Aus 'reflektierende Streifen' wird 'reflektierende Streifen machen dich im Dunkeln besser sichtbar'."
+    },
+    {
+      id: "kurzbeschreibung",
+      term: "Kurzbeschreibung",
+      category: "Sortiment",
+      summary: "Kompakter Produkttext mit den wichtigsten Informationen.",
+      detail: "Eine Kurzbeschreibung steht meist weit oben auf der Produktdetailseite. Sie fasst den Nutzen und die wichtigsten Eigenschaften knapp zusammen und hilft Kunden beim ersten Überblick.",
+      example: "Ein kurzer Absatz erklärt, für wen der Rucksack geeignet ist und welche Hauptvorteile er bietet."
+    },
+    {
+      id: "langbeschreibung",
+      term: "Langbeschreibung",
+      category: "Sortiment",
+      summary: "Ausführlicher Produkttext mit vertiefenden Informationen.",
+      detail: "Eine Langbeschreibung liefert Details, die nicht sofort im ersten Blickfeld stehen müssen. Sie kann über Reiter, aufklappbare Bereiche oder eine eigene Informationssektion angeboten werden.",
+      example: "Unter 'Details' stehen Material, Pflege, Maße, Einsatzbereich und weitere Hinweise ausführlicher erklärt."
+    },
+    {
+      id: "artikelauswahl",
+      term: "Artikelauswahl",
+      category: "Sortiment",
+      summary: "Entscheidung des Kunden für die passende Ausführung eines Artikels.",
+      detail: "Artikelauswahl meint den Schritt, in dem Kunden aus Varianten, Lieferoptionen und Zusatzinformationen die passende Lösung wählen. Gute Produktdetailseiten machen diesen Schritt einfach und vermeiden Unsicherheit.",
+      example: "Vor dem Kauf wählt ein Kunde Farbe, Größe, Menge und Lieferart aus."
+    },
+    {
+      id: "artikelvariante",
+      term: "Artikelvariante",
+      category: "Sortiment",
+      summary: "Konkrete Ausführung eines Artikels, etwa Farbe, Größe, Modell oder Material.",
+      detail: "Artikelvarianten gehören zum gleichen Artikel, unterscheiden sich aber in einzelnen Merkmalen. Je nach Variante können Bild, Preis, Lagerbestand, Lieferzeit oder technische Daten abweichen.",
+      example: "Der gleiche Rucksack wird in Grau, Schwarz und Grün sowie in zwei Größen angeboten."
+    },
+    {
+      id: "auswahlhilfe",
+      term: "Auswahlhilfe",
+      category: "Sortiment",
+      summary: "Unterstützung, die Kunden bei der passenden Produkt- oder Variantenwahl hilft.",
+      detail: "Auswahlhilfen können Größentabellen, Messanleitungen, Infoblöcke, Symbole, Produktberater, Chat, Hotline oder Entscheidungstabellen sein. Sie reduzieren Fehlkäufe und Nachfragen.",
+      example: "Eine Größentabelle erklärt, welche Jackengröße zu welchen Körpermaßen passt."
+    },
+    {
+      id: "produktvergleich",
+      term: "Produktvergleich",
+      category: "Sortiment",
+      summary: "Gegenüberstellung ähnlicher Produkte anhand wichtiger Merkmale.",
+      detail: "Ein Produktvergleich zeigt Merkmale, Preise, Bewertungen oder Funktionen nebeneinander. Er hilft besonders dann, wenn Kunden zwischen mehreren ähnlichen Artikeln entscheiden müssen.",
+      example: "Drei Monitore werden nach Displaygröße, Auflösung, Anschlüssen, Preis und Bewertung verglichen."
+    },
+    {
+      id: "buy-box",
+      term: "Buy-Box",
+      category: "Sortiment",
+      summary: "Kaufbereich einer Produktdetailseite mit den wichtigsten Entscheidungs- und Handlungsdaten.",
+      detail: "Die Buy-Box bündelt Preis, Versandkosten, Varianten, Menge, Verfügbarkeit, Lieferzeit und Call-to-Action. Sie ist die zentrale Schnittstelle zwischen Produktentscheidung und Warenkorb.",
+      example: "Rechts neben dem Produktbild stehen Preis, Größenauswahl, Lagerstatus und der Button 'In den Warenkorb'."
+    },
+    {
+      id: "warenkorb-layer",
+      term: "Warenkorb-Layer",
+      category: "Sortiment",
+      summary: "Eingeblendeter Hinweis nach dem Hinzufügen eines Artikels zum Warenkorb.",
+      detail: "Ein Warenkorb-Layer legt sich über die Seite oder erscheint als Hinweisbereich. Er bestätigt den hinzugefügten Artikel und bietet nächste Schritte wie weiter einkaufen, Warenkorb ansehen oder zur Kasse gehen.",
+      example: "Nach dem Klick auf den Button erscheint ein Fenster mit Produktbild, Menge, Zwischensumme und den Buttons 'Weiter einkaufen' und 'Zur Kasse'."
+    },
+    {
+      id: "lieferzeit",
+      term: "Lieferzeit",
+      category: "Beschaffung",
+      summary: "Zeitraum zwischen Bestellung und voraussichtlicher Anlieferung beim Kunden.",
+      detail: "Lieferzeitangaben müssen realistisch und verständlich sein. Konkrete Zeiträume helfen Kunden besser als unklare Formulierungen und sollten mit Lagerbestand, Versandart und Abholoptionen abgestimmt sein.",
+      example: "Die Produktseite zeigt 'Lieferung in 2-3 Werktagen' statt nur 'bald verfügbar'."
+    },
+    {
+      id: "produktfoto",
+      term: "Produktfoto",
+      category: "Sortiment",
+      summary: "Bild eines Artikels, das Form, Farbe, Material, Details oder Nutzung zeigt.",
+      detail: "Produktfotos sollen Kunden helfen, ein Produkt ohne direkten Kontakt realistisch einzuschätzen. Mehrere Perspektiven, Detailaufnahmen, Variantenbilder und ein einheitlicher Stil erhöhen die Aussagekraft.",
+      example: "Ein Rucksack wird frontal, von der Seite, geöffnet und am Rücken getragen gezeigt."
+    },
+    {
+      id: "thumbnail",
+      term: "Thumbnail",
+      category: "Sortiment",
+      summary: "Kleine Bildvorschau in einer Produktgalerie.",
+      detail: "Thumbnails zeigen verfügbare Ansichten im Kleinformat. Kunden können damit schnell zwischen Hauptbild, Detail, Farbe, Variante oder Anwendungssituation wechseln.",
+      example: "Unter dem großen Produktbild stehen fünf kleine Vorschaubilder für weitere Ansichten."
+    },
+    {
+      id: "zoom-funktion",
+      term: "Zoom-Funktion",
+      category: "Sortiment",
+      summary: "Vergrößerung eines Produktbildes zur Detailprüfung.",
+      detail: "Eine Zoom-Funktion macht Strukturen, Material, Verarbeitung oder kleine Merkmale sichtbar. Sie ist besonders sinnvoll, wenn Details für Qualität, Passform oder Kaufentscheidung wichtig sind.",
+      example: "Beim Überfahren des Bildes wird die Naht einer Tasche vergrößert angezeigt."
+    },
+    {
+      id: "rundumansicht",
+      term: "360-Grad-Ansicht",
+      category: "Sortiment",
+      summary: "Interaktive Rundumdarstellung eines Produkts aus mehreren Blickwinkeln.",
+      detail: "Eine 360-Grad-Ansicht vermittelt räumliche Wirkung und kann Unsicherheit verringern. Sie ersetzt nicht jede Detailaufnahme, ergänzt aber klassische Produktbilder sinnvoll.",
+      example: "Kunden drehen einen Schuh am Bildschirm und sehen Sohle, Seite und Rückansicht."
+    },
+    {
+      id: "produktvideo",
+      term: "Produktvideo",
+      category: "Sortiment",
+      summary: "Video, das Anwendung, Funktion, Größe oder Besonderheiten eines Produkts zeigt.",
+      detail: "Produktvideos können erklärungsbedürftige Artikel verständlicher machen, Aufmerksamkeit erhöhen und Vertrauen schaffen. Sie sollten relevant, kurz, rechtlich geklärt und technisch sauber eingebunden sein.",
+      example: "Ein Video zeigt, wie ein Fahrradhelm eingestellt und getragen wird."
+    },
+    {
+      id: "bildaufloesung",
+      term: "Bildauflösung",
+      category: "Technik",
+      summary: "Anzahl der Bildpunkte, aus denen ein digitales Bild besteht.",
+      detail: "Die Bildauflösung wird häufig als Breite mal Höhe in Pixeln angegeben. Mehr Pixel können mehr Details zeigen, führen aber oft auch zu größeren Dateien.",
+      example: "Ein Bild mit 1200 × 800 Pixeln enthält deutlich mehr Bildpunkte als ein Thumbnail mit 300 × 200 Pixeln."
+    },
+    {
+      id: "bildkompression",
+      term: "Bildkompression",
+      category: "Technik",
+      summary: "Verringerung der Dateigröße eines Bildes.",
+      detail: "Bildkompression reduziert Speicherbedarf und Ladezeit. Verlustfreie Kompression erhält alle Informationen, verlustbehaftete Kompression spart stärker, kann aber Artefakte erzeugen.",
+      example: "Ein Produktfoto wird für den Webshop komprimiert, damit die Seite schneller lädt."
+    },
+    {
+      id: "dateiformat",
+      term: "Dateiformat",
+      category: "Technik",
+      summary: "Technische Speicherform einer Datei, erkennbar an Endungen wie JPG, PNG, WebP oder MP4.",
+      detail: "Das Dateiformat beeinflusst Qualität, Komprimierung, Transparenz, Kompatibilität und Ladezeit. Für Fotos, Grafiken und Videos sind unterschiedliche Formate sinnvoll.",
+      example: "Ein Foto wird als JPG oder WebP gespeichert, eine transparente Grafik eher als PNG."
     },
     {
       id: "produktdaten",
@@ -2504,6 +3693,198 @@ window.EC_CONTENT = {
       summary: "Einbindung fremder Dateien, die direkt vom fremden Server geladen werden.",
       detail: "Beim Hotlinking wird zum Beispiel ein Bild über ein HTML-Attribut eingebunden und von einem fremden Server geladen. Besucher erkennen die fremde Herkunft nicht – rechtlich und technisch problematisch, da Urheberrechte verletzt und fremde Ressourcen belastet werden können.",
       example: "Statt ein Bild per Hotlink einzubetten, klärt ein Händler die Rechte und lädt es auf den eigenen Server."
+    },
+    {
+      id: "preisangabenverordnung",
+      term: "Preisangabenverordnung",
+      category: "Recht & Daten",
+      summary: "PAngV; regelt, wie Preise gegenüber Verbrauchern anzugeben sind.",
+      detail: "Die PAngV verlangt Endpreise inklusive Umsatzsteuer, klare Versandkosten-Hinweise und bei Mengenware den Grundpreis. Preise müssen leicht erkennbar, deutlich lesbar und dem Angebot eindeutig zugeordnet sein. Verstöße können Bußgelder bis 25.000 € nach sich ziehen.",
+      example: "Ein Shop schreibt unter jeden Artikelpreis „inkl. MwSt. zzgl. Versandkosten“ mit Link zur Versandkostenübersicht."
+    },
+    {
+      id: "grundpreis",
+      term: "Grundpreis",
+      category: "Recht & Daten",
+      summary: "Preis je Mengeneinheit, zum Beispiel je Liter oder Kilogramm.",
+      detail: "Der Grundpreis macht Angebote mit unterschiedlichen Packungsgrößen vergleichbar. Er ist inklusive Umsatzsteuer in unmittelbarer Nähe des Endpreises anzugeben, wenn Ware nach Gewicht, Volumen, Länge oder Fläche angeboten wird.",
+      example: "Neben „250 ml für 2,50 €“ steht der Grundpreis „10,00 € / 1 l“."
+    },
+    {
+      id: "dynamic-pricing",
+      term: "Dynamic Pricing",
+      category: "Wirtschaft",
+      summary: "Laufende, algorithmische Anpassung der Verkaufspreise.",
+      detail: "Beim Dynamic Pricing passt Software die Preise an Nachfrage, Tageszeit, Wettbewerb, Standort oder Endgerät an – teils mehrmals täglich. Kunden begegnen dem mit Preistrackern, gelöschten Cookies oder Preisvergleichsportalen.",
+      example: "Der Preis einer Uhr ist über einen Gutschein-Link niedriger als beim direkten Aufruf desselben Shops."
+    },
+    {
+      id: "preisdifferenzierung",
+      term: "Preisdifferenzierung",
+      category: "Wirtschaft",
+      summary: "Gleiche Ware wird verschiedenen Kunden zu unterschiedlichen Preisen angeboten.",
+      detail: "Preisdifferenzierung kann räumlich (nach Ort), personell (nach Kundengruppe), zeitlich (nach Saison oder Uhrzeit) oder mengenmäßig (nach Abnahmemenge) erfolgen. Künstliche Benachteiligung ausländischer EU-Kunden ist verboten.",
+      example: "Skier sind im Sommer günstiger als im Dezember – zeitliche Preisdifferenzierung."
+    },
+    {
+      id: "rabatt",
+      term: "Rabatt",
+      category: "Wirtschaft",
+      summary: "Preisnachlass auf den festgelegten Verkaufspreis.",
+      detail: "Übliche Formen sind Mengenrabatt, Treuerabatt, Wiederverkäuferrabatt, Personalrabatt und Bonus. Naturalrabatte gewähren Ware statt Geld: als Draufgabe (mehr Ware) oder Dreingabe (geringerer Preis für die gewünschte Menge).",
+      example: "Ab 100 Flaschen Wein erhält der Kunde 10 Flaschen als Draufgabe gratis dazu."
+    },
+    {
+      id: "skonto",
+      term: "Skonto",
+      category: "Wirtschaft",
+      summary: "Preisnachlass für Zahlung innerhalb einer kurzen Frist.",
+      detail: "Skonto belohnt schnelles Bezahlen einer Rechnung, zum Beispiel 2 % Abzug bei Zahlung innerhalb von 10 Tagen. Es ist Teil der Konditionenpolitik und verbessert die Liquidität des Verkäufers.",
+      example: "„Zahlbar innerhalb 30 Tagen netto, bei Zahlung in 10 Tagen 2 % Skonto.“"
+    },
+    {
+      id: "preisschwelleneffekt",
+      term: "Preisschwelleneffekt",
+      category: "Marketing",
+      summary: "Psychologische Preisgrenzen beeinflussen die Kaufbereitschaft deutlich.",
+      detail: "Beim Über- oder Unterschreiten bestimmter Schwellen (z. B. 20,00 €) ändert sich der Absatz spürbar. Deshalb setzen Händler gebrochene Preise wie 19,95 € knapp unter die Schwelle. Verwandt sind Preisrundungseffekt und Preisfiguren.",
+      example: "Nach der Senkung von 20,00 € auf 19,95 € steigt der Absatz von 40 auf 250 Stück im Monat."
+    },
+    {
+      id: "uvp",
+      term: "UVP",
+      category: "Wirtschaft",
+      summary: "Unverbindliche Preisempfehlung des Herstellers.",
+      detail: "Der Hersteller empfiehlt einen Verkaufspreis, an den Händler nicht gebunden sind. Verbindliche Preisbindung ist nur in Ausnahmen wie bei Büchern zulässig. In der Werbung darf eine echte UVP als Vergleichspreis genannt werden.",
+      example: "Ein Kopfhörer mit UVP 99,99 € wird im Shop für 79,99 € angeboten."
+    },
+    {
+      id: "warenwirtschaft",
+      term: "Warenwirtschaft",
+      category: "Beschaffung",
+      summary: "Alle Tätigkeiten rund um Beschaffung, Lagerung und Absatz der Ware.",
+      detail: "Die Warenwirtschaft ist der Warenbereich des Unternehmens. Ihr Ziel: die richtige Ware zur rechten Zeit, in der richtigen Menge, zum richtigen Preis am richtigen Ort. Dabei besteht ein Zielkonflikt zwischen niedrigen Beständen und sofortiger Lieferfähigkeit.",
+      example: "Ein Auftragseingang löst Verfügbarkeitsprüfung, Kommissionierung, Verpackung und Versand aus."
+    },
+    {
+      id: "warenfluss",
+      term: "Warenfluss",
+      category: "Beschaffung",
+      summary: "Die physische Bewegung der Ware durch das Unternehmen.",
+      detail: "Im Warenfluss wird die Ware körperlich bewegt: annehmen, prüfen, lagern, kommissionieren, verpacken, versenden. Er läuft parallel zum Informationsfluss, in dem die zugehörigen Daten verarbeitet werden.",
+      example: "Die Ware wird im Wareneingang geprüft, eingelagert und später für den Versand verpackt."
+    },
+    {
+      id: "informationsfluss",
+      term: "Informationsfluss",
+      category: "Beschaffung",
+      summary: "Die Bewegung von Informationen über Waren durch das Unternehmen.",
+      detail: "Im Informationsfluss arbeiten Beschäftigte mit Daten über Waren: Lieferschein prüfen, Rechnung kontrollieren, Bestand buchen, Preis kalkulieren, Umsatz erfassen und Nachbestellungen planen.",
+      example: "Nach dem Wareneingang wird der Lieferschein geprüft und der Bestand im System aktualisiert."
+    },
+    {
+      id: "artikelnummer",
+      term: "Artikelnummer",
+      category: "Beschaffung",
+      summary: "Eindeutige Kennung, mit der ein System jeden Artikel identifiziert.",
+      detail: "Artikelnummern sind die Voraussetzung für artikelgenaue Erfassung im Warenwirtschaftssystem. Webshops vergeben hauseigene Nummern nach eigenem Schema oder nutzen die herstellerübergreifende GTIN.",
+      example: "Der Bürostuhl X1000 trägt im Shop die hauseigene Artikelnummer BS-1000."
+    },
+    {
+      id: "gtin",
+      term: "GTIN",
+      category: "Beschaffung",
+      summary: "Global Trade Item Number; weltweit eindeutige Artikelnummer (früher EAN).",
+      detail: "Die 13-stellige GTIN besteht aus Länderkennzeichen, Unternehmensnummer, individueller Artikelnummer und Prüfziffer. Sie wird vom Hersteller vergeben, begleitet den Artikel über alle Handelsstufen und wird als Strichcode oder Matrixcode maschinenlesbar.",
+      example: "An der Kasse wird die GTIN gescannt und der Verkauf artikelgenau im System erfasst."
+    },
+    {
+      id: "erp-system",
+      term: "ERP-System",
+      category: "Beschaffung",
+      summary: "Enterprise Resource Planning; Programmpaket für alle Geschäftsprozesse.",
+      detail: "ERP-Systeme verknüpfen Warenwirtschaft, Verkauf, Finanzen, Rechnungswesen, Controlling, Personal und Marketing über eine zentrale Datenbasis. Vorteile sind aktuelle Daten ohne Mehrfacherfassung; Nachteile sind Customizing-Aufwand und Herstellerabhängigkeit. Bekannte Anbieter: SAP, Oracle, Microsoft Dynamics.",
+      example: "Eine Bestellung im Shop aktualisiert automatisch Lagerbestand, Rechnungswesen und Verkaufsstatistik."
+    },
+    {
+      id: "supply-chain-management",
+      term: "Supply Chain Management",
+      category: "Beschaffung",
+      summary: "Koordination der Lieferkette vom Lieferanten bis zum Kunden.",
+      detail: "Supply Chain Management (SCM) stimmt die Zusammenarbeit mit Lieferanten, Händlern, Logistikdienstleistern und Kunden über alle Wirtschaftsstufen ab. Moderne ERP-Systeme steuern diese Prozesse, inklusive Online-Beschaffung (E-Procurement).",
+      example: "Sinkt der Bestand, bestellt das ERP-System automatisch beim Lieferanten nach."
+    },
+    {
+      id: "crm",
+      term: "CRM",
+      category: "Marketing",
+      summary: "Customer Relationship Management; systematische Pflege der Kundenbeziehungen.",
+      detail: "CRM bündelt Kundendaten, Kaufhistorie und Kommunikation, um Kundenbeziehungen zu optimieren und die Kundenbindung zu stärken. CRM-Funktionen sind oft Teil moderner ERP-Systeme.",
+      example: "Der Shop erkennt Stammkunden und schlägt passende Angebote auf Basis früherer Käufe vor."
+    },
+    {
+      id: "webanalyse",
+      term: "Webanalyse",
+      category: "Marketing",
+      summary: "Systematische Auswertung des Besucherverhaltens auf einer Website.",
+      detail: "Webanalyse-Tools zeigen, woher Besucher kommen, welche Seiten sie nutzen und ob sie Ziele wie einen Kauf erreichen. Grundlage guter Analyse ist ein Messkonzept: erst Ziel und Kennzahl festlegen, dann messen.",
+      example: "Die Analyse zeigt, dass viele Besucher im Warenkorb abbrechen – der Checkout wird daraufhin vereinfacht."
+    },
+    {
+      id: "tracking",
+      term: "Tracking",
+      category: "Marketing",
+      summary: "Technische Erfassung des Nutzerverhaltens über Cookies oder ähnliche Verfahren.",
+      detail: "Tracking erkennt Besucher wieder und ordnet ihnen Seitenaufrufe, Kanäle und Conversions zu. Es darf in der Regel erst nach Einwilligung eingesetzt werden und sollte datensparsam konfiguriert sein.",
+      example: "Erst nach dem Klick auf „Akzeptieren“ im Consent-Banner beginnt die Analyse-Messung."
+    },
+    {
+      id: "sitzung",
+      term: "Sitzung",
+      category: "Marketing",
+      summary: "Zusammenhängender Besuch eines Nutzers auf einer Website (Session).",
+      detail: "Eine Sitzung umfasst alle Seitenaufrufe und Aktionen eines Besuchs. Bei längerer Inaktivität beginnt eine neue Sitzung. Sitzungen sind eine Basisgröße der Webanalyse, verwandt mit Nutzern und Seitenaufrufen.",
+      example: "Ein Kunde stöbert morgens zehn Minuten im Shop – eine Sitzung mit acht Seitenaufrufen."
+    },
+    {
+      id: "absprungrate",
+      term: "Absprungrate",
+      category: "Marketing",
+      summary: "Anteil der Besuche, die ohne weitere Interaktion enden.",
+      detail: "Eine hohe Absprungrate kann bedeuten, dass Erwartungen und Seiteninhalt nicht zusammenpassen oder die Seite Probleme hat. Sie ist aber kontextabhängig: Bei einer Kontaktseite kann ein schneller Ausstieg völlig normal sein.",
+      example: "420 von 1.200 Sitzungen enden auf der Einstiegsseite – Absprungrate 35 %."
+    },
+    {
+      id: "utm-parameter",
+      term: "UTM-Parameter",
+      category: "Marketing",
+      summary: "Anhängsel an Links, die Kampagne und Kanal eines Besuchers kennzeichnen.",
+      detail: "UTM-Parameter wie utm_source und utm_campaign werden an Kampagnenlinks angehängt. Die Webanalyse kann Besucher damit dem richtigen Kanal zuordnen und Kampagnen vergleichbar machen.",
+      example: "Der Newsletter-Link trägt utm_source=newsletter – so ist sichtbar, wie viele Käufe der Newsletter bringt."
+    },
+    {
+      id: "cookie",
+      term: "Cookie",
+      category: "Recht & Daten",
+      summary: "Kleine Datei, die eine Website im Browser des Nutzers speichert.",
+      detail: "Cookies können technisch notwendig sein (z. B. Warenkorb, Login) oder der Analyse und Werbung dienen. Für nicht notwendige Cookies ist nach § 25 TDDDG und DSGVO eine Einwilligung erforderlich.",
+      example: "Der Warenkorb-Cookie merkt sich die Artikel – der Analyse-Cookie wartet auf die Einwilligung."
+    },
+    {
+      id: "consent-banner",
+      term: "Consent-Banner",
+      category: "Recht & Daten",
+      summary: "Einwilligungsdialog für Cookies und Tracking beim ersten Seitenbesuch.",
+      detail: "Das Consent-Banner informiert über Zwecke und holt die Einwilligung ein, bevor nicht notwendige Cookies gesetzt werden. Ablehnen muss so einfach sein wie Zustimmen; die Auswahl muss später änderbar bleiben.",
+      example: "Besucher können im Banner „Nur notwendige“ wählen – die Webanalyse bleibt dann ausgeschaltet."
+    },
+    {
+      id: "pseudonymisierung",
+      term: "Pseudonymisierung",
+      category: "Recht & Daten",
+      summary: "Ersetzen direkter Personenbezüge durch Kennungen.",
+      detail: "Bei der Pseudonymisierung werden identifizierende Angaben durch Pseudonyme ersetzt, etwa gekürzte IP-Adressen oder zufällige IDs. Sie verringert Datenschutzrisiken, ersetzt aber keine Einwilligung, wo diese nötig ist.",
+      example: "Das Analyse-Tool speichert nur gekürzte IP-Adressen statt vollständiger."
     }
   ]
 };
