@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.18.0",
+  version: "1.28.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",
@@ -29,6 +29,30 @@ window.EC_CONTENT = {
           ["01", "Konzept"],
           ["02", "HTML/CSS"],
           ["03", "Optimierung"]
+        ]
+      }
+    },
+    {
+      id: "LF6",
+      label: "LF6",
+      title: "Lernfeld 6",
+      subtitle: "Servicekommunikation kundenorientiert gestalten",
+      short: "Servicekanäle: E-Mail, Chat, Social Media, Videokonferenz, Newsletter und Selbstservice.",
+      heroTitle: "Servicekommunikation",
+      heroEmphasis: "schnell, klar, kundenorientiert.",
+      heroText: "Guter Service entscheidet, ob aus Käufern Stammkunden werden. Lerne, den passenden Kanal zu wählen und auf E-Mail, Chat, Social Media, Videokonferenz und Newsletter professionell zu kommunizieren.",
+      modulesTitle: "Vom Anliegen zum passenden Kanal.",
+      modulesText: "Der LF6-Lernpfad ist vollständig: vom Überblick über die Servicekanäle (6.0) über die Kommunikation per E-Mail (6.13) und Social Media (6.14) bis zu Chat, Videokonferenz, Sprachsteuerung, Hotline und FAQ als weitere Vertriebswege (6.15).",
+      project: {
+        eyebrow: "LF6-Praxisauftrag",
+        title: "Der Service-Tag: Ein Anliegen, fünf Kanäle",
+        text: "Beantworte dieselbe Kundenanfrage einmal als E-Mail, als Chat-Antwort, als öffentliche Social-Media-Reaktion, im Videocall-Leitfaden und als FAQ-Eintrag. Das Arbeitsblatt führt dich durch alle fünf Formate.",
+        href: "assets/materials/lf6-servicekanaele-arbeitsblatt.pdf",
+        button: "Arbeitsblatt öffnen",
+        stats: [
+          ["01", "Kanalwahl"],
+          ["02", "Tonfall"],
+          ["03", "Lösung"]
         ]
       }
     },
@@ -593,36 +617,239 @@ window.EC_CONTENT = {
       ]
     },
     {
+      id: "lf6-servicekanaele",
+      field: "LF6",
+      code: "6.0",
+      mark: "SVC",
+      title: "Servicekanäle im Überblick",
+      short: "E-Mail, Chat, Social Media, Videokonferenz, Newsletter und FAQ: den passenden Kanal wählen und kundenorientiert kommunizieren.",
+      color: "orange",
+      mission: "Werde zur Service-Stimme deines Shops: Wähle für jedes Kundenanliegen den passenden Kanal und antworte so, dass aus einem Problem ein zufriedener Stammkunde wird.",
+      lessons: [
+        {
+          title: "Service ist Teil des Produkts",
+          text: "Im Onlinehandel entscheidet der Service oft stärker über Bewertungen und Wiederkäufe als das Produkt selbst. Kundenorientierte Servicekommunikation heißt: schnell reagieren, verständlich formulieren, freundlich bleiben und eine echte Lösung anbieten. Der erste Schritt ist die Kanalwahl – ein komplexes Beratungsanliegen braucht einen anderen Kanal als eine kurze Frage zur Lieferzeit."
+        },
+        {
+          title: "Schriftlich: E-Mail, Anschreiben und Chat",
+          text: "Die E-Mail ist der Standardkanal: dokumentierbar, durchdacht, aber mit Erwartung einer zügigen Antwort. Eine gute Service-E-Mail hat einen klaren Betreff, eine persönliche Anrede, die Lösung gleich am Anfang und konkrete nächste Schritte. Förmliche Anschreiben folgen den Regeln des Geschäftsbriefs. Der Live-Chat ist schneller und informeller – Chatbots können Standardfragen übernehmen, müssen komplexe oder emotionale Fälle aber erkennbar an Menschen übergeben."
+        },
+        {
+          title: "Live und öffentlich: Videokonferenz und Social Media",
+          text: "Videokonferenzen eignen sich für Beratung und Produktvorführungen: Technik vorher testen, ruhige Umgebung, Unterlagen bereithalten und Bildschirmfreigabe gezielt nutzen. Social Media ist ein Servicekanal mit Publikum: Auf öffentliche Kritik professionell und lösungsorientiert reagieren, niemals zurückgiften – und Details wie Bestellnummern in die Direktnachricht verlagern."
+        },
+        {
+          title: "Proaktiv: Newsletter und Selbstservice",
+          text: "Der Newsletter informiert Kunden aktiv über Neuigkeiten und Angebote – aber nur mit ausdrücklicher Einwilligung. Bewährt ist das Double-Opt-in-Verfahren mit Bestätigungslink, und jede Ausgabe braucht einen funktionierenden Abmeldelink. Gute FAQ- und Hilfeseiten sind der stillste Servicekanal: Kunden suchen ihre Frage oft zuerst über Suchmaschinen – wer dort gute Antworten anbietet, löst Probleme rund um die Uhr und entlastet das Serviceteam."
+        }
+      ],
+      takeaways: [
+        "Erst das Anliegen verstehen, dann den Kanal wählen: kurze Fragen in Chat oder FAQ, komplexe Beratung ins Gespräch, Verbindliches per E-Mail.",
+        "Service-E-Mails brauchen klaren Betreff, persönliche Anrede, die Lösung zuerst und konkrete nächste Schritte.",
+        "Social-Media-Service ist öffentlich: professionell reagieren, Lösung anbieten, Details in die Direktnachricht.",
+        "Newsletter nur mit Einwilligung (Double-Opt-in) und Abmeldelink; gute FAQ-Seiten beantworten Fragen, bevor sie den Service erreichen."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF6 Servicekanäle",
+          description: "Kanalwahl-Training, Service-E-Mail-Bauplan, Social-Media-Fall und der Praxisauftrag „Ein Anliegen, fünf Kanäle“.",
+          href: "assets/materials/lf6-servicekanaele-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Lege für dein Webshop-Projekt fest, über welche Kanäle Kunden dich erreichen können, und begründe die Auswahl.",
+        "Schreibe eine Muster-Service-E-Mail zu einer verspäteten Lieferung: Betreff, Anrede, Lösung zuerst, nächste Schritte, Grußformel.",
+        "Formuliere eine öffentliche Antwort auf eine kritische Social-Media-Bewertung und den passenden Wechsel in die Direktnachricht.",
+        "Plane einen Newsletter für deinen Shop: Zielgruppe, Inhalt, Einwilligung per Double-Opt-in und Abmeldemöglichkeit.",
+        "Erstelle fünf FAQ-Einträge zu den häufigsten Fragen rund um dein Sortiment, Versand und Rückgabe."
+      ]
+    },
+    {
+      id: "lf6-email",
+      field: "LF6",
+      code: "6.13",
+      mark: "EML",
+      title: "Kommunikation per E-Mail",
+      short: "Geschäftliche E-Mails professionell aufbauen: Empfänger, CC und BCC, Betreff, Textfeld, Abschluss mit Pflichtangaben – und Datenschutz mitdenken.",
+      color: "blue",
+      mission: "Schreibe E-Mails, die dein Ausbildungsunternehmen würdig vertreten: vollständig aufgebaut, rechtlich sauber und so formuliert, dass der Empfänger sofort weiß, worum es geht.",
+      lessons: [
+        {
+          title: "Die E-Mail als Visitenkarte des Unternehmens",
+          text: "Jede geschäftliche E-Mail repräsentiert das Unternehmen – genau wie ein Geschäftsbrief auf Papier. Deshalb gelten dieselben Regeln: professionelle Gestaltung, korrekte Ausdrucksweise und die gesetzlichen Geschäftsangaben (§§ 37a, 125a HGB für Kaufleute, § 80 AktG, § 35a GmbHG). Beliebt ist die E-Mail, weil sie schnell ist, Kosten spart, jederzeit weltweit funktioniert und digital archiviert werden kann – das passt auch zu einer ökologischen Ausrichtung des Unternehmens."
+        },
+        {
+          title: "Empfänger, Kopie und Betreff",
+          text: "Die E-Mail-Adresse besteht aus einem individuellen Namen, dem @-Zeichen und der Domain des Providers oder Unternehmens – oft mit länderspezifischer Top-Level-Domain wie „.de“ für Deutschland, „.fr“ für Frankreich oder „.uk“ für Großbritannien. Soll eine Kopie an weitere Personen gehen, gibt es zwei Felder: Bei CC (Carbon Copy) sehen alle Empfänger, wer die Kopie erhält – bei BCC (Blind Carbon Copy) bleibt das verborgen. Der Betreff ist Pflicht: eine kurze, präzise Inhaltsangabe, die beim Weiterleiten oder Beantworten angepasst wird, wenn sich der Inhalt ändert. Im internationalen Verkehr besser auf Umlaute und Akzente verzichten."
+        },
+        {
+          title: "Textfeld und Abschluss",
+          text: "Das Textfeld beginnt wie ein Geschäftsbrief mit der Anrede und einem Komma, dann folgt nach einer Leerzeile der Brieftext – einzeilig, bei Bedarf mit Absätzen und Hervorhebungen gegliedert. Der Abschluss hat eine feste Reihenfolge: Gruß, Firmenname, Name der Bearbeiterin oder des Bearbeiters mit Zusatz (i. A. = im Auftrag, i. V. = in Vollmacht, ppa. = per Prokura), danach Kommunikationsdaten und die gesetzlich vorgeschriebenen Unternehmensangaben wie Rechtsform, Sitz, Registergericht und Handelsregisternummer. Praktisch: Eine elektronische Signatur fügt diesen Baustein automatisch in jede ausgehende E-Mail ein."
+        },
+        {
+          title: "Datenschutz beim E-Mail-Kontakt",
+          text: "E-Mail-Adressen und E-Mail-Inhalte sind personenbezogene Daten – der Datenschutz gilt also in vollem Umfang. Das bedeutet: Zugänge zu Rechner und E-Mail-Programm mit Passwörtern schützen, Inhalte bei Bedarf verschlüsseln, Virenscanner und Firewall aktuell halten und beim Weiterleiten oder Archivieren die Datenschutzregeln beachten. Verstöße können nach der DSGVO Bußgelder bis zu 20 Millionen Euro (oder 4 % des weltweiten Jahresumsatzes) kosten. Für rechtsverbindliche elektronische Kommunikation wurde De-Mail geschaffen (§ 1 De-Mail-Gesetz) – in der Praxis hat sich das Verfahren aber kaum durchgesetzt."
+        }
+      ],
+      takeaways: [
+        "Die geschäftliche E-Mail folgt denselben Regeln und Pflichtangaben wie der Geschäftsbrief – sie repräsentiert das Unternehmen.",
+        "CC zeigt allen, wer mitliest – BCC nicht. Der Betreff ist Pflicht und fasst den Inhalt präzise zusammen.",
+        "Der Abschluss folgt der Reihenfolge Gruß, Firmenname, Bearbeiter mit Zusatz (i. A., i. V., ppa.), Kommunikationsdaten und gesetzliche Angaben – am besten per Signatur.",
+        "E-Mail-Adressen und -Inhalte sind personenbezogene Daten: Zugänge schützen, verschlüsseln, Datenschutzregeln beachten."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF6 Kommunikation per E-Mail",
+          description: "E-Mail-Bauplan zum Beschriften, CC/BCC-Entscheidungstraining, eine Anfrage zum Selberschreiben und der Datenschutz-Check.",
+          href: "assets/materials/lf6-email-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Lege für dein Webshop-Projekt eine einheitliche E-Mail-Signatur fest: Gruß, Firmenname, Bearbeiter, Kommunikationsdaten und gesetzliche Angaben.",
+        "Schreibe eine vollständige Anfrage-E-Mail an einen (fiktiven) Großhändler zu 100 Team-Hoodies mit eurem Logo – mit Betreff, Anrede, Brieftext und Abschluss.",
+        "Entscheide für drei Versand-Situationen begründet, ob CC, BCC oder keine Kopie das richtige Feld ist.",
+        "Recherchiere fünf länderspezifische Top-Level-Domains (z. B. über iana.org) und notiere, zu welchem Land sie gehören.",
+        "Erstelle eine Datenschutz-Checkliste für das E-Mail-Postfach eures Shops: Zugangsschutz, Verschlüsselung, Virenscanner, Weiterleitungsregeln."
+      ]
+    },
+    {
+      id: "lf6-social-media",
+      field: "LF6",
+      code: "6.14",
+      mark: "SOC",
+      title: "Kommunikation über Social Media",
+      short: "Many-to-Many-Kommunikation verstehen, professionell und rechtssicher auftreten und den passenden Plattformtyp wählen.",
+      color: "pink",
+      mission: "Werde zur Social-Media-Stimme deines Shops: Baue Vertrauen durch Offenheit auf, halte die Spielregeln von Recht und Netiquette ein und wähle für jede Botschaft die passende Plattform.",
+      lessons: [
+        {
+          title: "Many-to-Many: Was Social Media besonders macht",
+          text: "Soziale Medien ermöglichen Kommunikation in Echtzeit mit Tausenden – Many-to-Many statt One-to-One wie bei der E-Mail. Im Mittelpunkt steht der Kontakt zwischen Menschen; Ziel ist ein Mehrwert aus dieser Interaktion. Die Kehrseite der Reichweite: Informationen verbreiten sich in Sekunden „viral“ – gute wie schlechte. Auch Fake News können Image und Vertrauen nachhaltig beschädigen, selbst wenn das Unternehmen schnell reagiert. Deshalb gilt: Offenheit und Ehrlichkeit sind die Grundlage – wer Fehler macht, steht dazu. Das Eingestehen von Fehlern wird als Stärke gesehen und kann das Ansehen sogar verbessern."
+        },
+        {
+          title: "Professionell auftreten: Account, Ansprache, Dialog",
+          text: "Unternehmen nutzen keine privaten Profile, sondern eigene Seiten (Fanpages) – vorher die Hausregeln der Plattform prüfen: Nutzungsbedingungen, Namensvorgaben, mögliche Kosten und die Impressumspflicht auch für die Social-Media-Präsenz. Social Media fordert Kommunikation mit Menschen: Ansprechpartnerinnen und Ansprechpartner zeigen sich mit Namen und Bild. Kritik wird gewissenhaft bearbeitet – Lösung anbieten, Beanstandungen an die Fachabteilung weiterleiten und die Kundschaft über Rückmeldungen informieren. Als Reaktionszeit gilt: höchstens ein Tag. Beiträge kurz halten und regelmäßig, aber nicht aufdringlich posten – und nie vergessen: Die Kommunikation ist primär öffentlich."
+        },
+        {
+          title: "Rechtliche Spielregeln",
+          text: "Fremde Bilder, Videos und Texte sind fast immer urheberrechtlich geschützt – vor der Verwendung die Einwilligung der Urheberin oder des Urhebers einholen; bei eigenen Fotos gilt zusätzlich das Recht am eigenen Bild der abgebildeten Personen. Zitate brauchen eine Quellenangabe. Vorsicht beim Verlinken und Teilen: Wer auf Seiten mit rechtswidrigen Inhalten verweist oder solche Beiträge mit „Gefällt mir“ kommentiert, kann sich strafbar machen – rechtswidrige Inhalte auf der eigenen Präsenz müssen zügig gelöscht werden. Außerdem gelten Wettbewerbsvorschriften (keine herabsetzenden Konkurrenzvergleiche), und Influencerinnen und Influencer müssen kommerzielle Produktvorstellungen als solche kennzeichnen. Beim Datenschutz gilt: sparsam sammeln und über Auskunft, Änderung und Löschung informieren."
+        },
+        {
+          title: "Plattformtypen, Netiquette und Emojis",
+          text: "Social Media hat fünf Grundtypen: soziale Netzwerke (z. B. Facebook, Instagram, LinkedIn), Blogs (längere Artikel, z. B. mit WordPress), Videoplattformen (z. B. YouTube, TikTok), Bewertungsplattformen (z. B. yelp oder Google-Rezensionen) und Messenger (z. B. WhatsApp – eher private One-to-One-Kommunikation). Die Bedeutung einzelner Plattformen wandelt sich ständig – die Auswahl richtet sich nach der Zielgruppe. Eine Netiquette legt Verhaltensregeln für den respektvollen Umgang im eigenen Kanal fest. Emojis lockern die Kommunikation auf und drücken Gefühle aus, werden aber nicht von allen gleich verstanden – geschäftlich deshalb sparsam und unmissverständlich einsetzen."
+        }
+      ],
+      takeaways: [
+        "Social Media ist Many-to-Many-Kommunikation in Echtzeit: enorme Reichweite, aber auch virale Risiken bis hin zu Fake News.",
+        "Vertrauen entsteht durch Offenheit: Fehler eingestehen, persönlich ansprechbar sein, Kritik lösungsorientiert und binnen eines Tages beantworten.",
+        "Rechtlich zählen Urheberrecht, Recht am eigenen Bild, Haftung für Links und Likes, Influencer-Kennzeichnung, Impressumspflicht und Datenschutz.",
+        "Fünf Plattformtypen – Netzwerke, Blogs, Video-, Bewertungsplattformen und Messenger – werden nach Zielgruppe gewählt; Netiquette und sparsame Emojis halten den Ton professionell."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF6 Kommunikation über Social Media",
+          description: "Plattform-Steckbrief, Rechts-Check, ein Shitstorm-Fall zum Üben und der Praxisauftrag „Eure Unternehmensseite“.",
+          href: "assets/materials/lf6-social-media-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Wähle für dein Webshop-Projekt zwei passende Social-Media-Plattformen und begründe die Wahl über deine Zielgruppe.",
+        "Plane den Auftritt: Seitenname nach den Plattformregeln, Impressum, feste Ansprechpartner mit Bild und eine Netiquette mit fünf Regeln.",
+        "Erstelle einen Redaktionsplan mit kurzen Beiträgen für zwei Wochen – inklusive Reaktionszeit-Regel für Kommentare.",
+        "Prüfe drei geplante Beiträge auf Rechtsrisiken: Urheberrecht der Bilder, abgebildete Personen, Kennzeichnung von Werbung.",
+        "Simuliere einen kritischen Kommentar und formuliere die öffentliche Antwort plus die Weiterleitung an die Fachabteilung."
+      ]
+    },
+    {
+      id: "lf6-vertriebswege",
+      field: "LF6",
+      code: "6.15",
+      mark: "VTW",
+      title: "Kommunikation über weitere Vertriebswege",
+      short: "Videokonferenz, Chat, Sprachsteuerung, Hotline und FAQ als moderne Servicewege professionell und sicher einsetzen.",
+      color: "mint",
+      mission: "Baue das Servicenetz deines Shops aus: Setze Videokonferenz, Chat, Sprachsteuerung, Hotline und FAQ so ein, dass Kundinnen und Kunden jederzeit schnell und passend zum Anliegen Hilfe bekommen.",
+      lessons: [
+        {
+          title: "Videokonferenz: Beratung von Angesicht zu Angesicht",
+          text: "Die Videokonferenz verbindet mehrere Personen an verschiedenen Standorten über Ton und Bild – zeitlich und räumlich flexibel, ohne Reisekosten und dank Apps auch mobil. Im Einzelhandel lassen sich Reklamationen und Fragen „Face to Face“ klären: Wer das Gegenüber und das Problem tatsächlich sieht, kann schnell Abhilfe schaffen. Manche Programme bieten sogar simultane Übersetzung für fremdsprachige Kundschaft oder das Einspielen von Erklärvideos. Wichtig ist die Sicherheit: Videosysteme sollten eine integrierte Verschlüsselung nach gängigen Standards haben – zusätzlich Providermaßnahmen prüfen, Standardeinstellungen anpassen, ein sicheres Netzwerk verwenden, Schulungen anbieten und gemeinsame Regeln festlegen."
+        },
+        {
+          title: "Chat zur Kundenbetreuung: Nähe auf Knopfdruck",
+          text: "Ein Chat-Button auf der Homepage startet einen virtuellen Dialog – Voraussetzung ist, dass immer fachkundige Personen antworten können. Die Stärken: kostenlos für die Kundschaft, auf allen Endgeräten nutzbar, der Verlauf ist dokumentiert und nachlesbar, „Emotionen kochen nicht so hoch“, Bilder und Dateien wie Montageanleitungen sind schnell versendet, und eine Person kann mehrere Chats fast gleichzeitig betreuen. Textbausteine sparen Zeit und vermeiden Tippfehler, dürfen aber nicht roboterartig klingen. Bei Abwesenheit hilft der Offline-Modus mit Kontaktformular. Die Kehrseite: Personal muss unter Umständen rund um die Uhr und mehrsprachig verfügbar sein, und manche Kundengruppen scheuen die Texteingabe. Protokolle eignen sich zur Auswertung und können ins CRM-System übernommen werden."
+        },
+        {
+          title: "Sprachsteuerung und Hotlines",
+          text: "Bei der Sprachsteuerung wird die Spracheingabe in eine Cloud übertragen, dort zerlegt, analysiert und in Text umgewandelt – so lassen sich Suchanfragen und zunehmend auch Bestellungen im Webshop per Stimme erledigen. Grenzen: Die Erkennung arbeitet nicht immer korrekt, und nicht alle Systeme sind miteinander kompatibel. Hotlines bleiben der Klassiker für schnelle Fragen: Ein Sprachcomputer nimmt das Anliegen vor und leitet in die passende Fachabteilung weiter (spart Zeit und Personalkosten), eine 24-Stunden-Hotline ist rund um die Uhr besetzt, und ein externes Callcenter übernimmt die Betreuung als Dienstleister. Nachteile wie Wartezeiten, Erkennungsfehler des Sprachcomputers und Telefonkosten müssen gegen die kompetente persönliche Beratung abgewogen werden."
+        },
+        {
+          title: "FAQ: Der stille Servicekanal",
+          text: "Eine FAQ-Liste („frequently asked questions“ – die Abkürzung ist schon Plural) beantwortet häufige Fragen, bevor der Support kontaktiert werden muss: Kundinnen und Kunden helfen sich selbst, sparen Wartezeit, und das Serviceteam wird entlastet. Beim Erstellen werden echte Kundenfragen gesammelt, mit klaren Antworten versehen und übersichtlich dargestellt – etwa als Tabelle mit Schlagwörtern für die Stichwortsuche und alphabetischer Ordnung. Entscheidend ist die Pflege: FAQ stetig evaluieren und aktualisieren, einfach formulieren und die Kundschaft über Feedbackbögen aktiv einbinden – das stärkt sogar die Kundenbindung. Zu spezifische Fragen deckt die Liste allerdings nie vollständig ab."
+        }
+      ],
+      takeaways: [
+        "Videokonferenzen sparen Wege und lösen Reklamationen „Face to Face“ – aber nur mit Verschlüsselung, sicherem Netzwerk und klaren Regeln.",
+        "Der Chat schafft dokumentierte Kundennähe mit Bildern, Textbausteinen und Mehrfachbetreuung – braucht aber ständig verfügbares, geschultes Personal.",
+        "Sprachsteuerung wandelt Sprache über die Cloud in Text um; Hotlines mit Sprachcomputer, 24-Stunden-Service oder Callcenter bleiben der direkte Draht.",
+        "FAQ-Listen sind Selbstservice: aus echten Kundenfragen erstellen, mit Schlagwörtern durchsuchbar machen und ständig aktuell halten."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF6 Weitere Vertriebswege",
+          description: "Kanal-Vergleich, Videokonferenz-Leitfaden, FAQ-Werkstatt und der Praxisauftrag „Das Servicenetz eures Shops“.",
+          href: "assets/materials/lf6-vertriebswege-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Vergleiche für dein Webshop-Projekt Chat, Hotline und Videokonferenz: je zwei Vorteile, zwei Nachteile und ein typisches Einsatzszenario.",
+        "Erstelle einen Verhaltens-Leitfaden für Videokonferenzen mit Kundschaft: Vorbereitung, Technik-Check, Gesprächsführung, Nachbereitung.",
+        "Formuliere fünf Chat-Textbausteine für häufige Anliegen – und prüfe sie darauf, dass sie nicht roboterartig klingen.",
+        "Baue eine FAQ-Liste mit acht Einträgen aus echten Fragen zu Sortiment, Versand und Retoure – inklusive Schlagwörtern für die Suche.",
+        "Diskutiere, ob Sprachsteuerung für deinen Shop sinnvoll wäre: Zielgruppe, Nutzen, Risiken und Datenschutz."
+      ]
+    },
+    {
       id: "targeting",
       code: "7.5",
       mark: "TG",
       title: "Targeting",
-      short: "Zielgruppen sinnvoll eingrenzen, Streuverluste reduzieren und Datenschutz mitdenken.",
+      short: "Zielgruppen mit den passenden Targeting-Arten eingrenzen, Streuverluste reduzieren und Datenschutz mitdenken.",
       color: "cyan",
-      mission: "Entscheide, welche Zielgruppensignale zu einem Kampagnenziel passen.",
+      mission: "Entscheide wie ein Mediaplaner: Welche Targeting-Arten und Zielgruppensignale passen zu einem Kampagnenziel – und wo ziehen Datenschutz und gesunder Menschenverstand die Grenze?",
       lessons: [
         {
           title: "Vom Gesamtmarkt zur Zielgruppe",
-          text: "Targeting bedeutet, Werbemittel gezielt an ausgewählte Nutzergruppen auszuspielen. Grundlage sind Merkmale, Interessen, Situationen oder beobachtbares Verhalten."
+          text: "Targeting (von englisch „target“ = Ziel) bedeutet, Onlinewerbung genau an die Nutzergruppen auszuliefern, für die sie relevant ist. Dazu werden Nutzungs- und Kundendaten zu Profilen verdichtet: First Party Data erhebt der Shop selbst (z. B. bei Registrierung und Login), Second Party Data stammen aus Marktforschung, Third Party Data werden von Dritten erhoben und gehandelt – oft über Tracking-Technologien und Third-Party-Cookies. Je genauer die Zielgruppe beschrieben ist, desto feiner kann die Werbung ausgerichtet werden."
         },
         {
-          title: "Wichtige Targeting-Arten",
-          text: "Geografisches und demografisches Targeting nutzen Orts- beziehungsweise Personenmerkmale. Contextual Targeting orientiert sich am Inhalt einer Seite, Behavioral Targeting am bisherigen Verhalten."
+          title: "Die wichtigsten Targeting-Arten",
+          text: "Soziodemografisches Targeting nutzt Merkmale wie Alter, Geschlecht oder Beruf – kann aber täuschen: Zwei Personen mit gleichen Daten können völlig verschiedene Interessen haben. Psychografisches Targeting ergänzt deshalb Interessen und Persönlichkeit, oft verdichtet zu „Personas“, also anschaulich beschriebenen Modell-Kundinnen und -Kunden. Kontext-Targeting platziert Werbung in thematisch passenden Umfeldern, semantisches Targeting versteht ganze Sinnzusammenhänge statt einzelner mehrdeutiger Wörter, Keyword-Targeting richtet sich nach Suchbegriffen – alle drei funktionieren ohne Cookies. Technisches Targeting passt Werbung an Endgerät, Browser und Bandbreite an."
         },
         {
-          title: "Retargeting und ähnliche Zielgruppen",
-          text: "Retargeting spricht Personen erneut an, die bereits Kontakt mit Shop oder Produkt hatten. Ähnliche Zielgruppen übertragen typische Merkmale vorhandener Kundengruppen auf neue Kontakte."
+          title: "Vom Standort bis zum Verhalten",
+          text: "Geo-Targeting nutzt die IP-Adresse für standortbezogene Werbung – ideal für regionale Angebote. Proximity Targeting funkt per Beacon (Reichweite rund 50 Meter) Push-Angebote in unmittelbarer Nähe, Zeit-Targeting spielt Werbung passend zu Tageszeit und Anlass aus. Behavioral Targeting wertet Surf- und Klickverhalten aus – auf der eigenen Website (On-Site), über Werbenetzwerke (Network) oder als Vorhersage über „statistische Zwillinge“ (Predictive, Lookalikes). Re-Targeting spricht Personen erneut an, die den Shop kürzlich besucht oder den Warenkorb verlassen haben. Und damit Werbung nicht nervt, begrenzt Frequency Capping die Zahl der Einblendungen pro Person – gegen den „Banner-Burn-out“."
         },
         {
-          title: "Qualität vor Reichweite",
-          text: "Eine kleine passende Zielgruppe kann wirksamer sein als eine große ungenaue. Zu enge Zielgruppen begrenzen jedoch Reichweite und Lernmöglichkeiten einer Kampagne."
+          title: "Chancen, Grenzen und die Zukunft",
+          text: "Präzises Targeting erhöht die Relevanz, senkt Streuverluste und steigert die Wahrscheinlichkeit von Conversions – in der Praxis werden dafür mehrere Techniken kombiniert (integriertes Targeting). Die Kehrseite: höherer Datenaufwand und geringere Reichweite. Vor allem aber setzt der Datenschutz Grenzen: Cookie-basiertes Targeting braucht eine nachweisbare Einwilligung, die über Consent-Management-Plattformen eingeholt und verwaltet wird. Weil Third-Party-Cookies auslaufen, gewinnen cookielose Verfahren an Bedeutung – Kontext-, semantisches und Keyword-Targeting, Geo- und Zeit-Targeting sowie neue Ansätze mit anonymisierten Kohorten. Ziel bleibt nutzerfreundliche, datenschutzkonforme Werbung mit echtem Mehrwert."
         }
       ],
       takeaways: [
-        "Targeting soll Relevanz erhöhen und Streuverluste senken.",
-        "Die Targeting-Art muss zum Produkt, Ziel und verfügbaren Signal passen.",
-        "Nur notwendige Daten verwenden und Zielgruppen nicht diskriminierend bilden.",
-        "Erfolg immer mit Kennzahlen prüfen, nicht nur mit vermuteter Passgenauigkeit."
+        "Targeting heißt: Werbung genau dort ausliefern, wo sie relevant ist – auf Basis von First-, Second- und Third-Party-Daten.",
+        "Die Targeting-Art muss zu Produkt, Ziel und verfügbarem Signal passen – oft wirkt erst die Kombination mehrerer Techniken (integriertes Targeting).",
+        "Frequency Capping verhindert den Banner-Burn-out, Re-Targeting holt Interessenten zurück – darf aber kein „Banner-Stalking“ werden.",
+        "Ohne Einwilligung kein Cookie-Targeting: Consent-Management und cookielose Verfahren wie Kontext- und Geo-Targeting gewinnen an Bedeutung."
+      ],
+      projectSteps: [
+        "Beschreibe für dein Webshop-Projekt eine Persona: Name, Alter, Beruf, Interessen, typischer Tagesablauf und was sie an deinem Sortiment reizt.",
+        "Wähle für zwei Produkte je zwei passende Targeting-Arten aus und begründe die Wahl über Zielgruppe und verfügbares Signal.",
+        "Lege eine Frequency-Capping-Regel für deine Kampagne fest (z. B. maximale Einblendungen pro Person und Tag) und begründe sie.",
+        "Skizziere ein Re-Targeting-Konzept für Warenkorbabbrecher – inklusive der Regel, wann die Anzeigen wieder abgeschaltet werden.",
+        "Prüfe deine geplanten Maßnahmen auf Datenschutz: Was braucht eine Einwilligung, und welche cookielosen Alternativen gäbe es?"
       ]
     },
     {
@@ -630,32 +857,39 @@ window.EC_CONTENT = {
       code: "7.7",
       mark: "SU",
       title: "Suchmaschinen",
-      short: "Verstehen, wie Suchmaschinen Inhalte finden, ordnen und als Ergebnisse ausgeben.",
+      short: "Verstehen, wie Suchmaschinen entstanden sind, wie Crawler, Index und Algorithmus arbeiten und was auf der SERP passiert.",
       color: "blue",
-      mission: "Erkläre den Weg von einer Webseite bis zum sichtbaren Suchergebnis.",
+      mission: "Erkläre den Weg von einer Webseite bis zum sichtbaren Suchergebnis – und erkenne, welche Suchanfragen für einen Webshop bares Geld wert sind.",
       lessons: [
         {
-          title: "Crawling",
-          text: "Automatisierte Programme folgen Links und entdecken neue oder veränderte Seiten. Dieser Vorgang wird Crawling genannt."
+          title: "Vom Webkatalog zu Google",
+          text: "Die Vorgänger der Suchmaschinen waren Webkataloge: Jede Website wurde von Hand geprüft und einsortiert – bei täglich neuen Seiten war das bald nicht mehr zu schaffen. 1990 entstand mit „Archie“ die erste Suchmaschine, die allerdings nur Dateien in FTP-Verzeichnissen durchsuchte. Nach der Freigabe des World Wide Web 1993 kam mit Lycos die erste Suchmaschine im heutigen Sinn; sie untersuchte bereits Worthäufigkeiten und die Nähe von Suchbegriffen. 1998 startete Google – mit übersichtlichem Design, hoher Geschwindigkeit und einem Algorithmus, der relevante Ergebnisse lieferte. Trotz Zusammenschlüssen der Konkurrenz (Microsoft übernahm für Bing die Algorithmen von Yahoo) ist Google bis heute Marktführer."
         },
         {
-          title: "Indexierung",
-          text: "Gefundene Inhalte werden analysiert und in einem durchsuchbaren Index gespeichert. Nicht jede gecrawlte Seite muss automatisch im Index erscheinen."
+          title: "Crawler, Index und Algorithmus",
+          text: "Eine Suchmaschine funktioniert wie eine Bibliothek: Statt einer Bibliothekarin helfen Webcrawler (auch Bots oder Spider genannt) – Programme, die das World Wide Web ununterbrochen nach neuen und geänderten Inhalten durchsuchen und sie auf Servern in Datenbankzentren ablegen. Daraus entsteht der Index, eine Art Katalog – der wichtigste Teil der Suchmaschine. Bei einer Suchanfrage wird nie das ganze Internet durchsucht, sondern nur dieser Index; deshalb kommen die Ergebnisse in Sekundenbruchteilen. Der Algorithmus legt anschließend das Ranking fest, also die Reihenfolge der Ergebnisse – nach vielen, teils geheimen Kriterien. Die erste Position ist das relevanteste Ergebnis und darum für Unternehmen besonders wertvoll."
         },
         {
-          title: "Ranking",
-          text: "Bei einer Suchanfrage ordnet die Suchmaschine passende Dokumente. Relevanz, Qualität, Nutzerfreundlichkeit und viele weitere Signale beeinflussen die Reihenfolge."
+          title: "Die Suchergebnisseite: bezahlt, organisch, Extras",
+          text: "Die SERP (Search Engine Results Page) hat bei Google drei große Teilbereiche: Bezahlte Suchergebnisse stehen meist über den übrigen Treffern – ihre Reihenfolge bestimmen unter anderem Klickrate, Klickkosten und Qualitätsfaktor (mehr dazu in 7.9). Darunter folgen die organischen Suchergebnisse, die der Algorithmus in ein relevantes Ranking bringt – sie nehmen den meisten Platz ein. Dazu kommen Zusatzelemente: Das Knowledge Panel zeigt bei allgemeinen Suchanfragen Fakten zum Suchbegriff, das Google-Unternehmensprofil erscheint bei regionalen Suchen als Online-Branchenbuch mit Öffnungszeiten, Adresse und Telefonnummer – gerade für lokale Geschäfte enorm wichtig."
         },
         {
-          title: "Suchergebnisseite",
-          text: "Die Search Engine Results Page, kurz SERP, kann organische Treffer, Anzeigen, Bilder, Karten, Produkte und direkte Antworten enthalten."
+          title: "Suchmaschinen-Arten und Suchverhalten",
+          text: "Neben den indexbasierten Klassikern (Google, Bing) gibt es Metasuchmaschinen (fragen mehrere Suchmaschinen ab und sortieren nach Mehrheitsfindung – langsamer), katalogbasierte Suchmaschinen, Spezialsuchmaschinen für ein Themenfeld (Produktsuche wie Google Shopping oder Amazon, Preissuchmaschinen, Videosuche) und Hybridformen mit eigenem kleinerem Index. Genauso wichtig ist das Suchverhalten der Nutzerinnen und Nutzer: Navigationsorientierte Anfragen suchen eine bekannte Seite, informationsorientierte wollen Wissen und Antworten, transaktionsorientierte enthalten eine Kauf- oder Handlungsabsicht – von ihnen profitieren Onlineshops am meisten. Herausforderungen bleiben: aktueller Index, Datenschutz, Mehrdeutigkeiten und Tippfehler sowie riesige Datenmengen bei kürzesten Antwortzeiten."
         }
       ],
       takeaways: [
-        "Crawling entdeckt, Indexierung speichert, Ranking sortiert.",
-        "Eine Suchmaschine beantwortet eine konkrete Suchintention.",
-        "Organische Treffer und bezahlte Anzeigen sind unterschiedliche Ergebnisarten.",
-        "Die Darstellung der SERP hängt von Anfrage, Gerät, Ort und weiteren Signalen ab."
+        "Crawler entdecken, der Index speichert, der Algorithmus sortiert – durchsucht wird nie das Internet, sondern immer nur der Index.",
+        "Die SERP hat drei Bereiche: bezahlte Treffer, organische Treffer und Extras wie Knowledge Panel oder Google-Unternehmensprofil.",
+        "Suchmaschinen-Arten: indexbasiert, Meta-, katalogbasiert, Spezial- und Hybridformen – für Shops zählen besonders Produkt- und Preissuchmaschinen.",
+        "Suchanfragen sind navigations-, informations- oder transaktionsorientiert – die Kaufabsicht steckt in den transaktionsorientierten."
+      ],
+      projectSteps: [
+        "Sammle fünf Suchanfragen, über die Kundinnen und Kunden deinen Webshop finden sollen, und ordne jede dem passenden Suchverhalten zu.",
+        "Analysiere die SERP zu einer Suchanfrage aus deinem Sortiment: Welche Elemente erscheinen (Anzeigen, organische Treffer, Shopping, Karten) – und in welcher Reihenfolge?",
+        "Prüfe, welche Spezialsuchmaschinen für dein Sortiment relevant sind: Preisvergleich, Produktsuche, Videosuche.",
+        "Entwirf ein Google-Unternehmensprofil für deinen (fiktiven) Shop: Name, Leistungen, Öffnungszeiten, Adresse und drei Foto-Ideen.",
+        "Erkläre mit der Bibliotheks-Metapher in drei Sätzen, wie eine Suchmaschine von der Anfrage zum Ergebnis kommt."
       ]
     },
     {
@@ -663,32 +897,39 @@ window.EC_CONTENT = {
       code: "7.8",
       mark: "SEO",
       title: "Suchmaschinenoptimierung",
-      short: "Inhalte, Technik und Autorität für bessere organische Sichtbarkeit zusammendenken.",
+      short: "Rankingfaktoren verstehen, OnPage und OffPage optimieren – und wissen, warum SEO Geduld, Content und gute Backlinks braucht.",
       color: "mint",
-      mission: "Optimiere eine Shopseite für Menschen und Suchmaschinen.",
+      mission: "Entwickle wie eine SEO-Beraterin einen Optimierungsplan für einen Webshop: von der Keywordstrategie über Content und Technik bis zu hochwertigen Backlinks.",
       lessons: [
         {
-          title: "Onpage-Optimierung",
-          text: "Onpage-SEO umfasst Inhalt, Überschriften, Seitentitel, interne Links, Bilder und die verständliche Struktur einer einzelnen Webseite."
+          title: "Kampf um die Rankingplätze",
+          text: "Suchmaschinenoptimierung (Search Engine Optimization, SEO) ist eine Onlinemarketing-Maßnahme mit dem Ziel, die organischen Suchergebnisse zu festgelegten Suchbegriffen besser zu platzieren. Früher genügte ein Eintrag im Index, heute sind die obersten Positionen hart umkämpft. Ein wichtiger Grundsatz: Suchmaschinenbetreiber verraten ihren Suchalgorithmus nie vollständig – als Anfang 2023 durch ein Datenleck bei der Suchmaschine Yandex mehr als 18.000 Rankingfaktoren öffentlich wurden, blieb deren Gewichtung trotzdem geheim. SEO lebt deshalb von Experimenten, Beobachtungen und strategischem Denken. Offizielle Hilfe geben die Leitfäden der Suchmaschinen (etwa Google Search Central): technische Anforderungen, Spamrichtlinien und Best Practices. Wer dagegen verstößt, riskiert Abwertung bis zum Ausschluss aus dem Index – nachhaltige SEO braucht Geduld statt Abkürzungen."
         },
         {
-          title: "Technisches SEO",
-          text: "Ladezeit, mobile Nutzbarkeit, klare URLs, sichere Übertragung, Statuscodes, Canonical-Angaben und Crawlbarkeit bilden die technische Grundlage."
+          title: "Konkurrenz und Google-Updates",
+          text: "Der SEO-Erfolg hängt nicht nur von den eigenen Bemühungen ab: Zu jedem Keyword gibt es nur einen Platz eins, die Konkurrenz optimiert mit. Außerdem entwickeln sich Suchmaschinen ständig weiter – vor allem über große Updates. Das Panda-Update (2011) belohnt Seiten mit relevantem, einzigartigem Content und straft dünne oder kopierte Inhalte (Duplicate Content) ab. Das Penguin-Update (2012) erfasst Spam und gekaufte Backlinks; seit Version 4.0 ist dieser Filter fest im Algorithmus verankert. Das Hummingbird-Update verbesserte die semantische Suche: Google versteht seither Beziehungen zwischen Wörtern und die Absicht hinter der Anfrage, statt nur einzelne Begriffe zu vergleichen. Und seit dem Mobile-First-Indexing (Roll-out ab 2018) nutzt der Googlebot die mobile Version einer Website für Indexierung und Ranking – ohne Responsive Design geht es nicht mehr."
         },
         {
-          title: "Offpage-Optimierung",
-          text: "Offpage-SEO betrachtet Signale außerhalb der eigenen Website. Besonders relevant sind glaubwürdige Verlinkungen und Erwähnungen aus passenden Quellen."
+          title: "OnPage: Keywords, Technik und Content",
+          text: "Die OnPage-Optimierung umfasst alle Maßnahmen auf der eigenen Website, die von Dritten nicht beeinflussbar sind. Am Anfang steht die Keywordstrategie: Shorthead Keywords („Kommode“) haben hohes Suchvolumen, aber harten Wettbewerb; Longtail Keywords („Kommode weiß günstig“) sind spezifischer, haben weniger Konkurrenz und oft eine höhere Kaufwahrscheinlichkeit – eine gute Mischung macht es. Singular oder Plural und Groß- oder Kleinschreibung spielen kaum eine Rolle, saisonale und regionale Schwankungen lassen sich mit Google Trends prüfen. Die technische OnPage-Optimierung kümmert sich um Meta-Daten, Title-Elemente, Alt-Attribute von Bildern, interne Links und die Seitenstruktur. Dazu kommt Content Marketing: einzigartige Inhalte mit echtem Mehrwert statt Keyword-Stopferei – die alte Keyworddichte wurde dafür zu Formeln wie WDF*IDF weiterentwickelt, die Wörter im Themenzusammenhang gewichten."
         },
         {
-          title: "Suchintention und hilfreicher Inhalt",
-          text: "Ein Keyword allein genügt nicht. Die Seite muss die Absicht hinter der Suche treffen, Fragen beantworten und einen nachvollziehbaren nächsten Schritt anbieten."
+          title: "OffPage: Backlinks und Erfolgsmessung",
+          text: "Die OffPage-Optimierung arbeitet außerhalb der eigenen Website – vor allem am Aufbau von Backlinks, also Links fremder Seiten auf die eigene. Die Suchmaschine wertet sie als Empfehlung; dabei zählt Qualität und Themenrelevanz mehr als Menge. Vom Linkkauf ist dringend abzuraten: Suchmaschinen erkennen gekaufte oder zu schnell aufgebaute Links und strafen sie ab, im schlimmsten Fall als Spam. Gute Backlinks entstehen etwa über geteilte Infografiken, Gastbeiträge, Engagement in Communitys oder How-to-Videos. Ob die Arbeit wirkt, zeigen KPI wie Sichtbarkeit, Rankingposition, Seiten-Performance, Click-Through-Rate, Absprungrate und Verweildauer sowie die organischen Suchzugriffe im Zeitvergleich. Bleibt die Organisationsfrage: Inhouse-SEO bietet kurze Wege und Produktkenntnis, eine Agentur vielfältiges Expertenwissen – oft ist die Mischform der beste Weg."
         }
       ],
       takeaways: [
-        "SEO wirkt mittel- bis langfristig und kauft keine feste Position.",
-        "Keywords natürlich und passend zur Suchintention einsetzen.",
-        "Gute Technik macht gute Inhalte auffindbar und nutzbar.",
-        "Erfolg über Sichtbarkeit, qualifizierten Traffic und Conversions bewerten."
+        "SEO zielt auf bessere organische Rankings zu festgelegten Keywords – der Algorithmus bleibt geheim (der Yandex-Leak 2023 zeigte über 18.000 Faktoren, aber nicht ihre Gewichtung).",
+        "Google-Updates setzen die Regeln: Panda belohnt einzigartigen Content, Penguin bestraft gekaufte Links, Hummingbird versteht Bedeutungen, Mobile-First macht die mobile Version zur Hauptversion.",
+        "OnPage heißt: Keywordstrategie aus Shorthead- und Longtail-Keywords, saubere Technik (Meta-Daten, Alt-Attribute, interne Links) und Content mit Mehrwert.",
+        "OffPage heißt vor allem hochwertige, themenrelevante Backlinks – Linkkauf riskiert Abstrafung; den Erfolg zeigen KPI wie Sichtbarkeit und organische Zugriffe."
+      ],
+      projectSteps: [
+        "Definiere eine Keywordstrategie für deinen Webshop: je fünf Shorthead- und Longtail-Keywords zu einer Produktgruppe – und begründe die Mischung.",
+        "Prüfe zwei deiner Keywords mit Google Trends auf saisonale und regionale Schwankungen und leite ab, wann deine Optimierung starten muss.",
+        "Auditiere eine Produktseite OnPage: Title, Meta-Beschreibung, Überschriften, Alt-Attribute und interne Links – notiere drei konkrete Verbesserungen.",
+        "Plane drei realistische Backlink-Quellen (z. B. Gastbeitrag, Infografik, Community-Engagement) und begründe jeweils die Themenrelevanz – Linkkauf ist tabu.",
+        "Entscheide für dein Projekt: Inhouse-SEO oder Agentur? Stelle je zwei Vor- und Nachteile gegenüber und triff eine begründete Wahl."
       ],
       resources: [
         {
@@ -704,32 +945,39 @@ window.EC_CONTENT = {
       code: "7.9",
       mark: "SEA",
       title: "Suchmaschinenwerbung",
-      short: "Anzeigen, Keywords, Gebote und Landingpages als zusammenhängende Kampagne planen.",
+      short: "Anzeigenauktion und Qualitätsfaktor verstehen, Kampagnen per CPC und Budget steuern und die Synergie mit SEO nutzen.",
       color: "orange",
-      mission: "Baue eine Suchanzeige, deren Versprechen auf der Landingpage erfüllt wird.",
+      mission: "Plane wie ein Kampagnenmanager eine Suchanzeige: vom Keyword über Gebot, Qualitätsfaktor und Anzeigentext bis zum Conversion-Tracking.",
       lessons: [
         {
-          title: "Bezahlte Sichtbarkeit",
-          text: "SEA bezeichnet bezahlte Anzeigen in Suchmaschinen. Werbetreibende legen Kampagnen, Zielgruppen, Keywords, Anzeigen und Budgets fest."
+          title: "Bezahlte Plätze auf der Suchergebnisseite",
+          text: "Suchmaschinenwerbung (Search Engine Advertising, SEA) umfasst das Schalten bezahlter Suchanzeigen, die in der Regel über, neben oder unter den organischen Suchergebnissen stehen. Die bekanntesten Anbieter im deutschsprachigen Raum sind Google, Bing und Yahoo – Google ist mit großem Abstand Marktführer. Die wichtigste SEA-Plattform ist Google Ads: im Jahr 2000 gestartet (Google gab dafür das Versprechen einer werbefreien Plattform auf), über die Jahre um weitere Endgeräte und 2012 um YouTube im Google-Werbenetzwerk erweitert, seit 2018 mit neuer Oberfläche und neuem Namen – aus Google AdWords wurde Google Ads. Bei Produktsuchen erscheinen zusätzlich Shopping-Ergebnisse mit Produktbildern; seit 2017 können in der EU auch CSS-Partner solche Shopping-Anzeigen schalten."
         },
         {
-          title: "Auktion statt Festplatz",
-          text: "Eine Anzeige erscheint nicht allein wegen des höchsten Gebots. Auch erwartete Relevanz, Anzeigenqualität und Nutzererlebnis beeinflussen die Ausspielung."
+          title: "Auktion und Qualitätsfaktor",
+          text: "Im Hintergrund findet zu jedem Suchbegriff eine Art Auktion statt: Unternehmen wählen bei der Kampagnenerstellung Keywords passend zu ihrer Zielseite und geben dafür ein Gebot ab – in hart umkämpften Branchen liegen die Gebote deutlich höher. Doch das höchste Gebot steht nicht automatisch an erster Stelle: Google bezieht den Qualitätsfaktor ein, einen Schätzwert über die Leistung der Keywords in den bisherigen Kampagnen (Skala 1 bis 10). Er setzt sich unter anderem aus der Relevanz der Keywords, den bisherigen Klickraten, der Leistung des Ads-Kontos, der Qualität der Zielseite und der Verwendung von Anzeigenerweiterungen zusammen. Das Ziel: eine ideale Verknüpfung von Suchanfrage, Anzeigentext und Zielseite – das senkt die Absprungrate, und ein guter Qualitätsfaktor bedeutet geringere Klickkosten. Nicht alle Faktoren sind öffentlich."
         },
         {
-          title: "Keyword-Optionen",
-          text: "Weitgehend passende, passende und genau passende Keywords steuern, wie eng Suchanfragen zu einem eingebuchten Begriff passen. Ausschließende Keywords verhindern unpassende Ausspielungen."
+          title: "Performance Marketing: CPC, Budget und Kennzahlen",
+          text: "SEA ist stark performanceorientiert und wird deshalb auch Performance Marketing genannt: Abgerechnet wird im Cost-per-Click-Verfahren (CPC) – bezahlt wird nur, wenn tatsächlich jemand auf die Anzeige klickt. Wird die Anzeige nur gesehen, entsteht ein kostenloser Branding-Effekt, erkennbar an den Impressionen. Werbetreibende behalten volle Kostenkontrolle: Gebote sind frei wählbar, Budgets lassen sich pro Tag, Monat oder Kampagne festlegen; ausschließende Keywords verhindern unpassende Ausspielungen und sparen Klickkosten. Zum Basiswissen gehören die KPI Impressionen, Klicks, Klickrate, Cost-per-Click, Conversion, Conversionrate und Cost-per-Conversion. Das eigentliche Ziel ist aber nicht der Klick, sondern der Umsatz: Conversion-Tracking verfolgt nach, welche Kampagne und welches Keyword zu welcher Conversion geführt hat – während bei klassischer Bannerwerbung Klickraten von 0,1 bis 0,3 Prozent üblich sind, gilt bei Suchanzeigen erst eine Klickrate ab etwa 3 Prozent als Erfolg."
         },
         {
-          title: "Anzeige und Landingpage",
-          text: "Suchbegriff, Anzeigentext und Zielseite sollten dasselbe Bedürfnis aufgreifen. Ein klarer Call-to-Action führt zum gewünschten nächsten Schritt."
+          title: "Anzeigen gestalten – und die Synergie mit SEO",
+          text: "Für die Kampagnenplanung liefert der Keyword-Planer von Google Ads Suchvolumen, Prognosen und neue Keyword-Ideen. Bei der Gestaltung gilt: Keywords gehören in den Anzeigentext, ein Call-to-Action („Jetzt kaufen“, „Hier bestellen“) fordert zur gewünschten Handlung auf, und Anzeigenerweiterungen ergänzen Standorte, Preise, Versandinfos oder Telefonnummern – die Anzeige wird größer und präsenter auf der Suchergebnisseite. Display-Anzeigen im Werbenetzwerk lassen sich über Keywords, Themen, Placements, Interessen/Remarketing und demografische Merkmale steuern – alles kombinierbar. SEO und SEA zusammen heißen Search Engine Marketing (SEM), und die Synergie zahlt sich aus: Die Keyword-Recherche der SEA zeigt, welche Begriffe performen und sich für langfristige SEO lohnen. SEA wirkt schnell und flexibel, SEO mittel- bis langfristig und nachhaltig – am stärksten ist das Zusammenspiel."
         }
       ],
       takeaways: [
-        "SEA kann schnell Reichweite erzeugen, verbraucht aber laufend Budget.",
-        "Relevanz und Qualität gehören neben dem Gebot zur Kampagnensteuerung.",
-        "Ausschließende Keywords reduzieren unnötige Klicks.",
-        "Klicks sind nur ein Zwischenschritt; entscheidend ist das Kampagnenziel."
+        "SEA heißt: bezahlte Suchanzeigen über, neben oder unter den organischen Treffern – bei Google über die Plattform Google Ads (bis 2018 AdWords).",
+        "Im Hintergrund läuft eine Keyword-Auktion, aber das höchste Gebot gewinnt nicht automatisch: Der Qualitätsfaktor (Skala 1 bis 10) belohnt relevante Anzeigen und gute Zielseiten mit besseren Plätzen und geringeren Klickkosten.",
+        "SEA ist Performance Marketing: bezahlt wird pro Klick (CPC) bei voller Budgetkontrolle – und Conversion-Tracking zeigt, welche Keywords Umsatz bringen statt nur Klicks.",
+        "SEO und SEA zusammen sind SEM: SEA wirkt schnell und liefert Keyword-Daten, SEO wirkt nachhaltig – am stärksten sind beide im Zusammenspiel."
+      ],
+      projectSteps: [
+        "Wähle für deinen Webshop ein Kampagnenziel und fünf Keywords passend zur Zielseite – prüfe Suchvolumen und Alternativen mit einem Keyword-Planer.",
+        "Texte eine Suchanzeige mit Keyword im Titel und klarem Call-to-Action – plus eine zweite Variante, um die bessere Version zu ermitteln.",
+        "Plane zwei Anzeigenerweiterungen (z. B. Standort, Preise, Telefonnummer) und begründe, welchen Mehrwert sie den Suchenden bieten.",
+        "Lege ein Tagesbudget und ein maximales CPC-Gebot fest und rechne durch, wie viele Klicks dein Budget höchstens erlaubt.",
+        "Definiere die Conversion deiner Kampagne und skizziere, wie du per Conversion-Tracking erkennst, welche Keywords Umsatz bringen."
       ],
       resources: [
         {
@@ -745,32 +993,39 @@ window.EC_CONTENT = {
       code: "7.19",
       mark: "KPI",
       title: "Marketing-Maßnahmen auswerten",
-      short: "Kennzahlen korrekt berechnen, einordnen und daraus begründete Maßnahmen ableiten.",
+      short: "Werbeerfolgskontrolle in vier Schritten, Web-Analytics-Tools kennen und Kennzahlen korrekt berechnen und einordnen.",
       color: "violet",
-      mission: "Übersetze Kampagnendaten in eine nachvollziehbare Handlungsempfehlung.",
+      mission: "Werte eine Onlinemarketing-Kampagne wie im Betrieb aus: Ziel und KPI festlegen, Daten mit dem Analyse-Tool prüfen und eine begründete Handlungsempfehlung schreiben.",
       lessons: [
         {
-          title: "Vom Ziel zur Kennzahl",
-          text: "Eine Kennzahl ist nur dann hilfreich, wenn sie zu einem Ziel gehört. Für Aufmerksamkeit, Traffic, Verkauf und Rentabilität werden unterschiedliche KPIs benötigt."
+          title: "Werbeerfolgskontrolle: messen statt raten",
+          text: "Werbeerfolgskontrolle ist die nachhaltige Kontrolle und Optimierung einer Werbekampagne und ihres Erfolgs. Im klassischen Marketing ist das schwierig – das Internet dagegen macht fast alle Onlinemarketing-Maßnahmen direkt messbar: Tools wie Google Ads werten Kampagnen eigenständig aus, Berichte und Kennzahlen sind teils in Echtzeit einsehbar, sodass Unternehmen schnell auf Veränderungen reagieren können. Mit Web Analytics werden zusätzlich die Bewegungen der Besucherinnen und Besucher auf der eigenen Website gemessen – bekannte Programme sind Google Analytics, etracker und Matomo. Marktführer ist Google Analytics 4: kostenlos, eventbasiert (erfasst einzelne Interaktionen wie Seitenaufrufe oder Button-Klicks statt nur Sitzungen), mit maschinellem Lernen, Cross-Plattform-Tracking und sieben Berichtsbereichen von Echtzeit über Akquisition, Engagement und Monetarisierung bis Bindung, Nutzerattribute und Technologie."
         },
         {
-          title: "CTR und CPC",
-          text: "Die Click-Through-Rate misst Klicks im Verhältnis zu Impressionen. Der Cost-per-Click verteilt die Werbekosten auf die erzielten Klicks."
+          title: "In vier Schritten von Daten zu Erkenntnissen",
+          text: "Eine ganzheitliche Auswertung folgt vier Schritten. Schritt 1: Ziel analysieren und KPIs bestimmen – die Kennzahl muss zum Ziel passen: Wer den Umsatz steigern will, misst Bestellungen; wer Bekanntheit aufbauen will, misst die Sichtbarkeit – Impressionen allein sagen über den Umsatz wenig. Schritt 2: quantitative Analyse mit den Tools – wie viele Besucher kamen, wie lange blieben sie, wie viele Conversions gab es, woher kamen die Nutzerinnen und Nutzer? Schritt 3: qualitative Analyse – Zahlen zeigen nur das Was, nicht das Warum; Nutzerbefragungen, Umfragen und Heatmaps ergründen Verhalten und Motivation. Schritt 4: Analyse der Konkurrenz – mit speziellen SEO-Tools und den Konkurrenzdaten aus Google Ads. So entsteht ein tiefes Verständnis für die eigenen Besucher und den Markt."
         },
         {
-          title: "Conversion Rate und CPO",
-          text: "Die Conversion Rate setzt gewünschte Handlungen ins Verhältnis zu den Klicks oder Besuchen. Der Cost-per-Order zeigt die Werbekosten je Bestellung."
+          title: "Die Basis-Kennzahlen: CTR, CPC und Conversion Rate",
+          text: "Die Click-Through-Rate (CTR) misst Klicks im Verhältnis zu Impressionen: Klicks ÷ Impressionen × 100. Der Cost-per-Click (CPC) verteilt die Werbekosten auf die erzielten Klicks: Kosten ÷ Klicks. Die Conversion Rate setzt gewünschte Handlungen ins Verhältnis zu den Klicks oder Besuchen: Conversions ÷ Klicks × 100. Zusammen beschreiben sie den Weg vom Sehen über das Klicken bis zum Handeln – und zeigen, an welcher Stelle des Trichters eine Kampagne Besucher verliert."
         },
         {
-          title: "ROAS und Interpretation",
-          text: "Der Return on Advertising Spend setzt den zugeordneten Umsatz ins Verhältnis zu den Werbekosten. Eine Bewertung benötigt zusätzlich Marge, Zeitraum, Datenqualität und Vergleichswerte."
+          title: "CPO, ROAS und die richtige Interpretation",
+          text: "Der Cost-per-Order (CPO) zeigt die Werbekosten je Bestellung: Kosten ÷ Bestellungen. Der Return on Advertising Spend (ROAS) setzt den zugeordneten Umsatz ins Verhältnis zu den Werbekosten: Umsatz ÷ Kosten. Doch keine Kennzahl spricht für sich allein: Eine Bewertung braucht zusätzlich Marge, Zeitraum, Datenqualität und Vergleichswerte – eine Kampagne mit hohem ROAS, aber kleinem Umsatz kann schlechter zum Ziel passen als eine mit solidem ROAS und großem Volumen. Und weil quantitative Zahlen nicht alles erklären, gehören qualitative Erkenntnisse und der Konkurrenzvergleich immer dazu."
         }
       ],
       takeaways: [
-        "CTR = Klicks / Impressionen × 100.",
-        "CPC = Werbekosten / Klicks.",
-        "Conversion Rate = Conversions / Klicks × 100.",
-        "CPO = Werbekosten / Bestellungen; ROAS = Umsatz / Werbekosten."
+        "Werbeerfolgskontrolle heißt: Kampagnen nachhaltig kontrollieren und optimieren – online ist fast alles direkt messbar, Web-Analytics-Tools wie Google Analytics 4 oder etracker protokollieren die Besucherströme.",
+        "Der Weg von Daten zu Erkenntnissen hat vier Schritte: Ziel und KPIs bestimmen, quantitative Analyse, qualitative Analyse (Befragungen, Heatmaps), Konkurrenzanalyse.",
+        "Die KPI muss zum Ziel passen: Für ein Umsatzziel zählen Bestellungen mehr als Impressionen, für Bekanntheit zählt die Sichtbarkeit.",
+        "Formeln: CTR = Klicks ÷ Impressionen × 100; CPC = Kosten ÷ Klicks; Conversion Rate = Conversions ÷ Klicks × 100; CPO = Kosten ÷ Bestellungen; ROAS = Umsatz ÷ Kosten."
+      ],
+      projectSteps: [
+        "Lege für eine Kampagne deines Webshop-Projekts ein Ziel fest und bestimme die passende KPI – begründe, warum z. B. Bestellungen aussagekräftiger sind als Impressionen.",
+        "Formuliere fünf quantitative Fragen, die dein Web-Analytics-Tool beantworten soll (Besucher, Verweildauer, Conversions, Herkunft).",
+        "Plane eine qualitative Ergänzung: Entwirf drei Fragen für eine Nutzerbefragung oder beschreibe, was eine Heatmap deiner Startseite zeigen soll.",
+        "Skizziere eine Konkurrenzanalyse: Wähle zwei Wettbewerber und lege fest, welche Sichtbarkeits- und Angebotsmerkmale du vergleichst.",
+        "Rechne im Kennzahlen-Labor ein Kampagnenszenario durch und schreibe eine Handlungsempfehlung in drei Sätzen."
       ]
     },
     {
@@ -826,32 +1081,47 @@ window.EC_CONTENT = {
       code: "7.20",
       mark: "KI",
       title: "KI: Entstehung und Anwendung",
-      short: "Grundideen künstlicher Intelligenz verstehen und KI im Marketing verantwortungsvoll nutzen.",
+      short: "Von den 1950ern bis zu Sprachmodellen: verstehen, wie KI lernt – und sie im Marketing verantwortungsvoll einsetzen.",
       color: "pink",
-      mission: "Prüfe, wo KI unterstützt und wo menschliche Kontrolle unverzichtbar bleibt.",
+      mission: "Beurteile wie eine Abteilungsleiterin: Wo kann KI die Onlinemarketing-Prozesse deines Betriebs verbessern – und wo bleiben menschliche Kontrolle und Verantwortung unverzichtbar?",
       lessons: [
         {
-          title: "Von Regeln zu lernenden Systemen",
-          text: "Frühe KI-Systeme arbeiteten stark regelbasiert. Maschinelles Lernen erkennt dagegen Muster in Beispieldaten und nutzt sie für Vorhersagen oder Entscheidungen."
+          title: "Von den 1950ern zum Deep-Learning-Boom",
+          text: "Die Geschichte der Künstlichen Intelligenz (englisch Artificial Intelligence, AI) beginnt in den 1950er-Jahren mit der Idee, menschenähnliche Intelligenz nachzubilden. Frühe Systeme waren regelbasiert: Sie führten Aufgaben nach fest vom Menschen vorgegebenen Regeln aus. Später kamen Statistik und Wahrscheinlichkeitstheorie dazu – das maschinelle Lernen entstand: Computer lernen aus Daten, ohne explizit programmiert zu werden. In den 1990er-Jahren wurden Verfahren wie Entscheidungsbäume, Support Vector Machines und neuronale Netzwerke entwickelt. Den Durchbruch brachten die 2010er-Jahre: Große Datenmengen und leistungsfähige Computer lösten den Boom des Deep Learning aus – mit Fortschritten von der Sprach- und Bilderkennung bis zu den Sprachmodellen hinter heutigen Chat-Assistenten."
         },
         {
-          title: "Neuronale Netze und generative KI",
-          text: "Deep Learning verwendet mehrschichtige neuronale Netze. Generative Modelle erzeugen neue Texte, Bilder oder andere Inhalte auf Basis erlernter statistischer Muster."
+          title: "Schwache und starke KI, drei Arten des Lernens",
+          text: "Es gibt zwei grundlegende Arten von KI: Schwache KI ist auf eine spezifische Aufgabe beschränkt und hat kein Bewusstsein – praktisch alle heutigen Systeme, von Chatbots bis Sprachassistenten, gehören dazu. Starke KI, die jede intellektuelle Aufgabe eines Menschen selbstständig erfüllen könnte, ist eine Hypothese und bis heute nicht realisiert. Beim maschinellen Lernen unterscheidet man drei Grundarten: Überwachtes Lernen trainiert mit Eingabedaten und bekannten Ergebnissen (Labels) – etwa die Vorhersage eines Hauspreises aus Größe und Lage. Unüberwachtes Lernen sucht ohne Labels nach Mustern, zum Beispiel beim Clustering ähnlicher Kundengruppen. Bestärkendes Lernen lernt über Belohnung und Strafe durch Interaktion – wie ein Programm, das ein Spiel spielt und seinen Punktestand maximiert."
         },
         {
-          title: "Anwendungen im Online-Marketing",
-          text: "KI kann Zielgruppen analysieren, Empfehlungen erzeugen, Suchbegriffe clustern, Texte vorbereiten, Bilder variieren und Auffälligkeiten in Kampagnendaten finden."
+          title: "Neuronale Netze, Deep Learning und Sprachmodelle",
+          text: "Ein neuronales Netzwerk ist lose an das menschliche Gehirn angelehnt: Viele verbundene „Neuronen“ sind in Schichten organisiert – Eingabeschicht, versteckte Schichten, Ausgabeschicht. Deep Learning nutzt besonders tiefe Netze mit vielen Schichten und ist stark bei unstrukturierten Daten wie Bildern und Sprache; beim Training werden die Gewichtungen zwischen den Neuronen so angepasst, dass die Vorhersagen immer besser werden. Sprachmodelle wie ChatGPT (GPT = Generative Pretraining Transformer) basieren auf der Transformer-Architektur mit Aufmerksamkeits-Mechanismus und werden zweistufig trainiert: erst Vortraining auf riesigen Textmengen, dann Feinabstimmung mit menschlichem Feedback. Bei der Generierung sagt das Modell ab dem Prompt Wort für Wort das wahrscheinlichste nächste voraus – mit etwas Zufall. Es klingt überzeugend, hat aber kein Bewusstsein und kein echtes Verständnis."
         },
         {
-          title: "Grenzen und Verantwortung",
-          text: "KI-Ausgaben können falsch, verzerrt oder ungeeignet sein. Quellenprüfung, Datenschutz, Urheberrecht, transparente Kennzeichnung und menschliche Freigabe bleiben wichtig."
+          title: "KI im Online-Marketing: Chancen, Grenzen, Verantwortung",
+          text: "Im Onlinemarketing unterstützt KI an vielen Stellen: Chatbots beantworten Kundenanfragen rund um die Uhr, E-Commerce-Assistenten helfen bei Produktberatung und Empfehlungen, personalisierte Marketingkommunikation passt Angebote an Kundendaten an, KI analysiert Kundenfeedback und Kampagnendaten und bereitet Texte, Bilder und Newsletter vor – neben ChatGPT gibt es dafür viele weitere Tools. Die Grenzen: KI kann Kontext missverstehen, Fehlinformationen und Verzerrungen aus den Trainingsdaten übernehmen, und ihr Wissensstand endet am Trainingszeitpunkt. Dazu kommen ethische Fragen: Datenschutz bei Kundendaten, Manipulationsgefahr durch immer gezieltere Ansprache und der Wandel von Arbeitsplätzen, wenn Routineaufgaben automatisiert werden. Die Verantwortung bleibt beim Menschen: Ausgaben kritisch prüfen, transparent einsetzen und erst nach Freigabe veröffentlichen."
         }
       ],
       takeaways: [
-        "KI ist ein Oberbegriff; maschinelles Lernen und Deep Learning sind Teilbereiche.",
-        "Generative KI erzeugt wahrscheinliche Inhalte, keine garantierten Wahrheiten.",
-        "Gute Prompts enthalten Ziel, Kontext, Format und Qualitätskriterien.",
-        "Verantwortung für veröffentlichte Inhalte bleibt beim Menschen."
+        "KI reicht von regelbasierten Systemen über maschinelles Lernen bis Deep Learning – heutige Systeme sind schwache KI, starke KI bleibt eine Hypothese.",
+        "Drei Lernarten: überwacht (mit bekannten Ergebnissen), unüberwacht (Muster finden) und bestärkend (Belohnung) – Deep Learning nutzt tiefe neuronale Netze für Bild und Sprache.",
+        "Sprachmodelle sagen ab dem Prompt Wort für Wort das wahrscheinlichste nächste voraus – gute Prompts nennen Ziel, Kontext, Format und Qualitätskriterien.",
+        "Im Marketing hilft KI bei Personalisierung, Chatbots, Analyse und Content – Datenschutz, Manipulationsgefahr und Arbeitsplatzwandel verlangen menschliche Kontrolle und Freigabe."
+      ],
+      projectSteps: [
+        "Beziehe Position: „KI wird den Marketingbereich grundlegend verändern“ – schreibe eine Stellungnahme (150 bis 200 Wörter) mit Einleitung, Chancen, Risiken und Fazit.",
+        "Erstelle eine Pro-/Contra-Tafel zur Frage „Sollten Unternehmen im Online-Marketing vermehrt auf KI setzen?“ – mit je vier Argumenten.",
+        "KI & Ich: Finde drei konkrete Einsatzfelder für KI in deinem (Ausbildungs-)Betrieb – von Kundenkommunikation über Produktbeschreibungen bis Datenanalyse – und nenne je einen Vorteil.",
+        "Analysiere deine eigenen Aufgaben: Welche könnte KI übernehmen oder verändern – und was bedeutet das für deinen Arbeitsplatz (mehr Verantwortung, weniger Routine, neues Lernen)?",
+        "Praxistest: Lass ein KI-Tool eine Produktbeschreibung für dein Webshop-Projekt entwerfen und prüfe sie kritisch auf Fakten, Tonalität und rechtliche Grenzen – notiere, was du ändern musstest."
+      ],
+      resources: [
+        {
+          title: "Video: KI & Ich – Auswirkungen auf den Arbeitsplatz",
+          description: "Einführungsvideo zur Frage, wie KI Arbeitsplätze und Marketingaufgaben verändert – Grundlage für die Reflexionsaufgaben im Projektauftrag.",
+          href: "https://www.youtube.com/watch?v=Cs32Q0ayM4M&t=4s",
+          type: "Video"
+        }
       ]
     }
   ],
@@ -924,6 +1194,34 @@ window.EC_CONTENT = {
       ],
       answer: 1,
       explanation: "Passendere Zielgruppen und Botschaften sollen die Wirkung der Werbung verbessern."
+    },
+    {
+      id: "tar-07",
+      module: "targeting",
+      type: "choice",
+      prompt: "Eine Kampagne legt fest: höchstens fünf identische Banner pro Tag und Person. Wie heißt diese Technik – und wozu dient sie?",
+      options: [
+        "Banner-Stalking – sie erhöht den Werbedruck gezielt.",
+        "Frequency Capping – sie verhindert, dass Nutzer von stets wiederkehrender Werbung genervt werden (Banner-Burn-out).",
+        "Predictive Targeting – sie sagt künftige Käufe voraus.",
+        "Conversion Capping – sie begrenzt die Zahl der Bestellungen."
+      ],
+      answer: 1,
+      explanation: "Frequency Capping deckelt die Einblendungen je Person. Zu häufige Wiederholung führt zum Banner-Burn-out: Die Werbewirkung sinkt, und die Nutzer sind genervt."
+    },
+    {
+      id: "tar-08",
+      module: "targeting",
+      type: "choice",
+      prompt: "Third-Party-Cookies werden zunehmend blockiert. Welche Targeting-Verfahren funktionieren auch ohne Cookies?",
+      options: [
+        "Ausschließlich Network Behavioral Targeting.",
+        "Gar keine – ohne Cookies ist kein Targeting möglich.",
+        "Kontext-, semantisches und Keyword-Targeting sowie Geo- und Zeit-Targeting.",
+        "Nur das klassische Re-Targeting."
+      ],
+      answer: 2,
+      explanation: "Kontextbasierte Verfahren durchsuchen Themen und Inhalte statt Nutzerdaten; Geo- und Zeit-Targeting nutzen öffentlich verfügbare Signale. Sie gelten als cookielose, datenschutzfreundlichere Alternativen."
     },
     {
       id: "sea-01",
@@ -1010,6 +1308,34 @@ window.EC_CONTENT = {
       explanation: "Moderne Ergebnisseiten kombinieren je nach Anfrage unterschiedliche Ergebnisformate."
     },
     {
+      id: "sea-07",
+      module: "search",
+      type: "choice",
+      prompt: "Warum liefert eine Suchmaschine Ergebnisse in Sekundenbruchteilen, obwohl das Web Milliarden Seiten hat?",
+      options: [
+        "Sie durchsucht bei jeder Anfrage das komplette Internet mit Höchstgeschwindigkeit.",
+        "Sie zeigt einfach immer dieselben zehn Ergebnisse an.",
+        "Sie durchsucht nicht das Internet, sondern nur ihren vorbereiteten Index – den Katalog der gecrawlten Inhalte.",
+        "Sie lässt die Websites selbst nach der Antwort suchen."
+      ],
+      answer: 2,
+      explanation: "Webcrawler sammeln Inhalte laufend ein und legen sie im Index ab. Bei der Suchanfrage wird nur dieser Katalog durchsucht – wie in einer gut sortierten Bibliothek."
+    },
+    {
+      id: "sea-08",
+      module: "search",
+      type: "choice",
+      prompt: "Eine Nutzerin googelt „Bürostuhl ergonomisch kaufen“. Welches Suchverhalten liegt vor – und warum ist das für deinen Shop wichtig?",
+      options: [
+        "Navigationsorientiert – sie sucht eine bekannte Website.",
+        "Transaktionsorientiert – sie hat eine Kaufabsicht und ist nah an der Conversion.",
+        "Informationsorientiert – sie möchte nur Wissen aufbauen.",
+        "Zufallsorientiert – solche Anfragen lassen sich nicht einordnen."
+      ],
+      answer: 1,
+      explanation: "„Kaufen“ signalisiert eine Handlungs- bzw. Kaufabsicht. Von transaktionsorientierten Suchanfragen profitieren Onlineshops am meisten – hier lohnt sich Suchmaschinenmarketing besonders."
+    },
+    {
       id: "seo-01",
       module: "seo",
       type: "choice",
@@ -1094,6 +1420,30 @@ window.EC_CONTENT = {
       explanation: "Nützliche Informationen, gute Bedienbarkeit und saubere Technik unterstützen Nutzer und Suchmaschine."
     },
     {
+      id: "seo-07",
+      module: "seo",
+      type: "choice",
+      prompt: "Ein Onlineshop hat in kurzer Zeit massenhaft Links gekauft und stürzt im Ranking ab. Welches Google-Update erfasst dieses Verhalten?",
+      options: [
+        "Das Penguin-Update",
+        "Das Panda-Update",
+        "Das Hummingbird-Update",
+        "Das Mobile-First-Indexing"
+      ],
+      answer: 0,
+      explanation: "Das Penguin-Update (2012) zielt auf Spam, gekaufte Backlinks und zu schnellen Linkaufbau; seit Version 4.0 ist der Filter fest im Algorithmus. Panda bewertet dagegen die Content-Qualität."
+    },
+    {
+      id: "seo-08",
+      module: "seo",
+      type: "number",
+      prompt: "Eine Shopseite erscheint in einem Monat 12500-mal in den Suchergebnissen (Impressionen) und wird 375-mal angeklickt. Berechne die Click-Through-Rate in Prozent.",
+      answer: 3,
+      tolerance: 0.1,
+      suffix: "%",
+      explanation: "Click-Through-Rate = Klicks ÷ Impressionen × 100 = 375 ÷ 12500 × 100 = 3 %. Die Klickrate ist selbst ein Rankingfaktor: Je höher, desto besser."
+    },
+    {
       id: "ads-01",
       module: "sea",
       type: "choice",
@@ -1173,6 +1523,30 @@ window.EC_CONTENT = {
       explanation: "Die Klickzahl muss mit Zielerreichung und Wirtschaftlichkeit verbunden werden."
     },
     {
+      id: "ads-07",
+      module: "sea",
+      type: "choice",
+      prompt: "Ein Konkurrent bietet mehr pro Klick, deine Anzeige steht trotzdem über seiner. Was kann das erklären?",
+      options: [
+        "Ein besserer Qualitätsfaktor durch relevante Anzeige und gute Zielseite",
+        "Eine höhere Zahl an Impressionen",
+        "Ein längerer Anzeigentext",
+        "Ein größeres Tagesbudget"
+      ],
+      answer: 0,
+      explanation: "Google Ads ist keine reine Auktion: Der Qualitätsfaktor (Skala 1 bis 10) bezieht Relevanz, bisherige Klickraten und Zielseitenqualität ein – gute Qualität schlägt ein höheres Gebot."
+    },
+    {
+      id: "ads-08",
+      module: "sea",
+      type: "number",
+      prompt: "Deine Kampagne hat ein Tagesbudget von 45 Euro, der durchschnittliche CPC liegt bei 0,90 Euro. Wie viele Klicks erlaubt das Budget höchstens pro Tag?",
+      answer: 50,
+      tolerance: 0.5,
+      suffix: "Klicks",
+      explanation: "Maximale Klicks = Tagesbudget ÷ CPC = 45 € ÷ 0,90 € = 50 Klicks. Beim Cost-per-Click-Verfahren zahlst du nur für tatsächliche Klicks – Impressionen ohne Klick sind kostenloser Branding-Effekt."
+    },
+    {
       id: "kpi-01",
       module: "analytics",
       type: "number",
@@ -1235,6 +1609,34 @@ window.EC_CONTENT = {
       ],
       answer: 1,
       explanation: "Eine einzelne Kennzahl reicht selten für eine belastbare Entscheidung."
+    },
+    {
+      id: "kpi-07",
+      module: "analytics",
+      type: "choice",
+      prompt: "Ein Fahrrad-Shop schaltet Suchanzeigen, um den Umsatz um 10 % zu steigern. Welche KPI ist für dieses Ziel am aussagekräftigsten?",
+      options: [
+        "Die Menge an Bestellungen",
+        "Die Impressionen der Anzeigen",
+        "Die Zahl der Newsletter-Abonnenten",
+        "Die Sitzungsdauer auf der Website"
+      ],
+      answer: 0,
+      explanation: "Schritt 1 der Auswertung: Die KPI muss zum Ziel passen. Nur ein Kauf steigert den Umsatz – Impressionen zeigen nur, dass die Anzeige gesehen wurde."
+    },
+    {
+      id: "kpi-08",
+      module: "analytics",
+      type: "choice",
+      prompt: "Die Zahlen zeigen, dass viele Besucher den Warenkorb abbrechen – aber nicht, warum. Welcher Analyse-Schritt hilft jetzt weiter?",
+      options: [
+        "Die qualitative Analyse, z. B. mit Nutzerbefragungen oder Heatmaps",
+        "Noch einmal dieselben Kennzahlen berechnen",
+        "Die Anzeigen sofort abschalten",
+        "Die Konkurrenz kopieren"
+      ],
+      answer: 0,
+      explanation: "Web-Analytics-Tools liefern nur Zahlen (das Was). Für das Warum braucht es qualitative Methoden wie Befragungen, Umfragen oder Heatmaps – Schritt 3 der Auswertung."
     },
     {
       id: "ai-01",
@@ -1319,6 +1721,34 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Mustererkennung und vorbereitende Analysen sind typische unterstützende Anwendungen."
+    },
+    {
+      id: "ai-07",
+      module: "ai",
+      type: "choice",
+      prompt: "Ein Sprachassistent beantwortet Fragen, kann aber sonst nichts. Welche Art von KI liegt vor?",
+      options: [
+        "Schwache KI – auf eine spezifische Aufgabe beschränkt, ohne Bewusstsein",
+        "Starke KI – sie kann jede menschliche Aufgabe erfüllen",
+        "Keine KI, weil kein Roboter beteiligt ist",
+        "Bestärkendes Lernen, weil der Assistent spricht"
+      ],
+      answer: 0,
+      explanation: "Praktisch alle heutigen Systeme sind schwache KI. Starke KI, die jede intellektuelle Aufgabe eines Menschen selbstständig erfüllt, ist bis heute nicht realisiert."
+    },
+    {
+      id: "ai-08",
+      module: "ai",
+      type: "choice",
+      prompt: "Ein Modell lernt aus Wohnfläche und Lage mit bekannten Verkaufspreisen, künftige Hauspreise vorherzusagen. Welche Lernart ist das?",
+      options: [
+        "Überwachtes Lernen – Training mit Eingabedaten und bekannten Ergebnissen (Labels)",
+        "Unüberwachtes Lernen – das Modell sucht ohne Labels nach Mustern",
+        "Bestärkendes Lernen – das Modell erhält Belohnungen und Strafen",
+        "Regelbasiertes System – der Preis folgt festen Wenn-dann-Regeln"
+      ],
+      answer: 0,
+      explanation: "Beim überwachten Lernen sind die richtigen Antworten (hier: Verkaufspreise) im Training bekannt. Clustering ohne Labels wäre unüberwacht, Lernen über Belohnung bestärkend."
     },
     {
       id: "webanalyse-01",
@@ -2527,6 +2957,438 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Matrixcodes speichern Informationen in zwei Dimensionen und fassen dadurch deutlich mehr Daten als eindimensionale Strichcodes."
+    },
+    {
+      id: "lf6-servicekanaele-01",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Eine Kundin braucht eine ausführliche Beratung zu einem erklärungsbedürftigen Produkt mit vielen Rückfragen. Welcher Kanal passt am besten?",
+      options: [
+        "Ein einzelner FAQ-Eintrag.",
+        "Eine Videokonferenz oder ein Telefonat mit Beratungstermin.",
+        "Ein öffentlicher Social-Media-Kommentar.",
+        "Ein automatischer Chatbot ohne Weiterleitung."
+      ],
+      answer: 1,
+      explanation: "Komplexe Beratung braucht Dialog in Echtzeit – ideal per Videokonferenz oder Telefon. Kurze Standardfragen passen dagegen gut in Chat oder FAQ."
+    },
+    {
+      id: "lf6-servicekanaele-02",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Was gehört an den Anfang einer guten Service-E-Mail zu einer Beschwerde?",
+      options: [
+        "Eine lange Entschuldigungsgeschichte ohne Ergebnis.",
+        "Die Firmengeschichte des Shops.",
+        "Die Lösung beziehungsweise der konkrete nächste Schritt für den Kunden.",
+        "Ein Hinweis, dass der Kunde selbst schuld ist."
+      ],
+      answer: 2,
+      explanation: "Kunden wollen zuerst wissen, wie es weitergeht. Klarer Betreff, persönliche Anrede und die Lösung am Anfang machen die E-Mail kundenorientiert."
+    },
+    {
+      id: "lf6-servicekanaele-03",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Ein Kunde beschwert sich öffentlich auf Social Media über eine falsche Lieferung. Wie reagiert der Shop professionell?",
+      options: [
+        "Den Kommentar löschen und den Kunden blockieren.",
+        "Öffentlich zurückschimpfen, um Stärke zu zeigen.",
+        "Gar nicht reagieren, das verläuft von selbst.",
+        "Öffentlich freundlich antworten, eine Lösung anbieten und Details per Direktnachricht klären."
+      ],
+      answer: 3,
+      explanation: "Social-Media-Service hat Publikum: Eine souveräne, lösungsorientierte Antwort überzeugt auch alle Mitlesenden. Bestelldaten gehören in die Direktnachricht."
+    },
+    {
+      id: "lf6-servicekanaele-04",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Wo liegt die Grenze eines Chatbots im Kundenservice?",
+      options: [
+        "Er kann keine Standardfragen wie Lieferzeiten beantworten.",
+        "Er funktioniert nur werktags.",
+        "Komplexe oder emotionale Anliegen sollte er erkennbar an einen Menschen übergeben.",
+        "Er darf rechtlich nur nachts eingesetzt werden."
+      ],
+      answer: 2,
+      explanation: "Chatbots entlasten bei Routinefragen rund um die Uhr. Bei komplexen oder emotionalen Fällen braucht es die Übergabe an Menschen – sonst eskaliert der Frust."
+    },
+    {
+      id: "lf6-servicekanaele-05",
+      module: "lf6-servicekanaele",
+      type: "number",
+      prompt: "Ein Newsletter geht an 4.000 Empfänger, 720 öffnen ihn. Wie hoch ist die Öffnungsrate?",
+      suffix: "%",
+      answer: 18,
+      tolerance: 0.1,
+      explanation: "720 / 4.000 × 100 = 18 %. Die Öffnungsrate zeigt, wie gut Betreff und Absender funktionieren – gemessen wird sie mit den Mitteln der Webanalyse."
+    },
+    {
+      id: "lf6-servicekanaele-06",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Warum nutzen seriöse Shops für die Newsletter-Anmeldung das Double-Opt-in-Verfahren?",
+      options: [
+        "Weil so die Einwilligung nachweisbar ist: Erst der Klick auf den Bestätigungslink aktiviert das Abo.",
+        "Weil dadurch doppelt so viele Newsletter verschickt werden dürfen.",
+        "Weil die E-Mails dann schneller ankommen.",
+        "Weil der Abmeldelink dann entfallen darf."
+      ],
+      answer: 0,
+      explanation: "Beim Double-Opt-in bestätigt der Empfänger die Anmeldung per Link. Das belegt die Einwilligung – der Abmeldelink bleibt trotzdem in jeder Ausgabe Pflicht."
+    },
+    {
+      id: "lf6-servicekanaele-07",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Was gehört zur guten Vorbereitung einer Kundenberatung per Videokonferenz?",
+      options: [
+        "Erst im Termin prüfen, ob Kamera und Mikrofon funktionieren.",
+        "Technik vorher testen, ruhige Umgebung schaffen und Unterlagen für die Bildschirmfreigabe bereithalten.",
+        "Nebenbei andere Kundenanfragen beantworten.",
+        "Die Kamera grundsätzlich ausgeschaltet lassen."
+      ],
+      answer: 1,
+      explanation: "Ein professioneller Videocall wirkt vorbereitet: funktionierende Technik, ruhiger Hintergrund und griffbereite Unterlagen für die Bildschirmfreigabe."
+    },
+    {
+      id: "lf6-servicekanaele-08",
+      module: "lf6-servicekanaele",
+      type: "choice",
+      prompt: "Welchen doppelten Nutzen haben gute FAQ- und Hilfeseiten?",
+      options: [
+        "Sie ersetzen das Impressum und die Datenschutzerklärung.",
+        "Sie machen den Shop automatisch günstiger.",
+        "Sie verhindern jede Beschwerde für immer.",
+        "Kunden finden Antworten rund um die Uhr – auch über Suchmaschinen – und das Serviceteam wird entlastet."
+      ],
+      answer: 3,
+      explanation: "Viele Kunden suchen ihre Frage zuerst über Suchmaschinen. Gute Hilfeinhalte beantworten sie sofort und reduzieren gleichzeitig das Anfragevolumen im Service."
+    },
+    {
+      id: "lf6-email-01",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "Warum muss eine geschäftliche E-Mail genauso sorgfältig gestaltet werden wie ein Geschäftsbrief auf Papier?",
+      options: [
+        "Weil E-Mails immer ausgedruckt und abgeheftet werden müssen.",
+        "Weil sie das Unternehmen repräsentiert und dieselben gesetzlichen Geschäftsangaben enthalten muss.",
+        "Weil E-Mails sonst technisch nicht zugestellt werden können.",
+        "Weil nur formatierte E-Mails verschlüsselt werden dürfen."
+      ],
+      answer: 1,
+      explanation: "Jede Kontaktaufnahme repräsentiert das Unternehmen. Für geschäftliche E-Mails gelten deshalb dieselben Vorschriften zu den Geschäftsangaben wie für den Geschäftsbrief (u. a. §§ 37a, 125a HGB)."
+    },
+    {
+      id: "lf6-email-02",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "Die Vertriebsleitung soll über dein Angebot an einen Kunden informiert werden, ohne dass der Kunde das sieht. Welches Feld nutzt du?",
+      options: [
+        "CC – dort sind Kopien grundsätzlich unsichtbar.",
+        "Den Betreff, mit dem Zusatz „Kopie an Vertrieb“.",
+        "BCC – der Empfänger erkennt nicht, dass eine Kopie an weitere Personen ging.",
+        "Ein zweites Anschreiben per Post."
+      ],
+      answer: 2,
+      explanation: "Bei BCC (Blind Carbon Copy) sehen die übrigen Empfänger die Kopie-Adressen nicht. Bei CC (Carbon Copy) sind alle Kopie-Empfänger dagegen für alle sichtbar."
+    },
+    {
+      id: "lf6-email-03",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "Welche Aussage zum Betreff einer geschäftlichen E-Mail ist richtig?",
+      options: [
+        "Er ist zwingend anzugeben und fasst den Inhalt kurz und präzise zusammen.",
+        "Er ist freiwillig und kann leer bleiben.",
+        "Er darf beim Beantworten niemals verändert werden, auch wenn sich das Thema ändert.",
+        "Er sollte möglichst viele Umlaute und Sonderzeichen enthalten."
+      ],
+      answer: 0,
+      explanation: "Der Betreff ist Pflicht und dient als kurze Inhaltsangabe. Ändert sich beim Weiterleiten oder Beantworten der Inhalt, wird der Betreff angepasst – und für internationale Mails besser auf Umlaute und Akzente verzichten."
+    },
+    {
+      id: "lf6-email-04",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "In welcher Reihenfolge ist der Abschluss einer geschäftlichen E-Mail aufgebaut?",
+      options: [
+        "Kommunikationsdaten, Gruß, Firmenname, Bearbeiter.",
+        "Bearbeiter, Gruß, gesetzliche Angaben, Firmenname.",
+        "Firmenname, Gruß, Bearbeiter, Kommunikationsdaten.",
+        "Gruß, Firmenname, Bearbeiter mit Zusatz, Kommunikationsdaten und gesetzliche Angaben."
+      ],
+      answer: 3,
+      explanation: "Nach dem Brieftext folgt mit Leerzeile der Gruß, dann Firmenname, Name der Bearbeiterin oder des Bearbeiters (mit i. A., i. V. oder ppa.) und zuletzt Kommunikationsdaten samt gesetzlicher Angaben – oft automatisch per Signatur."
+    },
+    {
+      id: "lf6-email-05",
+      module: "lf6-email",
+      type: "number",
+      prompt: "Ein Unternehmen ersetzt monatlich 1.200 Briefe (Porto je 0,95 €) durch E-Mails. Wie viel Porto spart es im Jahr?",
+      suffix: "€",
+      answer: 13680,
+      tolerance: 1,
+      explanation: "1.200 × 0,95 € = 1.140 € pro Monat, × 12 Monate = 13.680 € im Jahr. Kosteneinsparung ist neben Schnelligkeit und ständiger Erreichbarkeit ein Hauptvorteil der E-Mail."
+    },
+    {
+      id: "lf6-email-06",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "Unter einer E-Mail steht „ppa. Sandra Krause“. Was bedeutet der Zusatz?",
+      options: [
+        "Sandra Krause ist Auszubildende im ersten Lehrjahr.",
+        "Sandra Krause unterschreibt als Prokuristin (per Prokura).",
+        "Die E-Mail wurde automatisch von einem Programm erstellt.",
+        "Die E-Mail ist nur ein unverbindlicher Entwurf."
+      ],
+      answer: 1,
+      explanation: "Die Zusätze zeigen die Vertretungsbefugnis: i. A. = im Auftrag, i. V. = in Vollmacht, ppa. = per Prokura – die weitreichendste kaufmännische Vollmacht."
+    },
+    {
+      id: "lf6-email-07",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "Warum unterliegt der geschäftliche E-Mail-Verkehr dem Datenschutz?",
+      options: [
+        "Weil jede E-Mail automatisch beim Registergericht gespeichert wird.",
+        "Weil das @-Zeichen markenrechtlich geschützt ist.",
+        "Weil E-Mail-Adressen und E-Mail-Inhalte zu den personenbezogenen Daten zählen.",
+        "Nur Newsletter unterliegen dem Datenschutz, normale E-Mails nicht."
+      ],
+      answer: 2,
+      explanation: "E-Mail-Adressen und Inhalte sind personenbezogene Daten. Deshalb gehören Zugangsschutz, Verschlüsselung, Virenscanner und Firewall sowie datenschutzkonforme Weiterleitung und Archivierung zum Pflichtprogramm."
+    },
+    {
+      id: "lf6-email-08",
+      module: "lf6-email",
+      type: "choice",
+      prompt: "Ein Kollege will vertrauliche Kundendaten als unverschlüsselte E-Mail-Anlage versenden. Was ist die richtige Reaktion?",
+      options: [
+        "Kein Problem – E-Mails können unterwegs nicht mitgelesen werden.",
+        "Hauptsache BCC verwenden, dann sind die Daten sicher.",
+        "Die Daten vorher ausdrucken, das ist immer datenschutzkonform.",
+        "Stopp: Vertrauliche Daten nur verschlüsselt übermitteln – DSGVO-Verstöße können Bußgelder bis 20 Millionen Euro kosten."
+      ],
+      answer: 3,
+      explanation: "Vertrauliche Inhalte gehören nur verschlüsselt in die E-Mail. Die DSGVO sieht bei Datenschutzverstößen Bußgelder bis 20 Millionen Euro oder 4 % des weltweiten Jahresumsatzes vor."
+    },
+    {
+      id: "lf6-social-media-01",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Was unterscheidet Social Media grundlegend von der Kommunikation per E-Mail?",
+      options: [
+        "Social Media funktioniert nur mit Werbebudget.",
+        "Social Media ist Many-to-Many-Kommunikation in Echtzeit – E-Mail ist One-to-One.",
+        "E-Mails erreichen grundsätzlich mehr Menschen als Social Media.",
+        "In Social Media gibt es keine rechtlichen Regeln."
+      ],
+      answer: 1,
+      explanation: "Soziale Medien ermöglichen den Austausch vieler mit vielen in Echtzeit. Die E-Mail richtet sich dagegen an einen bestimmten Personenkreis – One-to-One-Kommunikation."
+    },
+    {
+      id: "lf6-social-media-02",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Eine Falschmeldung über deinen Shop verbreitet sich „viral“. Was bedeutet das – und warum ist es gefährlich?",
+      options: [
+        "Sie wird automatisch von der Plattform gelöscht und ist harmlos.",
+        "Sie ist nur für Follower des Shops sichtbar.",
+        "Sie verbreitet sich wie ein Virus in Sekunden an eine breite Öffentlichkeit – auch schnelles Reagieren verhindert Imageschäden nicht immer.",
+        "Sie wird erst nach behördlicher Prüfung veröffentlicht."
+      ],
+      answer: 2,
+      explanation: "Viral heißt: Inhalte verbreiten sich in wenigen Sekunden an eine breite Öffentlichkeit. Fake News können deshalb bleibende Schäden wie Image- oder Vertrauensverlust verursachen, selbst bei schneller Reaktion."
+    },
+    {
+      id: "lf6-social-media-03",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Deinem Shop ist ein Fehler passiert, der öffentlich diskutiert wird. Wie reagierst du nach den Grundsätzen guter Social-Media-Kommunikation?",
+      options: [
+        "Den Fehler offen eingestehen und eine Lösung anbieten – das wird als Stärke wahrgenommen.",
+        "Den Fehler leugnen, bis Beweise auftauchen.",
+        "Alle kritischen Kommentare löschen.",
+        "Das Profil vorübergehend deaktivieren."
+      ],
+      answer: 0,
+      explanation: "Social Media erwartet Offenheit und Ehrlichkeit. Wer Fehler eingesteht statt sie zu verschleiern, kann das Ansehen des Unternehmens sogar verbessern."
+    },
+    {
+      id: "lf6-social-media-04",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Du willst ein stimmungsvolles Foto aus dem Internet für den Unternehmensauftritt posten. Was gilt?",
+      options: [
+        "Alles im Internet darf frei verwendet werden.",
+        "Ein Bildnachweis in kleiner Schrift genügt immer.",
+        "Hauptsache, das Foto wird leicht bearbeitet.",
+        "Bestehende Fotos sind meist urheberrechtlich geschützt – ohne Einwilligung des Urhebers darf es nicht verwendet werden; abgebildete Personen müssen ebenfalls zustimmen."
+      ],
+      answer: 3,
+      explanation: "Fremde Bilder, Videos und Texte sind fast immer urheberrechtlich geschützt. Zusätzlich gilt das Recht am eigenen Bild: Erkennbare Personen müssen der Veröffentlichung zustimmen."
+    },
+    {
+      id: "lf6-social-media-05",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Warum kann sogar ein „Gefällt mir“-Klick des Unternehmens problematisch sein?",
+      options: [
+        "Likes kosten für Unternehmensseiten eine Gebühr.",
+        "Wer Beiträge mit Links auf rechtswidrige Inhalte liked oder teilt, kann sich strafbar machen.",
+        "Likes verringern die Reichweite der eigenen Seite.",
+        "Unternehmen dürfen grundsätzlich keine Beiträge liken."
+      ],
+      answer: 1,
+      explanation: "Beim Verlinken, Teilen und selbst beim Kommentieren mit „Gefällt mir“ haftet, wer auf rechtswidrige Inhalte verweist. Solche Inhalte auf der eigenen Präsenz müssen zügig gelöscht werden."
+    },
+    {
+      id: "lf6-social-media-06",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Eine Influencerin stellt den Bürostuhl deines Shops in ihrem Video vor und wird dafür bezahlt. Was ist zwingend nötig?",
+      options: [
+        "Nichts – Empfehlungen sind formfrei.",
+        "Das Video darf höchstens 60 Sekunden lang sein.",
+        "Die kommerzielle Produktvorstellung muss als Werbung gekennzeichnet werden.",
+        "Der Preis des Produkts muss geheim bleiben."
+      ],
+      answer: 2,
+      explanation: "Wer Produkte aus kommerziellen Gründen vorstellt, ausprobiert oder beurteilt, muss das kenntlich machen – sonst liegt Schleichwerbung vor."
+    },
+    {
+      id: "lf6-social-media-07",
+      module: "lf6-social-media",
+      type: "number",
+      prompt: "Eine Studie untersuchte 29.000 Instagram-Profile; rund 50 % davon nutzten Emojis. Wie viele Profile waren das?",
+      suffix: "Profile",
+      answer: 14500,
+      tolerance: 10,
+      explanation: "29.000 × 0,5 = 14.500 Profile. Emojis sind in Social Media weit verbreitet – geschäftlich sollten sie trotzdem sparsam und unmissverständlich eingesetzt werden."
+    },
+    {
+      id: "lf6-social-media-08",
+      module: "lf6-social-media",
+      type: "choice",
+      prompt: "Kundinnen und Kunden sollen Erfahrungsberichte mit Sternebewertungen zu deinem Shop lesen können. Welcher Plattformtyp passt?",
+      options: [
+        "Ein Messenger-Dienst.",
+        "Eine Videoplattform.",
+        "Ein firmeninterner Blog ohne Kommentarfunktion.",
+        "Eine Bewertungsplattform wie yelp oder Google-Rezensionen."
+      ],
+      answer: 3,
+      explanation: "Bewertungsplattformen bieten offenen Meinungsaustausch mit Sternen und Berichten. Netzwerke, Blogs, Videoplattformen und Messenger erfüllen andere Aufgaben."
+    },
+    {
+      id: "lf6-vertriebswege-01",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Warum eignet sich eine Videokonferenz besonders gut, um eine Reklamation zu klären?",
+      options: [
+        "Weil das Gespräch dabei automatisch aufgezeichnet und veröffentlicht wird.",
+        "Weil beide Seiten das Gegenüber und das Problem tatsächlich sehen – so ist schnell und einfach Abhilfe möglich.",
+        "Weil Reklamationen per Video rechtlich verbindlicher sind als per E-Mail.",
+        "Weil die Kundschaft dann keine Rückfragen mehr stellen darf."
+      ],
+      answer: 1,
+      explanation: "„Face to Face“ lässt sich ein Problem zeigen statt nur beschreiben. Das tatsächliche Sehen von Gegenüber und Ware macht die Klärung schnell und persönlich."
+    },
+    {
+      id: "lf6-vertriebswege-02",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Was gehört zu einer sicheren Videokonferenz mit Kundinnen und Kunden?",
+      options: [
+        "Möglichst viele unbekannte Teilnehmende zulassen.",
+        "Die Standardeinstellungen niemals verändern.",
+        "Ein Videosystem mit integrierter Verschlüsselung, geprüfte Provider-Sicherheit und ein sicheres Netzwerk.",
+        "Sicherheit spielt bei Videokonferenzen keine Rolle."
+      ],
+      answer: 2,
+      explanation: "Videosysteme sollten nach gängigen Standards verschlüsseln. Dazu kommen: Sicherheitsmaßnahmen des Providers prüfen, Standardeinstellungen anpassen, sicheres Netzwerk, Schulungen und klare Regeln."
+    },
+    {
+      id: "lf6-vertriebswege-03",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Welcher Vorteil spricht für den Chat in der Kundenbetreuung?",
+      options: [
+        "Der Verlauf ist dokumentiert, Bilder und Anleitungen sind schnell versendet, und eine Person kann mehrere Chats fast gleichzeitig betreuen.",
+        "Chats funktionieren ohne Personal vollautomatisch fehlerfrei.",
+        "Chats sind nur zu Bürozeiten technisch möglich.",
+        "Im Chat dürfen keine Dateien versendet werden."
+      ],
+      answer: 0,
+      explanation: "Chat-Verläufe sind nachlesbar, Emotionen kochen weniger hoch, Dateien wie Montageanleitungen sind schnell geteilt – und mehrere Kundinnen und Kunden können nahezu zeitgleich betreut werden."
+    },
+    {
+      id: "lf6-vertriebswege-04",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Dein Team nutzt im Chat vorgefertigte Textbausteine. Was ist Vorteil und was Gefahr?",
+      options: [
+        "Vorteil: Sie ersetzen die Datenschutzerklärung. Gefahr: keine.",
+        "Vorteil: Der Chat wird automatisch übersetzt. Gefahr: hohe Lizenzkosten.",
+        "Vorteil: Kundinnen und Kunden antworten schneller. Gefahr: Der Server wird überlastet.",
+        "Vorteil: Zeitersparnis und weniger Tippfehler. Gefahr: Vorformulierte Floskeln können roboterartig klingen."
+      ],
+      answer: 3,
+      explanation: "Textbausteine werden per Copy-and-paste eingefügt – das spart Zeit und vermeidet Tippfehler. Sie müssen aber persönlich angepasst werden, sonst wirkt der Chat wie ein Roboter."
+    },
+    {
+      id: "lf6-vertriebswege-05",
+      module: "lf6-vertriebswege",
+      type: "number",
+      prompt: "Textbausteine sparen im Chat je Anfrage etwa 2 Minuten. Euer Support bearbeitet 450 Anfragen pro Woche. Wie viele Stunden spart das Team wöchentlich?",
+      suffix: "Stunden",
+      answer: 15,
+      tolerance: 0.1,
+      explanation: "450 × 2 Minuten = 900 Minuten, geteilt durch 60 = 15 Stunden pro Woche. Solche Auswertungen gelingen leicht, weil Chatprotokolle automatisch gespeichert werden."
+    },
+    {
+      id: "lf6-vertriebswege-06",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Wie funktioniert Sprachsteuerung technisch – etwa bei einer Bestellung per Stimme?",
+      options: [
+        "Das Gerät versteht die Sprache lokal ohne jede Verarbeitung.",
+        "Ein Mensch im Callcenter tippt jede Spracheingabe live ab.",
+        "Die Spracheingabe wird in eine Cloud übertragen, dort zerlegt und analysiert und in Text umgewandelt.",
+        "Die Sprache wird als Tondatei an den Hersteller gefaxt."
+      ],
+      answer: 2,
+      explanation: "Die Stimme wird in die Cloud übertragen, zerlegt, prozessiert und analysiert. Grenzen: Die Erkennung arbeitet nicht immer korrekt, und viele Systeme sind untereinander nicht kompatibel."
+    },
+    {
+      id: "lf6-vertriebswege-07",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Warum fragen viele Hotlines zu Beginn per Sprachcomputer nach dem Anliegen?",
+      options: [
+        "Damit Anrufende möglichst schnell wieder auflegen.",
+        "Weil die Anrufenden dann direkt in die passende Fachabteilung geleitet werden – das spart Zeit und Personalkosten.",
+        "Weil Gespräche ohne Vorauswahl gesetzlich verboten sind.",
+        "Damit die Warteschleifenmusik länger läuft."
+      ],
+      answer: 1,
+      explanation: "Die Vorauswahl nach dem Anliegen führt zielgerichtet zu geschulten Fachkräften, etwa in die Reklamationsabteilung – Zeitersparnis für beide Seiten und geringere Kosten für das Unternehmen."
+    },
+    {
+      id: "lf6-vertriebswege-08",
+      module: "lf6-vertriebswege",
+      type: "choice",
+      prompt: "Was macht eine gute FAQ-Liste im Onlineshop aus?",
+      options: [
+        "Sie wird einmal erstellt und dann nie wieder angefasst.",
+        "Sie beantwortet ausschließlich Fragen, die noch nie gestellt wurden.",
+        "Sie ersetzt Impressum und Datenschutzerklärung.",
+        "Sie entsteht aus echten Kundenfragen, ist einfach formuliert, per Schlagwort durchsuchbar und wird stetig aktualisiert."
+      ],
+      answer: 3,
+      explanation: "Häufig gestellte Fragen werden gesammelt, klar beantwortet und übersichtlich – etwa alphabetisch mit Schlagwortsuche – dargestellt. Pflege ist Pflicht: FAQ stetig evaluieren und aktualisieren."
     }
   ],
   badges: [
@@ -2613,6 +3475,42 @@ window.EC_CONTENT = {
       description: "Das LF2-Modul zu ERP- und Warenwirtschaftssystemen vollständig abgeschlossen.",
       condition: "module",
       value: "lf2-warenwirtschaft"
+    },
+    {
+      id: "lf6-servicekanaele-ready",
+      title: "Service-Ass",
+      description: "Das LF6-Modul zu Servicekanälen vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf6-servicekanaele"
+    },
+    {
+      id: "lf6-email-ready",
+      title: "Postfach-Profi",
+      description: "Das LF6-Modul zur Kommunikation per E-Mail vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf6-email"
+    },
+    {
+      id: "lf6-social-media-ready",
+      title: "Community-Manager",
+      description: "Das LF6-Modul zur Kommunikation über Social Media vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf6-social-media"
+    },
+    {
+      id: "lf6-vertriebswege-ready",
+      title: "Kanal-Kapitän",
+      description: "Das LF6-Modul zu den weiteren Vertriebswegen vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf6-vertriebswege"
+    },
+    {
+      id: "lf6-komplett",
+      title: "LF6 komplett",
+      description: "Alle vier LF6-Module vollständig abgeschlossen.",
+      condition: "allModules",
+      field: "LF6",
+      value: 4
     },
     {
       id: "targeting-ready",
@@ -3441,12 +4339,100 @@ window.EC_CONTENT = {
       example: "Eine Produktberatung beantwortet Suchfragen und verlinkt passende Produktseiten."
     },
     {
+      id: "onpage-optimierung",
+      term: "OnPage-Optimierung",
+      category: "Marketing",
+      summary: "Alle SEO-Maßnahmen auf der eigenen Website.",
+      detail: "Die OnPage-Optimierung (auch OnSite) umfasst alles, was auf der eigenen Website geschieht und von Dritten nicht beeinflussbar ist: Keywords, technische Optimierung (Meta-Daten, Alt-Attribute, interne Links, Seitenstruktur), Content und die Auswertung über KPI.",
+      example: "Der Shop überarbeitet Title, Meta-Beschreibung und Überschriften seiner Kategorieseite."
+    },
+    {
+      id: "offpage-optimierung",
+      term: "OffPage-Optimierung",
+      category: "Marketing",
+      summary: "SEO-Bemühungen außerhalb der eigenen Website.",
+      detail: "Die OffPage-Optimierung (auch OffSite) arbeitet an Signalen außerhalb der eigenen Website – vor allem am Aufbau hochwertiger, themenrelevanter Backlinks. Gekaufte oder zu schnell aufgebaute Links erkennen Suchmaschinen und strafen sie ab.",
+      example: "Ein Fachblog verlinkt den Ratgeber des Shops – ein wertvoller, themenrelevanter Backlink."
+    },
+    {
+      id: "backlink",
+      term: "Backlink",
+      category: "Marketing",
+      summary: "Link von einer fremden Website auf die eigene Seite.",
+      detail: "Suchmaschinen werten Backlinks als Empfehlung und damit als Rankingfaktor. Entscheidend sind Qualität und Themenrelevanz der verlinkenden Seite, nicht die bloße Menge. Gute Quellen sind Gastbeiträge, geteilte Infografiken oder Engagement in Communitys.",
+      example: "Ein Ratgeberportal verlinkt in einem Artikel über Rückenschmerzen den Bürostuhl-Guide des Shops."
+    },
+    {
+      id: "longtail-keyword",
+      term: "Longtail Keyword",
+      category: "Marketing",
+      summary: "Spezifische, mehrteilige Suchanfrage mit geringem Suchvolumen.",
+      detail: "Longtail Keywords („Kommode weiß günstig“) haben weniger Suchvolumen und Wettbewerb als Shorthead Keywords („Kommode“), führen aber öfter zum Kauf, weil die Absicht konkreter ist. Eine gute Keywordstrategie mischt beide Arten.",
+      example: "Statt nur auf „Bürostuhl“ optimiert der Shop auch auf „ergonomischer Bürostuhl mit Lordosenstütze“."
+    },
+    {
+      id: "content-marketing",
+      term: "Content Marketing",
+      category: "Marketing",
+      summary: "Zielgruppen mit nützlichen Inhalten informieren und unterhalten.",
+      detail: "Content Marketing erstellt Inhalte mit echtem Mehrwert – Blogbeiträge, Tests, Infografiken, Videos. Im SEO-Bereich ist es entscheidend: Ohne guten, einzigartigen Content gibt es keine guten Rankings. Die Textlänge zählt weniger als der Nutzen für die Lesenden.",
+      example: "Der Shop veröffentlicht einen Ratgeber „Homeoffice ergonomisch einrichten“ mit Checkliste."
+    },
+    {
+      id: "duplicate-content",
+      term: "Duplicate Content",
+      category: "Marketing",
+      summary: "Identische Inhalte, die mehrfach im Netz auftauchen.",
+      detail: "Kopierte oder mehrfach verwendete Inhalte gelten als schlechter Rankingfaktor: Seit dem Panda-Update belohnt Google relevante, einzigartige Inhalte und wertet Seiten ohne eigenen Mehrwert ab.",
+      example: "Zwei Produktseiten mit wortgleicher Herstellerbeschreibung konkurrieren gegeneinander – besser eigene Texte schreiben."
+    },
+    {
       id: "sea",
       term: "SEA",
       category: "Marketing",
       summary: "Bezahlte Suchmaschinenwerbung.",
       detail: "SEA nutzt Anzeigen bei Suchmaschinen. Kampagnen werden über Keywords, Anzeigen, Gebote, Budgets, Zielseiten und Kennzahlen gesteuert.",
       example: "Für das Keyword 'ergonomischer Bürostuhl' wird eine Suchanzeige geschaltet."
+    },
+    {
+      id: "qualitaetsfaktor",
+      term: "Qualitätsfaktor",
+      category: "Marketing",
+      summary: "Schätzwert von Google Ads über die Leistung der Keywords (Skala 1 bis 10).",
+      detail: "Der Qualitätsfaktor macht aus Google Ads keine reine Auktion: Er bewertet unter anderem die Relevanz der Keywords, bisherige Klickraten, die Qualität der Zielseite und die Verwendung von Anzeigenerweiterungen. Ein guter Qualitätsfaktor bringt bessere Positionen bei geringeren Klickkosten.",
+      example: "Trotz niedrigerem Gebot steht die relevantere Anzeige mit passender Zielseite weiter oben."
+    },
+    {
+      id: "conversion-tracking",
+      term: "Conversion-Tracking",
+      category: "Marketing",
+      summary: "Nachverfolgen, welche Kampagne oder welches Keyword zu einer Conversion geführt hat.",
+      detail: "Conversion-Tracking ist Teil der Website-Analyse: Es verbindet Klicks mit dem eigentlichen Ziel – Bestellungen, Anfragen, Umsatz. So zeigt sich, welche Keywords Umsatz generieren statt nur Klicks; das steigert die Erfolgsauswertung von Onlinemarketing-Maßnahmen deutlich.",
+      example: "Das Keyword mit den meisten Klicks bringt kaum Bestellungen – ein anderes mit weniger Klicks den meisten Umsatz."
+    },
+    {
+      id: "performance-marketing",
+      term: "Performance Marketing",
+      category: "Marketing",
+      summary: "Werbung, die nach messbarer Leistung abgerechnet und gesteuert wird.",
+      detail: "Suchmaschinenwerbung ist Performance Marketing: Bezahlt wird im Cost-per-Click-Verfahren nur für tatsächliche Klicks, Budgets und Gebote sind frei wählbar, der Erfolg wird über Echtzeit-Kennzahlen und Conversion-Tracking gemessen. Anzeigen ohne Klick liefern einen kostenlosen Branding-Effekt.",
+      example: "Die Kampagne wird täglich anhand von Klickrate und Cost-per-Conversion nachjustiert."
+    },
+    {
+      id: "anzeigenerweiterung",
+      term: "Anzeigenerweiterung",
+      category: "Marketing",
+      summary: "Zusatzelemente, die eine Suchanzeige größer und informativer machen.",
+      detail: "Anzeigenerweiterungen ergänzen die Anzeige um Standorte, Preise, Zusatzinformationen wie Versand und Beratung oder eine Telefonnummer. Die Anzeige belegt mehr Platz auf der Suchergebnisseite und wird präsenter – das kann die Klickrate und den Qualitätsfaktor verbessern.",
+      example: "Unter dem Anzeigentext erscheinen Öffnungszeiten, Standort und ein Anruf-Button."
+    },
+    {
+      id: "sem",
+      term: "SEM",
+      category: "Marketing",
+      summary: "Search Engine Marketing: SEO und SEA im Zusammenspiel.",
+      detail: "SEM erhöht die Sichtbarkeit in Suchergebnisseiten durch die Kombination von bezahlten Suchanzeigen (SEA) und Suchmaschinenoptimierung (SEO). Beide teilen Keywords, Kennzahlen und Zielseiten – die SEA-Keyword-Daten zeigen, welche Begriffe sich für langfristige SEO lohnen.",
+      example: "Ein performantes SEA-Keyword wird zusätzlich in die SEO-Strategie der Kategorieseite übernommen."
     },
     {
       id: "serp",
@@ -3841,6 +4827,38 @@ window.EC_CONTENT = {
       example: "Der Shop erkennt Stammkunden und schlägt passende Angebote auf Basis früherer Käufe vor."
     },
     {
+      id: "werbeerfolgskontrolle",
+      term: "Werbeerfolgskontrolle",
+      category: "Marketing",
+      summary: "Nachhaltige Kontrolle und Optimierung einer Werbekampagne und ihres Erfolgs.",
+      detail: "Im Onlinemarketing ist die Werbeerfolgskontrolle direkt möglich: Tools werten Kampagnen eigenständig aus und liefern Berichte und Kennzahlen teils in Echtzeit. Die Auswertung folgt vier Schritten: Ziel und KPIs bestimmen, quantitative Analyse, qualitative Analyse und Konkurrenzanalyse.",
+      example: "Nach drei Monaten Kampagne prüft der Shop, ob die Bestellungen das Umsatzziel von plus 10 Prozent erreicht haben."
+    },
+    {
+      id: "google-analytics",
+      term: "Google Analytics",
+      category: "Marketing",
+      summary: "Meistgenutztes Web-Analytics-Programm, aktuell als eventbasiertes GA4.",
+      detail: "Google Analytics 4 erfasst Nutzerinteraktionen als Events (Seitenaufrufe, Klicks, Käufe) statt nur als Sitzungen und bietet sieben Berichtsbereiche: Echtzeit, Akquisition, Engagement, Monetarisierung, Bindung, Nutzerattribute und Technologie. Kostenlos und leicht zu integrieren – aber wegen der DSGVO setzen viele EU-Unternehmen auf datenschutzorientierte Alternativen wie etracker oder Matomo.",
+      example: "Der Akquisition-Bericht zeigt, dass die meisten neuen Besucher über die organische Suche kommen."
+    },
+    {
+      id: "heatmap",
+      term: "Heatmap",
+      category: "Marketing",
+      summary: "Visualisierung, wo Besucher klicken, scrollen und verweilen.",
+      detail: "Heatmaps machen sichtbar, welche Bereiche einer Seite Aufmerksamkeit bekommen und wo Nutzer sich durch die Seiten bewegen. Sie gehören zur qualitativen Analyse: Sie helfen zu verstehen, warum Besucher sich so verhalten, wie die Zahlen es zeigen.",
+      example: "Die Heatmap zeigt, dass kaum jemand bis zum Bestellbutton unterhalb des Produktbilds scrollt."
+    },
+    {
+      id: "multivariater-test",
+      term: "Multivariater Test",
+      category: "Marketing",
+      summary: "Testverfahren, das mehrere Elemente gleichzeitig in Kombinationen prüft.",
+      detail: "Während ein A/B-Test nur eine Variable verändert, kombiniert der multivariate Test mehrere Varianten mehrerer Elemente, um die beste Kombination zu finden. Das spart aufeinanderfolgende A/B-Tests, braucht aber deutlich mehr Besucher und eine aufwendigere Auswertung – für den Einstieg ist ein einfacher A/B-Test die bessere Wahl.",
+      example: "Drei Bilder und zwei Überschriften ergeben sechs Versionen, die gleichzeitig getestet werden."
+    },
+    {
       id: "webanalyse",
       term: "Webanalyse",
       category: "Marketing",
@@ -3881,6 +4899,46 @@ window.EC_CONTENT = {
       example: "Der Newsletter-Link trägt utm_source=newsletter – so ist sichtbar, wie viele Käufe der Newsletter bringt."
     },
     {
+      id: "maschinelles-lernen",
+      term: "Maschinelles Lernen",
+      category: "Marketing",
+      summary: "Teilbereich der KI: Computer lernen aus Daten, ohne explizit programmiert zu werden.",
+      detail: "Statt fester Regeln erkennt maschinelles Lernen Muster in Beispieldaten und trifft daraus Vorhersagen. Drei Grundarten: überwachtes Lernen (mit bekannten Ergebnissen/Labels), unüberwachtes Lernen (Muster ohne Labels, z. B. Clustering) und bestärkendes Lernen (über Belohnung und Strafe).",
+      example: "Aus früheren Bestellungen lernt das Modell, welche Produktempfehlungen zu welchen Kundengruppen passen."
+    },
+    {
+      id: "neuronales-netzwerk",
+      term: "Neuronales Netzwerk",
+      category: "Marketing",
+      summary: "Modell aus verbundenen „Neuronen“ in Schichten, lose ans Gehirn angelehnt.",
+      detail: "Eine Eingabeschicht nimmt Daten auf, versteckte Schichten führen Berechnungen durch, die Ausgabeschicht liefert das Ergebnis. Beim Training werden die Gewichtungen zwischen den Neuronen angepasst, bis die Vorhersagen stimmen. Deep Learning nutzt besonders tiefe Netze mit vielen Schichten – stark bei Bildern und Sprache.",
+      example: "Ein tiefes Netz erkennt auf Produktfotos automatisch, ob ein Bürostuhl oder ein Schreibtisch zu sehen ist."
+    },
+    {
+      id: "schwache-und-starke-ki",
+      term: "Schwache und starke KI",
+      category: "Marketing",
+      summary: "Heutige KI ist auf einzelne Aufgaben spezialisiert; Allround-KI bleibt Hypothese.",
+      detail: "Schwache (schmale) KI ist auf eine spezifische Aufgabe beschränkt und hat kein Bewusstsein – dazu gehören praktisch alle heutigen Systeme wie Chatbots und Sprachassistenten. Starke KI, die jede intellektuelle Aufgabe eines Menschen selbstständig erfüllen könnte, ist bis heute nicht realisiert.",
+      example: "Der Übersetzungsdienst ist exzellent im Übersetzen – kann aber keine Kampagne planen: schwache KI."
+    },
+    {
+      id: "sprachmodell",
+      term: "Sprachmodell",
+      category: "Marketing",
+      summary: "KI-Modell, das ab einem Prompt Wort für Wort wahrscheinlichen Text erzeugt.",
+      detail: "Sprachmodelle wie ChatGPT (GPT = Generative Pretraining Transformer) basieren auf der Transformer-Architektur und werden zweistufig trainiert: Vortraining auf riesigen Textmengen, dann Feinabstimmung mit menschlichem Feedback. Sie sagen das jeweils wahrscheinlichste nächste Wort voraus – überzeugend formuliert, aber ohne Bewusstsein; Ausgaben können falsch sein und müssen geprüft werden.",
+      example: "Das Modell entwirft fünf Betreffzeilen für den Newsletter – die Marketingfachkraft prüft und wählt aus."
+    },
+    {
+      id: "prompt",
+      term: "Prompt",
+      category: "Marketing",
+      summary: "Eingabetext, mit dem eine generative KI gesteuert wird.",
+      detail: "Der Prompt ist der Anfangstext, aus dem das Sprachmodell die Fortsetzung erzeugt. Gute Prompts nennen Ziel, Kontext, Format und Qualitätskriterien – je präziser der Auftrag, desto brauchbarer und prüfbarer die Ausgabe.",
+      example: "„Erstelle fünf sachliche Betreffzeilen für einen Schulshop, Zielgruppe Auszubildende, maximal 45 Zeichen.“"
+    },
+    {
       id: "cookie",
       term: "Cookie",
       category: "Recht & Daten",
@@ -3903,6 +4961,310 @@ window.EC_CONTENT = {
       summary: "Ersetzen direkter Personenbezüge durch Kennungen.",
       detail: "Bei der Pseudonymisierung werden identifizierende Angaben durch Pseudonyme ersetzt, etwa gekürzte IP-Adressen oder zufällige IDs. Sie verringert Datenschutzrisiken, ersetzt aber keine Einwilligung, wo diese nötig ist.",
       example: "Das Analyse-Tool speichert nur gekürzte IP-Adressen statt vollständiger."
+    },
+    {
+      id: "servicekanal",
+      term: "Servicekanal",
+      category: "Service",
+      summary: "Weg, über den Kunden den Kundenservice erreichen oder informiert werden.",
+      detail: "Typische Servicekanäle sind E-Mail, Telefon, Live-Chat, Social Media, Videokonferenz, Newsletter und FAQ-Seiten. Die Kanalwahl richtet sich nach Anliegen, Dringlichkeit und Zielgruppe – jeder Kanal hat eigene Ton- und Reaktionszeit-Erwartungen.",
+      example: "Die kurze Lieferzeit-Frage klärt der Chat, die ausführliche Produktberatung übernimmt ein Videocall."
+    },
+    {
+      id: "live-chat",
+      term: "Live-Chat",
+      category: "Service",
+      summary: "Text-Dialog in Echtzeit direkt auf der Shopseite.",
+      detail: "Der Live-Chat beantwortet Fragen schnell und senkt Kaufabbrüche, erfordert aber erreichbares Personal. Der Ton ist informeller als in der E-Mail, bleibt aber professionell. Oft übernimmt zunächst ein Chatbot.",
+      example: "Während des Bestellvorgangs fragt eine Kundin im Chat nach der Größentabelle und bekommt sofort den Link."
+    },
+    {
+      id: "chatbot",
+      term: "Chatbot",
+      category: "Service",
+      summary: "Programm, das Kundenanfragen automatisch im Dialog beantwortet.",
+      detail: "Chatbots beantworten Standardfragen rund um die Uhr, etwa zu Lieferzeiten oder Retouren. Sie müssen als Bot erkennbar sein und komplexe oder emotionale Anliegen an Menschen übergeben können.",
+      example: "Der Bot beantwortet die Frage zur Retourenfrist und leitet die Beschwerde über eine beschädigte Ware an den Service weiter."
+    },
+    {
+      id: "newsletter",
+      term: "Newsletter",
+      category: "Service",
+      summary: "Regelmäßige E-Mail an Abonnenten mit Neuigkeiten und Angeboten.",
+      detail: "Der Newsletter ist proaktive Servicekommunikation und Marketinginstrument zugleich. Er braucht eine nachweisbare Einwilligung (Double-Opt-in), einen Abmeldelink in jeder Ausgabe und Inhalte mit echtem Nutzen. Öffnungs- und Klickraten zeigen die Wirkung.",
+      example: "Der Shop verschickt monatlich Pflegetipps passend zu den gekauften Produkten – abmelden geht mit einem Klick."
+    },
+    {
+      id: "double-opt-in",
+      term: "Double-Opt-in",
+      category: "Service",
+      summary: "Anmeldeverfahren mit Bestätigungslink als Nachweis der Einwilligung.",
+      detail: "Nach der Anmeldung erhält der Empfänger eine E-Mail mit Bestätigungslink; erst der Klick aktiviert das Abo. So ist nachweisbar, dass wirklich der Inhaber der Adresse eingewilligt hat.",
+      example: "Wer sich zum Newsletter anmeldet, bekommt zuerst eine Mail: „Bitte bestätige deine Anmeldung.“"
+    },
+    {
+      id: "videokonferenz",
+      term: "Videokonferenz",
+      category: "Service",
+      summary: "Online-Gespräch mit Bild und Ton, oft mit Bildschirmfreigabe.",
+      detail: "Videokonferenzen eignen sich für persönliche Beratung, Produktvorführungen und Abstimmungen. Professionell wirken getestete Technik, ruhige Umgebung, Blick in die Kamera und vorbereitete Unterlagen für die Bildschirmfreigabe.",
+      example: "Ein Kunde bekommt im Videocall die Einrichtung seines neuen Geräts per Bildschirmfreigabe gezeigt."
+    },
+    {
+      id: "faq",
+      term: "FAQ",
+      category: "Service",
+      summary: "Frequently Asked Questions; Sammlung häufiger Fragen mit Antworten.",
+      detail: "FAQ- und Hilfeseiten sind Selbstservice: Kunden finden Antworten rund um die Uhr, oft direkt über Suchmaschinen. Gute FAQ entstehen aus echten Serviceanfragen und entlasten das Team spürbar.",
+      example: "Die Frage „Wie verfolge ich meine Sendung?“ steht mit Anleitung ganz oben in den FAQ."
+    },
+    {
+      id: "reaktionszeit",
+      term: "Reaktionszeit",
+      category: "Service",
+      summary: "Zeitspanne bis zur ersten Antwort auf eine Kundenanfrage.",
+      detail: "Jeder Kanal weckt eigene Erwartungen: Im Chat werden Minuten erwartet, bei E-Mails höchstens ein bis zwei Werktage, auf Social Media wenige Stunden. Eine Eingangsbestätigung überbrückt längere Bearbeitungszeiten.",
+      example: "Die automatische Antwort bestätigt den Eingang und nennt die voraussichtliche Bearbeitungszeit."
+    },
+    {
+      id: "geschaeftliche-e-mail",
+      term: "Geschäftliche E-Mail",
+      category: "Service",
+      summary: "E-Mail im Namen des Unternehmens mit den Pflichtangaben des Geschäftsbriefs.",
+      detail: "Jede geschäftliche E-Mail repräsentiert das Unternehmen. Für sie gelten dieselben gesetzlichen Vorschriften zu den Geschäftsangaben wie für Geschäftsbriefe (u. a. §§ 37a, 125a HGB): Rechtsform, Sitz, Registergericht, Handelsregisternummer und je nach Rechtsform weitere Angaben.",
+      example: "Die Bestellbestätigung des Shops nennt im Abschluss Firmenname, Sitz, Registergericht und HRB-Nummer."
+    },
+    {
+      id: "cc-und-bcc",
+      term: "CC und BCC",
+      category: "Service",
+      summary: "Kopie-Felder der E-Mail – offen (CC) oder verdeckt (BCC).",
+      detail: "CC steht für Carbon Copy: Alle Empfänger sehen, wer die Kopie erhält. BCC steht für Blind Carbon Copy: Die Kopie-Empfänger bleiben für alle anderen unsichtbar. BCC schützt bei Rundmails an viele externe Empfänger auch die E-Mail-Adressen – ein Datenschutzaspekt.",
+      example: "Die Einladung an 80 Kundinnen und Kunden geht per BCC, damit niemand die Adressen der anderen sieht."
+    },
+    {
+      id: "betreff",
+      term: "Betreff",
+      category: "Service",
+      summary: "Pflichtzeile der E-Mail mit kurzer, präziser Inhaltsangabe.",
+      detail: "Der Betreff ist zwingend anzugeben und wird wie im Geschäftsbrief präzise und zielführend formuliert. Er hilft beim Einordnen und Weiterleiten. Ändert sich beim Beantworten der Inhalt, wird der Betreff angepasst; im internationalen Verkehr verzichtet man auf Umlaute und Akzente.",
+      example: "Statt „Frage“ lautet der Betreff „Anfrage: 100 Team-Hoodies mit Logodruck – Lieferzeit und Preis“."
+    },
+    {
+      id: "signatur",
+      term: "Signatur (E-Mail)",
+      category: "Service",
+      summary: "Automatischer Baustein mit Gruß, Firmen- und Pflichtangaben am E-Mail-Ende.",
+      detail: "Die elektronische Signatur fügt den Abschluss automatisch in jede ausgehende E-Mail ein: Gruß, Firmenname, Bearbeiterin oder Bearbeiter, Kommunikationsdaten und die gesetzlich vorgeschriebenen Unternehmensangaben. Zusätze wie „Think before you print“ sind möglich.",
+      example: "Im E-Mail-Programm ist die Firmensignatur hinterlegt – niemand muss die HRB-Nummer von Hand tippen."
+    },
+    {
+      id: "vertretungszusatz",
+      term: "i. A. / i. V. / ppa.",
+      category: "Service",
+      summary: "Zusätze vor dem Namen, die die Vertretungsbefugnis zeigen.",
+      detail: "i. A. bedeutet „im Auftrag“ (Unterzeichnung für eine einzelne Angelegenheit), i. V. „in Vollmacht“ (Handlungsvollmacht) und ppa. „per Prokura“ – die weitreichendste kaufmännische Vollmacht, die im Handelsregister eingetragen wird.",
+      example: "Die Auszubildende unterschreibt die Terminbestätigung mit „i. A. Lena Roth“."
+    },
+    {
+      id: "top-level-domain",
+      term: "Top-Level-Domain",
+      category: "Service",
+      summary: "Endung einer Domain, z. B. „.de“ für Deutschland.",
+      detail: "Die Top-Level-Domain steht ganz rechts in der Adresse. Länderspezifische TLDs wie „.de“, „.fr“ oder „.uk“ zeigen den Länderbezug, generische wie „.com“ oder „.org“ den Verwendungszweck. Die offizielle Liste pflegt die IANA.",
+      example: "An „info@shop-bordeaux.fr“ erkennst du den Unternehmenssitz in Frankreich – die Anfrage formulierst du auf Französisch oder in der im Unternehmen üblichen Verkehrssprache."
+    },
+    {
+      id: "e-mail-verschluesselung",
+      term: "E-Mail-Verschlüsselung",
+      category: "Recht & Daten",
+      summary: "Schutz vertraulicher E-Mail-Inhalte vor Mitlesen auf dem Übertragungsweg.",
+      detail: "Weil E-Mail-Adressen und Inhalte personenbezogene Daten sind, müssen vertrauliche Informationen verschlüsselt übermittelt werden. Dazu kommen Zugangsschutz für Rechner und Postfach, aktuelle Virenscanner und Firewalls. DSGVO-Verstöße können Bußgelder bis 20 Millionen Euro oder 4 % des weltweiten Jahresumsatzes kosten.",
+      example: "Die Gehaltsabrechnung wird nur als verschlüsselte, passwortgeschützte Anlage verschickt."
+    },
+    {
+      id: "de-mail",
+      term: "De-Mail",
+      category: "Recht & Daten",
+      summary: "Gesetzlich geregelter Dienst für rechtsverbindliche elektronische Kommunikation.",
+      detail: "De-Mail (§ 1 De-Mail-Gesetz) sollte eine sichere, vertrauliche und nachweisbare elektronische Kommunikation ermöglichen. Voraussetzung: Beide Seiten haben ein De-Mail-Konto und ihren Sitz in Deutschland. In der Praxis hat sich der Dienst kaum durchgesetzt; große Anbieter haben ihn wieder eingestellt.",
+      example: "Statt De-Mail setzen viele Behörden heute auf eigene Portale mit Postfachfunktion."
+    },
+    {
+      id: "social-media",
+      term: "Social Media",
+      category: "Service",
+      summary: "Digitale Medien für Many-to-Many-Kommunikation in Echtzeit.",
+      detail: "Soziale Medien verbinden viele Menschen gleichzeitig – anders als die One-to-One-Kommunikation per E-Mail. Im Fokus steht der Kontakt zwischen Menschen; Ziel ist ein Mehrwert aus der Interaktion. Für Unternehmen sind sie Service-, Dialog- und Marketingkanal zugleich.",
+      example: "Auf die Instagram-Frage zur Lieferzeit antwortet der Shop öffentlich – und tausende Mitlesende sehen den guten Service."
+    },
+    {
+      id: "viral",
+      term: "Viral",
+      category: "Service",
+      summary: "Sehr schnelle Verbreitung von Inhalten über das Social Web.",
+      detail: "Inhalte erreichen über Teilen und Empfehlen in Sekunden eine breite Öffentlichkeit – wie ein Virus. Das wirkt für gelungene Kampagnen ebenso wie für Pannen und Fake News; auch schnelles Reagieren verhindert Image-Schäden nicht immer.",
+      example: "Das witzige Produktvideo wird zehntausendfach geteilt – die Reichweite kostet keinen Cent Mediabudget."
+    },
+    {
+      id: "netiquette",
+      term: "Netiquette",
+      category: "Service",
+      summary: "Verhaltensregeln für den respektvollen Umgang im eigenen Online-Kanal.",
+      detail: "Das Kunstwort aus „Net“ und „Etiquette“ beschreibt Umgangsregeln für Internet-Seiten und -Dienste. Unternehmen passen sie an Zielgruppe und Kommunikationsform an – etwa: vertrauliche Daten nicht in öffentliche Foren, sachlich bleiben, Privates in die Direktnachricht.",
+      example: "Die Facebook-Seite des Shops verweist bei beleidigenden Kommentaren auf die Netiquette und blendet sie aus."
+    },
+    {
+      id: "blog",
+      term: "Blog",
+      category: "Service",
+      summary: "Website mit längeren Artikeln in umgekehrt chronologischer Reihenfolge.",
+      detail: "Blogs stellen Informationen längerfristig bereit und erlauben Kommentare, Verlinkungen und Schlagwortsuche (Tag Cloud). Unternehmen zeigen damit Kompetenz zu einem Thema, werden über Suchmaschinen gefunden und können FAQ-ähnliche Servicethemen vertiefen.",
+      example: "Der Möbel-Shop bloggt „So pflegst du Massivholz“ – der Artikel bringt monatelang Besucher über Google."
+    },
+    {
+      id: "bewertungsplattform",
+      term: "Bewertungsplattform",
+      category: "Service",
+      summary: "Plattform für öffentliche Erfahrungsberichte mit Sternebewertungen.",
+      detail: "Bewertungsplattformen wie yelp oder Google-Rezensionen ermöglichen offenen Meinungsaustausch über Unternehmen, Produkte und Standorte. Unternehmen sollten Bewertungen beobachten und professionell auf Kritik antworten – sachlich falsche oder rechtswidrige Beiträge können sie beim Betreiber beanstanden, berechtigte Kritik nicht.",
+      example: "Auf die Zwei-Sterne-Bewertung antwortet der Shop freundlich mit einer Lösung – sichtbar für alle künftigen Leser."
+    },
+    {
+      id: "messenger-dienst",
+      term: "Messenger-Dienst",
+      category: "Service",
+      summary: "Dienst für private Text-, Bild- und Sprachnachrichten, z. B. WhatsApp.",
+      detail: "Messenger bieten gegenüber offenen Plattformen mehr Privatsphäre und eine ungestörte One-to-One-Kommunikation. Unternehmen nutzen sie für Kundenservice und Sendungsverfolgung; dabei müssen sie auf die Datenschutzerklärung des Anbieters hinweisen und den vertraulichen Umgang mit Nachrichten sicherstellen.",
+      example: "Die Kundin bekommt Versandstatus und Rückfragen direkt in den Messenger – schneller als jede Warteschleife."
+    },
+    {
+      id: "influencer-kennzeichnung",
+      term: "Influencer-Kennzeichnung",
+      category: "Recht & Daten",
+      summary: "Pflicht, bezahlte Produktvorstellungen als Werbung kenntlich zu machen.",
+      detail: "Wer Produkte aus kommerziellen Gründen vorstellt, ausprobiert oder beurteilt, muss das kennzeichnen – sonst liegt Schleichwerbung vor. Unternehmen, die mit Influencerinnen und Influencern arbeiten, müssen auf diese Pflicht hinweisen; daneben gelten Wettbewerbsvorschriften wie das Verbot herabsetzender Konkurrenzvergleiche.",
+      example: "Das gesponserte Unboxing-Video trägt gut sichtbar den Hinweis „Werbung“."
+    },
+    {
+      id: "emoji",
+      term: "Emoji",
+      category: "Service",
+      summary: "Kleine Bildzeichen, die Gefühle und Begriffe in Nachrichten transportieren.",
+      detail: "Emojis (japanisch „e“ = Bild, „moji“ = Buchstabe/Zeichen) entstanden Ende der 1990er-Jahre in Japan und sind seit der Aufnahme in den Unicode-Standard weltweit einheitlich nutzbar. Sie lockern Kommunikation auf und drücken Gefühle aus, werden aber nicht von allen gleich verstanden – geschäftlich deshalb sparsam und unmissverständlich einsetzen.",
+      example: "Im Chat passt der Daumen nach oben – im förmlichen Beschwerde-Antwortschreiben bleibt er draußen."
+    },
+    {
+      id: "sprachsteuerung",
+      term: "Sprachsteuerung",
+      category: "Service",
+      summary: "Bedienung von Geräten und Webshops per gesprochener Sprache.",
+      detail: "Die Spracheingabe wird in eine Cloud übertragen, dort zerlegt, analysiert und in Text umgewandelt. So lassen sich Suchanfragen und zunehmend Bestellungen per Stimme erledigen. Grenzen: Erkennungsfehler und fehlende Kompatibilität zwischen Systemen.",
+      example: "„Bestell noch einmal das Druckerpapier von letzter Woche“ – der Artikel landet per Sprachbefehl im Warenkorb."
+    },
+    {
+      id: "smart-speaker",
+      term: "Smart Speaker",
+      category: "Service",
+      summary: "Sprachgesteuerter Lautsprecher mit digitalem Assistenten.",
+      detail: "Smart Speaker wie Sprachassistenz-Lautsprecher nehmen gesprochene Befehle entgegen und verarbeiten sie über eine Cloud. Für den E-Commerce interessant: Suche, Bestellung und Sendungsstatus per Zuruf – ein Vertriebsweg, der sich stetig weiterentwickelt.",
+      example: "Der Lautsprecher im Wohnzimmer beantwortet die Frage nach dem Lieferstatus der Bestellung."
+    },
+    {
+      id: "hotline",
+      term: "Hotline",
+      category: "Service",
+      summary: "Telefonischer Kundenservice, oft mit Sprachcomputer-Vorauswahl.",
+      detail: "Hotlines klären Fragen schnell und persönlich. Varianten: Sprachcomputer mit Anliegen-Vorauswahl (leitet in die passende Fachabteilung), 24-Stunden-Hotline und externe Callcenter. Nachteile wie Wartezeiten, Erkennungsfehler und Telefonkosten müssen gegen die kompetente Beratung abgewogen werden.",
+      example: "„Sagen Sie ‚Retoure‘ oder ‚Bestellung‘“ – der Sprachcomputer verbindet direkt mit dem richtigen Team."
+    },
+    {
+      id: "callcenter",
+      term: "Callcenter",
+      category: "Service",
+      summary: "Externer Dienstleister, der die telefonische Kundenbetreuung übernimmt.",
+      detail: "Will ein Unternehmen keine eigenen Mitarbeitenden für die Hotline einsetzen, übernimmt ein Callcenter mit geschultem Personal die Anrufe. Es fallen Kosten an – meist jedoch geringere als eigene Personal-, Raum- und Nebenkosten.",
+      example: "Im Weihnachtsgeschäft fängt das beauftragte Callcenter die Anrufspitzen ab."
+    },
+    {
+      id: "textbaustein",
+      term: "Textbaustein",
+      category: "Service",
+      summary: "Vorformulierte Antwort für wiederkehrende Anfragen im Chat oder Support.",
+      detail: "Textbausteine werden per Copy-and-paste in den Chatverlauf eingefügt: Das spart Zeit und vermeidet Tippfehler. Gefahr: Vorformulierte Floskeln können roboterartig klingen – Bausteine deshalb persönlich anpassen.",
+      example: "Der Baustein zur Retourenfrist wird mit dem Namen der Kundin und ihrer Bestellnummer ergänzt."
+    },
+    {
+      id: "user-experience",
+      term: "User Experience",
+      category: "Service",
+      summary: "Gesamterlebnis der Nutzerinnen und Nutzer mit Shop und Service.",
+      detail: "Die User Experience umfasst alle Erfahrungen rund um den Shop – von der Bedienung der Website bis zur Erreichbarkeit des Supports über Hotline, Chat oder FAQ. Gute Servicewege zahlen direkt auf die User Experience und damit auf Kundenbindung und Umsatz ein.",
+      example: "Kurze Wartezeit, freundlicher Chat, klare FAQ: Die Kundin empfiehlt den Shop weiter."
+    },
+    {
+      id: "persona",
+      term: "Persona",
+      category: "Marketing",
+      summary: "Anschaulich beschriebene Modell-Kundin für Kampagnen und Gestaltung.",
+      detail: "Eine Persona fasst Kundinnen und Kunden mit ähnlichen Merkmalen und Persönlichkeiten zu einer greifbaren Beispielperson zusammen – mit Name, Alter, Beruf, Interessen und Motiven. Werbebotschaft und Ansprache (Tonality) werden gezielt auf die Persona zugeschnitten.",
+      example: "„Sportliche Steffi, 29, pendelt mit dem Rad und kauft nachhaltiges Zubehör“ – für sie wird die Anzeige getextet."
+    },
+    {
+      id: "first-second-third-party-data",
+      term: "First, Second & Third Party Data",
+      category: "Marketing",
+      summary: "Daten nach Herkunft: selbst erhoben, aus Marktforschung oder von Dritten.",
+      detail: "First Party Data erhebt das Unternehmen selbst (Registrierung, Login, Bestellhistorie), Second Party Data stammen aus Marktforschung, Third Party Data werden von Dritten erhoben und gehandelt – oft über Tracking. Third Party Data verlieren durch Datenschutzregeln und das Ende der Third-Party-Cookies an Bedeutung.",
+      example: "Der Shop nutzt vorrangig die eigene Bestellhistorie (First Party) statt zugekaufter Fremdprofile."
+    },
+    {
+      id: "frequency-capping",
+      term: "Frequency Capping",
+      category: "Marketing",
+      summary: "Obergrenze für die Zahl der Werbeeinblendungen je Person.",
+      detail: "Frequency Capping legt fest, wie oft dieselbe Person ein Werbemittel maximal sieht, etwa fünf identische Banner pro Tag. Das verhindert den Banner-Burn-out: Zu häufige Wiederholung nervt und lässt die Werbewirkung deutlich sinken.",
+      example: "Nach der fünften Einblendung des Sneaker-Banners pausiert die Anzeige für diese Nutzerin."
+    },
+    {
+      id: "consent-management-plattform",
+      term: "Consent-Management-Plattform",
+      category: "Recht & Daten",
+      summary: "System, das Einwilligungen der Nutzer einholt, verwaltet und nachweisbar macht.",
+      detail: "Eine Consent-Management-Plattform (CMP) dokumentiert, ob Nutzerinnen und Nutzer Cookies und Datennutzung für Werbezwecke zugestimmt haben – jederzeit prüfbar für Publisher und Drittparteien. Branchenstandard ist das vom IAB entwickelte Transparency & Consent Framework.",
+      example: "Erst nach dem „Zustimmen“-Klick im Consent-Banner lädt der Shop die Marketing-Cookies – die CMP protokolliert das."
+    },
+    {
+      id: "webcrawler",
+      term: "Webcrawler",
+      category: "Marketing",
+      summary: "Programm, das das Web laufend nach neuen Inhalten durchsucht.",
+      detail: "Webcrawler (auch Bots oder Spider) folgen Links, durchsuchen das World Wide Web kontinuierlich nach neuen und geänderten Inhalten und legen sie auf Servern in Datenbankzentren ab. Aus diesen Daten baut die Suchmaschine ihren Index – ihren wichtigsten Bestandteil.",
+      example: "Nach dem Relaunch besucht der Crawler die neue Produktseite und nimmt sie in den Index auf."
+    },
+    {
+      id: "spezialsuchmaschine",
+      term: "Spezialsuchmaschine",
+      category: "Marketing",
+      summary: "Suchmaschine für ein bestimmtes Themenfeld, z. B. Produkte oder Preise.",
+      detail: "Spezialsuchmaschinen indexieren nicht das ganze Web, sondern ein Themenfeld: Produktsuchmaschinen wie Google Shopping, Preissuchmaschinen und Videosuchen sind typische Beispiele. Für Onlineshops sind sie eigene, wichtige Auffindbarkeitskanäle neben der klassischen Websuche.",
+      example: "Der Bürostuhl taucht nicht nur bei Google auf, sondern auch im Preisvergleichsportal – mit direktem Link zum Shop."
+    },
+    {
+      id: "knowledge-panel",
+      term: "Knowledge Panel",
+      category: "Marketing",
+      summary: "Infokasten auf der SERP mit Fakten zum Suchbegriff.",
+      detail: "Das Knowledge Panel blendet bei vielen Suchanfragen Zusatzinformationen ein, etwa Kurzbeschreibung, Gründungsdatum oder Zentrale eines Unternehmens. Bei regionalen Suchen übernimmt das Google-Unternehmensprofil diese Rolle als Online-Branchenbuch mit Öffnungszeiten, Adresse und Bewertungen.",
+      example: "Wer den Shopnamen googelt, sieht rechts das Panel mit Logo, Öffnungszeiten und Kundenbewertungen."
+    },
+    {
+      id: "suchverhalten",
+      term: "Suchverhalten",
+      category: "Marketing",
+      summary: "Drei Anfrage-Muster: navigations-, informations- und transaktionsorientiert.",
+      detail: "Navigationsorientierte Suchanfragen zielen auf eine bekannte Website („Shopname Kontakt“), informationsorientierte auf Wissen („Wie binde ich eine Krawatte?“), transaktionsorientierte enthalten eine Kauf- oder Handlungsabsicht („Schulbücher bestellen“). Für Suchmaschinenmarketing sind transaktionsorientierte Anfragen am wertvollsten.",
+      example: "Für „Bürostuhl kaufen“ schaltet der Shop Anzeigen – für „Bürostuhl einstellen“ schreibt er einen Ratgeber."
     }
   ]
 };

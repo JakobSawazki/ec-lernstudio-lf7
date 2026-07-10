@@ -2,10 +2,10 @@
 
 Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
-aus ausgewählten Lernfeldern. Aktuell sind `LF2` und `LF7` eingebunden.
+aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
 
-**Version:** `1.18.0`
-**Dokumentationsstand:** 9. Juli 2026
+**Version:** `1.28.0`
+**Dokumentationsstand:** 10. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -26,8 +26,8 @@ Lehrkraft.
 
 ## Fachlicher Umfang
 
-Für Datenverarbeitung werden derzeit die Lernfelder `LF2` und `LF7` als
-umschaltbare Bereiche geführt.
+Für Datenverarbeitung werden derzeit die Lernfelder `LF2`, `LF6` und `LF7`
+als umschaltbare Bereiche geführt.
 
 Für LF2 sind zunächst folgende Kapitel eingebunden:
 
@@ -48,6 +48,21 @@ Für LF2 sind zunächst folgende Kapitel eingebunden:
 Damit sind alle in der DV-Auswahl vorgesehenen LF2-Kapitel mit vorhandener
 Quellen-PDF als Module umgesetzt.
 
+Für LF6 (`Servicekommunikation kundenorientiert gestalten`) ist der
+DV-Anteil laut Lehrplanübersicht mit E-Mail, Social Media, Chat und
+Suchmaschinen umrissen:
+
+| Abschnitt | Thema | Portalmodul |
+| --- | --- | --- |
+| 6.0 | Servicekanäle im Überblick | Servicekanäle |
+| 6.13 | Kommunikation per E-Mail | Kommunikation per E-Mail |
+| 6.14 | Kommunikation über Social Media | Kommunikation über Social Media |
+| 6.15 | Kommunikation über weitere Vertriebswege | Weitere Vertriebswege |
+
+`6.0` ist ein eigener Überblicksbaustein vor den Lehrbuchkapiteln. Damit
+sind alle DV-relevanten LF6-Kapitel (`6.13` bis `6.15`) als Module
+umgesetzt.
+
 Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 
 | Abschnitt | Thema | Portalmodul |
@@ -62,19 +77,28 @@ Für LF7 werden in Datenverarbeitung derzeit folgende Abschnitte behandelt:
 
 Die Abstimmung mit BE nennt insbesondere `7.5/7/8/9/19` als verbindliche
 DV-Inhalte. Abschnitt `7.20` ist als zusätzlicher, ausdrücklich gewünschter
-KI-Baustein enthalten.
+KI-Baustein enthalten. Alle LF7-Module mit vorliegendem Buchkapitel
+(`7.5`, `7.7`, `7.8`, `7.9`, `7.19`, `7.20`) sind am Lehrbuch
+nachgeschärft.
 
 ## Funktionsumfang
 
-- Lernfeld-Umschalter für `LF2` und `LF7`
-- achtzehn Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 124 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- Lernfeld-Umschalter für `LF2`, `LF6` und `LF7`
+- zweiundzwanzig Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 168 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
 - abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout`, `2.3 Webshop-Seiten`,
   `2.4 Das Impressum`, `2.5 Haftung für Webseiteninhalte` und
   `2.6 Produktdetailseite`, `2.7 Informationen für Kunden`,
   `2.8 Produktbeschreibung`, `2.9 Artikelauswahl`, `2.10 Visualisierungen`,
   `2.12 Preisgestaltung` sowie `2.16 ERP und Warenwirtschaft` als
   eigenständig formulierte PDFs
+- LF6-Arbeitsblätter `Servicekanäle` (mit dem Praxisauftrag
+  „Ein Anliegen, fünf Kanäle“ als Startseiten-Callout des LF6-Bereichs),
+  `6.13 Kommunikation per E-Mail` (E-Mail-Bauplan, CC/BCC-Training,
+  Schreibwerkstatt und Datenschutz-Check), `6.14 Kommunikation über
+  Social Media` (Plattform-Steckbrief, Rechts-Check und Shitstorm-Fall)
+  und `6.15 Weitere Vertriebswege` (Kanal-Vergleich,
+  Videokonferenz-Leitfaden und FAQ-Werkstatt)
 - LF2-Projektbrief `E-Commerce-Homepage mit Marketing-Optimierung` als
   sichtbarer Startseiten-Callout und eigenes PDF-Material
 - DV-Lehrplan-Kompass als eigener Startseiten-Zugriff mit privater
@@ -86,7 +110,7 @@ KI-Baustein enthalten.
   Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
 - lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
-- XP, Level, Lernserie und einundzwanzig Abzeichen
+- XP, Level, Lernserie und sechsundzwanzig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
   dezenter Hover-Animation und reduziertem Header `Datenverarbeitung`
@@ -167,6 +191,10 @@ Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
 `website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf`,
 `website/assets/materials/lf7-seo-sea-transferfall.pdf`,
 `website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
+`website/assets/materials/lf6-servicekanaele-arbeitsblatt.pdf`,
+`website/assets/materials/lf6-email-arbeitsblatt.pdf`,
+`website/assets/materials/lf6-social-media-arbeitsblatt.pdf`,
+`website/assets/materials/lf6-vertriebswege-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
 `website/assets/materials/dv-lehrplan-kompass.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
@@ -260,6 +288,10 @@ EC/
         |   |-- lf2-2-10-visualisierungen-arbeitsblatt.pdf
         |   |-- lf2-2-12-preisgestaltung-arbeitsblatt.pdf
         |   |-- lf2-2-16-warenwirtschaft-arbeitsblatt.pdf
+        |   |-- lf6-servicekanaele-arbeitsblatt.pdf
+        |   |-- lf6-email-arbeitsblatt.pdf
+        |   |-- lf6-social-media-arbeitsblatt.pdf
+        |   |-- lf6-vertriebswege-arbeitsblatt.pdf
         |   |-- lf7-seo-sea-transferfall.pdf
         |   |-- lf7-webanalyse-arbeitsblatt.pdf
         |   |-- lf2-projektidee-ecommerce-homepage.pdf
@@ -296,10 +328,10 @@ git diff --check
 Zusätzlich manuell oder automatisiert prüfen:
 
 - Onboarding mit Name und Gastmodus
-- Lernfeld-Umschalter `LF2`/`LF7`
+- Lernfeld-Umschalter `LF2`/`LF6`/`LF7`
 - Dark/Light Mode im Header
-- Navigation in alle achtzehn Module
-- LF2- und LF7-Arbeitsblätter öffnen
+- Navigation in alle zweiundzwanzig Module
+- LF2-, LF6- und LF7-Arbeitsblätter öffnen
 - Multiple-Choice- und Zahlenaufgabe
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
@@ -329,7 +361,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.18.0`
+Aktueller Stand: `1.28.0`
 
 ## Offene Weiterentwicklung
 

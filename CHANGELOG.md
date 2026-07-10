@@ -2,6 +2,182 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.28.0 - 10. Juli 2026
+
+- LF7-Modul `7.20 KI: Entstehung und Anwendung` am neu bereitgestellten
+  Buchkapitel nachgeschärft: vier vertiefte Erklärbausteine
+  (KI-Geschichte von den 1950ern über maschinelles Lernen bis zum
+  Deep-Learning-Boom; schwache/starke KI und die drei Lernarten
+  überwacht/unüberwacht/bestärkend; neuronale Netze, Deep Learning und
+  Sprachmodelle mit Transformer, zweistufigem Training und
+  Wort-für-Wort-Generierung; KI im Online-Marketing mit Chancen,
+  Grenzen und Verantwortung) sowie neuer Projektauftrag mit fünf
+  Schritten nach den Reflexionsideen der OneNote-Aufschriebe
+  (Pro-/Contra-Tafel, „KI & Ich“)
+- Einführungsvideo „KI & Ich – Auswirkungen auf den Arbeitsplatz“
+  (von Jakob bereitgestellter YouTube-Link) als externe Modul-Ressource
+  verlinkt
+- zwei neue Aufgaben zu schwacher/starker KI und überwachtem Lernen
+  (Modul jetzt acht Aufgaben)
+- Glossar um Maschinelles Lernen, Neuronales Netzwerk, Schwache und
+  starke KI, Sprachmodell und Prompt erweitert (211 Begriffe)
+- Offline-Cache auf `ec-lernstudio-v34` erhöht
+- damit ist der LF7-Buchabgleich abgeschlossen: alle Module mit
+  vorliegendem Buchkapitel (7.5, 7.7, 7.8, 7.9, 7.19, 7.20) sind
+  nachgeschärft
+
+## 1.27.0 - 10. Juli 2026
+
+- LF7-Modul `7.19 Marketing-Maßnahmen auswerten` am neu bereitgestellten
+  Buchkapitel nachgeschärft: vier vertiefte Erklärbausteine
+  (Werbeerfolgskontrolle und Web Analytics inkl. Google Analytics 4 mit
+  Events und sieben Berichtsbereichen sowie etracker/Matomo als
+  datenschutzorientierte Alternativen; Vier-Schritte-Vorgehen von Ziel
+  und KPI über quantitative und qualitative Analyse bis zur
+  Konkurrenzanalyse; Basis-Kennzahlen CTR/CPC/Conversion Rate; CPO,
+  ROAS und Interpretation) sowie neuer Projektauftrag mit fünf
+  Schritten
+- zwei neue Aufgaben: KPI-Zielwahl (Fahrrad-Shop-Fall) und qualitative
+  Analyse (Modul jetzt acht Aufgaben)
+- Glossar um Werbeerfolgskontrolle, Google Analytics, Heatmap und
+  Multivariater Test erweitert (206 Begriffe)
+- Offline-Cache auf `ec-lernstudio-v33` erhöht
+
+## 1.26.0 - 10. Juli 2026
+
+- LF7-Modul `7.9 Suchmaschinenwerbung` am neu bereitgestellten
+  Buchkapitel nachgeschärft: vier vertiefte Erklärbausteine (bezahlte
+  Plätze auf der SERP und Google-Ads-Geschichte inkl. Umbenennung
+  AdWords zu Ads 2018; Keyword-Auktion und Qualitätsfaktor mit
+  Parametern und Skala 1 bis 10; Performance Marketing mit CPC,
+  Budgetkontrolle, KPI und Conversion-Tracking; Anzeigengestaltung mit
+  Keyword-Planer, Call-to-Action, Anzeigenerweiterungen,
+  Display-Steuerung und SEM-Synergie) sowie neuer Projektauftrag mit
+  fünf Schritten
+- zwei neue Aufgaben: Qualitätsfaktor-Fall und
+  Tagesbudget-Rechenaufgabe (Modul jetzt acht Aufgaben)
+- Glossar um Qualitätsfaktor, Conversion-Tracking, Performance
+  Marketing, Anzeigenerweiterung und SEM erweitert (202 Begriffe)
+- Offline-Cache auf `ec-lernstudio-v32` erhöht
+
+## 1.25.0 - 10. Juli 2026
+
+- LF7-Modul `7.8 Suchmaschinenoptimierung` am neu bereitgestellten
+  Buchkapitel nachgeschärft: vier vertiefte Erklärbausteine (Definition,
+  Ziele und Geheimhaltung des Algorithmus inkl. Yandex-Leck 2023;
+  Konkurrenz und Google-Updates Panda/Penguin/Hummingbird/Mobile-First;
+  OnPage mit Keywordstrategie, technischer Optimierung und Content
+  Marketing; OffPage mit Backlinks, KPI und der Frage Inhouse oder
+  Agentur) sowie neuer Projektauftrag mit fünf Schritten
+- zwei neue Aufgaben: Penguin-Update-Fall und
+  Click-Through-Rate-Rechenaufgabe (Modul jetzt acht Aufgaben)
+- Glossar um OnPage-Optimierung, OffPage-Optimierung, Backlink,
+  Longtail Keyword, Content Marketing und Duplicate Content erweitert
+  (197 Begriffe)
+- Offline-Cache auf `ec-lernstudio-v31` erhöht
+
+## 1.24.0 - 10. Juli 2026
+
+- LF7-Modul `7.7 Suchmaschinen` am neu bereitgestellten Buchkapitel
+  nachgeschärft: vier vertiefte Erklärbausteine (Historie vom Webkatalog
+  über Archie und Lycos zu Google; Crawler/Index/Algorithmus mit
+  Bibliotheks-Metapher; SERP-Aufbau mit bezahlten und organischen
+  Treffern, Knowledge Panel und Unternehmensprofil; Suchmaschinen-Arten
+  und Suchverhalten) sowie neuer Projektauftrag mit fünf Schritten
+- zwei neue Aufgaben zu Index-Funktionsweise und transaktionsorientiertem
+  Suchverhalten (Modul jetzt acht Aufgaben)
+- Glossar um Webcrawler, Spezialsuchmaschine, Knowledge Panel und
+  Suchverhalten erweitert (191 Begriffe)
+- Offline-Cache auf `ec-lernstudio-v30` erhöht
+
+## 1.23.0 - 10. Juli 2026
+
+- LF7-Modul `7.5 Targeting` am neu bereitgestellten Buchkapitel
+  nachgeschärft: vier vertiefte Erklärbausteine (Datengrundlage mit First-,
+  Second- und Third-Party-Data; Targeting-Arten von soziodemografisch bis
+  Keyword; Standort- und Verhaltens-Targeting inkl. Proximity, Frequency
+  Capping und Re-Targeting; Datenschutz-Zukunft mit Consent-Management und
+  cookielosen Verfahren) sowie neuer Projektauftrag mit fünf Schritten
+- zwei neue Aufgaben zu Frequency Capping und cookielosen
+  Targeting-Verfahren (Modul jetzt acht Aufgaben)
+- Glossar um Persona, First/Second/Third Party Data, Frequency Capping und
+  Consent-Management-Plattform erweitert (187 Begriffe)
+- Offline-Cache auf `ec-lernstudio-v29` erhöht
+
+## 1.22.0 - 10. Juli 2026
+
+- LF6-Modul `6.15 Kommunikation über weitere Vertriebswege` nach der
+  Quellen-PDF umgesetzt: vier Erklärbausteine (Videokonferenz inkl.
+  Sicherheit, Chat-Betrieb mit Textbausteinen und Protokollen,
+  Sprachsteuerung und Hotlines, FAQ-Listen), Projektauftrag mit fünf
+  Schritten und Abzeichen `Kanal-Kapitän`
+- acht neue Aufgaben inkl. Textbaustein-Zeitersparnis-Rechenaufgabe
+  (450 Anfragen × 2 Minuten)
+- neues Abzeichen `LF6 komplett` für alle vier LF6-Module
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf6-vertriebswege-arbeitsblatt.pdf` mit Kanal-Vergleich,
+  Videokonferenz-Leitfaden, FAQ-Werkstatt und dem Praxisauftrag
+  „Das Servicenetz eures Shops“
+- Glossar um Sprachsteuerung, Smart Speaker, Hotline, Callcenter,
+  Textbaustein und User Experience erweitert (183 Begriffe)
+- damit sind alle DV-relevanten LF6-Kapitel (6.13 bis 6.15) umgesetzt;
+  LF6-Lernpfadtext aktualisiert und Offline-Cache auf `ec-lernstudio-v28`
+  erhöht
+
+## 1.21.0 - 10. Juli 2026
+
+- LF6-Modul `6.14 Kommunikation über Social Media` nach der Quellen-PDF
+  umgesetzt: vier Erklärbausteine (Many-to-Many und virale Verbreitung,
+  professioneller Auftritt mit Account/Ansprache/Dialog, rechtliche
+  Spielregeln, Plattformtypen/Netiquette/Emojis), Projektauftrag mit fünf
+  Schritten und Abzeichen `Community-Manager`
+- acht neue Aufgaben inkl. Emoji-Studien-Rechenaufgabe
+  (29.000 Profile × 50 %)
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf6-social-media-arbeitsblatt.pdf` mit Plattform-Steckbrief,
+  Rechts-Check, Shitstorm-Fall und dem Praxisauftrag
+  „Eure Unternehmensseite“
+- Glossar um Social Media, Viral, Netiquette, Blog, Bewertungsplattform,
+  Messenger-Dienst, Influencer-Kennzeichnung und Emoji erweitert
+  (177 Begriffe)
+- LF6-Lernpfadtext aktualisiert; Offline-Cache auf `ec-lernstudio-v27`
+  erhöht
+
+## 1.20.0 - 10. Juli 2026
+
+- LF6-Modul `6.13 Kommunikation per E-Mail` nach der Quellen-PDF umgesetzt:
+  vier Erklärbausteine (E-Mail als Visitenkarte, Empfänger/CC/BCC/Betreff,
+  Textfeld und Abschluss mit Pflichtangaben, Datenschutz beim E-Mail-Kontakt),
+  Projektauftrag mit fünf Schritten und Abzeichen `Postfach-Profi`
+- acht neue Aufgaben inkl. Porto-Ersparnis-Rechenaufgabe
+  (1.200 Briefe × 0,95 € × 12 Monate)
+- neues eigenständig formuliertes Arbeitsblatt `lf6-email-arbeitsblatt.pdf`
+  mit E-Mail-Bauplan, CC/BCC-Entscheidungstraining, Schreibwerkstatt
+  „Anfrage Team-Hoodies“, TLD-Recherche und Datenschutz-Check
+- Glossar um Geschäftliche E-Mail, CC und BCC, Betreff, Signatur (E-Mail),
+  i. A./i. V./ppa., Top-Level-Domain, E-Mail-Verschlüsselung und De-Mail
+  erweitert (169 Begriffe)
+- LF6-Lernpfadtext aktualisiert; Offline-Cache auf `ec-lernstudio-v26`
+  erhöht
+
+## 1.19.0 - 9. Juli 2026
+
+- neues Lernfeld `LF6 Servicekommunikation kundenorientiert gestalten` als
+  dritter Portalbereich mit eigenem Header-Umschalter, Hero und
+  Praxisauftrag-Callout „Der Service-Tag: Ein Anliegen, fünf Kanäle“
+- LF6-Modul `6.0 Servicekanäle im Überblick` mit vier Erklärbausteinen
+  (Kanalwahl, E-Mail/Anschreiben/Chat, Videokonferenz/Social Media,
+  Newsletter/FAQ), Projektauftrag, acht Aufgaben (inkl. Öffnungsraten-
+  Rechenaufgabe) und Abzeichen `Service-Ass`
+- neues eigenständig formuliertes Arbeitsblatt
+  `lf6-servicekanaele-arbeitsblatt.pdf` mit Kanalwahl-Training,
+  E-Mail-Bauplan, Social-Media-Fall und dem Praxisauftrag
+  „Ein Anliegen, fünf Kanäle“
+- Glossar um Servicekanal, Live-Chat, Chatbot, Newsletter, Double-Opt-in,
+  Videokonferenz, FAQ und Reaktionszeit erweitert
+- Offline-Cache erweitert; LF6-Roadmap-Punkt aus `ideas.txt` und
+  DV-Lehrplan-Kompass damit umgesetzt
+
 ## 1.18.0 - 9. Juli 2026
 
 - LF7-Transferfall `SEO/SEA-Kampagne` als eigenständiges PDF-Material

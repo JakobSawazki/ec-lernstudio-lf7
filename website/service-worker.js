@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v24";
+const CACHE_NAME = "ec-lernstudio-v34";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -34,6 +34,10 @@ const APP_SHELL = [
   "./assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf",
   "./assets/materials/lf7-seo-sea-transferfall.pdf",
   "./assets/materials/lf7-webanalyse-arbeitsblatt.pdf",
+  "./assets/materials/lf6-servicekanaele-arbeitsblatt.pdf",
+  "./assets/materials/lf6-email-arbeitsblatt.pdf",
+  "./assets/materials/lf6-social-media-arbeitsblatt.pdf",
+  "./assets/materials/lf6-vertriebswege-arbeitsblatt.pdf",
   "./assets/materials/lf2-projektidee-ecommerce-homepage.pdf",
   "./assets/materials/dv-lehrplan-kompass.pdf"
 ];

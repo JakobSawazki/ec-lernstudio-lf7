@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
-Stand: 9. Juli 2026<br>
-Aktuelle Version: `1.18.0`<br>
+Stand: 10. Juli 2026<br>
+Aktuelle Version: `1.28.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -48,6 +48,16 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.16.0 | 09.07.2026 | LF7 Webanalyse | Modul, acht Aufgaben, Abzeichen, acht Glossarbegriffe und eigenes Arbeitsblatt zu Messkonzept, UTM, A/B-Test und Consent-/Datenschutz-Check lokal eingebunden |
 | Erledigt | 1.17.0 | 09.07.2026 | Kapitelbilder für LF2 2.12 und 2.16 | Fotorealistische PNG-Modulbilder für Preisgestaltung sowie ERP/Warenwirtschaft erzeugt, eingebunden und in den Offline-Cache aufgenommen |
 | Erledigt | 1.18.0 | 09.07.2026 | LF7 SEO/SEA-Transferfall | Eigenständiges PDF-Material zu Suchintention, SEO-Landingpage, SEA-Anzeige und KPI-Vergleich erstellt und in den Modulen SEO/SEA verlinkt |
+| Erledigt | 1.19.0 | 09.07.2026 | LF6 Servicekanäle | Neues Lernfeld LF6 mit Header-Umschalter, Praxisauftrag-Callout, Modul (acht Aufgaben), Abzeichen, acht Glossarbegriffen und eigenem Arbeitsblatt lokal eingebunden |
+| Erledigt | 1.20.0 | 10.07.2026 | LF6 6.13 Kommunikation per E-Mail | Modul nach Quellen-PDF, acht Aufgaben (inkl. Porto-Rechenaufgabe), Abzeichen `Postfach-Profi`, acht Glossarbegriffe und eigenes Arbeitsblatt lokal eingebunden und im Browser geprüft |
+| Erledigt | 1.21.0 | 10.07.2026 | LF6 6.14 Kommunikation über Social Media | Modul nach Quellen-PDF, acht Aufgaben (inkl. Rechenaufgabe), Abzeichen `Community-Manager`, acht Glossarbegriffe und eigenes Arbeitsblatt lokal eingebunden und im Browser geprüft |
+| Erledigt | 1.22.0 | 10.07.2026 | LF6 6.15 Weitere Vertriebswege | Modul nach Quellen-PDF, acht Aufgaben (inkl. Rechenaufgabe), Abzeichen `Kanal-Kapitän` und `LF6 komplett`, sechs Glossarbegriffe und eigenes Arbeitsblatt lokal eingebunden und im Browser geprüft; alle DV-relevanten LF6-Kapitel damit umgesetzt |
+| Erledigt | 1.23.0 | 10.07.2026 | LF7 7.5 Targeting am Buch nachgeschärft | Vertiefte Erklärbausteine (Datenarten, Targeting-Arten, Frequency Capping, Consent/cookielos), Projektauftrag, zwei neue Aufgaben und vier Glossarbegriffe lokal eingebunden und im Browser geprüft |
+| Erledigt | 1.24.0 | 10.07.2026 | LF7 7.7 Suchmaschinen am Buch nachgeschärft | Vertiefte Erklärbausteine (Historie, Crawler/Index/Algorithmus, SERP-Aufbau, Arten und Suchverhalten), Projektauftrag, zwei neue Aufgaben und vier Glossarbegriffe lokal eingebunden |
+| Erledigt | 1.25.0 | 10.07.2026 | LF7 7.8 SEO am Buch nachgeschärft | Vertiefte Erklärbausteine (Rankingfaktoren/Yandex-Leck, Google-Updates, OnPage mit Keywords/Technik/Content, OffPage mit Backlinks und KPI), Projektauftrag, zwei neue Aufgaben (inkl. CTR-Rechenaufgabe) und sechs Glossarbegriffe lokal eingebunden und im Browser geprüft |
+| Erledigt | 1.26.0 | 10.07.2026 | LF7 7.9 SEA am Buch nachgeschärft | Vertiefte Erklärbausteine (Google-Ads-Geschichte, Auktion und Qualitätsfaktor, Performance Marketing mit CPC/KPI/Conversion-Tracking, Anzeigengestaltung und SEM-Synergie), Projektauftrag, zwei neue Aufgaben (inkl. Tagesbudget-Rechenaufgabe) und fünf Glossarbegriffe lokal eingebunden und im Browser geprüft |
+| Erledigt | 1.27.0 | 10.07.2026 | LF7 7.19 Auswertung am Buch nachgeschärft | Vertiefte Erklärbausteine (Werbeerfolgskontrolle und Web Analytics mit GA4/etracker, Vier-Schritte-Vorgehen, Basis-Kennzahlen, CPO/ROAS-Interpretation), Projektauftrag, zwei neue Aufgaben und vier Glossarbegriffe lokal eingebunden und im Browser geprüft |
+| Erledigt | 1.28.0 | 10.07.2026 | LF7 7.20 KI am Buch nachgeschärft – Buchabgleich komplett | Vertiefte Erklärbausteine (KI-Geschichte, schwache/starke KI und drei Lernarten, neuronale Netze und Sprachmodelle, KI im Marketing mit Chancen/Grenzen/Verantwortung), Projektauftrag nach den OneNote-Reflexionsideen, YouTube-Video „KI & Ich“ als Ressource, zwei neue Aufgaben und fünf Glossarbegriffe lokal eingebunden und im Browser geprüft; alle LF7-Buchkapitel damit abgeglichen |
 
 ## In Arbeit
 
@@ -61,7 +71,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
-| Offen | Mittel | LF6-Servicekanäle laut ideas.txt | Videokonferenz, E-Mail, Anschreiben und Newsletter als möglicher neuer Lernfeldbereich; Zuordnung siehe DV-Lehrplan-Kompass |
+| Offen | Mittel | Kapitelbilder für LF6 6.0, 6.13, 6.14 und 6.15 | Fotorealistische Modul-Icons `lf6-6-0-servicekanaele.png`, `lf6-6-13-email.png`, `lf6-6-14-social-media.png` und `lf6-6-15-vertriebswege.png` per Bildgenerator (Codex) erzeugen, als `image` in den Modulen `lf6-servicekanaele`/`lf6-email`/`lf6-social-media`/`lf6-vertriebswege` und im Offline-Cache eintragen; bis dahin zeigen die Karten die Kürzel `SVC`/`EML`/`SOC`/`VTW` |
 | Offen | Niedrig | Lehrerbereich für eigene Aufgaben | Erst sinnvoll, wenn mehr Module stabil sind |
 | Offen | Niedrig | Druckansicht für Arbeitsphasen | Optional für Unterricht ohne Geräte |
 

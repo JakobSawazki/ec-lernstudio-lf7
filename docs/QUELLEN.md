@@ -1,6 +1,6 @@
 # Quellen und Veröffentlichungsgrenzen
 
-Stand: 9. Juli 2026
+Stand: 10. Juli 2026
 
 ## Private Unterrichtsquellen
 
@@ -57,6 +57,13 @@ Zusätzliche geordnete Ablage seit 9. Juli 2026: `assets/Lehrplan/`
 - `LF2/2.12 Preisgestaltung und -darstellung in Webshops.pdf`
 - `LF2/2.16 ERP- und Warenwirtschaftssysteme.pdf`
 - `LF2/Projektidee LF2.pdf`
+- `LF6/6.13 Kommunikation per E-Mail.pdf`
+- `LF6/6.14 Kommunikation über Social Media.pdf`
+- `LF6/6.15 Kommunikation über weitere Vertriebswege.pdf`
+- `LF6/LF6 Übersicht.pdf`
+- `LF7/7.5 Targeting.pdf`
+- `LF7/7.5 OneNote-Aufschrieb.pdf` (eigene Notizen, nur Inspiration)
+- `LF7/LF7 Übersicht.pdf`
 - `Lehrplan/KMK_Rahmenlehrplan_Kaufmann_Kauffrau_E-Commerce_2017-11-24.pdf`
 - `Lehrplan/DV_Uebersicht_Lehrplan.pdf`
 - `Lehrplan/DV_LP_komplett.pdf`
@@ -94,6 +101,150 @@ ausgeliefert. Die veröffentlichten Materialien
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
 `website/assets/materials/dv-lehrplan-kompass.pdf` sind eigenständig
 formuliert.
+
+Das LF6-Überblicksmodul `6.0 Servicekanäle` und sein Arbeitsblatt
+`website/assets/materials/lf6-servicekanaele-arbeitsblatt.pdf` wurden am
+9. Juli 2026 eigenständig formuliert; fachliche Grundlage sind die
+Lehrplanübersicht (LF6 „Servicekommunikation kundenorientiert gestalten“,
+DV-Anteil: E-Mail, Social Media, Chat, Suchmaschinen) und allgemeine
+Servicekommunikations-Grundlagen. Die neu bereitgestellten Lehrbuch-PDFs
+6.13 bis 6.15 in `assets/LF6` dienen den Folgemodulen als private
+Orientierungsquellen und werden nicht veröffentlicht.
+
+Für das LF6-Modul `6.13 Kommunikation per E-Mail` wurde die private
+Quellen-PDF `assets/LF6/6.13 Kommunikation per E-Mail.pdf` am 10. Juli 2026
+nur zur fachlichen Orientierung gelesen. Modul, Aufgaben und das Arbeitsblatt
+`website/assets/materials/lf6-email-arbeitsblatt.pdf` sind eigenständig
+formuliert; das im Buch verwendete Übungsunternehmen wurde durch eine eigene
+fiktive Großhandlung („Nordwind Textil GmbH“) ersetzt. Rechtsanker:
+§§ 37a, 125a HGB (Geschäftsangaben gelten auch für geschäftliche E-Mails,
+<https://www.gesetze-im-internet.de/hgb/__37a.html>), Art. 83 DSGVO
+(Bußgeldrahmen bis 20 Mio. Euro bzw. 4 % des weltweiten Jahresumsatzes) und
+§ 1 De-Mail-Gesetz (<https://www.gesetze-im-internet.de/de-mail-g/__1.html>);
+ergänzend weist das Modul darauf hin, dass sich De-Mail in der Praxis kaum
+durchgesetzt hat und große Anbieter den Dienst eingestellt haben.
+
+Für das LF6-Modul `6.14 Kommunikation über Social Media` wurde die private
+Quellen-PDF `assets/LF6/6.14 Kommunikation über Social Media.pdf` am
+10. Juli 2026 nur zur fachlichen Orientierung gelesen. Modul, Aufgaben und
+das Arbeitsblatt `website/assets/materials/lf6-social-media-arbeitsblatt.pdf`
+sind eigenständig formuliert. Die Rechtsthemen (Urheberrecht, Recht am
+eigenen Bild, Haftung für Links/Likes, Influencer-Kennzeichnung,
+Impressumspflicht, Wettbewerbsrecht, Datenschutz) sind bewusst
+verhaltensorientiert dargestellt und ersetzen keine Rechtsberatung;
+Plattform-Nutzerzahlen aus dem Lehrbuch wurden wegen ihrer
+Schnelllebigkeit nicht übernommen. Als einzige Studienzahl nutzt eine
+Rechenaufgabe die im Lehrbuch referenzierte Quintly-Emoji-Untersuchung
+(29.000 Instagram-Profile, rund 50 % mit Emojis).
+
+Für das LF6-Modul `6.15 Kommunikation über weitere Vertriebswege` wurde die
+private Quellen-PDF `assets/LF6/6.15 Kommunikation über weitere
+Vertriebswege.pdf` am 10. Juli 2026 nur zur fachlichen Orientierung
+gelesen. Modul, Aufgaben und das Arbeitsblatt
+`website/assets/materials/lf6-vertriebswege-arbeitsblatt.pdf` sind
+eigenständig formuliert (Videokonferenz-Sicherheit, Chat-Betrieb mit
+Textbausteinen und Protokollen, Sprachsteuerung über Cloud-Verarbeitung,
+Hotline-Varianten inkl. Callcenter, FAQ-Erstellung und -Pflege).
+Produktnamen einzelner Anbieter aus dem Lehrbuch wurden nur allgemein
+(„Smart Speaker“, „Sprachassistenz“) übernommen.
+
+Die private Quellen-PDF `assets/LF7/7.5 Targeting.pdf` wurde am
+10. Juli 2026 zur fachlichen Nachschärfung des bestehenden
+Targeting-Moduls gelesen (v1.23.0). Die vertieften Portaltexte zu
+Datenarten (First/Second/Third Party Data), Targeting-Arten, Frequency
+Capping, Re-Targeting, Consent-Management-Plattformen und cookielosen
+Verfahren sind eigenständig formuliert; Beispiele und Bildmaterial des
+Lehrbuchs wurden nicht übernommen. `assets/LF7/7.5 OneNote-Aufschrieb.pdf`
+dient laut Auftraggeber ausdrücklich nur als Inspiration.
+
+Seit dem 10. Juli 2026 liegen alle weiteren LF7-Buchkapitel als private
+Quellen in `assets/LF7` (7.7 Suchmaschinen, 7.8 SEO, 7.9 SEA, 7.19
+Auswertung, 7.20 KI, je mit OneNote-Aufschrieb als reine Inspiration).
+`7.7 Suchmaschinen.pdf` wurde am 10. Juli 2026 zur Nachschärfung des
+Suchmaschinen-Moduls gelesen (v1.24.0); die Portaltexte zu Historie
+(Webkataloge, Archie, Lycos, Google), Crawler/Index/Algorithmus,
+SERP-Aufbau (bezahlt, organisch, Knowledge Panel/Unternehmensprofil),
+Suchmaschinen-Arten und Suchverhalten sind eigenständig formuliert;
+Beispiel-Screenshots des Lehrbuchs wurden nicht übernommen.
+
+`7.8 Suchmaschinenoptimierung (SEO Search Engine Optimization).pdf`
+wurde am 10. Juli 2026 zur Nachschärfung des SEO-Moduls gelesen
+(v1.25.0). Die Portaltexte zu Definition und Zielen der SEO, zur
+Geheimhaltung der Rankingfaktoren (inkl. des öffentlich berichteten
+Yandex-Quellcode-Lecks von Anfang 2023, das über 18.000 Rankingfaktoren
+ohne deren Gewichtung offenlegte), zu den Google-Updates (Panda 2011,
+Penguin 2012, Hummingbird, Mobile-First-Indexing ab 2018), zur
+OnPage-Optimierung (Keywordstrategie mit Shorthead/Longtail-Keywords,
+Meta-Daten, Alt-Attribute, Content Marketing, WDF*IDF), zur
+OffPage-Optimierung (Backlinks, Risiko Linkkauf) und zur Abwägung
+Inhouse-SEO oder Agentur sind eigenständig formuliert. Das
+Beispielunternehmen des Lehrbuchs (Möbel-Anbieter) wurde nicht
+übernommen; die Modulbeispiele nutzen das neutrale Keyword-Beispiel
+„Kommode“ bzw. das portaleigene Bürostuhl-Sortiment. Die im Lehrbuch
+zitierten Google-Leitfäden sind öffentlich einsehbar:
+<https://developers.google.com/search/docs?hl=de> (Google Search
+Central, „Grundlagen der Google Suche“ und „Startleitfaden zur
+Suchmaschinenoptimierung“). Der zugehörige OneNote-Aufschrieb dient nur
+als Inspiration.
+
+`7.9 Suchmaschinenwerbung (SEA Search Engine Advertising).pdf` wurde am
+10. Juli 2026 zur Nachschärfung des SEA-Moduls gelesen (v1.26.0). Die
+Portaltexte zu Definition und Anbietern der SEA, zur Geschichte von
+Google Ads (Start 2000, YouTube im Werbenetzwerk 2012, Umbenennung von
+AdWords zu Google Ads 2018, CSS-Partnerprogramm 2017 nach der
+Entscheidung der Europäischen Kommission), zur Keyword-Auktion und zum
+Qualitätsfaktor (Skala 1 bis 10 mit den im Buch genannten Parametern),
+zum Cost-per-Click-Verfahren und Performance Marketing, zu den
+SEA-KPI, zum Conversion-Tracking, zur Anzeigengestaltung
+(Keyword-Planer, Call-to-Action, Anzeigenerweiterungen,
+Display-Steuerung) und zur SEM-Synergie sind eigenständig formuliert.
+Marktanteils-Angaben und die Beispiel-Anzeigen-Screenshots des
+Lehrbuchs wurden nicht übernommen; als Orientierungswerte blieben nur
+die Klickraten-Spannen (Bannerwerbung 0,1 bis 0,3 Prozent, Erfolg bei
+Suchanzeigen ab etwa 3 Prozent) als allgemeine Branchenwerte erhalten.
+Das Beispielunternehmen des Lehrbuchs wurde nicht übernommen. Der
+zugehörige OneNote-Aufschrieb dient nur als Inspiration.
+
+`7.19 Auswertung der Onlinemarketing-Maßnahmen.pdf` wurde am
+10. Juli 2026 zur Nachschärfung des Kennzahlen-Moduls 7.19 gelesen
+(v1.27.0). Die Portaltexte zur Werbeerfolgskontrolle, zum
+Vier-Schritte-Vorgehen (Ziel und KPIs, quantitative Analyse,
+qualitative Analyse mit Befragungen und Heatmaps, Konkurrenzanalyse),
+zu Google Analytics 4 (eventbasiert, sieben Berichtsbereiche:
+Echtzeit, Akquisition, Engagement, Monetarisierung, Bindung,
+Nutzerattribute, Technologie), zu etracker und Matomo als
+datenschutzorientierten Alternativen sowie zu den Kennzahlen sind
+eigenständig formuliert. Das Fahrrad-Unternehmen-Beispiel des Buchs
+wurde sinngemäß als kurzer Aufgabenfall (KPI-Zielwahl) neu erzählt,
+die GA4-Screenshots des Lehrbuchs wurden nicht übernommen. Die
+GA4-Angaben sind über die öffentliche Google-Analytics-Hilfe
+(<https://support.google.com/analytics/>) nachprüfbar; die
+A/B-Test-Inhalte des Kapitels sind bereits seit v1.16.0 im eigenen
+Webanalyse-Modul eigenständig umgesetzt (dort ergänzt: Glossarbegriff
+Multivariater Test). Der zugehörige OneNote-Aufschrieb dient nur als
+Inspiration.
+
+`7.20 KI - Von der Entstehung bis zur praktischen Anwendung.pdf` wurde
+am 10. Juli 2026 zur Nachschärfung des KI-Moduls 7.20 gelesen
+(v1.28.0). Die Portaltexte zur KI-Geschichte (1950er-Jahre,
+regelbasierte Systeme, maschinelles Lernen mit Entscheidungsbäumen und
+Support Vector Machines in den 1990ern, Deep-Learning-Boom der
+2010er), zu schwacher und starker KI, zu den drei Lernarten
+(überwacht, unüberwacht, bestärkend), zu neuronalen Netzwerken und
+Deep Learning, zu Sprachmodellen (Transformer-Architektur,
+zweistufiges Training aus Vortraining und Feinabstimmung,
+Wort-für-Wort-Generierung ab dem Prompt) sowie zu Anwendungen, Grenzen
+und Ethik im Onlinemarketing sind eigenständig formuliert.
+Zeitgebundene Detailangaben des Lehrbuchs zu Firmen und Personen
+(z. B. OpenAI-Personalien, Investoren, einzelne Konkurrenzprodukte)
+wurden bewusst nicht übernommen, da sie schnell veralten. Die eigenen
+OneNote-Aufschriebe des Auftraggebers `7.20a Pro & Contra KI im
+Unternehmen` und `7.20b KI im Marketing` dienten als Inspiration für
+den Projektauftrag (Stellungnahme, Pro-/Contra-Tafel, „KI & Ich“-
+Reflexion); die in 7.20a enthaltene Musterlösung wird nicht
+veröffentlicht. Das in ideas.txt genannte Einführungsvideo
+(<https://www.youtube.com/watch?v=Cs32Q0ayM4M&t=4s>) ist im KI-Modul
+als externe Video-Ressource verlinkt.
 
 Zusätzlich stellte der Auftraggeber am 8. Juli 2026 eigene OneNote-Notizen zu
 den Abschnitten 2.5, 2.6 und 2.7 bereit (Lernziele, Aufgaben, Fallanalysen,

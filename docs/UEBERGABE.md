@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 9. Juli 2026
-Version: `1.18.0`
+Stand: 10. Juli 2026
+Version: `1.28.0`
 
 ## Auftrag und Ergebnis
 
@@ -9,7 +9,7 @@ Ziel ist eine grafisch hochwertige Lernplattform nach dem Muster der
 vorhandenen BM- und Python-Portale. Die Plattform deckt die in
 Datenverarbeitung relevanten E-Commerce-Lernfelder schrittweise ab.
 
-Aktuell sind `LF2` und `LF7` als Lernfeld-Kategorien eingebunden. Lernstände
+Aktuell sind `LF2`, `LF6` und `LF7` als Lernfeld-Kategorien eingebunden. Lernstände
 werden lokal gespeichert und können als Datei exportiert und importiert werden.
 Die Anwendung ist eine statische Single-Page-Anwendung ohne Framework und ohne
 Build-Schritt.
@@ -46,6 +46,15 @@ LF2:
 - 2.12 Preisgestaltung und -darstellung in Webshops
 - 2.16 ERP- und Warenwirtschaftssysteme
 
+LF6:
+
+- 6.0 Servicekanäle im Überblick (eigener Überblicksbaustein)
+- 6.13 Kommunikation per E-Mail
+- 6.14 Kommunikation über Social Media
+- 6.15 Kommunikation über weitere Vertriebswege
+
+Damit sind alle DV-relevanten LF6-Kapitel umgesetzt.
+
 LF7:
 
 - 7.5 Targeting
@@ -58,18 +67,20 @@ LF7:
 
 Je Modul existieren vier Erklärungskarten, vier Merksätze und mindestens sechs
 Aufgaben; die Module 2.5, 2.7, 2.8, 2.9, 2.10, 2.12 und 2.16 haben acht
-Aufgaben, das Webanalyse-Modul ebenfalls. Das ergibt aktuell achtzehn Module
-und 124 Aufgaben. Die Module 2.12, 2.16 und Webanalyse enthalten auch
-Rechenaufgaben vom Typ `number` außerhalb des Kennzahlen-Moduls. Damit sind
-alle LF2-Kapitel mit vorhandener Quellen-PDF umgesetzt.
+Aufgaben, alle sieben LF7-Module und alle vier LF6-Module ebenfalls.
+Das ergibt aktuell zweiundzwanzig Module und 168 Aufgaben. Die Module
+2.12, 2.16, Webanalyse, SEO, SEA und alle LF6-Module enthalten auch
+Rechenaufgaben vom Typ `number` außerhalb des Kennzahlen-Moduls. Damit sind alle LF2- und
+LF6-Kapitel mit vorhandener Quellen-PDF umgesetzt; für LF7 werden weitere
+Buchkapitel nach und nach bereitgestellt.
 
 ## Besondere Funktionen
 
-- Lernfeld-Umschalter `LF2`/`LF7` im Header
+- Lernfeld-Umschalter `LF2`/`LF6`/`LF7` im Header
 - Kennzahlen-Labor mit Plausibilitätsprüfung
 - Praxischeck mit zufälligen Fragen aus dem aktiven Lernfeld
 - Fehlertraining
-- XP und einundzwanzig Abzeichen
+- XP und sechsundzwanzig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
@@ -81,6 +92,12 @@ alle LF2-Kapitel mit vorhandener Quellen-PDF umgesetzt.
 - LF7-SEO/SEA-Transferfall als eigenes PDF-Material für Suchintention,
   Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
 - LF7-Webanalyse-Arbeitsblatt als eigenes PDF-Material
+- LF6-Bereich mit Praxisauftrag-Callout „Der Service-Tag“ und eigenen
+  Arbeitsblättern `lf6-servicekanaele-arbeitsblatt.pdf`,
+  `lf6-email-arbeitsblatt.pdf`, `lf6-social-media-arbeitsblatt.pdf` und
+  `lf6-vertriebswege-arbeitsblatt.pdf`; die Module 6.0, 6.13, 6.14 und
+  6.15 zeigen bis zur Icon-Erzeugung die Kürzel `SVC`, `EML`, `SOC` bzw.
+  `VTW` (siehe `TASKS.md`)
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich
   und dezenter Hover-Animation: `website/assets/ec-lernstudio-logo.png`
@@ -113,6 +130,10 @@ alle LF2-Kapitel mit vorhandener Quellen-PDF umgesetzt.
   `website/assets/materials/lf2-2-16-warenwirtschaft-arbeitsblatt.pdf` sowie
   `website/assets/materials/lf7-seo-sea-transferfall.pdf` und
   `website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
+  `website/assets/materials/lf6-servicekanaele-arbeitsblatt.pdf`,
+  `website/assets/materials/lf6-email-arbeitsblatt.pdf`,
+  `website/assets/materials/lf6-social-media-arbeitsblatt.pdf`,
+  `website/assets/materials/lf6-vertriebswege-arbeitsblatt.pdf`,
   `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` und
   `website/assets/materials/dv-lehrplan-kompass.pdf`
 
@@ -226,6 +247,67 @@ zeigte aber keine sichtbaren Dateien im Ordner `EC`. Eine spätere Verlinkung
 ist technisch möglich, sollte aber erst nach Befüllung und schulischer
 Rechteklärung erfolgen.
 
+Die Quellen-PDF `assets/LF6/6.13 Kommunikation per E-Mail.pdf` wurde am
+10. Juli 2026 nur zur fachlichen Orientierung gelesen und nicht
+veröffentlicht; Modul, Aufgaben und Arbeitsblatt zu 6.13 sind eigenständig
+formuliert. Rechtsanker im Modul: §§ 37a, 125a HGB (Geschäftsangaben auch in
+E-Mails), DSGVO-Bußgeldrahmen Art. 83 (bis 20 Mio. Euro bzw. 4 % des
+Jahresumsatzes) und § 1 De-Mail-Gesetz mit dem Hinweis, dass sich De-Mail in
+der Praxis kaum durchgesetzt hat.
+
+Die Quellen-PDF `assets/LF6/6.14 Kommunikation über Social Media.pdf` wurde
+am 10. Juli 2026 ebenso nur zur fachlichen Orientierung gelesen; Modul,
+Aufgaben und Arbeitsblatt zu 6.14 sind eigenständig formuliert
+(Rechtsthemen: Urheberrecht, Recht am eigenen Bild, Haftung für Links und
+Likes, Influencer-Kennzeichnung, Impressumspflicht, Wettbewerbsrecht –
+bewusst verhaltensorientiert statt paragraphenlastig dargestellt).
+
+Die Quellen-PDF `assets/LF6/6.15 Kommunikation über weitere
+Vertriebswege.pdf` wurde am 10. Juli 2026 ebenfalls nur zur fachlichen
+Orientierung gelesen; Modul, Aufgaben und Arbeitsblatt zu 6.15
+(Videokonferenz, Chat, Sprachsteuerung, Hotline, FAQ) sind eigenständig
+formuliert.
+
+Die Quellen-PDF `assets/LF7/7.5 Targeting.pdf` wurde am 10. Juli 2026 zur
+fachlichen Nachschärfung des bestehenden Targeting-Moduls gelesen (v1.23.0).
+Die vertieften Erklärtexte (Datenarten, Targeting-Arten, Frequency Capping,
+Re-Targeting, Consent-Management, cookielose Verfahren) sind eigenständig
+formuliert; der zugehörige `7.5 OneNote-Aufschrieb.pdf` dient laut
+Auftraggeber nur als Inspiration.
+
+Inzwischen liegen alle LF7-Buchkapitel in `assets/LF7` (7.7, 7.8, 7.9,
+7.19, 7.20 samt OneNote-Aufschrieben). `7.7 Suchmaschinen.pdf` wurde am
+10. Juli 2026 zur Nachschärfung des Suchmaschinen-Moduls gelesen
+(v1.24.0); die Erklärtexte (Historie, Crawler/Index/Algorithmus,
+SERP-Aufbau, Suchmaschinen-Arten, Suchverhalten) sind eigenständig
+formuliert. `7.8 Suchmaschinenoptimierung.pdf` wurde am 10. Juli 2026
+zur Nachschärfung des SEO-Moduls gelesen (v1.25.0); die Erklärtexte
+(Rankingfaktoren und Yandex-Leck, Google-Updates, OnPage mit
+Keywordstrategie/Technik/Content, OffPage mit Backlinks, KPI, Inhouse
+oder Agentur) sind eigenständig formuliert.
+`7.9 Suchmaschinenwerbung.pdf` wurde am 10. Juli 2026 zur Nachschärfung
+des SEA-Moduls gelesen (v1.26.0); die Erklärtexte (Google-Ads-Geschichte,
+Keyword-Auktion und Qualitätsfaktor, Performance Marketing mit CPC und
+Conversion-Tracking, Anzeigengestaltung und SEM-Synergie) sind
+eigenständig formuliert.
+`7.19 Auswertung der Onlinemarketing-Maßnahmen.pdf` wurde am
+10. Juli 2026 zur Nachschärfung des Kennzahlen-Moduls gelesen
+(v1.27.0); die Erklärtexte (Werbeerfolgskontrolle, Web Analytics mit
+GA4-Berichtsbereichen und etracker/Matomo, Vier-Schritte-Vorgehen,
+Kennzahlen-Formeln und Interpretation) sind eigenständig formuliert;
+die A/B-Test-Vertiefung bleibt im eigenen Webanalyse-Modul.
+`7.20 KI - Von der Entstehung bis zur praktischen Anwendung.pdf` wurde
+am 10. Juli 2026 zur Nachschärfung des KI-Moduls gelesen (v1.28.0);
+die Erklärtexte (KI-Geschichte, schwache/starke KI, Lernarten,
+neuronale Netze, Sprachmodelle, KI im Marketing) sind eigenständig
+formuliert. Der Projektauftrag greift die Reflexionsideen der
+OneNote-Aufschriebe 7.20a (Pro-/Contra-Tafel) und 7.20b („KI & Ich“)
+auf – die dortige Musterlösung wird nicht veröffentlicht; das von
+Jakob genannte Einführungsvideo ist als externe Ressource verlinkt.
+Damit ist der LF7-Buchabgleich abgeschlossen: Alle Module mit
+vorliegendem Buchkapitel (7.5, 7.7, 7.8, 7.9, 7.19, 7.20) sind am
+Lehrbuch nachgeschärft.
+
 Der nächste fachliche Schritt ist ein vollständiger Abgleich der eigenständig
 formulierten Inhalte mit den BiBox-Unterkapiteln, ohne geschützte Texte zu
 übernehmen.
@@ -244,7 +326,7 @@ git diff --check
 Danach lokal über HTTP starten und im Browser prüfen:
 
 - Onboarding
-- Lernfeld-Umschalter `LF2`/`LF7`
+- Lernfeld-Umschalter `LF2`/`LF6`/`LF7`
 - LF2- und LF7-Module
 - LF2- und LF7-Arbeitsblätter öffnen
 - Zahlen- und Auswahlaufgabe
