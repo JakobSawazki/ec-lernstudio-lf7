@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 10. Juli 2026
-Version: `1.28.0`
+Version: `1.29.0`
 
 ## Auftrag und Ergebnis
 
@@ -113,6 +113,11 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/module-icons/lf2-2-10-visualisierungen.png` sowie
   `website/assets/module-icons/lf2-2-12-preisgestaltung.png` und
   `website/assets/module-icons/lf2-2-16-warenwirtschaft.png`
+- fotorealistische LF6-Kapitelbilder:
+  `website/assets/module-icons/lf6-6-0-servicekanaele.png`,
+  `website/assets/module-icons/lf6-6-13-email.png`,
+  `website/assets/module-icons/lf6-6-14-social-media.png` und
+  `website/assets/module-icons/lf6-6-15-vertriebswege.png`
 - kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
 - Dark Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`

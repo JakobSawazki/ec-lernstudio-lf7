@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.28.0",
+  version: "1.29.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",
@@ -624,6 +624,7 @@ window.EC_CONTENT = {
       title: "Servicekanäle im Überblick",
       short: "E-Mail, Chat, Social Media, Videokonferenz, Newsletter und FAQ: den passenden Kanal wählen und kundenorientiert kommunizieren.",
       color: "orange",
+      image: "assets/module-icons/lf6-6-0-servicekanaele.png",
       mission: "Werde zur Service-Stimme deines Shops: Wähle für jedes Kundenanliegen den passenden Kanal und antworte so, dass aus einem Problem ein zufriedener Stammkunde wird.",
       lessons: [
         {
@@ -673,6 +674,7 @@ window.EC_CONTENT = {
       title: "Kommunikation per E-Mail",
       short: "Geschäftliche E-Mails professionell aufbauen: Empfänger, CC und BCC, Betreff, Textfeld, Abschluss mit Pflichtangaben – und Datenschutz mitdenken.",
       color: "blue",
+      image: "assets/module-icons/lf6-6-13-email.png",
       mission: "Schreibe E-Mails, die dein Ausbildungsunternehmen würdig vertreten: vollständig aufgebaut, rechtlich sauber und so formuliert, dass der Empfänger sofort weiß, worum es geht.",
       lessons: [
         {
@@ -722,6 +724,7 @@ window.EC_CONTENT = {
       title: "Kommunikation über Social Media",
       short: "Many-to-Many-Kommunikation verstehen, professionell und rechtssicher auftreten und den passenden Plattformtyp wählen.",
       color: "pink",
+      image: "assets/module-icons/lf6-6-14-social-media.png",
       mission: "Werde zur Social-Media-Stimme deines Shops: Baue Vertrauen durch Offenheit auf, halte die Spielregeln von Recht und Netiquette ein und wähle für jede Botschaft die passende Plattform.",
       lessons: [
         {
@@ -771,6 +774,7 @@ window.EC_CONTENT = {
       title: "Kommunikation über weitere Vertriebswege",
       short: "Videokonferenz, Chat, Sprachsteuerung, Hotline und FAQ als moderne Servicewege professionell und sicher einsetzen.",
       color: "mint",
+      image: "assets/module-icons/lf6-6-15-vertriebswege.png",
       mission: "Baue das Servicenetz deines Shops aus: Setze Videokonferenz, Chat, Sprachsteuerung, Hotline und FAQ so ein, dass Kundinnen und Kunden jederzeit schnell und passend zum Anliegen Hilfe bekommen.",
       lessons: [
         {

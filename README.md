@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
 
-**Version:** `1.28.0`
+**Version:** `1.29.0`
 **Dokumentationsstand:** 10. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -114,7 +114,8 @@ nachgeschärft.
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
   dezenter Hover-Animation und reduziertem Header `Datenverarbeitung`
-- fotorealistische Kapitelbilder für die LF2-Module 2.2 bis 2.16
+- fotorealistische Kapitelbilder für die LF2-Module 2.2 bis 2.16 und alle
+  LF6-Module
 - Dark Mode als Standard und Light Mode per Toggle im Header
 - responsives Design für Computer, Tablet und Smartphone
 - lokale Speicherung ohne eigenes Benutzerkonto
@@ -275,7 +276,11 @@ EC/
         |   |-- lf2-2-9-artikelauswahl.png
         |   |-- lf2-2-10-visualisierungen.png
         |   |-- lf2-2-12-preisgestaltung.png
-        |   `-- lf2-2-16-warenwirtschaft.png
+        |   |-- lf2-2-16-warenwirtschaft.png
+        |   |-- lf6-6-0-servicekanaele.png
+        |   |-- lf6-6-13-email.png
+        |   |-- lf6-6-14-social-media.png
+        |   `-- lf6-6-15-vertriebswege.png
         |-- materials/
         |   |-- lf2-2-2-webshop-layout-arbeitsblatt.pdf
         |   |-- lf2-2-3-webshop-seiten-arbeitsblatt.pdf
@@ -361,7 +366,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.28.0`
+Aktueller Stand: `1.29.0`
 
 ## Offene Weiterentwicklung
 

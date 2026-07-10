@@ -48,6 +48,10 @@ jobs:
           test -f website/assets/module-icons/lf2-2-10-visualisierungen.png
           test -f website/assets/module-icons/lf2-2-12-preisgestaltung.png
           test -f website/assets/module-icons/lf2-2-16-warenwirtschaft.png
+          test -f website/assets/module-icons/lf6-6-0-servicekanaele.png
+          test -f website/assets/module-icons/lf6-6-13-email.png
+          test -f website/assets/module-icons/lf6-6-14-social-media.png
+          test -f website/assets/module-icons/lf6-6-15-vertriebswege.png
           test -f website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf

@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 10. Juli 2026<br>
-Aktuelle Version: `1.28.0`<br>
+Aktuelle Version: `1.29.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -58,6 +58,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.26.0 | 10.07.2026 | LF7 7.9 SEA am Buch nachgeschärft | Vertiefte Erklärbausteine (Google-Ads-Geschichte, Auktion und Qualitätsfaktor, Performance Marketing mit CPC/KPI/Conversion-Tracking, Anzeigengestaltung und SEM-Synergie), Projektauftrag, zwei neue Aufgaben (inkl. Tagesbudget-Rechenaufgabe) und fünf Glossarbegriffe lokal eingebunden und im Browser geprüft |
 | Erledigt | 1.27.0 | 10.07.2026 | LF7 7.19 Auswertung am Buch nachgeschärft | Vertiefte Erklärbausteine (Werbeerfolgskontrolle und Web Analytics mit GA4/etracker, Vier-Schritte-Vorgehen, Basis-Kennzahlen, CPO/ROAS-Interpretation), Projektauftrag, zwei neue Aufgaben und vier Glossarbegriffe lokal eingebunden und im Browser geprüft |
 | Erledigt | 1.28.0 | 10.07.2026 | LF7 7.20 KI am Buch nachgeschärft – Buchabgleich komplett | Vertiefte Erklärbausteine (KI-Geschichte, schwache/starke KI und drei Lernarten, neuronale Netze und Sprachmodelle, KI im Marketing mit Chancen/Grenzen/Verantwortung), Projektauftrag nach den OneNote-Reflexionsideen, YouTube-Video „KI & Ich“ als Ressource, zwei neue Aufgaben und fünf Glossarbegriffe lokal eingebunden und im Browser geprüft; alle LF7-Buchkapitel damit abgeglichen |
+| Erledigt | 1.29.0 | 10.07.2026 | Kapitelbilder für LF6 6.0, 6.13, 6.14 und 6.15 | Fotorealistische PNG-Modulbilder für Servicekanäle, E-Mail, Social Media und weitere Vertriebswege erzeugt, eingebunden und in den Offline-Cache aufgenommen |
 
 ## In Arbeit
 
@@ -71,7 +72,6 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
-| Offen | Mittel | Kapitelbilder für LF6 6.0, 6.13, 6.14 und 6.15 | Fotorealistische Modul-Icons `lf6-6-0-servicekanaele.png`, `lf6-6-13-email.png`, `lf6-6-14-social-media.png` und `lf6-6-15-vertriebswege.png` per Bildgenerator (Codex) erzeugen, als `image` in den Modulen `lf6-servicekanaele`/`lf6-email`/`lf6-social-media`/`lf6-vertriebswege` und im Offline-Cache eintragen; bis dahin zeigen die Karten die Kürzel `SVC`/`EML`/`SOC`/`VTW` |
 | Offen | Niedrig | Lehrerbereich für eigene Aufgaben | Erst sinnvoll, wenn mehr Module stabil sind |
 | Offen | Niedrig | Druckansicht für Arbeitsphasen | Optional für Unterricht ohne Geräte |
 

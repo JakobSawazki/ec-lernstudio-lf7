@@ -536,3 +536,47 @@ LF2-Kapitelbilder:
   Dashboard, Paketen, Barcode-Scanner, Lagerregal und Warenfluss-Karten
 - Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
   lesbaren Fremdtexte, keine Personen
+
+LF6-Kapitelbilder:
+
+`website/assets/module-icons/lf6-6-0-servicekanaele.png`
+
+- Erzeugt: 10. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF6 6.0 `Servicekanäle im Überblick`
+- Motiv: fotorealistischer Service-Arbeitsplatz mit Laptop, Smartphone,
+  Headset und generischen Symbolen für E-Mail, Chat, Video, Social Media und
+  FAQ
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen
+
+`website/assets/module-icons/lf6-6-13-email.png`
+
+- Erzeugt: 10. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF6 6.13 `Kommunikation per E-Mail`
+- Motiv: fotorealistischer E-Mail-Arbeitsplatz mit generischem
+  Nachrichtenfenster, Checkliste, Umschlag, Stift und Datenschutz-Schloss
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen
+
+`website/assets/module-icons/lf6-6-14-social-media.png`
+
+- Erzeugt: 10. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF6 6.14 `Kommunikation über Social Media`
+- Motiv: fotorealistischer Social-Media-Service-Arbeitsplatz mit Tablet,
+  Smartphone, abstrakten Kommentar-Karten, Kalenderansicht und Paket
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine Personen und keine Profilfotos
+
+`website/assets/module-icons/lf6-6-15-vertriebswege.png`
+
+- Erzeugt: 10. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF6 6.15
+  `Kommunikation über weitere Vertriebswege`
+- Motiv: fotorealistisches Multichannel-Service-Setup mit Videochat,
+  Live-Chat, Sprachsteuerung, Hotline, FAQ, Headset, Mikrofon und Paket
+- Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
+  lesbaren Fremdtexte, keine echten Personen

@@ -2,6 +2,16 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.29.0 - 10. Juli 2026
+
+- fotorealistische Kapitelbilder für alle vier LF6-Module erzeugt und
+  eingebunden:
+  `lf6-6-0-servicekanaele.png`, `lf6-6-13-email.png`,
+  `lf6-6-14-social-media.png` und `lf6-6-15-vertriebswege.png`
+- LF6-Modulkarten nutzen nun eigene Bildmotive statt Kürzelkarten
+- Offline-Cache auf `ec-lernstudio-v35` erhöht und Deployment-Prüfung um die
+  neuen PNG-Dateien erweitert
+
 ## 1.28.0 - 10. Juli 2026
 
 - LF7-Modul `7.20 KI: Entstehung und Anwendung` am neu bereitgestellten
