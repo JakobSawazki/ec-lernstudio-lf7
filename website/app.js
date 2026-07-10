@@ -655,6 +655,9 @@
                 <button class="primary-button" data-action="practice-module" data-module="${module.id}">
                   ${progress.solved ? "Training fortsetzen" : "Training starten"}
                 </button>
+                <button class="secondary-button print-button" data-action="print-module" type="button">
+                  Druckansicht
+                </button>
                 <span class="module-status">${progress.solved}/${progress.total} Aufgaben gelöst</span>
               </div>
             </div>
@@ -1525,6 +1528,9 @@
         if (action === "dashboard") navigate("dashboard");
         if (action === "lab") navigate("lab");
         if (action === "glossary") navigate("glossary");
+        if (action === "print-module") {
+          window.print();
+        }
         if (action === "open-glossary-term") {
           navigate("glossaryTerm", { termId: button.dataset.term });
         }

@@ -3418,3 +3418,216 @@ h3 {
     display: none;
   }
 }
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  *,
+  *::before,
+  *::after {
+    color: #0b2030 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  html,
+  body {
+    min-height: auto;
+    background: #ffffff !important;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.42;
+  }
+
+  .site-header,
+  .mobile-nav,
+  .toast-region,
+  .modal-backdrop,
+  .portal-footer,
+  .back-button,
+  .print-button,
+  .practice-callout,
+  .module-hero-visual,
+  .module-hero-mark {
+    display: none !important;
+  }
+
+  #app {
+    display: block;
+  }
+
+  .page-shell {
+    width: 100%;
+    max-width: none;
+  }
+
+  .section-block,
+  .module-hero-inner {
+    margin: 0 0 10mm;
+    padding: 0;
+  }
+
+  .module-hero,
+  .takeaway-card,
+  .resource-panel,
+  .lesson-card,
+  .step-list article {
+    background: #ffffff !important;
+    border-color: #cfd8de !important;
+  }
+
+  .module-hero {
+    border-bottom: 1px solid #cfd8de;
+  }
+
+  .module-hero-grid,
+  .lesson-layout,
+  .takeaway-card,
+  .resource-panel,
+  .project-steps {
+    display: block;
+  }
+
+  .module-hero-grid {
+    padding-top: 0;
+  }
+
+  .module-hero h1,
+  .lesson-heading h2,
+  .takeaway-card h2,
+  .resource-panel h2 {
+    margin-bottom: 4mm;
+    font-size: 22pt;
+    line-height: 1.08;
+  }
+
+  .module-hero p,
+  .mission-box,
+  .lesson-card p,
+  .takeaway-card li,
+  .resource-panel p,
+  .resource-card small,
+  .step-list p {
+    color: #233746 !important;
+  }
+
+  .mission-box {
+    margin-top: 6mm;
+    padding: 4mm;
+    border: 1px solid #cfd8de;
+    border-radius: 0;
+  }
+
+  .hero-actions {
+    display: block;
+    margin-top: 5mm;
+  }
+
+  .hero-actions .primary-button,
+  .hero-actions .secondary-button {
+    display: none !important;
+  }
+
+  .module-status {
+    display: inline-block;
+    color: #4e6572 !important;
+  }
+
+  .lesson-heading {
+    position: static;
+  }
+
+  .lesson-list {
+    border-top: 1px solid #cfd8de;
+  }
+
+  .lesson-card {
+    grid-template-columns: 12mm 1fr;
+    gap: 5mm;
+    padding: 5mm 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .lesson-card h3 {
+    font-size: 13pt;
+  }
+
+  .takeaway-card {
+    padding: 6mm;
+    border: 1px solid #cfd8de;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .takeaway-card ul {
+    gap: 3mm;
+  }
+
+  .takeaway-card li {
+    padding: 2.5mm 3mm 2.5mm 8mm;
+    background: #ffffff !important;
+    border: 1px solid #dbe4e8;
+    border-radius: 0;
+  }
+
+  .takeaway-card li::before {
+    left: 2mm;
+    color: #087b7a !important;
+  }
+
+  .resource-panel {
+    padding: 6mm;
+    border: 1px solid #cfd8de;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resource-list {
+    gap: 3mm;
+  }
+
+  .resource-card {
+    padding: 4mm;
+    background: #ffffff !important;
+    border: 1px solid #dbe4e8;
+    border-radius: 0;
+  }
+
+  .resource-card::after {
+    content: attr(href);
+    color: #4e6572 !important;
+    font-size: 8pt;
+    overflow-wrap: anywhere;
+  }
+
+  .project-steps {
+    break-before: auto;
+  }
+
+  .step-list {
+    gap: 3mm;
+  }
+
+  .step-list article {
+    grid-template-columns: 11mm 1fr;
+    padding: 3.5mm;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .step-list span {
+    width: 9mm;
+    height: 9mm;
+    background: #e8fbfa !important;
+    border: 1px solid #b7dadd;
+    border-radius: 0;
+  }
+}

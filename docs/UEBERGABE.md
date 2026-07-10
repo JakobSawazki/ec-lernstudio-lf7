@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 10. Juli 2026
-Version: `1.29.0`
+Version: `1.30.0`
 
 ## Auftrag und Ergebnis
 
@@ -95,9 +95,7 @@ Buchkapitel nach und nach bereitgestellt.
 - LF6-Bereich mit Praxisauftrag-Callout „Der Service-Tag“ und eigenen
   Arbeitsblättern `lf6-servicekanaele-arbeitsblatt.pdf`,
   `lf6-email-arbeitsblatt.pdf`, `lf6-social-media-arbeitsblatt.pdf` und
-  `lf6-vertriebswege-arbeitsblatt.pdf`; die Module 6.0, 6.13, 6.14 und
-  6.15 zeigen bis zur Icon-Erzeugung die Kürzel `SVC`, `EML`, `SOC` bzw.
-  `VTW` (siehe `TASKS.md`)
+  `lf6-vertriebswege-arbeitsblatt.pdf`
 - menschlicheres Hero-Bild: `website/assets/ecommerce-consultation-hero.png`
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich
   und dezenter Hover-Animation: `website/assets/ec-lernstudio-logo.png`
@@ -119,6 +117,8 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/module-icons/lf6-6-14-social-media.png` und
   `website/assets/module-icons/lf6-6-15-vertriebswege.png`
 - kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
+- Druckansicht für Modul-Arbeitsphasen mit ausgeblendeter Navigation und
+  lesbarer Schwarz-Weiß-Struktur
 - Dark Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`
 - LF2-Arbeitsblätter:

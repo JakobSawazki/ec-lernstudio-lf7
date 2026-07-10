@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 10. Juli 2026<br>
-Aktuelle Version: `1.29.0`<br>
+Aktuelle Version: `1.30.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -59,6 +59,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.27.0 | 10.07.2026 | LF7 7.19 Auswertung am Buch nachgeschärft | Vertiefte Erklärbausteine (Werbeerfolgskontrolle und Web Analytics mit GA4/etracker, Vier-Schritte-Vorgehen, Basis-Kennzahlen, CPO/ROAS-Interpretation), Projektauftrag, zwei neue Aufgaben und vier Glossarbegriffe lokal eingebunden und im Browser geprüft |
 | Erledigt | 1.28.0 | 10.07.2026 | LF7 7.20 KI am Buch nachgeschärft – Buchabgleich komplett | Vertiefte Erklärbausteine (KI-Geschichte, schwache/starke KI und drei Lernarten, neuronale Netze und Sprachmodelle, KI im Marketing mit Chancen/Grenzen/Verantwortung), Projektauftrag nach den OneNote-Reflexionsideen, YouTube-Video „KI & Ich“ als Ressource, zwei neue Aufgaben und fünf Glossarbegriffe lokal eingebunden und im Browser geprüft; alle LF7-Buchkapitel damit abgeglichen |
 | Erledigt | 1.29.0 | 10.07.2026 | Kapitelbilder für LF6 6.0, 6.13, 6.14 und 6.15 | Fotorealistische PNG-Modulbilder für Servicekanäle, E-Mail, Social Media und weitere Vertriebswege erzeugt, eingebunden und in den Offline-Cache aufgenommen |
+| Erledigt | 1.30.0 | 10.07.2026 | Druckansicht für Arbeitsphasen | Druckbutton auf Modul-Detailseiten ergänzt, Print-Styles für lesbare Arbeitsphasen umgesetzt und Offline-Cache aktualisiert |
 
 ## In Arbeit
 
@@ -73,7 +74,6 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
 | Offen | Niedrig | Lehrerbereich für eigene Aufgaben | Erst sinnvoll, wenn mehr Module stabil sind |
-| Offen | Niedrig | Druckansicht für Arbeitsphasen | Optional für Unterricht ohne Geräte |
 
 ## Material- und Rechte-Regeln
 

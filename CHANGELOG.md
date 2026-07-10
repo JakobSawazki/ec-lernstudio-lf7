@@ -2,6 +2,16 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.30.0 - 10. Juli 2026
+
+- Modul-Detailseiten haben nun einen eigenen Button `Druckansicht`, der direkt
+  den Browser-Druckdialog öffnet
+- druckfreundliches Stylesheet ergänzt: Header, Navigation, Übungsaufrufe,
+  visuelle Dekorationen und Bedienbuttons werden im Ausdruck ausgeblendet;
+  Erklärkarten, Merksätze, Ressourcen und Projektphasen werden lesbar auf
+  weißem Hintergrund gesetzt
+- Offline-Cache auf `ec-lernstudio-v36` erhöht
+
 ## 1.29.0 - 10. Juli 2026
 
 - fotorealistische Kapitelbilder für alle vier LF6-Module erzeugt und
