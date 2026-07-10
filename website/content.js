@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.31.0",
+  version: "1.32.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",

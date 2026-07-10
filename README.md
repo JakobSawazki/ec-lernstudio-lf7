@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
 
-**Version:** `1.31.0`
+**Version:** `1.32.0`
 **Dokumentationsstand:** 10. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -112,6 +112,8 @@ nachgeschärft.
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
 - Kompetenzcheck mit Ich-kann-Aussagen, Aufgabenfortschritt und lokaler
   Selbsteinschätzung je Modul
+- lokaler Lehrerbereich für eigene Multiple-Choice-Aufgaben mit JSON-Export
+  und -Import von Aufgabensätzen
 - XP, Level, Lernserie und sechsundzwanzig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
@@ -136,6 +138,7 @@ Gespeichert werden:
 - gelöste Glossar-Checks
 - offene Fehler
 - Selbsteinschätzungen im Kompetenzcheck
+- eigene lokal erstellte Aufgaben
 - Abzeichen
 - Lernserie und letzter Lerntag
 - Anzahl abgeschlossener Praxischecks
@@ -345,6 +348,7 @@ Zusätzlich manuell oder automatisiert prüfen:
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
 - Kompetenzcheck mit gespeicherter Selbsteinschätzung
+- Lehrerbereich: eigene Aufgabe erstellen, trainieren, exportieren und importieren
 - XP und Abzeichen
 - Glossar-Suche, Kategorie-Filter, Detailseite und Mini-Quiz
 - Kennzahlen-Labor einschließlich unplausibler Eingaben
@@ -371,7 +375,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.31.0`
+Aktueller Stand: `1.32.0`
 
 ## Offene Weiterentwicklung
 
@@ -383,7 +387,6 @@ Priorisiert:
 
 Optional:
 
-- Lehrerbereich für eigene Aufgabensätze
 - weitere Lernfelder des E-Commerce als neue Portalbereiche
 - datenschutzkonforme Synchronisation über ein separates Backend
 

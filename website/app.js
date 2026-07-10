@@ -5,6 +5,7 @@
   const THEME_STORAGE_KEY = "ec-lernstudio-theme";
   const EXPORT_FORMAT = "ec-lernstudio-lf7-progress";
   const EXPORT_VERSION = 1;
+  const CUSTOM_TASK_FORMAT = "ec-lernstudio-custom-tasks";
   const POINTS_PER_LEVEL = 200;
   const COMPETENCY_LEVELS = [
     {
@@ -40,6 +41,7 @@
     glossaryAnswered: {},
     mistakes: [],
     competencies: {},
+    customTasks: [],
     unlockedBadges: [],
     streak: 0,
     lastStudyDate: "",
@@ -106,8 +108,16 @@
     `;
   }
 
-  function questionById(id) {
+  function officialQuestionById(id) {
     return content.questions.find((question) => question.id === id);
+  }
+
+  function customQuestionById(id) {
+    return state.customTasks.find((question) => question.id === id);
+  }
+
+  function questionById(id) {
+    return officialQuestionById(id) || customQuestionById(id);
   }
 
   function moduleById(id) {
@@ -187,15 +197,64 @@
       .replace(/^-|-$/g, "") || "gast";
   }
 
+  function compactText(value, limit) {
+    return String(value || "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, limit);
+  }
+
+  function normalizeCustomTask(value, index = 0) {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+    const module = moduleById(value.module) ? value.module : "";
+    const prompt = compactText(value.prompt, 260);
+    const options = Array.isArray(value.options)
+      ? value.options.map((option) => compactText(option, 140)).filter(Boolean).slice(0, 4)
+      : [];
+    const answer = Number(value.answer);
+    if (!module || prompt.length < 8 || options.length < 2 || !Number.isInteger(answer) || answer < 0 || answer >= options.length) {
+      return null;
+    }
+    const rawId = compactText(value.id, 80).toLowerCase();
+    const id = /^custom-[a-z0-9-]{4,}$/.test(rawId)
+      ? rawId
+      : `custom-import-${index + 1}-${Date.now().toString(36)}`;
+    return {
+      id,
+      module,
+      type: "choice",
+      prompt,
+      options,
+      answer,
+      explanation: compactText(value.explanation, 360) || "Vergleiche deine Antwort mit der Musterlösung und begründe sie fachlich.",
+      createdAt: typeof value.createdAt === "string" ? value.createdAt : new Date().toISOString(),
+      custom: true
+    };
+  }
+
+  function normalizeCustomTasks(value) {
+    if (!Array.isArray(value)) return [];
+    const tasks = [];
+    const seen = new Set();
+    value.slice(0, 60).forEach((entry, index) => {
+      const task = normalizeCustomTask(entry, index);
+      if (!task || seen.has(task.id)) return;
+      seen.add(task.id);
+      tasks.push(task);
+    });
+    return tasks;
+  }
+
   function normalizeState(value) {
     const candidate = value && typeof value === "object" && !Array.isArray(value) ? value : {};
+    const customTasks = normalizeCustomTasks(candidate.customTasks);
     const answered =
       candidate.answered && typeof candidate.answered === "object" && !Array.isArray(candidate.answered)
         ? Object.fromEntries(
             Object.entries(candidate.answered)
               .filter(
                 ([id, entry]) =>
-                  questionById(id) &&
+                  officialQuestionById(id) &&
                   entry &&
                   typeof entry === "object" &&
                   entry.correct === true
@@ -256,9 +315,10 @@
       answered,
       glossaryAnswered,
       mistakes: Array.isArray(candidate.mistakes)
-        ? [...new Set(candidate.mistakes.filter((id) => questionById(id)))]
+        ? [...new Set(candidate.mistakes.filter((id) => officialQuestionById(id)))]
         : [],
       competencies,
+      customTasks,
       unlockedBadges: Array.isArray(candidate.unlockedBadges)
         ? [
             ...new Set(
@@ -393,6 +453,7 @@
       view === "module" ? "modules" :
       view === "glossary" || view === "glossaryTerm" ? "glossary" :
       view === "competencies" ? "dashboard" :
+      view === "teacher" ? "dashboard" :
       view;
     document.querySelectorAll("[data-view]").forEach((button) => {
       button.classList.toggle("is-active", button.dataset.view === navigationView);
@@ -434,6 +495,7 @@
     if (view === "mistakes") renderMistakes();
     if (view === "achievements") renderAchievements();
     if (view === "competencies") renderCompetencies();
+    if (view === "teacher") renderTeacherArea();
     if (view === "glossary") renderGlossary();
     if (view === "glossaryTerm") renderGlossaryTerm(options.termId);
 
@@ -446,6 +508,7 @@
     const progress = totalProgress(field.id);
     const info = levelInfo();
     const competency = competencySummary(field.id);
+    const customTaskCount = state.customTasks.length;
     const nextModule =
       fieldModules.find((module) => moduleProgress(module.id).percent < 100) ||
       fieldModules.find((module) => module.id === state.lastModuleId) ||
@@ -585,9 +648,18 @@
           </div>
           <button class="secondary-button" data-action="competencies">Kompetenzcheck öffnen</button>
         </article>
+        <article class="focus-card teacher-card">
+          <span class="focus-index">04</span>
+          <div>
+            <p class="eyebrow">Lehrerbereich</p>
+            <h2>${customTaskCount || "Eigene"} ${customTaskCount === 1 ? "Aufgabe" : "Aufgaben"}.</h2>
+            <p>Multiple-Choice-Aufgaben lokal erstellen, als JSON teilen und direkt trainieren.</p>
+          </div>
+          <button class="secondary-button" data-action="teacher">Lehrerbereich öffnen</button>
+        </article>
         ${content.curriculum ? `
           <article class="focus-card curriculum-card">
-            <span class="focus-index">04</span>
+            <span class="focus-index">05</span>
             <div>
               <p class="eyebrow">${escapeHtml(content.curriculum.eyebrow)}</p>
               <h2>${escapeHtml(content.curriculum.title)}</h2>
@@ -991,8 +1063,16 @@
   function renderPractice() {
     if (!session) return;
     const question = questionById(session.ids[session.index]);
+    if (!question) {
+      session = null;
+      navigate("dashboard");
+      return;
+    }
     const module = moduleById(question.module);
     const position = session.index + 1;
+    const questionStatus = question.custom
+      ? "Eigene Aufgabe"
+      : state.answered[question.id]?.correct ? "Schon einmal gelöst" : "25 XP möglich";
 
     app.innerHTML = `
       <section class="practice-shell">
@@ -1011,9 +1091,9 @@
           <article class="question-card">
             <div class="question-meta">
               <span class="question-module ${module.color}">${module.code} · ${module.mark}</span>
-              <span>${state.answered[question.id]?.correct ? "Schon einmal gelöst" : "25 XP möglich"}</span>
+              <span>${questionStatus}</span>
             </div>
-            <h1>${question.prompt}</h1>
+            <h1>${escapeHtml(question.prompt)}</h1>
             <form id="answer-form">
               ${renderAnswerInput(question)}
               <button class="primary-button answer-button" type="submit">Antwort prüfen</button>
@@ -1024,7 +1104,9 @@
       </section>
     `;
 
-    document.querySelector('[data-action="leave-practice"]').addEventListener("click", () => navigate("dashboard"));
+    document.querySelector('[data-action="leave-practice"]').addEventListener("click", () => {
+      navigate(session.mode === "custom" ? "teacher" : "dashboard");
+    });
     document.getElementById("answer-form").addEventListener("submit", checkAnswer);
   }
 
@@ -1043,7 +1125,7 @@
               required
               aria-describedby="number-hint"
             >
-            <strong>${question.suffix || ""}</strong>
+            <strong>${escapeHtml(question.suffix || "")}</strong>
           </span>
           <small id="number-hint">Dezimaltrennzeichen darf Komma oder Punkt sein.</small>
         </label>
@@ -1057,7 +1139,7 @@
           <label class="choice-option">
             <input type="radio" name="answer" value="${index}" required>
             <span class="choice-letter">${String.fromCharCode(65 + index)}</span>
-            <span>${option}</span>
+            <span>${escapeHtml(option)}</span>
           </label>
         `).join("")}
       </fieldset>
@@ -1092,6 +1174,19 @@
     if (isCorrect) {
       session.answeredCurrent = true;
       session.correct += 1;
+      if (question.custom) {
+        feedback.innerHTML = `
+          <div>
+            <strong>Richtig gelöst!</strong>
+            <p>${escapeHtml(question.explanation)}</p>
+          </div>
+          <button class="primary-button" id="next-question" type="button">
+            ${session.index === session.ids.length - 1 ? "Auswertung ansehen" : "Nächste Aufgabe"}
+          </button>
+        `;
+        document.getElementById("next-question").addEventListener("click", nextQuestion);
+        return;
+      }
       const firstCorrect = !state.answered[question.id]?.correct;
       state.answered[question.id] = {
         correct: true,
@@ -1105,7 +1200,7 @@
       feedback.innerHTML = `
         <div>
           <strong>${firstCorrect ? "Richtig! +25 XP" : "Richtig gelöst!"}</strong>
-          <p>${question.explanation}</p>
+          <p>${escapeHtml(question.explanation)}</p>
         </div>
         <button class="primary-button" id="next-question" type="button">
           ${session.index === session.ids.length - 1 ? "Auswertung ansehen" : "Nächste Aufgabe"}
@@ -1113,6 +1208,15 @@
       `;
       document.getElementById("next-question").addEventListener("click", nextQuestion);
     } else {
+      if (question.custom) {
+        feedback.innerHTML = `
+          <div>
+            <strong>Noch nicht ganz.</strong>
+            <p>Vergleiche die Antwortoptionen und versuche es direkt noch einmal.</p>
+          </div>
+        `;
+        return;
+      }
       if (!state.mistakes.includes(question.id)) state.mistakes.push(question.id);
       saveState();
       feedback.innerHTML = `
@@ -1215,7 +1319,7 @@
                 <article>
                   <span class="question-module ${module.color}">${module.code}</span>
                   <div>
-                    <h2>${question.prompt}</h2>
+                    <h2>${escapeHtml(question.prompt)}</h2>
                     <p>${module.title}</p>
                   </div>
                 </article>
@@ -1397,6 +1501,245 @@
         renderCompetencies();
       });
     });
+  }
+
+  function renderTeacherArea() {
+    const modules = content.modules;
+    const tasks = state.customTasks;
+    const defaultModuleId = modulesForField(state.activeField)[0]?.id || modules[0]?.id;
+
+    app.innerHTML = `
+      <section class="page-shell page-intro">
+        <p class="eyebrow">Lehrerbereich</p>
+        <h1>Eigene Aufgaben<br>für die Stunde.</h1>
+        <p>
+          Erstelle kurze Multiple-Choice-Aufgaben, trainiere sie lokal und
+          teile den Aufgabensatz als JSON-Datei mit anderen Geräten.
+        </p>
+      </section>
+
+      <section class="page-shell teacher-workspace section-block">
+        <form class="teacher-form" id="custom-task-form">
+          <p class="eyebrow">Neue Aufgabe</p>
+          <h2>Multiple Choice anlegen</h2>
+          <label for="custom-task-module">
+            <span>Modulbezug</span>
+            <select id="custom-task-module" name="module" required>
+              ${modules.map((module) => `
+                <option value="${module.id}" ${module.id === defaultModuleId ? "selected" : ""}>
+                  ${escapeHtml(module.code)} · ${escapeHtml(module.title)}
+                </option>
+              `).join("")}
+            </select>
+          </label>
+          <label for="custom-task-prompt">
+            <span>Frage</span>
+            <textarea id="custom-task-prompt" name="prompt" rows="4" maxlength="260" required></textarea>
+          </label>
+          <div class="teacher-option-grid">
+            ${[0, 1, 2, 3].map((index) => `
+              <label for="custom-task-option-${index}">
+                <span>Antwort ${String.fromCharCode(65 + index)}</span>
+                <input id="custom-task-option-${index}" name="option-${index}" maxlength="140" required>
+              </label>
+            `).join("")}
+          </div>
+          <label for="custom-task-answer">
+            <span>Richtige Antwort</span>
+            <select id="custom-task-answer" name="answer" required>
+              <option value="0">Antwort A</option>
+              <option value="1">Antwort B</option>
+              <option value="2">Antwort C</option>
+              <option value="3">Antwort D</option>
+            </select>
+          </label>
+          <label for="custom-task-explanation">
+            <span>Erklärung</span>
+            <textarea id="custom-task-explanation" name="explanation" rows="3" maxlength="360"></textarea>
+          </label>
+          <button class="primary-button full-width" type="submit">Aufgabe speichern</button>
+          <p class="teacher-note">
+            Eigene Aufgaben bleiben lokal und zählen nicht zum offiziellen Modulfortschritt.
+          </p>
+        </form>
+
+        <aside class="teacher-panel">
+          <div>
+            <p class="eyebrow">Aufgabensatz</p>
+            <h2>${tasks.length || "Keine"} ${tasks.length === 1 ? "eigene Aufgabe" : "eigene Aufgaben"}</h2>
+            <p>
+              Der Aufgabensatz wird mit dem Lernstand gespeichert. Für die Weitergabe
+              kannst du ihn zusätzlich separat als JSON-Datei exportieren.
+            </p>
+          </div>
+          <div class="teacher-actions">
+            <button class="primary-button" data-action="practice-custom" type="button" ${tasks.length ? "" : "disabled"}>
+              Eigene Aufgaben trainieren
+            </button>
+            <button class="secondary-button" data-action="export-custom-tasks" type="button" ${tasks.length ? "" : "disabled"}>
+              Aufgabensatz speichern
+            </button>
+            <label class="secondary-button file-button" for="custom-task-import">
+              Aufgabensatz laden
+            </label>
+            <input id="custom-task-import" type="file" accept=".json,application/json" hidden>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-shell section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Gespeicherte Aufgaben</p>
+            <h2>Deine lokale Sammlung.</h2>
+          </div>
+        </div>
+        ${tasks.length ? `
+          <div class="custom-task-list">
+            ${tasks.map((task) => {
+              const module = moduleById(task.module);
+              return `
+                <article class="custom-task-card">
+                  <div>
+                    <span class="question-module ${module.color}">${module.code} · ${module.mark}</span>
+                    <h3>${escapeHtml(task.prompt)}</h3>
+                    <p>${escapeHtml(module.title)}</p>
+                  </div>
+                  <ol>
+                    ${task.options.map((option, index) => `
+                      <li class="${index === task.answer ? "is-correct" : ""}">
+                        <span>${String.fromCharCode(65 + index)}</span>
+                        ${escapeHtml(option)}
+                      </li>
+                    `).join("")}
+                  </ol>
+                  <p>${escapeHtml(task.explanation)}</p>
+                  <button class="text-button danger-link" data-action="delete-custom-task" data-task="${task.id}" type="button">
+                    Aufgabe löschen
+                  </button>
+                </article>
+              `;
+            }).join("")}
+          </div>
+        ` : `
+          <div class="empty-state">
+            <span aria-hidden="true">+</span>
+            <h2>Noch keine eigenen Aufgaben.</h2>
+            <p>Lege oben eine Frage an oder lade einen vorhandenen Aufgabensatz.</p>
+          </div>
+        `}
+      </section>
+      ${renderPortalFooter()}
+    `;
+
+    bindAppActions();
+    document.getElementById("custom-task-form").addEventListener("submit", createCustomTask);
+    document.getElementById("custom-task-import").addEventListener("change", importCustomTasks);
+  }
+
+  function makeCustomTaskId() {
+    return `custom-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+  }
+
+  function createCustomTask(event) {
+    event.preventDefault();
+    if (state.customTasks.length >= 60) {
+      showToast("Maximal 60 eigene Aufgaben pro Gerät.", "error");
+      return;
+    }
+    const form = new FormData(event.currentTarget);
+    const task = normalizeCustomTask({
+      id: makeCustomTaskId(),
+      module: form.get("module"),
+      prompt: form.get("prompt"),
+      options: [0, 1, 2, 3].map((index) => form.get(`option-${index}`)),
+      answer: Number(form.get("answer")),
+      explanation: form.get("explanation"),
+      createdAt: new Date().toISOString()
+    });
+    if (!task) {
+      showToast("Bitte fülle Frage, Antworten und richtige Lösung vollständig aus.", "error");
+      return;
+    }
+    state.customTasks.push(task);
+    saveState();
+    showToast("Eigene Aufgabe gespeichert.");
+    renderTeacherArea();
+  }
+
+  function exportCustomTasks() {
+    if (!state.customTasks.length) return;
+    const payload = {
+      format: CUSTOM_TASK_FORMAT,
+      version: 1,
+      appVersion: content.version,
+      exportedAt: new Date().toISOString(),
+      tasks: state.customTasks
+    };
+    downloadProgressFile(
+      JSON.stringify(payload, null, 2),
+      `ec-lernstudio-eigene-aufgaben-${new Date().toISOString().slice(0, 10)}.json`
+    );
+    showToast("Aufgabensatz-Datei wurde erstellt.");
+  }
+
+  function extractCustomTasks(value) {
+    if (Array.isArray(value)) return value;
+    if (
+      value &&
+      typeof value === "object" &&
+      !Array.isArray(value)
+    ) {
+      if (value.format === CUSTOM_TASK_FORMAT && Array.isArray(value.tasks)) {
+        return value.tasks;
+      }
+      if (value.format === EXPORT_FORMAT && Array.isArray(value.progress?.customTasks)) {
+        return value.progress.customTasks;
+      }
+      if (Array.isArray(value.customTasks)) {
+        return value.customTasks;
+      }
+    }
+    throw new Error("Ungültiger Aufgabensatz");
+  }
+
+  function importCustomTasks(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    if (file.size > 2 * 1024 * 1024) {
+      showToast("Die Aufgabensatz-Datei ist zu groß.", "error");
+      event.target.value = "";
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      try {
+        const imported = normalizeCustomTasks(extractCustomTasks(JSON.parse(String(reader.result))));
+        if (!imported.length) throw new Error("Keine gültigen Aufgaben");
+        const merged = new Map(state.customTasks.map((task) => [task.id, task]));
+        imported.forEach((task) => merged.set(task.id, task));
+        state.customTasks = [...merged.values()].slice(0, 60);
+        saveState();
+        showToast(`${imported.length} ${imported.length === 1 ? "Aufgabe" : "Aufgaben"} geladen.`);
+        renderTeacherArea();
+      } catch (error) {
+        showToast("Die Aufgabensatz-Datei ist ungültig.", "error");
+      }
+    });
+    reader.readAsText(file);
+    event.target.value = "";
+  }
+
+  function deleteCustomTask(taskId) {
+    const task = customQuestionById(taskId);
+    if (!task) return;
+    const confirmed = window.confirm("Soll diese eigene Aufgabe gelöscht werden?");
+    if (!confirmed) return;
+    state.customTasks = state.customTasks.filter((entry) => entry.id !== taskId);
+    saveState();
+    showToast("Eigene Aufgabe gelöscht.");
+    renderTeacherArea();
   }
 
   function renderGlossary() {
@@ -1694,6 +2037,7 @@
         if (action === "dashboard") navigate("dashboard");
         if (action === "lab") navigate("lab");
         if (action === "competencies") navigate("competencies");
+        if (action === "teacher") navigate("teacher");
         if (action === "glossary") navigate("glossary");
         if (action === "print-module") {
           window.print();
@@ -1710,6 +2054,15 @@
         }
         if (action === "practice-mistakes" && state.mistakes.length) {
           startPractice(state.mistakes, "Fehlertraining", "mistakes");
+        }
+        if (action === "practice-custom" && state.customTasks.length) {
+          startPractice(state.customTasks.map((question) => question.id), "Eigene Aufgaben", "custom");
+        }
+        if (action === "export-custom-tasks") {
+          exportCustomTasks();
+        }
+        if (action === "delete-custom-task") {
+          deleteCustomTask(button.dataset.task);
         }
       });
     });

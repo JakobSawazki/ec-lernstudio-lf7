@@ -2,6 +2,17 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.32.0 - 10. Juli 2026
+
+- lokalen Lehrerbereich ergänzt: eigene Multiple-Choice-Aufgaben können einem
+  bestehenden Modul zugeordnet, gespeichert und direkt trainiert werden
+- eigene Aufgabensätze lassen sich separat als JSON-Datei exportieren und
+  wieder importieren; auch komplette Lernstand-Dateien mit eigenen Aufgaben
+  werden beim Import akzeptiert
+- eigene Aufgaben bleiben lokal, werden im Lernstand mitgespeichert und zählen
+  nicht zum offiziellen Modulfortschritt
+- Offline-Cache auf `ec-lernstudio-v38` erhöht
+
 ## 1.31.0 - 10. Juli 2026
 
 - Kompetenzcheck für das aktive Lernfeld ergänzt: pro Modul gibt es eine

@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 10. Juli 2026<br>
-Aktuelle Version: `1.31.0`<br>
+Aktuelle Version: `1.32.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -61,6 +61,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.29.0 | 10.07.2026 | Kapitelbilder für LF6 6.0, 6.13, 6.14 und 6.15 | Fotorealistische PNG-Modulbilder für Servicekanäle, E-Mail, Social Media und weitere Vertriebswege erzeugt, eingebunden und in den Offline-Cache aufgenommen |
 | Erledigt | 1.30.0 | 10.07.2026 | Druckansicht für Arbeitsphasen | Druckbutton auf Modul-Detailseiten ergänzt, Print-Styles für lesbare Arbeitsphasen umgesetzt und Offline-Cache aktualisiert |
 | Erledigt | 1.31.0 | 10.07.2026 | Kompetenzcheck mit Ich-kann-Aussagen | Kompetenzcheck-View, Startseiten-Karte und gespeicherte Selbsteinschätzung je Modul umgesetzt |
+| Erledigt | 1.32.0 | 10.07.2026 | Lehrerbereich für eigene Aufgaben | Lokalen Lehrerbereich mit Aufgabenerstellung, Training sowie JSON-Export/-Import eigener Multiple-Choice-Aufgaben umgesetzt |
 
 ## In Arbeit
 
@@ -74,7 +75,6 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
-| Offen | Niedrig | Lehrerbereich für eigene Aufgaben | Erst sinnvoll, wenn mehr Module stabil sind |
 
 ## Material- und Rechte-Regeln
 

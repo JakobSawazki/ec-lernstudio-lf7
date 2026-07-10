@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 10. Juli 2026
-Version: `1.31.0`
+Version: `1.32.0`
 
 ## Auftrag und Ergebnis
 
@@ -82,6 +82,8 @@ Buchkapitel nach und nach bereitgestellt.
 - Fehlertraining
 - Kompetenzcheck mit Ich-kann-Aussagen, Aufgabenfortschritt und lokaler
   Selbsteinschätzung je Modul
+- lokaler Lehrerbereich für eigene Multiple-Choice-Aufgaben mit Training,
+  JSON-Export und JSON-Import von Aufgabensätzen
 - XP und sechsundzwanzig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
@@ -156,6 +158,7 @@ Felder:
 - `glossaryAnswered`
 - `mistakes`
 - `competencies`
+- `customTasks`
 - `unlockedBadges`
 - `streak`
 - `lastStudyDate`
@@ -174,6 +177,14 @@ Exportformat:
 - Version: `1`
 - Dateiendung: `.json`
 - Importgrenze: 2 MB
+
+Separater Aufgabensatz-Export im Lehrerbereich:
+
+- Kennzeichen: `ec-lernstudio-custom-tasks`
+- Version: `1`
+- enthält nur `customTasks`, keinen Schülerfortschritt
+- der Import akzeptiert zusätzlich vollständige Lernstand-Dateien und liest
+  daraus vorhandene `customTasks`
 
 ## Inhalte Pflegen
 
