@@ -2,6 +2,16 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.31.0 - 10. Juli 2026
+
+- Kompetenzcheck für das aktive Lernfeld ergänzt: pro Modul gibt es eine
+  Ich-kann-Aussage, den Aufgabenfortschritt und eine lokale Selbsteinschätzung
+  in drei Stufen
+- Startseite um eine Kompetenzcheck-Karte erweitert
+- Selbsteinschätzungen werden im Lernstand gespeichert und beim JSON-Export
+  sowie Import berücksichtigt
+- Offline-Cache auf `ec-lernstudio-v37` erhöht
+
 ## 1.30.0 - 10. Juli 2026
 
 - Modul-Detailseiten haben nun einen eigenen Button `Druckansicht`, der direkt

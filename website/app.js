@@ -6,6 +6,23 @@
   const EXPORT_FORMAT = "ec-lernstudio-lf7-progress";
   const EXPORT_VERSION = 1;
   const POINTS_PER_LEVEL = 200;
+  const COMPETENCY_LEVELS = [
+    {
+      value: "open",
+      label: "Noch offen",
+      hint: "Ich brauche noch Orientierung."
+    },
+    {
+      value: "partial",
+      label: "Teilweise sicher",
+      hint: "Ich kann Grundideen anwenden."
+    },
+    {
+      value: "secure",
+      label: "Sicher",
+      hint: "Ich kann es erklären und begründen."
+    }
+  ];
   const content = window.EC_CONTENT;
   const app = document.getElementById("app");
   const welcomeModal = document.getElementById("welcome-modal");
@@ -22,6 +39,7 @@
     answered: {},
     glossaryAnswered: {},
     mistakes: [],
+    competencies: {},
     unlockedBadges: [],
     streak: 0,
     lastStudyDate: "",
@@ -215,6 +233,18 @@
           )
         : {};
 
+    const competencyValues = new Set(COMPETENCY_LEVELS.map((level) => level.value));
+    const competencies =
+      candidate.competencies &&
+      typeof candidate.competencies === "object" &&
+      !Array.isArray(candidate.competencies)
+        ? Object.fromEntries(
+            Object.entries(candidate.competencies).filter(
+              ([id, value]) => moduleById(id) && competencyValues.has(value)
+            )
+          )
+        : {};
+
     const draft = candidate.labDraft && typeof candidate.labDraft === "object"
       ? candidate.labDraft
       : defaultState.labDraft;
@@ -228,6 +258,7 @@
       mistakes: Array.isArray(candidate.mistakes)
         ? [...new Set(candidate.mistakes.filter((id) => questionById(id)))]
         : [],
+      competencies,
       unlockedBadges: Array.isArray(candidate.unlockedBadges)
         ? [
             ...new Set(
@@ -327,6 +358,24 @@
     return modules.filter((module) => moduleProgress(module.id).percent === 100).length;
   }
 
+  function competencyLabel(value) {
+    return COMPETENCY_LEVELS.find((level) => level.value === value)?.label || "Nicht eingeschätzt";
+  }
+
+  function competencyStatement(module) {
+    return `Ich kann das Thema „${module.title}“ erklären und an typischen Shop-Situationen anwenden.`;
+  }
+
+  function competencySummary(fieldId = state.activeField) {
+    const modules = modulesForField(fieldId);
+    return {
+      total: modules.length,
+      assessed: modules.filter((module) => state.competencies[module.id]).length,
+      secure: modules.filter((module) => state.competencies[module.id] === "secure").length,
+      complete: completedModules(fieldId)
+    };
+  }
+
   function updateHeader() {
     const info = levelInfo();
     const name = state.name || "Gast";
@@ -343,6 +392,7 @@
     const navigationView =
       view === "module" ? "modules" :
       view === "glossary" || view === "glossaryTerm" ? "glossary" :
+      view === "competencies" ? "dashboard" :
       view;
     document.querySelectorAll("[data-view]").forEach((button) => {
       button.classList.toggle("is-active", button.dataset.view === navigationView);
@@ -383,6 +433,7 @@
     if (view === "lab") renderLab();
     if (view === "mistakes") renderMistakes();
     if (view === "achievements") renderAchievements();
+    if (view === "competencies") renderCompetencies();
     if (view === "glossary") renderGlossary();
     if (view === "glossaryTerm") renderGlossaryTerm(options.termId);
 
@@ -394,6 +445,7 @@
     const fieldModules = modulesForField(field.id);
     const progress = totalProgress(field.id);
     const info = levelInfo();
+    const competency = competencySummary(field.id);
     const nextModule =
       fieldModules.find((module) => moduleProgress(module.id).percent < 100) ||
       fieldModules.find((module) => module.id === state.lastModuleId) ||
@@ -524,9 +576,18 @@
           </div>
           <button class="secondary-button" data-action="glossary">Glossar öffnen</button>
         </article>
+        <article class="focus-card competency-card">
+          <span class="focus-index">03</span>
+          <div>
+            <p class="eyebrow">Kompetenzcheck</p>
+            <h2>${competency.secure} von ${competency.total} Modulen sicher.</h2>
+            <p>Ich-kann-Aussagen, Aufgabenfortschritt und Selbsteinschätzung für ${field.label}.</p>
+          </div>
+          <button class="secondary-button" data-action="competencies">Kompetenzcheck öffnen</button>
+        </article>
         ${content.curriculum ? `
           <article class="focus-card curriculum-card">
-            <span class="focus-index">03</span>
+            <span class="focus-index">04</span>
             <div>
               <p class="eyebrow">${escapeHtml(content.curriculum.eyebrow)}</p>
               <h2>${escapeHtml(content.curriculum.title)}</h2>
@@ -1233,6 +1294,111 @@
     `;
   }
 
+  function renderCompetencies() {
+    const field = activeFieldInfo();
+    const modules = modulesForField(field.id);
+    const progress = totalProgress(field.id);
+    const summary = competencySummary(field.id);
+
+    app.innerHTML = `
+      <section class="page-shell page-intro">
+        <p class="eyebrow">Kompetenzcheck · ${field.label}</p>
+        <h1>Was kannst du <br>schon sicher?</h1>
+        <p>
+          Jede Modulzeile verbindet eine Ich-kann-Aussage mit deinem
+          Aufgabenfortschritt und deiner eigenen Einschätzung.
+        </p>
+      </section>
+
+      <section class="page-shell competency-summary section-block">
+        <article>
+          <span>Aufgaben</span>
+          <strong>${progress.percent}%</strong>
+          <small>${progress.solved} von ${progress.total} gelöst</small>
+        </article>
+        <article>
+          <span>Eingeschätzt</span>
+          <strong>${summary.assessed} / ${summary.total}</strong>
+          <small>Module mit Selbsteinschätzung</small>
+        </article>
+        <article>
+          <span>Sicher</span>
+          <strong>${summary.secure}</strong>
+          <small>als sicher markiert</small>
+        </article>
+        <article>
+          <span>Komplett</span>
+          <strong>${summary.complete}</strong>
+          <small>Module vollständig gelöst</small>
+        </article>
+      </section>
+
+      <section class="page-shell section-block">
+        <div class="competency-list">
+          ${modules.map((module) => {
+            const moduleProgressData = moduleProgress(module.id);
+            const selected = state.competencies[module.id] || "";
+            return `
+              <article class="competency-item">
+                <div class="competency-item-main">
+                  <span class="question-module ${module.color}">${module.code} · ${module.mark}</span>
+                  <div>
+                    <p class="eyebrow">${escapeHtml(competencyLabel(selected))}</p>
+                    <h2>${escapeHtml(competencyStatement(module))}</h2>
+                    <p>${escapeHtml(module.title)}</p>
+                    <div class="progress-track"><span style="width: ${moduleProgressData.percent}%"></span></div>
+                    <small>${moduleProgressData.solved}/${moduleProgressData.total} Aufgaben gelöst · ${moduleProgressData.percent}%</small>
+                  </div>
+                </div>
+                <form class="competency-scale" data-competency-module="${module.id}">
+                  ${COMPETENCY_LEVELS.map((level) => `
+                    <label class="${selected === level.value ? "is-selected" : ""}">
+                      <input
+                        type="radio"
+                        name="competency-${module.id}"
+                        value="${level.value}"
+                        ${selected === level.value ? "checked" : ""}
+                      >
+                      <span>${level.label}</span>
+                      <small>${level.hint}</small>
+                    </label>
+                  `).join("")}
+                </form>
+                <div class="competency-actions">
+                  <button class="secondary-button" data-action="open-module" data-module="${module.id}" type="button">
+                    Modul öffnen
+                  </button>
+                  <button class="primary-button" data-action="practice-module" data-module="${module.id}" type="button">
+                    Training starten
+                  </button>
+                </div>
+              </article>
+            `;
+          }).join("")}
+        </div>
+      </section>
+
+      <section class="page-shell reference-strip">
+        <div>
+          <p class="eyebrow light">Lernfeld-Fokus</p>
+          <h2>${escapeHtml(field.modulesTitle)}</h2>
+        </div>
+        <button class="light-button" data-action="all-modules">Lernpfad öffnen</button>
+      </section>
+      ${renderPortalFooter()}
+    `;
+
+    bindAppActions();
+    app.querySelectorAll("[data-competency-module] input").forEach((input) => {
+      input.addEventListener("change", (event) => {
+        const moduleId = event.currentTarget.closest("[data-competency-module]").dataset.competencyModule;
+        state.competencies[moduleId] = event.currentTarget.value;
+        saveState();
+        renderCompetencies();
+      });
+    });
+  }
+
   function renderGlossary() {
     const categories = ["all", ...new Set(content.glossary.map((entry) => entry.category))];
     const query = glossarySearch.trim().toLocaleLowerCase("de-DE");
@@ -1527,6 +1693,7 @@
         if (action === "mistakes") navigate("mistakes");
         if (action === "dashboard") navigate("dashboard");
         if (action === "lab") navigate("lab");
+        if (action === "competencies") navigate("competencies");
         if (action === "glossary") navigate("glossary");
         if (action === "print-module") {
           window.print();

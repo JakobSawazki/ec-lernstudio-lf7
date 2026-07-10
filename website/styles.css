@@ -1258,6 +1258,32 @@ h3 {
   background: var(--cyan);
 }
 
+.competency-card {
+  color: white;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(255, 190, 122, 0.24), transparent 13rem),
+    linear-gradient(135deg, #0b2030, #12364a);
+  border: 1px solid rgba(223, 242, 247, 0.12);
+}
+
+.competency-card .eyebrow {
+  color: var(--cyan);
+}
+
+.competency-card p:not(.eyebrow) {
+  color: #b9ccd5;
+}
+
+.competency-card .focus-index {
+  color: var(--night);
+  background: var(--orange);
+}
+
+.competency-card .secondary-button {
+  color: var(--night);
+  background: var(--cyan);
+}
+
 .portal-footer {
   display: flex;
   justify-content: flex-end;
@@ -2343,13 +2369,19 @@ h3 {
   font-size: 2.2rem;
 }
 
-.achievement-summary {
+.achievement-summary,
+.competency-summary {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 16px;
 }
 
-.achievement-summary article {
+.competency-summary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.achievement-summary article,
+.competency-summary article {
   padding: 30px;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -2358,22 +2390,129 @@ h3 {
 
 .achievement-summary span,
 .achievement-summary small,
-.achievement-summary strong {
+.achievement-summary strong,
+.competency-summary span,
+.competency-summary small,
+.competency-summary strong {
   display: block;
 }
 
 .achievement-summary span,
-.achievement-summary small {
+.achievement-summary small,
+.competency-summary span,
+.competency-summary small {
   color: var(--ink-soft);
 }
 
-.achievement-summary strong {
+.achievement-summary strong,
+.competency-summary strong {
   margin: 10px 0;
   font-size: 3.3rem;
 }
 
 .achievement-summary .progress-track {
   margin-top: 20px;
+}
+
+.competency-list {
+  display: grid;
+  gap: 14px;
+}
+
+.competency-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(310px, 0.9fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+  box-shadow: 0 18px 55px rgba(7, 24, 39, 0.08);
+}
+
+.competency-item-main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-width: 0;
+}
+
+.competency-item h2 {
+  margin: 6px 0 8px;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.08;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.competency-item p:not(.eyebrow),
+.competency-item small {
+  color: var(--ink-soft);
+}
+
+.competency-item .progress-track {
+  margin: 14px 0 7px;
+}
+
+.competency-scale {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.competency-scale label {
+  position: relative;
+  display: grid;
+  gap: 5px;
+  min-height: 96px;
+  padding: 13px;
+  background: rgba(120, 226, 223, 0.08);
+  border: 1px solid rgba(120, 226, 223, 0.18);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.competency-scale label:focus-within {
+  outline: 3px solid rgba(120, 226, 223, 0.55);
+  outline-offset: 2px;
+}
+
+.competency-scale label.is-selected {
+  color: var(--night);
+  background: var(--cyan);
+  border-color: transparent;
+}
+
+.competency-scale input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.competency-scale span {
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.competency-scale small {
+  font-size: 0.73rem;
+  line-height: 1.35;
+}
+
+.competency-scale label.is-selected small {
+  color: rgba(11, 32, 48, 0.7);
+}
+
+.competency-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.competency-actions .primary-button,
+.competency-actions .secondary-button {
+  white-space: nowrap;
 }
 
 .badge-grid {
@@ -2955,6 +3094,18 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .competency-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .competency-item {
+    grid-template-columns: 1fr;
+  }
+
+  .competency-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .module-grid,
   .glossary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3205,6 +3356,7 @@ h3 {
   .glossary-grid,
   .badge-grid,
   .achievement-summary,
+  .competency-summary,
   .lab-results {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -3228,6 +3380,16 @@ h3 {
 
   .settings-stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .competency-item-main,
+  .competency-scale,
+  .competency-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .competency-scale label {
+    min-height: auto;
   }
 
   .module-card {

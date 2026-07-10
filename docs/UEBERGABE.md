@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 10. Juli 2026
-Version: `1.30.0`
+Version: `1.31.0`
 
 ## Auftrag und Ergebnis
 
@@ -80,6 +80,8 @@ Buchkapitel nach und nach bereitgestellt.
 - Kennzahlen-Labor mit Plausibilitätsprüfung
 - Praxischeck mit zufälligen Fragen aus dem aktiven Lernfeld
 - Fehlertraining
+- Kompetenzcheck mit Ich-kann-Aussagen, Aufgabenfortschritt und lokaler
+  Selbsteinschätzung je Modul
 - XP und sechsundzwanzig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
@@ -153,6 +155,7 @@ Felder:
 - `answered`
 - `glossaryAnswered`
 - `mistakes`
+- `competencies`
 - `unlockedBadges`
 - `streak`
 - `lastStudyDate`
@@ -357,4 +360,3 @@ Danach lokal über HTTP starten und im Browser prüfen:
 1. `TASKS.md` prüfen und die nächste priorisierte Aufgabe auswählen.
 2. BiBox-Abgleich abschließen.
 3. Den Produktseiten-Lernpfad mit LF2 2.11 fortführen.
-4. Kompetenzraster mit Ich-kann-Aussagen erstellen.

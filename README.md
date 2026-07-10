@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
 
-**Version:** `1.30.0`
+**Version:** `1.31.0`
 **Dokumentationsstand:** 10. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -110,6 +110,8 @@ nachgeschärft.
   Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
 - lernfeldbezogener Praxischeck mit zufälligen Aufgaben
 - automatische Fehlerliste mit gezieltem Wiederholungstraining
+- Kompetenzcheck mit Ich-kann-Aussagen, Aufgabenfortschritt und lokaler
+  Selbsteinschätzung je Modul
 - XP, Level, Lernserie und sechsundzwanzig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
@@ -133,6 +135,7 @@ Gespeichert werden:
 - richtig gelöste Aufgaben
 - gelöste Glossar-Checks
 - offene Fehler
+- Selbsteinschätzungen im Kompetenzcheck
 - Abzeichen
 - Lernserie und letzter Lerntag
 - Anzahl abgeschlossener Praxischecks
@@ -341,6 +344,7 @@ Zusätzlich manuell oder automatisiert prüfen:
 - Multiple-Choice- und Zahlenaufgabe
 - deutsche Zahleneingabe mit Komma und Punkt
 - Fehlerliste und Entfernen nach richtiger Lösung
+- Kompetenzcheck mit gespeicherter Selbsteinschätzung
 - XP und Abzeichen
 - Glossar-Suche, Kategorie-Filter, Detailseite und Mini-Quiz
 - Kennzahlen-Labor einschließlich unplausibler Eingaben
@@ -367,7 +371,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.30.0`
+Aktueller Stand: `1.31.0`
 
 ## Offene Weiterentwicklung
 
@@ -376,7 +380,6 @@ Priorisiert:
 1. Aufgaben und Begriffe nach dem vollständigen BiBox-Abgleich fachlich
    nachschärfen.
 2. Weitere Transferfälle mit zusammenhängenden Kampagnendaten ergänzen.
-3. Einen Kompetenzcheck mit Ich-kann-Aussagen entwickeln.
 
 Optional:
 
