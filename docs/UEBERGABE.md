@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 11. Juli 2026
-Version: `1.33.0`
+Version: `1.34.0`
 
 ## Auftrag und Ergebnis
 
@@ -96,6 +96,11 @@ Buchkapitel nach und nach bereitgestellt.
   Startseiten-Callout und eigenes PDF-Material
   `lf7-abschlussprojekt-marketing-strategie.pdf` (fiktive Agentur, acht
   Bausteine mit Modul-Verweisen, Branchenwahl, Zeitplan, Bewertung 50/30/20)
+- Lerncoach-Auftrag zur LF7-Klassenarbeit als Karte im LF7-Kompetenzcheck
+  und eigenes PDF-Material `lf7-ka-ki-lerncoach.pdf` (kopierfertiger
+  KI-Prompt, Spielregeln, Themen-Check aller sieben LF7-Module); technisch
+  über das optionale Feld `examPrep` eines Lernfelds in `content.js`
+  gesteuert
 - DV-Lehrplan-Kompass als Startseiten-Karte und eigenes PDF-Material
 - LF7-SEO/SEA-Transferfall als eigenes PDF-Material für Suchintention,
   Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
@@ -330,6 +335,15 @@ Jakob genannte Einführungsvideo ist als externe Ressource verlinkt.
 Damit ist der LF7-Buchabgleich abgeschlossen: Alle Module mit
 vorliegendem Buchkapitel (7.5, 7.7, 7.8, 7.9, 7.19, 7.20) sind am
 Lehrbuch nachgeschärft.
+
+Der eigene OneNote-Aufschrieb `assets/LF7/KA/OneNote-Aufschrieb Vorbereitung
+KA LF7.pdf` (Auftrag „KI-gestützte Lernkontrolle zur Übungsklausur LF7“ mit
+Beispiel-Prompt) wurde am 11. Juli 2026 gesichtet und als eigenständig
+formulierter Lerncoach-Auftrag `lf7-ka-ki-lerncoach.pdf` aufbereitet; ergänzt
+wurden Spielregeln (KI-Antworten fachlich gegenprüfen, keine persönlichen
+Daten hochladen) und ein Themen-Check mit Modul-Verweisen. Die Übungsklausur
+selbst liegt nicht vor und wird nicht benötigt, da die Lernenden ihre eigene
+bearbeitete Klausur verwenden.
 
 Am 11. Juli 2026 wurden die neu bereitgestellten Projektunterlagen in
 `assets/LF7/Projektarbeit/` gesichtet (`OneNote-Aufschrieb Projektarbeit.pdf`,

@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.33.0",
+  version: "1.34.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",
@@ -78,6 +78,13 @@ window.EC_CONTENT = {
           ["02", "Kampagne"],
           ["03", "Pitch"]
         ]
+      },
+      examPrep: {
+        eyebrow: "Klassenarbeit LF7",
+        title: "Mit dem KI-Lerncoach zur Klassenarbeit.",
+        text: "Bearbeite deine Übungsklausur zu Hause mit einer KI als Lerncoach weiter: Der Auftrag liefert den fertigen Prompt, Spielregeln und einen Themen-Check für alle LF7-Module.",
+        href: "assets/materials/lf7-ka-ki-lerncoach.pdf",
+        button: "Lerncoach-Auftrag öffnen"
       }
     }
   ],

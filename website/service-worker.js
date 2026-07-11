@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v39";
+const CACHE_NAME = "ec-lernstudio-v40";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -44,7 +44,8 @@ const APP_SHELL = [
   "./assets/materials/lf6-vertriebswege-arbeitsblatt.pdf",
   "./assets/materials/lf2-projektidee-ecommerce-homepage.pdf",
   "./assets/materials/dv-lehrplan-kompass.pdf",
-  "./assets/materials/lf7-abschlussprojekt-marketing-strategie.pdf"
+  "./assets/materials/lf7-abschlussprojekt-marketing-strategie.pdf",
+  "./assets/materials/lf7-ka-ki-lerncoach.pdf"
 ];
 
 self.addEventListener("install", (event) => {

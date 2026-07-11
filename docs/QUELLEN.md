@@ -285,6 +285,16 @@ erstellt. Die in den Quellen enthaltenen Namen und Beispiel-Zuweisungen
 werden nicht veröffentlicht; die Projektliste mit 17 Einzelthemen bleibt
 als privater Themenpool für eine spätere Erweiterung liegen.
 
+Ebenfalls am 11. Juli 2026 wurde der eigene OneNote-Aufschrieb
+`assets/LF7/KA/OneNote-Aufschrieb Vorbereitung KA LF7.pdf` gesichtet
+(Auftrag „KI-gestützte Lernkontrolle zur Übungsklausur LF7“ mit
+Beispiel-Prompt). Daraus entstand der eigenständig formulierte
+Lerncoach-Auftrag `lf7-ka-ki-lerncoach.pdf` (v1.34.0). Der Prompt wurde
+sinngemäß neu formuliert, um Spielregeln (KI-Antworten fachlich
+gegenprüfen, keine persönlichen Daten hochladen) und einen Themen-Check
+mit Verweisen auf die LF7-Module ergänzt. Die Übungsklausur selbst ist
+nicht Teil der Veröffentlichung.
+
 ### Schulinterne EduCloud / OneDrive
 
 Geprüfter EduCloud-Link:

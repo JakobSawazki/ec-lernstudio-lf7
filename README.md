@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
 
-**Version:** `1.33.0`
+**Version:** `1.34.0`
 **Dokumentationsstand:** 11. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -104,6 +104,9 @@ nachgeschärft.
 - LF7-Abschlussprojekt `360°-Online-Marketing-Strategie` als
   Startseiten-Callout mit eigenständig formuliertem Projektauftrag-PDF
   (fiktive Agentur, acht Bausteine, Branchenwahl, Zeitplan und Bewertung)
+- Lerncoach-Auftrag zur LF7-Klassenarbeit im Kompetenzcheck: PDF mit
+  kopierfertigem KI-Prompt, Spielregeln und Themen-Check über alle
+  LF7-Module
 - DV-Lehrplan-Kompass als eigener Startseiten-Zugriff mit privater
   Quellenablage unter `assets/Lehrplan/`
 - interaktives Kennzahlen-Labor für CTR, CPC, Conversion Rate, CPO und ROAS
@@ -378,7 +381,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.33.0`
+Aktueller Stand: `1.34.0`
 
 ## Offene Weiterentwicklung
 

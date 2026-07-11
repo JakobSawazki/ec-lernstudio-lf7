@@ -1437,6 +1437,19 @@
         </article>
       </section>
 
+      ${field.examPrep ? `
+        <section class="page-shell reference-strip section-block">
+          <div>
+            <p class="eyebrow light">${escapeHtml(field.examPrep.eyebrow)}</p>
+            <h2>${escapeHtml(field.examPrep.title)}</h2>
+            <p>${escapeHtml(field.examPrep.text)}</p>
+          </div>
+          <a class="light-button" href="${escapeHtml(field.examPrep.href)}" target="_blank" rel="noopener">
+            ${escapeHtml(field.examPrep.button)}
+          </a>
+        </section>
+      ` : ""}
+
       <section class="page-shell section-block">
         <div class="competency-list">
           ${modules.map((module) => {

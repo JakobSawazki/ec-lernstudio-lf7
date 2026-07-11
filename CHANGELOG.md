@@ -2,6 +2,17 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.34.0 - 11. Juli 2026
+
+- Lerncoach-Auftrag zur LF7-Klassenarbeit ergänzt: eigenständig formuliertes
+  PDF `lf7-ka-ki-lerncoach.pdf` mit Vorgehen, kopierfertigem
+  KI-Lerncoach-Prompt, Spielregeln (KI-Antworten prüfen, keine persönlichen
+  Daten hochladen), Themen-Check über alle sieben LF7-Module und
+  Lernstudio-Fahrplan (Kompetenzcheck, Fehlertraining, Praxischeck)
+- Kompetenzcheck-Ansicht zeigt für LF7 eine neue Karte `Klassenarbeit LF7`,
+  die den Lerncoach-Auftrag öffnet; andere Lernfelder bleiben unverändert
+- Offline-Cache auf `ec-lernstudio-v40` erhöht
+
 ## 1.33.0 - 11. Juli 2026
 
 - LF7-Abschlussprojekt `360°-Online-Marketing-Strategie` ergänzt: Teams
