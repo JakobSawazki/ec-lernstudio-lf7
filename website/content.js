@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.37.0",
+  version: "1.38.0",
   teacherMaterials: [
     {
       eyebrow: "Lehrermaterial",
@@ -106,7 +106,7 @@ window.EC_CONTENT = {
       heroEmphasis: "prüfen, vergleichen, auswählen.",
       heroText: "Im dritten Ausbildungsjahr wählst du Online-Vertriebssysteme kriteriengeleitet aus: Du beurteilst Webshops und Shopsoftware, verstehst die Technik dahinter und bereitest Produktdaten für alle Kanäle auf.",
       modulesTitle: "Vom Kriterienkatalog zur passenden Shoplösung.",
-      modulesText: "Der LF9-Lernpfad startet mit der Beurteilung von Webshops und Shopsoftware (9.4). Die weiteren DV-Kapitel 9.9 bis 9.16 – von Hardware, Software und Netzen über Schnittstellen und Datenbanken bis zu Datenfeeds und Produktdatenoptimierung – folgen Schritt für Schritt als eigene Module."
+      modulesText: "Der LF9-Lernpfad führt von der Beurteilung von Webshops und Shopsoftware (9.4) zur Auswahl und Konfiguration von Hardware und Software (9.9). Die weiteren DV-Kapitel 9.10 bis 9.16 - von Hardware und Software über Netze, Schnittstellen und Datenbanken bis zu Datenfeeds und Produktdatenoptimierung - folgen Schritt für Schritt als eigene Module."
     }
   ],
   modules: [
@@ -1216,6 +1216,56 @@ window.EC_CONTENT = {
         "Prüfe einen echten Webshop auf Usability: Weg zum Artikel, Suche, Filter und Checkout mit Gastzugang – notiere je zwei Stärken und Schwächen.",
         "Erstelle eine SWOT-Analyse für einen Webshop deiner Wahl mit mindestens zwei Punkten pro Feld.",
         "Zeichne die Mikro-Conversions vom Startseitenbesuch bis zur Kaufbestätigung als Kette auf und markiere, wo Besucher typischerweise abspringen."
+      ]
+    },
+    {
+      id: "lf9-hardware-software",
+      field: "LF9",
+      code: "9.9",
+      mark: "IT",
+      title: "Hardware und Software auswählen",
+      short: "EDV-Anlagen passend konfigurieren, das EVA-Prinzip anwenden und Hardware- bzw. Softwareangebote mit Kosten- und Nutzwertanalyse vergleichen.",
+      color: "cyan",
+      image: "assets/module-icons/lf9-9-9-hardware-software.png",
+      mission: "Plane die technische Basis eines Onlineshops: Entscheide begründet über Geräte, Programme und Daten - und vergleiche Alternativen nicht nach Bauchgefühl, sondern mit nachvollziehbaren Methoden.",
+      lessons: [
+        {
+          title: "Eine EDV-Anlage wird passend konfiguriert",
+          text: "Wenn ein Unternehmen seine Datenverarbeitung erneuert, stehen zwei Grundfragen am Anfang: Welche Hardware wird gebraucht und welche Software soll darauf laufen? Hardware sind die anfassbaren Bestandteile einer EDV-Anlage - zum Beispiel Computer, Bildschirm, Kabel, Scanner, Drucker, Netzwerkgeräte und Datenträger. Software umfasst die nicht anfassbaren Programme und Daten. Eine sinnvolle Zusammenstellung aller Komponenten für einen konkreten Einsatzzweck heißt Konfiguration. Für einen Webshop können dazu etwa Arbeitsplatz-PCs, Barcodescanner, Etikettendrucker, WLAN, Warenwirtschaft und Shopsoftware gehören."
+        },
+        {
+          title: "Programme verarbeiten Daten",
+          text: "Software lässt Hardware arbeiten. Programmdaten enthalten Anweisungen, die ein Computer ausführen soll - zum Beispiel die Befehle eines Warenwirtschaftssystems oder einer Bildbearbeitung. Datendateien enthalten dagegen Informationen, mit denen gearbeitet wird: Artikelstammdaten, Produktbilder, Bestellungen oder Rechnungen. Die Unterscheidung hilft im Alltag: Ein Update verändert meist ein Programm, eine neue Produktbeschreibung ist eine Datendatei."
+        },
+        {
+          title: "EVA: vom Scan bis zur Ausgabe",
+          text: "Das EVA-Prinzip beschreibt die Grundstruktur jeder Datenverarbeitung: Eingabe, Verarbeitung, Ausgabe. Im Onlineshop kann ein Scanner eine Artikelnummer einlesen (Eingabe), die Warenwirtschaft prüft Bestand und Preis (Verarbeitung) und ein Etikett oder eine Auftragsbestätigung wird erzeugt (Ausgabe). Das Prinzip gilt nicht nur für einen Kassiervorgang, sondern auch für Webformulare, Produktimporte, Bestellungen und Auswertungen."
+        },
+        {
+          title: "Kosten, Nutzen und klare Regeln",
+          text: "Bei mehreren Angeboten reicht der Blick auf den Preis nicht. Eine Kostenanalyse ermittelt den Bezugspreis: Listeneinkaufspreis minus Rabatt minus Skonto plus Bezugskosten. Eine Nutzwertanalyse bewertet zusätzlich qualitative Kriterien wie Zuverlässigkeit, Schulungsaufwand, Schnittstellen oder Service: Kriterien gewichten, Punkte vergeben und die gewichteten Werte addieren. Für einfache Ja-Nein-Entscheidungen hilft eine Entscheidungsmatrix; eine Entscheidungstabelle ordnet Kombinationen von Bedingungen einer Aktion zu. So werden technische Entscheidungen transparent und begründbar."
+        }
+      ],
+      takeaways: [
+        "Hardware ist anfassbar, Software besteht aus nicht anfassbaren Programmen und Daten. Eine Konfiguration verbindet beides für einen konkreten Einsatzzweck.",
+        "Programmdaten geben dem Computer Anweisungen; Datendateien enthalten Informationen wie Artikel, Bilder, Bestellungen oder Rechnungen.",
+        "EVA bedeutet Eingabe, Verarbeitung, Ausgabe - ein Muster für Scanner, Formulare, Shopbestellungen und Auswertungen.",
+        "Kostenanalyse vergleicht Bezugspreise; Nutzwertanalyse ergänzt Kriterien wie Qualität und Service. Entscheidungsmatrix und -tabelle machen Regeln sichtbar."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF9 9.9 Hardware und Software auswählen",
+          description: "Konfigurationscheck, EVA-Werkstatt, Bezugspreis-Rechnung, Nutzwertanalyse und Entscheidungsregel für die technische Basis eines Webshops.",
+          href: "assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Erstelle für euer Webshop-Projekt eine Konfiguration aus mindestens fünf Hardware- und fünf Software-/Daten-Bausteinen. Begründe jeden Baustein kurz.",
+        "Beschreibe einen Ablauf aus eurem Shop nach EVA, zum Beispiel Bestellung, Retourenlabel oder Lagerbuchung. Benenne je Schritt die eingesetzte Technik.",
+        "Vergleiche zwei Geräte- oder Softwareangebote zunächst über den Bezugspreis und danach über mindestens vier Nutzwertkriterien.",
+        "Entwirf eine einfache Entscheidungsmatrix für eine konkrete Ja-Nein-Frage, etwa: Welches Etikettendrucker-Modell erfüllt die Pflichtkriterien?",
+        "Formuliere eine Entscheidungstabelle für eine Kundenaktion mit zwei bis drei Bedingungen und klaren Folgen."
       ]
     }
   ],
@@ -3591,6 +3641,110 @@ window.EC_CONTENT = {
       tolerance: 0.1,
       suffix: "Punkte",
       explanation: "Gesamtwert = 0,40 × 8 + 0,35 × 6 + 0,25 × 10 = 3,2 + 2,1 + 2,5 = 7,8 Punkte. So macht die Nutzwertanalyse verschiedene Systeme objektiv vergleichbar."
+    },
+    {
+      id: "lf9-it-01",
+      module: "lf9-hardware-software",
+      type: "choice",
+      prompt: "Welche Zusammenstellung besteht ausschließlich aus Hardware?",
+      options: [
+        "Etikettendrucker, Barcodescanner und Netzwerk-Switch",
+        "Warenwirtschaft, Produktbilder und Betriebssystem",
+        "Shopsoftware, Datenbank und Bestellbestätigung",
+        "Produkttext, Browser und Artikelnummer"
+      ],
+      answer: 0,
+      explanation: "Hardware sind die anfassbaren Bestandteile der EDV-Anlage. Drucker, Scanner und Switch sind Geräte; die anderen Antworten enthalten Programme oder Daten."
+    },
+    {
+      id: "lf9-it-02",
+      module: "lf9-hardware-software",
+      type: "choice",
+      prompt: "Was beschreibt im IT-Kontext eine Konfiguration am treffendsten?",
+      options: [
+        "Die passende Zusammenstellung von Hardware- und Softwarebestandteilen für einen Einsatzzweck.",
+        "Das einmalige Einschalten eines neuen Computers.",
+        "Eine Liste aller Mitarbeitenden eines Betriebs.",
+        "Das Löschen alter Dateien nach einem Update."
+      ],
+      answer: 0,
+      explanation: "Eine Konfiguration stimmt die Bausteine einer EDV-Anlage auf die Aufgabe ab, zum Beispiel Arbeitsplatz, Scanner, Drucker, Netzwerk und Warenwirtschaft für die Versandabwicklung."
+    },
+    {
+      id: "lf9-it-03",
+      module: "lf9-hardware-software",
+      type: "choice",
+      prompt: "Welche Aussage unterscheidet Programmdaten und Datendateien richtig?",
+      options: [
+        "Programmdaten enthalten Arbeitsanweisungen; Datendateien enthalten Informationen, die verarbeitet werden.",
+        "Programmdaten sind immer ausgedruckte Dokumente; Datendateien sind immer Scanner.",
+        "Datendateien geben dem Computer Befehle; Programmdaten enthalten nur Bilder.",
+        "Zwischen beiden gibt es keinen Unterschied."
+      ],
+      answer: 0,
+      explanation: "Ein Programm enthält Anweisungen für den Computer. Artikelstammdaten, Bestellungen oder Produktbilder sind Daten, mit denen das Programm arbeitet."
+    },
+    {
+      id: "lf9-it-04",
+      module: "lf9-hardware-software",
+      type: "choice",
+      prompt: "Ein Kunde sendet ein Bestellformular ab. Die Warenwirtschaft prüft Bestand und Preis. Danach erscheint die Bestellbestätigung. Welche EVA-Reihenfolge passt?",
+      options: [
+        "Eingabe - Verarbeitung - Ausgabe",
+        "Ausgabe - Eingabe - Verarbeitung",
+        "Verarbeitung - Ausgabe - Eingabe",
+        "Eingabe - Ausgabe - Verarbeitung"
+      ],
+      answer: 0,
+      explanation: "Das Formular liefert die Eingabe, die Prüfung ist die Verarbeitung und die Bestellbestätigung ist die Ausgabe."
+    },
+    {
+      id: "lf9-it-05",
+      module: "lf9-hardware-software",
+      type: "choice",
+      prompt: "Welche Tätigkeit ist bei einem Retourenprozess am ehesten eine Eingabe im EVA-Prinzip?",
+      options: [
+        "Der Scanner liest die Retourennummer ein.",
+        "Das System berechnet die Rückerstattung.",
+        "Der Kunde erhält die Rückerstattungs-E-Mail.",
+        "Das Team bewertet das Monatsziel."
+      ],
+      answer: 0,
+      explanation: "Beim Einlesen der Retourennummer gelangen Daten in das System. Berechnung und Nachricht folgen als Verarbeitung beziehungsweise Ausgabe."
+    },
+    {
+      id: "lf9-it-06",
+      module: "lf9-hardware-software",
+      type: "number",
+      prompt: "Kostenanalyse: Ein Etikettendrucker kostet laut Liste 200 Euro. Es gibt 20 % Rabatt, danach 2 % Skonto auf den Zieleinkaufspreis. Hinzu kommen 15 Euro Bezugskosten. Wie hoch ist der Bezugspreis?",
+      answer: 171.8,
+      tolerance: 0.1,
+      suffix: "Euro",
+      explanation: "200 - 20 % = 160 Euro Zieleinkaufspreis. Davon 2 % Skonto = 3,20 Euro, also 156,80 Euro Bareinkaufspreis. Zuzüglich 15 Euro Bezugskosten ergibt das 171,80 Euro Bezugspreis."
+    },
+    {
+      id: "lf9-it-07",
+      module: "lf9-hardware-software",
+      type: "number",
+      prompt: "Nutzwertanalyse: Zuverlässigkeit wird mit 50 % gewichtet, Support mit 30 %, Anschaffungskosten mit 20 %. Lösung A erhält 8, 6 und 7 Punkte. Wie hoch ist ihr gewichteter Gesamtwert?",
+      answer: 7.2,
+      tolerance: 0.1,
+      suffix: "Punkte",
+      explanation: "0,50 × 8 + 0,30 × 6 + 0,20 × 7 = 4,0 + 1,8 + 1,4 = 7,2 Punkte."
+    },
+    {
+      id: "lf9-it-08",
+      module: "lf9-hardware-software",
+      type: "choice",
+      prompt: "Wann ist eine Entscheidungstabelle besonders passend?",
+      options: [
+        "Wenn mehrere Bedingungen zusammen eine konkrete Aktion auslösen sollen.",
+        "Wenn nur der niedrigste Preis verglichen werden soll.",
+        "Wenn ein Produktfoto zugeschnitten werden soll.",
+        "Wenn die Anzahl der Lagerplätze gezählt wird."
+      ],
+      answer: 0,
+      explanation: "Entscheidungstabellen bilden Regeln ab: Für Kombinationen aus Bedingungen wird jeweils eine festgelegte Aktion ausgeführt, zum Beispiel ein Rabatt oder eine Versandfreigabe."
     }
   ],
   badges: [
@@ -3784,6 +3938,13 @@ window.EC_CONTENT = {
       description: "Das LF9-Modul zur Beurteilung von Webshops und Shopsoftware vollständig abgeschlossen.",
       condition: "module",
       value: "lf9-shopsoftware"
+    },
+    {
+      id: "lf9-it-ready",
+      title: "IT-Konfigurator",
+      description: "Das LF9-Modul zur Auswahl von Hardware und Software vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf9-hardware-software"
     }
   ],
   glossary: [
@@ -5514,6 +5675,54 @@ window.EC_CONTENT = {
       summary: "Messbarer Zwischenschritt auf dem Weg zum eigentlichen Ziel, etwa einem Kauf.",
       detail: "Eine Makro-Conversion ist das Hauptziel, etwa eine Bestellung. Mikro-Conversions machen sichtbar, wie Besucher dorthin gelangen: Suche genutzt, Kategorie geöffnet, Produktseite angesehen, Variante gewählt oder Artikel in den Warenkorb gelegt. Sie helfen, Absprünge im Kaufprozess zu finden.",
       example: "Viele Besucher öffnen die Produktseite, aber nur wenige legen den Artikel in den Warenkorb - ein Hinweis auf ein Problem bei Preis, Informationen oder Auswahl."
+    },
+    {
+      id: "hardware",
+      term: "Hardware",
+      category: "IT & Daten",
+      summary: "Anfassbare, technische Bestandteile einer EDV-Anlage.",
+      detail: "Zur Hardware gehören alle physischen Geräte und Verbindungen, etwa Computer, Bildschirm, Drucker, Scanner, Router, Netzwerk-Switch, Kabel und Datenträger. Hardware braucht Software, um Aufgaben auszuführen.",
+      example: "Der Barcodescanner im Lager, der Etikettendrucker und der Arbeitsplatz-PC sind Hardware."
+    },
+    {
+      id: "software",
+      term: "Software",
+      category: "IT & Daten",
+      summary: "Nicht anfassbare Programme und Daten, die auf Hardware verarbeitet werden.",
+      detail: "Software umfasst Programme mit Arbeitsanweisungen für den Computer und Datendateien mit Informationen. Betriebssystem, Warenwirtschaft und Shopsoftware sind Programme; Artikelstammdaten, Produktbilder und Rechnungen sind Daten.",
+      example: "Das Warenwirtschaftsprogramm verarbeitet die Bestelldaten und löst eine Lagerbuchung aus."
+    },
+    {
+      id: "konfiguration",
+      term: "Konfiguration",
+      category: "IT & Daten",
+      summary: "Passende Zusammenstellung von IT-Bausteinen für einen bestimmten Einsatzzweck.",
+      detail: "Bei einer Konfiguration werden Hardware, Software, Netzwerk und Zubehör so gewählt, dass sie gemeinsam eine Aufgabe erfüllen. Entscheidend sind Anforderungen, Schnittstellen, Mitarbeitende, Kosten, Sicherheit und spätere Erweiterbarkeit.",
+      example: "Für den Versandplatz werden PC, Scanner, Etikettendrucker, WLAN, Warenwirtschaft und Versandsoftware aufeinander abgestimmt."
+    },
+    {
+      id: "eva-prinzip",
+      term: "EVA-Prinzip",
+      category: "IT & Daten",
+      summary: "Grundablauf der Datenverarbeitung: Eingabe, Verarbeitung, Ausgabe.",
+      detail: "Eingabe bringt Daten in ein System, Verarbeitung verändert oder prüft sie nach Programmanweisungen, Ausgabe stellt das Ergebnis bereit. Das EVA-Prinzip hilft, digitale Abläufe verständlich zu zerlegen und Fehlerstellen zu finden.",
+      example: "Artikelnummer scannen, Bestand prüfen, Versandetikett drucken: Eingabe, Verarbeitung, Ausgabe."
+    },
+    {
+      id: "kostenanalyse",
+      term: "Kostenanalyse",
+      category: "IT & Daten",
+      summary: "Vergleich von Alternativen anhand aller relevanten Beschaffungskosten.",
+      detail: "Bei der Kostenanalyse wird nicht nur der Listenpreis betrachtet. Für den Bezugspreis werden Rabatte und Skonto abgezogen, Bezugskosten wie Fracht oder Versand aber hinzugerechnet. Erst dann lassen sich Angebote fair vergleichen.",
+      example: "Ein günstiger Drucker wird durch hohe Versandkosten teurer als ein anderes Angebot."
+    },
+    {
+      id: "entscheidungstabelle",
+      term: "Entscheidungstabelle",
+      category: "IT & Daten",
+      summary: "Übersicht, die Kombinationen von Bedingungen klaren Aktionen zuordnet.",
+      detail: "Entscheidungstabellen dokumentieren Regeln. In den Zeilen stehen Bedingungen und mögliche Aktionen, in den Spalten Regeln mit Ja- oder Nein-Kombinationen. Sie eignen sich besonders für wiederkehrende, logisch strukturierte Entscheidungen.",
+      example: "Nur wenn Stammkunde und Rechnungen pünktlich bezahlt sind, erhält ein Kunde den höchsten Rabatt."
     }
   ]
 };

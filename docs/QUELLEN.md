@@ -76,6 +76,7 @@ Zusätzliche geordnete Ablage seit 9. Juli 2026: `assets/Lehrplan/`
 - `LF9/LF9 Übersicht.pdf`
 - `LF9/9.4 Beurteilung von Webshops und Shopsoftware.pdf`
 - `LF9/9.4 OneNote-Aufschrieb Beurteilung von Webshops und Shopsoftware.pdf`
+- `LF9/9.9 Grundlegende Entscheidungen bei der Auswahl von Hardware und Software.pdf`
 - `LF9/9.9` bis `LF9/9.16` weitere private Buchkapitel für die DV-Planung
 - `LF9/LF9 Prüfungsfragen.pdf` und `LF9/LF9-LF12 Lösungen.pdf`
   (nur private Prüfungsvorbereitung, nicht zur Veröffentlichung bestimmt)
@@ -122,6 +123,12 @@ Für LF9 9.4 wurden die private Quellen-PDF und der private OneNote-Aufschrieb
 am 11. Juli 2026 fachlich abgeglichen. Veröffentlichung: nur das
 eigenständige Lernstudio-Modul, seine Aufgaben und das eigene Arbeitsblatt;
 Lehrbuchseiten, Aufschrieb, Prüfungsfragen und Lösungen bleiben privat.
+
+Die PDF `assets/LF9/9.9 Grundlegende Entscheidungen bei der Auswahl von
+Hardware und Software.pdf` wurde am 11. Juli 2026 visuell als private
+Orientierungsquelle geprüft. Eigenständig veröffentlicht werden nur das
+Lernstudio-Modul, die Aufgaben und das Arbeitsblatt
+`website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf`.
 
 Das LF6-Überblicksmodul `6.0 Servicekanäle` und sein Arbeitsblatt
 `website/assets/materials/lf6-servicekanaele-arbeitsblatt.pdf` wurden am
@@ -641,5 +648,16 @@ LF6-Kapitelbilder:
 - Zweck: Kapitelbild für LF9 9.4 `Beurteilung von Webshops und Shopsoftware`
 - Motiv: fotorealistisches Team bei der kriteriengeleiteten Auswahl einer
   Shoplösung mit generischen Dashboards, Checkliste und Versandpaket
+- Einschränkungen im Prompt: keine Logos, keine lesbaren Oberflächentexte,
+  keine Wasserzeichen
+
+`website/assets/module-icons/lf9-9-9-hardware-software.png`
+
+- Erzeugt: 11. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF9 9.9 `Hardware und Software auswählen`
+- Motiv: fotorealistisches Team bei der Konfiguration eines Versand- und
+  Servicearbeitsplatzes mit generischem Laptop, Etikettendrucker,
+  Barcodescanner, Netzwerk-Switch und Versandpaket
 - Einschränkungen im Prompt: keine Logos, keine lesbaren Oberflächentexte,
   keine Wasserzeichen

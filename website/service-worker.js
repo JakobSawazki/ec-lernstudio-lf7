@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v43";
+const CACHE_NAME = "ec-lernstudio-v44";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -24,6 +24,7 @@ const APP_SHELL = [
   "./assets/module-icons/lf6-6-14-social-media.png",
   "./assets/module-icons/lf6-6-15-vertriebswege.png",
   "./assets/module-icons/lf9-9-4-shopsoftware.png",
+  "./assets/module-icons/lf9-9-9-hardware-software.png",
   "./assets/lf7-marketing-lab.png",
   "./assets/ecommerce-consultation-hero.png",
   "./assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf",
@@ -48,7 +49,8 @@ const APP_SHELL = [
   "./assets/materials/lf7-abschlussprojekt-marketing-strategie.pdf",
   "./assets/materials/lf7-ka-ki-lerncoach.pdf",
   "./assets/materials/lf7-lf8-projektthemen-pool.pdf",
-  "./assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf"
+  "./assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf",
+  "./assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf"
 ];
 
 self.addEventListener("install", (event) => {

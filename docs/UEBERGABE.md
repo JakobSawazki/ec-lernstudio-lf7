@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 11. Juli 2026
-Version: `1.37.0`
+Version: `1.38.0`
 
 ## Auftrag und Ergebnis
 
@@ -68,11 +68,12 @@ LF7:
 LF9:
 
 - 9.4 Beurteilung von Webshops und Shopsoftware
+- 9.9 Grundlegende Entscheidungen bei der Auswahl von Hardware und Software
 
 Je Modul existieren vier Erklärungskarten, vier Merksätze und mindestens sechs
 Aufgaben; die Module 2.5, 2.7, 2.8, 2.9, 2.10, 2.12 und 2.16 haben acht
 Aufgaben, alle sieben LF7-Module und alle vier LF6-Module ebenfalls.
-Das ergibt aktuell dreiundzwanzig Module und 176 Aufgaben. Die Module
+Das ergibt aktuell vierundzwanzig Module und 184 Aufgaben. Die Module
 2.12, 2.16, Webanalyse, SEO, SEA und alle LF6-Module enthalten auch
 Rechenaufgaben vom Typ `number` außerhalb des Kennzahlen-Moduls. Damit sind alle LF2- und
 LF6-Kapitel mit vorhandener Quellen-PDF umgesetzt; für LF7 werden weitere
@@ -92,7 +93,7 @@ Buchkapitel nach und nach bereitgestellt.
   eigenes PDF-Material `lf7-lf8-projektthemen-pool.pdf` (17 Einzel- und
   Partnerprojekte mit Ablauf, Bewertung und Modul-Verweisen); technisch
   über die Liste `teacherMaterials` in `content.js` gesteuert
-- XP und siebenundzwanzig Abzeichen
+- XP und achtundzwanzig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
@@ -139,6 +140,7 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/module-icons/lf6-6-15-vertriebswege.png`
 - fotorealistisches LF9-Kapitelbild:
   `website/assets/module-icons/lf9-9-4-shopsoftware.png`
+  und `website/assets/module-icons/lf9-9-9-hardware-software.png`
 - kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
 - Druckansicht für Modul-Arbeitsphasen mit ausgeblendeter Navigation und
   lesbarer Schwarz-Weiß-Struktur
@@ -166,7 +168,8 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/materials/lf6-vertriebswege-arbeitsblatt.pdf`,
   `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` und
   `website/assets/materials/dv-lehrplan-kompass.pdf` sowie
-  `website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf`
+  `website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf` und
+  `website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf`
 
 ## Zustandsmodell
 
@@ -317,6 +320,13 @@ eigenständig formuliert. Das Arbeitsblatt wurde nach der Erzeugung als
 dreiseitiges A4-PDF gerendert und visuell geprüft. Die weiteren privaten
 LF9-Unterlagen 9.9 bis 9.16 sind als nächste fachliche Ausbaustufen vorhanden.
 
+Die Quellen-PDF `assets/LF9/9.9 Grundlegende Entscheidungen bei der Auswahl
+von Hardware und Software.pdf` wurde am 11. Juli 2026 nur zur fachlichen
+Orientierung gelesen und nicht veröffentlicht. Das Modul, seine acht Aufgaben,
+sechs Glossarbegriffe sowie das Arbeitsblatt sind eigenständig formuliert. Das
+Arbeitsblatt wurde als dreiseitiges A4-PDF gerendert und visuell geprüft. Als
+nächstes privates LF9-Quellenkapitel steht 9.10 `Die Hardware` bereit.
+
 Die Quellen-PDF `assets/LF7/7.5 Targeting.pdf` wurde am 10. Juli 2026 zur
 fachlichen Nachschärfung des bestehenden Targeting-Moduls gelesen (v1.23.0).
 Die vertieften Erklärtexte (Datenarten, Targeting-Arten, Frequency Capping,
@@ -428,5 +438,5 @@ Danach lokal über HTTP starten und im Browser prüfen:
 ## Sinnvolle Nächste Schritte
 
 1. `TASKS.md` prüfen und die nächste priorisierte Aufgabe auswählen.
-2. LF9 mit 9.9 `Grundlegende Entscheidungen bei der Auswahl von Hardware und Software` fortführen.
+2. LF9 mit 9.10 `Die Hardware` fortführen.
 3. Prüfungsvorbereitung als eigenständigen Bereich mit urheberrechtlich unbedenklichem Eigenmaterial planen.

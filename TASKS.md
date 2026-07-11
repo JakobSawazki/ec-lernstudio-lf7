@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 11. Juli 2026<br>
-Aktuelle Version: `1.37.0`<br>
+Aktuelle Version: `1.38.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -67,6 +67,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.35.0 | 11.07.2026 | Projektthemen-Pool LF7/LF8 als Lehrermaterial | Die 17 Einzelthemen aus dem OneNote-Aufschrieb Projektarbeit eigenständig als Themenpool-PDF aufbereitet (Sozialform, Werkzeuge, Ablauf, Bewertung, Modul-Verweise) und als Lehrermaterial-Karte im Lehrerbereich eingebunden; im Browser geprüft |
 | Erledigt | 1.36.0 | 11.07.2026 | Profil-Dialog neu gestaltet | Kopfzeile mit Avatar, Abschnitts-Labels, Cyan-Speichern-Button, kontrastfeste Datei- und Lösch-Buttons sowie Hinweis-Box mit Akzentkante; Textkontraste in Dark und Light Mode gemessen (mind. 4,5:1) |
 | Erledigt | 1.37.0 | 11.07.2026 | LF9 9.4 Webshops und Shopsoftware beurteilen | Neues Lernfeld LF9 mit Modul, acht Aufgaben, Abzeichen, fünf Glossarbegriffen, eigenem Arbeitsblatt und fotorealistischem Kapitelbild lokal eingebunden und als PDF visuell geprüft |
+| Erledigt | 1.38.0 | 11.07.2026 | LF9 9.9 Hardware und Software auswählen | Modul, acht Aufgaben mit zwei Rechenaufgaben, Abzeichen, sechs Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild lokal eingebunden und als PDF visuell geprüft |
 
 ## In Arbeit
 
@@ -80,7 +81,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
-| Offen | Hoch | LF9 9.9 Grundlegende Entscheidungen bei der Auswahl von Hardware und Software | Nächstes vorhandenes LF9-Kapitel; als eigenständiges Modul mit Abgrenzung zu 9.4 aufbauen |
+| Offen | Hoch | LF9 9.10 Die Hardware | Nächstes vorhandenes LF9-Kapitel; Hardware-Komponenten, Beschaffungsentscheidung und betriebliche Konfiguration sinnvoll von 9.9 abgrenzen |
 | Offen | Mittel | Prüfungsvorbereitung | Eigene Übungsfälle und -lösungen als neuer Bereich planen; echte Abschlussprüfungen oder Lösungen erst nach Rechteprüfung und mit klarer Trennung von veröffentlichtem Eigenmaterial einbinden |
 
 ## Material- und Rechte-Regeln

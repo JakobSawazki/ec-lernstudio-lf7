@@ -2,6 +2,21 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.38.0 - 11. Juli 2026
+
+- LF9-Modul `9.9 Hardware und Software auswählen` ergänzt: Konfiguration,
+  Programm- und Datendateien, EVA-Prinzip, Kostenanalyse, Nutzwertanalyse
+  und Entscheidungstabellen in vier Erklärbausteinen
+- acht Aufgaben inklusive Bezugspreis- und Nutzwertanalyse-Rechenaufgabe,
+  sechs neue Glossarbegriffe und Abzeichen `IT-Konfigurator`
+- eigenes Arbeitsblatt `lf9-9-9-hardware-software-arbeitsblatt.pdf` mit
+  Konfigurationscheck, EVA-Werkstatt, Bezugspreis-Kalkulation,
+  Nutzwertanalyse und Entscheidungstabelle erstellt und visuell als
+  dreiseitiges A4-PDF geprüft
+- fotorealistisches Kapitelbild `lf9-9-9-hardware-software.png` erzeugt
+  und eingebunden
+- Offline-Cache auf `ec-lernstudio-v44` erhöht
+
 ## 1.37.0 - 11. Juli 2026
 
 - LF9 als neuer Lernfeld-Umschalter ergänzt; der Lernpfad startet mit
