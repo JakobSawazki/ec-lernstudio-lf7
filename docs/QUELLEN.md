@@ -1,6 +1,6 @@
 # Quellen und Veröffentlichungsgrenzen
 
-Stand: 10. Juli 2026
+Stand: 11. Juli 2026
 
 ## Private Unterrichtsquellen
 
@@ -73,6 +73,12 @@ Zusätzliche geordnete Ablage seit 9. Juli 2026: `assets/Lehrplan/`
 - `LF7/Projektarbeit/Aufteilung_Themen_ Rahmenlehrplan_CK.docx`
 - `LF7/Projektarbeit/DV_1.bis 3. Jahr_2020.docx`
 - `LF7/Projektarbeit/Projekte EC.pptx`
+- `LF9/LF9 Übersicht.pdf`
+- `LF9/9.4 Beurteilung von Webshops und Shopsoftware.pdf`
+- `LF9/9.4 OneNote-Aufschrieb Beurteilung von Webshops und Shopsoftware.pdf`
+- `LF9/9.9` bis `LF9/9.16` weitere private Buchkapitel für die DV-Planung
+- `LF9/LF9 Prüfungsfragen.pdf` und `LF9/LF9-LF12 Lösungen.pdf`
+  (nur private Prüfungsvorbereitung, nicht zur Veröffentlichung bestimmt)
 - `Lehrplan/KMK_Rahmenlehrplan_Kaufmann_Kauffrau_E-Commerce_2017-11-24.pdf`
 - `Lehrplan/DV_Uebersicht_Lehrplan.pdf`
 - `Lehrplan/DV_LP_komplett.pdf`
@@ -108,8 +114,14 @@ ausgeliefert. Die veröffentlichten Materialien
 `website/assets/materials/lf7-seo-sea-transferfall.pdf`,
 `website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
-`website/assets/materials/dv-lehrplan-kompass.pdf` sind eigenständig
-formuliert.
+`website/assets/materials/dv-lehrplan-kompass.pdf` und
+`website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf` sind
+eigenständig formuliert.
+
+Für LF9 9.4 wurden die private Quellen-PDF und der private OneNote-Aufschrieb
+am 11. Juli 2026 fachlich abgeglichen. Veröffentlichung: nur das
+eigenständige Lernstudio-Modul, seine Aufgaben und das eigene Arbeitsblatt;
+Lehrbuchseiten, Aufschrieb, Prüfungsfragen und Lösungen bleiben privat.
 
 Das LF6-Überblicksmodul `6.0 Servicekanäle` und sein Arbeitsblatt
 `website/assets/materials/lf6-servicekanaele-arbeitsblatt.pdf` wurden am
@@ -621,3 +633,13 @@ LF6-Kapitelbilder:
   Live-Chat, Sprachsteuerung, Hotline, FAQ, Headset, Mikrofon und Paket
 - Einschränkungen im Prompt: keine Logos, keine Markenoberflächen, keine
   lesbaren Fremdtexte, keine echten Personen
+
+`website/assets/module-icons/lf9-9-4-shopsoftware.png`
+
+- Erzeugt: 11. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF9 9.4 `Beurteilung von Webshops und Shopsoftware`
+- Motiv: fotorealistisches Team bei der kriteriengeleiteten Auswahl einer
+  Shoplösung mit generischen Dashboards, Checkliste und Versandpaket
+- Einschränkungen im Prompt: keine Logos, keine lesbaren Oberflächentexte,
+  keine Wasserzeichen

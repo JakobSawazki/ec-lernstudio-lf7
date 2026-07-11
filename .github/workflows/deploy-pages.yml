@@ -52,6 +52,7 @@ jobs:
           test -f website/assets/module-icons/lf6-6-13-email.png
           test -f website/assets/module-icons/lf6-6-14-social-media.png
           test -f website/assets/module-icons/lf6-6-15-vertriebswege.png
+          test -f website/assets/module-icons/lf9-9-4-shopsoftware.png
           test -f website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-3-webshop-seiten-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-2-4-impressum-arbeitsblatt.pdf
@@ -71,6 +72,7 @@ jobs:
           test -f website/assets/materials/lf7-webanalyse-arbeitsblatt.pdf
           test -f website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf
           test -f website/assets/materials/dv-lehrplan-kompass.pdf
+          test -f website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf
 
   deploy:
     environment:

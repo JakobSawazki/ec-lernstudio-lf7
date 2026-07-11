@@ -2,6 +2,23 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.37.0 - 11. Juli 2026
+
+- LF9 als neuer Lernfeld-Umschalter ergänzt; der Lernpfad startet mit
+  `9.4 Beurteilung von Webshops und Shopsoftware`
+- neues LF9-Modul mit vier Erklärbausteinen zu kriteriengeleiteter Auswahl,
+  Usability, Funktionalität/Ergonomie und Gesamtbewertung; acht Aufgaben
+  inklusive Nutzwertanalyse-Rechenaufgabe und das Abzeichen
+  `Shop-Systemfinder`
+- Glossar um Nutzwertanalyse, Softwareergonomie, Interoperabilität,
+  SWOT-Analyse und Mikro-Conversion erweitert
+- eigenständig formuliertes Arbeitsblatt
+  `lf9-9-4-shopsoftware-arbeitsblatt.pdf` mit Usability-Test,
+  Kriterienkatalog, Nutzwertanalyse, Frontend-/Backend-Check und SWOT
+- eigenes fotorealistisches Kapitelbild `lf9-9-4-shopsoftware.png`
+  erzeugt und eingebunden
+- Offline-Cache auf `ec-lernstudio-v43` erhöht
+
 ## 1.36.0 - 11. Juli 2026
 
 - Profil-Dialog `Dein Lernstand` neu gestaltet: Kopfzeile mit

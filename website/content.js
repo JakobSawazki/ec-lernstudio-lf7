@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.36.0",
+  version: "1.37.0",
   teacherMaterials: [
     {
       eyebrow: "Lehrermaterial",
@@ -95,6 +95,18 @@ window.EC_CONTENT = {
         href: "assets/materials/lf7-ka-ki-lerncoach.pdf",
         button: "Lerncoach-Auftrag öffnen"
       }
+    },
+    {
+      id: "LF9",
+      label: "LF9",
+      title: "Lernfeld 9",
+      subtitle: "Online-Vertriebskanäle auswählen",
+      short: "Shopsysteme beurteilen, Hardware und Software auswählen, Netze, Schnittstellen, Datenbanken, Shop-Programmierung und Produktdaten.",
+      heroTitle: "Vertriebskanäle",
+      heroEmphasis: "prüfen, vergleichen, auswählen.",
+      heroText: "Im dritten Ausbildungsjahr wählst du Online-Vertriebssysteme kriteriengeleitet aus: Du beurteilst Webshops und Shopsoftware, verstehst die Technik dahinter und bereitest Produktdaten für alle Kanäle auf.",
+      modulesTitle: "Vom Kriterienkatalog zur passenden Shoplösung.",
+      modulesText: "Der LF9-Lernpfad startet mit der Beurteilung von Webshops und Shopsoftware (9.4). Die weiteren DV-Kapitel 9.9 bis 9.16 – von Hardware, Software und Netzen über Schnittstellen und Datenbanken bis zu Datenfeeds und Produktdatenoptimierung – folgen Schritt für Schritt als eigene Module."
     }
   ],
   modules: [
@@ -1154,6 +1166,56 @@ window.EC_CONTENT = {
           href: "https://www.youtube.com/watch?v=Cs32Q0ayM4M&t=4s",
           type: "Video"
         }
+      ]
+    },
+    {
+      id: "lf9-shopsoftware",
+      field: "LF9",
+      code: "9.4",
+      mark: "SHP",
+      title: "Beurteilung von Webshops und Shopsoftware",
+      short: "Shopsysteme kriteriengeleitet bewerten: Usability, Funktionalität, Ergonomie, Barrierefreiheit, Recht – und die Nutzwertanalyse als Entscheidungswerkzeug.",
+      color: "violet",
+      image: "assets/module-icons/lf9-9-4-shopsoftware.png",
+      mission: "Werde zur Prüferin bzw. zum Prüfer für Shopsysteme: Beurteile Webshops und Shopsoftware anhand klarer Kriterien und triff eine begründete Auswahlentscheidung.",
+      lessons: [
+        {
+          title: "Ein Shopsystem ist eine Auswahlentscheidung",
+          text: "Wer einen Webshop betreiben will, muss ihn selbst programmieren lassen oder eine Shopsoftware kaufen bzw. mieten. Für Erfolg oder Misserfolg sind viele Faktoren ausschlaggebend – deshalb werden der eigene Shop und die Onlinepräsenzen der Mitbewerber laufend nach denselben Kriterien untersucht. Damit die Entscheidung nicht nach Bauchgefühl fällt, hilft eine Nutzwertanalyse: Kriterien festlegen, nach Wichtigkeit gewichten, jedes System bewerten und die gewichteten Punkte vergleichen."
+        },
+        {
+          title: "Usability: der einfache Weg zum Kauf",
+          text: "Usability heißt Benutzerfreundlichkeit: Ein Shop ist benutzerfreundlich, wenn er sich intuitiv und einfach nutzen lässt. Dazu gehören eine übersichtliche, zielgruppengerechte Gestaltung mit durchdachter Navigation, ein leichter Weg zum Artikel (nachvollziehbare Kategorien, Filter, sichtbare Suchfunktion, Produktvergleich und Merkzettel), eine überzeugende Artikelpräsentation mit allen wichtigen Informationen und Bildern – und ein nutzerfreundlicher Checkout: Warenkorb überall auffindbar, Gastzugang möglich, jede Angabe leicht änderbar, Fortschritt und Kosten jederzeit transparent."
+        },
+        {
+          title: "Funktionalität und Ergonomie",
+          text: "Die Funktionalität beschreibt den Funktionsumfang der Software: Nach ISO/IEC 9126 gehören dazu Angemessenheit, Sicherheit, Interoperabilität (Zusammenspiel mit anderen Systemen), Konformität, Ordnungsmäßigkeit und Richtigkeit. Die Software-Ergonomie passt die Technik an den Menschen an – nicht umgekehrt. Die DIN EN ISO 9241 nennt dafür sieben Grundsätze, von Aufgabenangemessenheit über Steuerbarkeit und Fehlertoleranz bis Lernförderlichkeit. Wichtig ist der doppelte Blick: Das Frontend muss für Kundinnen und Kunden ergonomisch sein, das Backend für die Mitarbeiterinnen und Mitarbeiter, die den Shop betreiben."
+        },
+        {
+          title: "Von Pflichtkriterien zur Gesamtbewertung",
+          text: "Zur Beurteilung gehören außerdem: responsives Design für alle Endgeräte, Barrierefreiheit nach WCAG-Standard, die Erfüllung der Informationspflichten im Bestellprozess (AGB, Datenschutzerklärung, Widerrufsbelehrung, eindeutiger Kauf-Button), das Vermeiden von 404-Seiten sowie Sprachen, Währungen und Steuersätze für den internationalen Verkauf. B2B-Shops brauchen zusätzlich Rollenmodelle, Rahmenverträge und Bestelllisten. Für die Marktposition liefert die SWOT-Analyse Stärken, Schwächen, Chancen und Risiken – und Mikro-Conversions (Schritte Richtung Kauf) zeigen im Betrieb, wo der Shop gut oder schlecht funktioniert."
+        }
+      ],
+      takeaways: [
+        "Shopsysteme werden nicht nach Bauchgefühl, sondern mit einem Kriterienkatalog beurteilt – von Usability bis Recht; das gilt für den eigenen Shop und die Mitbewerber.",
+        "Die Nutzwertanalyse macht die Auswahl objektiv: Kriterien gewichten, Systeme bewerten, gewichtete Punkte vergleichen.",
+        "Frontend und Backend haben unterschiedliche Nutzer: Kunden brauchen einen ergonomischen Shop, das Team eine ergonomische Verwaltung.",
+        "Die Makro-Conversion ist der Kauf – Mikro-Conversions sind die messbaren Schritte dorthin, vom Kategorieaufruf bis zum Warenkorb."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF9 9.4 Webshops und Shopsoftware beurteilen",
+          description: "Kriterien-Check, Usability-Prüfung eines echten Shops, Nutzwertanalyse mit Rechenteil, ISO-9241-Zuordnung und SWOT-Matrix.",
+          href: "assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Stelle für euer Shop-Projekt einen Kriterienkatalog mit mindestens acht Beurteilungskriterien zusammen und begründe die drei wichtigsten.",
+        "Führe eine Nutzwertanalyse für zwei Shopsysteme oder zwei echte Webshops durch: Kriterien gewichten, Punkte vergeben, Ergebnis interpretieren.",
+        "Prüfe einen echten Webshop auf Usability: Weg zum Artikel, Suche, Filter und Checkout mit Gastzugang – notiere je zwei Stärken und Schwächen.",
+        "Erstelle eine SWOT-Analyse für einen Webshop deiner Wahl mit mindestens zwei Punkten pro Feld.",
+        "Zeichne die Mikro-Conversions vom Startseitenbesuch bis zur Kaufbestätigung als Kette auf und markiere, wo Besucher typischerweise abspringen."
       ]
     }
   ],
@@ -3421,6 +3483,114 @@ window.EC_CONTENT = {
       ],
       answer: 3,
       explanation: "Häufig gestellte Fragen werden gesammelt, klar beantwortet und übersichtlich – etwa alphabetisch mit Schlagwortsuche – dargestellt. Pflege ist Pflicht: FAQ stetig evaluieren und aktualisieren."
+    },
+    {
+      id: "lf9-shop-01",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "Was versteht man unter der Usability eines Webshops?",
+      options: [
+        "Seine Benutzerfreundlichkeit: Der Shop lässt sich intuitiv und einfach nutzen.",
+        "Die Anzahl der angebotenen Zahlungsarten.",
+        "Die Geschwindigkeit des Servers, auf dem der Shop läuft.",
+        "Die rechtliche Absicherung des Betreibers."
+      ],
+      answer: 0,
+      explanation: "Usability ist die Benutzerfreundlichkeit: Je leichter Besucher einen Artikel finden und kaufen können, desto höher ist die Usability."
+    },
+    {
+      id: "lf9-shop-02",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "Ein Shop erlaubt die Bestellung per Gastzugang, zeigt den Warenkorb auf jeder Seite und lässt jede Angabe im Checkout leicht korrigieren. Welches Beurteilungskriterium wird hier besonders gut erfüllt?",
+      options: [
+        "Die Nutzerfreundlichkeit des Checkout-Prozesses",
+        "Die Übertragbarkeit der Software",
+        "Die Erfüllung der Informationspflichten",
+        "Die Effizienz der Systemressourcen"
+      ],
+      answer: 0,
+      explanation: "Gastzugang, jederzeit auffindbarer Warenkorb und leichte Korrigierbarkeit sind typische Merkmale eines nutzerfreundlichen Checkouts – ein Kernbaustein der Usability."
+    },
+    {
+      id: "lf9-shop-03",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "Zur Funktionalität nach ISO/IEC 9126 gehört die „Interoperabilität“. Was ist damit gemeint?",
+      options: [
+        "Die Software kann mit anderen Computersystemen und Programmen zusammenarbeiten.",
+        "Die Software liefert immer richtige Ergebnisse.",
+        "Die Software verhindert unberechtigte Zugriffe auf Daten.",
+        "Die Software hält gesetzliche Bestimmungen ein."
+      ],
+      answer: 0,
+      explanation: "Interoperabilität bedeutet Zusammenspiel: Das Shopsystem muss mit anderen Systemen und Programmen – etwa dem Warenwirtschaftssystem – zusammenarbeiten können."
+    },
+    {
+      id: "lf9-shop-04",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "Die DIN EN ISO 9241 nennt „Fehlertoleranz“ als softwareergonomischen Grundsatz. Was verlangt dieser Grundsatz?",
+      options: [
+        "Das Programm hilft, Fehler zu vermeiden, bietet Korrekturmöglichkeiten und führt trotz fehlerhafter Eingabe mit wenig Aufwand zum Ziel.",
+        "Das Programm darf gar keine Fehlermeldungen anzeigen.",
+        "Anwender müssen alle Fehler selbst suchen und beheben.",
+        "Fehlerhafte Bestellungen werden automatisch gelöscht."
+      ],
+      answer: 0,
+      explanation: "Fehlertoleranz heißt: Fehler möglichst verhindern (z. B. durch Plausibilitätskontrollen), Korrekturen anbieten – und das Arbeitsergebnis soll auch nach einer fehlerhaften Eingabe mit geringem Aufwand erreichbar sein."
+    },
+    {
+      id: "lf9-shop-05",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "Ein Shopbetreiber prüft die Ergonomie seines Systems. Für wen muss vor allem das Backend ergonomisch gestaltet sein?",
+      options: [
+        "Für die Mitarbeiterinnen und Mitarbeiter, die den Shop verwalten und betreiben.",
+        "Für die Kundinnen und Kunden beim Einkaufen.",
+        "Für die Suchmaschinen-Crawler.",
+        "Für den Paketdienst bei der Zustellung."
+      ],
+      answer: 0,
+      explanation: "Das Frontend (die Shop-Oberfläche) muss für Kunden ergonomisch sein, das Backend (die Verwaltung) für das Team, das Artikel einstellt, Bestellungen bearbeitet und den Shop pflegt."
+    },
+    {
+      id: "lf9-shop-06",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "Welches Ereignis ist eine typische Mikro-Conversion?",
+      options: [
+        "Ein Besucher legt einen Artikel in den Warenkorb.",
+        "Ein Kunde schließt den Kauf ab und erhält die Bestellbestätigung.",
+        "Der Server antwortet mit einem 404-Fehler.",
+        "Der Shopbetreiber senkt die Preise."
+      ],
+      answer: 0,
+      explanation: "Mikro-Conversions sind Schritte in Richtung Kaufabschluss – etwa Suchfunktion nutzen, Produktdetailseite aufrufen oder Artikel in den Warenkorb legen. Der Kauf selbst ist die Makro-Conversion."
+    },
+    {
+      id: "lf9-shop-07",
+      module: "lf9-shopsoftware",
+      type: "choice",
+      prompt: "In einer SWOT-Analyse für einen Webshop stehen „Chancen“ und „Risiken“. Worauf beziehen sich diese beiden Felder?",
+      options: [
+        "Auf externe und zukünftige Faktoren wie Marktentwicklungen, Kundengruppen und Konkurrenz.",
+        "Auf den technischen Ist-Zustand des Shops.",
+        "Nur auf die Ladezeit der Startseite.",
+        "Auf die internen Stärken des eigenen Teams."
+      ],
+      answer: 0,
+      explanation: "Stärken und Schwächen beschreiben den Ist-Zustand des Shops (interne Faktoren). Chancen und Risiken blicken nach außen und in die Zukunft: Markt, Kundengruppen und Konkurrenz."
+    },
+    {
+      id: "lf9-shop-08",
+      module: "lf9-shopsoftware",
+      type: "number",
+      prompt: "Nutzwertanalyse: Das Kriterium Usability ist mit 40 % gewichtet, Funktionalität mit 35 %, Preis mit 25 %. Shopsystem A erhält für Usability 8 Punkte, für Funktionalität 6 Punkte und für den Preis 10 Punkte. Berechne den gewichteten Gesamtwert von System A.",
+      answer: 7.8,
+      tolerance: 0.1,
+      suffix: "Punkte",
+      explanation: "Gesamtwert = 0,40 × 8 + 0,35 × 6 + 0,25 × 10 = 3,2 + 2,1 + 2,5 = 7,8 Punkte. So macht die Nutzwertanalyse verschiedene Systeme objektiv vergleichbar."
     }
   ],
   badges: [
@@ -3607,6 +3777,13 @@ window.EC_CONTENT = {
       description: "Zehn Glossar-Checks richtig gelöst.",
       condition: "glossary",
       value: 10
+    },
+    {
+      id: "lf9-shopsoftware-ready",
+      title: "Shop-Systemfinder",
+      description: "Das LF9-Modul zur Beurteilung von Webshops und Shopsoftware vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf9-shopsoftware"
     }
   ],
   glossary: [
@@ -5297,6 +5474,46 @@ window.EC_CONTENT = {
       summary: "Drei Anfrage-Muster: navigations-, informations- und transaktionsorientiert.",
       detail: "Navigationsorientierte Suchanfragen zielen auf eine bekannte Website („Shopname Kontakt“), informationsorientierte auf Wissen („Wie binde ich eine Krawatte?“), transaktionsorientierte enthalten eine Kauf- oder Handlungsabsicht („Schulbücher bestellen“). Für Suchmaschinenmarketing sind transaktionsorientierte Anfragen am wertvollsten.",
       example: "Für „Bürostuhl kaufen“ schaltet der Shop Anzeigen – für „Bürostuhl einstellen“ schreibt er einen Ratgeber."
+    },
+    {
+      id: "nutzwertanalyse",
+      term: "Nutzwertanalyse",
+      category: "Vertriebskanäle",
+      summary: "Entscheidungsverfahren, das Kriterien gewichtet und Alternativen vergleichbar macht.",
+      detail: "Bei einer Nutzwertanalyse werden zuerst passende Kriterien festgelegt, zum Beispiel Usability, Funktionsumfang, Kosten und Schnittstellen. Danach bekommt jedes Kriterium eine Gewichtung. Für jede Alternative werden Punkte vergeben, mit der Gewichtung multipliziert und zu einem Gesamtwert addiert. Die Rechnung ersetzt nicht das Nachdenken, macht die Entscheidung aber nachvollziehbar.",
+      example: "Ein Shopteam gewichtet Usability mit 40 Prozent und vergleicht zwei Shopsysteme anhand derselben Kriterien."
+    },
+    {
+      id: "softwareergonomie",
+      term: "Softwareergonomie",
+      category: "Vertriebskanäle",
+      summary: "Gestaltung von Software, die sich an Bedürfnissen und Fähigkeiten der Menschen orientiert.",
+      detail: "Softwareergonomie bedeutet: Die Anwendung unterstützt die Arbeit, statt zusätzliche Hürden zu schaffen. Wichtige Grundsätze sind Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Steuerbarkeit, Erwartungskonformität, Fehlertoleranz, Individualisierbarkeit und Lernförderlichkeit. Im E-Commerce betrifft das Frontend für Kunden ebenso wie das Backend für das Shopteam.",
+      example: "Eine Artikelpflege zeigt verständliche Fehlermeldungen und lässt Eingaben vor dem Speichern prüfen."
+    },
+    {
+      id: "interoperabilitaet",
+      term: "Interoperabilität",
+      category: "Vertriebskanäle",
+      summary: "Fähigkeit verschiedener Systeme, Daten auszutauschen und sinnvoll zusammenzuarbeiten.",
+      detail: "Ein Shopsystem ist interoperabel, wenn es zum Beispiel Bestände mit einem Warenwirtschaftssystem abgleichen, Zahlungen an einen Zahlungsdienst übergeben und Versanddaten an Logistiksysteme senden kann. Entscheidend sind klar definierte Datenformate und Schnittstellen.",
+      example: "Nach einer Bestellung übergibt der Shop Artikelnummer und Menge an die Warenwirtschaft, die den Bestand sofort aktualisiert."
+    },
+    {
+      id: "swot-analyse",
+      term: "SWOT-Analyse",
+      category: "Vertriebskanäle",
+      summary: "Methode zur Gegenüberstellung von Stärken, Schwächen, Chancen und Risiken.",
+      detail: "Stärken und Schwächen beschreiben interne Merkmale eines Unternehmens oder Shops, etwa schnelle Lieferung oder eine unübersichtliche Navigation. Chancen und Risiken betrachten äußere Entwicklungen wie wachsende Nachfrage, neue Konkurrenz oder geänderte Regeln. Aus der Übersicht lassen sich Maßnahmen ableiten.",
+      example: "Die schnelle Lieferung ist eine Stärke, steigende Versandkosten ein Risiko; daraus entsteht die Idee für einen Mindestbestellwert."
+    },
+    {
+      id: "mikro-conversion",
+      term: "Mikro-Conversion",
+      category: "Vertriebskanäle",
+      summary: "Messbarer Zwischenschritt auf dem Weg zum eigentlichen Ziel, etwa einem Kauf.",
+      detail: "Eine Makro-Conversion ist das Hauptziel, etwa eine Bestellung. Mikro-Conversions machen sichtbar, wie Besucher dorthin gelangen: Suche genutzt, Kategorie geöffnet, Produktseite angesehen, Variante gewählt oder Artikel in den Warenkorb gelegt. Sie helfen, Absprünge im Kaufprozess zu finden.",
+      example: "Viele Besucher öffnen die Produktseite, aber nur wenige legen den Artikel in den Warenkorb - ein Hinweis auf ein Problem bei Preis, Informationen oder Auswahl."
     }
   ]
 };

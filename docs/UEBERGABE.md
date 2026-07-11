@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 11. Juli 2026
-Version: `1.36.0`
+Version: `1.37.0`
 
 ## Auftrag und Ergebnis
 
@@ -9,7 +9,7 @@ Ziel ist eine grafisch hochwertige Lernplattform nach dem Muster der
 vorhandenen BM- und Python-Portale. Die Plattform deckt die in
 Datenverarbeitung relevanten E-Commerce-Lernfelder schrittweise ab.
 
-Aktuell sind `LF2`, `LF6` und `LF7` als Lernfeld-Kategorien eingebunden. Lernstände
+Aktuell sind `LF2`, `LF6`, `LF7` und `LF9` als Lernfeld-Kategorien eingebunden. Lernstände
 werden lokal gespeichert und können als Datei exportiert und importiert werden.
 Die Anwendung ist eine statische Single-Page-Anwendung ohne Framework und ohne
 Build-Schritt.
@@ -65,10 +65,14 @@ LF7:
 - 7.19+ Webanalyse: Messen, Testen, Datenschutz
 - 7.20 KI - Entstehung und praktische Anwendung
 
+LF9:
+
+- 9.4 Beurteilung von Webshops und Shopsoftware
+
 Je Modul existieren vier Erklärungskarten, vier Merksätze und mindestens sechs
 Aufgaben; die Module 2.5, 2.7, 2.8, 2.9, 2.10, 2.12 und 2.16 haben acht
 Aufgaben, alle sieben LF7-Module und alle vier LF6-Module ebenfalls.
-Das ergibt aktuell zweiundzwanzig Module und 168 Aufgaben. Die Module
+Das ergibt aktuell dreiundzwanzig Module und 176 Aufgaben. Die Module
 2.12, 2.16, Webanalyse, SEO, SEA und alle LF6-Module enthalten auch
 Rechenaufgaben vom Typ `number` außerhalb des Kennzahlen-Moduls. Damit sind alle LF2- und
 LF6-Kapitel mit vorhandener Quellen-PDF umgesetzt; für LF7 werden weitere
@@ -76,7 +80,7 @@ Buchkapitel nach und nach bereitgestellt.
 
 ## Besondere Funktionen
 
-- Lernfeld-Umschalter `LF2`/`LF6`/`LF7` im Header
+- Lernfeld-Umschalter `LF2`/`LF6`/`LF7`/`LF9` im Header
 - Kennzahlen-Labor mit Plausibilitätsprüfung
 - Praxischeck mit zufälligen Fragen aus dem aktiven Lernfeld
 - Fehlertraining
@@ -88,7 +92,7 @@ Buchkapitel nach und nach bereitgestellt.
   eigenes PDF-Material `lf7-lf8-projektthemen-pool.pdf` (17 Einzel- und
   Partnerprojekte mit Ablauf, Bewertung und Modul-Verweisen); technisch
   über die Liste `teacherMaterials` in `content.js` gesteuert
-- XP und sechsundzwanzig Abzeichen
+- XP und siebenundzwanzig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
@@ -133,6 +137,8 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/module-icons/lf6-6-13-email.png`,
   `website/assets/module-icons/lf6-6-14-social-media.png` und
   `website/assets/module-icons/lf6-6-15-vertriebswege.png`
+- fotorealistisches LF9-Kapitelbild:
+  `website/assets/module-icons/lf9-9-4-shopsoftware.png`
 - kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
 - Druckansicht für Modul-Arbeitsphasen mit ausgeblendeter Navigation und
   lesbarer Schwarz-Weiß-Struktur
@@ -159,7 +165,8 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/materials/lf6-social-media-arbeitsblatt.pdf`,
   `website/assets/materials/lf6-vertriebswege-arbeitsblatt.pdf`,
   `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` und
-  `website/assets/materials/dv-lehrplan-kompass.pdf`
+  `website/assets/materials/dv-lehrplan-kompass.pdf` sowie
+  `website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf`
 
 ## Zustandsmodell
 
@@ -302,6 +309,14 @@ Orientierung gelesen; Modul, Aufgaben und Arbeitsblatt zu 6.15
 (Videokonferenz, Chat, Sprachsteuerung, Hotline, FAQ) sind eigenständig
 formuliert.
 
+Die Quellen-PDF `assets/LF9/9.4 Beurteilung von Webshops und Shopsoftware.pdf`
+und der zugehörige eigene OneNote-Aufschrieb wurden am 11. Juli 2026 nur zur
+fachlichen Orientierung genutzt und nicht veröffentlicht. Das LF9-Modul,
+seine acht Aufgaben, die fünf Glossarbegriffe und das Arbeitsblatt sind
+eigenständig formuliert. Das Arbeitsblatt wurde nach der Erzeugung als
+dreiseitiges A4-PDF gerendert und visuell geprüft. Die weiteren privaten
+LF9-Unterlagen 9.9 bis 9.16 sind als nächste fachliche Ausbaustufen vorhanden.
+
 Die Quellen-PDF `assets/LF7/7.5 Targeting.pdf` wurde am 10. Juli 2026 zur
 fachlichen Nachschärfung des bestehenden Targeting-Moduls gelesen (v1.23.0).
 Die vertieften Erklärtexte (Datenarten, Targeting-Arten, Frequency Capping,
@@ -413,5 +428,5 @@ Danach lokal über HTTP starten und im Browser prüfen:
 ## Sinnvolle Nächste Schritte
 
 1. `TASKS.md` prüfen und die nächste priorisierte Aufgabe auswählen.
-2. BiBox-Abgleich abschließen.
-3. Den Produktseiten-Lernpfad mit LF2 2.11 fortführen.
+2. LF9 mit 9.9 `Grundlegende Entscheidungen bei der Auswahl von Hardware und Software` fortführen.
+3. Prüfungsvorbereitung als eigenständigen Bereich mit urheberrechtlich unbedenklichem Eigenmaterial planen.

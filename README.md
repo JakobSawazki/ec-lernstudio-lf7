@@ -2,9 +2,9 @@
 
 Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
-aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
+aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6`, `LF7` und `LF9` eingebunden.
 
-**Version:** `1.36.0`
+**Version:** `1.37.0`
 **Dokumentationsstand:** 11. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -26,7 +26,7 @@ Lehrkraft.
 
 ## Fachlicher Umfang
 
-Für Datenverarbeitung werden derzeit die Lernfelder `LF2`, `LF6` und `LF7`
+Für Datenverarbeitung werden derzeit die Lernfelder `LF2`, `LF6`, `LF7` und `LF9`
 als umschaltbare Bereiche geführt.
 
 Für LF2 sind zunächst folgende Kapitel eingebunden:
@@ -81,11 +81,21 @@ KI-Baustein enthalten. Alle LF7-Module mit vorliegendem Buchkapitel
 (`7.5`, `7.7`, `7.8`, `7.9`, `7.19`, `7.20`) sind am Lehrbuch
 nachgeschärft.
 
+Für LF9 (`Online-Vertriebskanäle auswählen`) beginnt der DV-Lernpfad mit:
+
+| Abschnitt | Thema | Portalmodul |
+| --- | --- | --- |
+| 9.4 | Beurteilung von Webshops und Shopsoftware | Webshops und Shopsoftware beurteilen |
+
+Das Modul behandelt Usability, Funktionalität, Softwareergonomie,
+Barrierefreiheit, Nutzwertanalyse, SWOT und Mikro-Conversions. Die weiteren
+vorliegenden DV-Kapitel 9.9 bis 9.16 folgen als einzelne Module.
+
 ## Funktionsumfang
 
-- Lernfeld-Umschalter für `LF2`, `LF6` und `LF7`
-- zweiundzwanzig Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 168 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- Lernfeld-Umschalter für `LF2`, `LF6`, `LF7` und `LF9`
+- dreiundzwanzig Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 176 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
 - abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout`, `2.3 Webshop-Seiten`,
   `2.4 Das Impressum`, `2.5 Haftung für Webseiteninhalte` und
   `2.6 Produktdetailseite`, `2.7 Informationen für Kunden`,
@@ -99,6 +109,9 @@ nachgeschärft.
   Social Media` (Plattform-Steckbrief, Rechts-Check und Shitstorm-Fall)
   und `6.15 Weitere Vertriebswege` (Kanal-Vergleich,
   Videokonferenz-Leitfaden und FAQ-Werkstatt)
+- LF9-Arbeitsblatt `9.4 Webshops und Shopsoftware beurteilen` mit
+  Usability-Test, Kriterienkatalog, Nutzwertanalyse, Ergonomie-Check,
+  SWOT und Mikro-Conversion-Kette
 - LF2-Projektbrief `E-Commerce-Homepage mit Marketing-Optimierung` als
   sichtbarer Startseiten-Callout und eigenes PDF-Material
 - LF7-Abschlussprojekt `360°-Online-Marketing-Strategie` als
@@ -123,12 +136,12 @@ nachgeschärft.
 - Projektthemen-Pool LF7/LF8 als Lehrermaterial im Lehrerbereich: 17
   Einzel- und Partnerprojekte mit Ablauf, Bewertungsraster und
   Modul-Verweisen
-- XP, Level, Lernserie und sechsundzwanzig Abzeichen
+- XP, Level, Lernserie und siebenundzwanzig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
   dezenter Hover-Animation und reduziertem Header `Datenverarbeitung`
 - fotorealistische Kapitelbilder für die LF2-Module 2.2 bis 2.16 und alle
-  LF6-Module
+  LF6-Module sowie LF9 9.4
 - lokale Druckansicht für Modul-Arbeitsphasen
 - Dark Mode als Standard und Light Mode per Toggle im Header
 - responsives Design für Computer, Tablet und Smartphone
@@ -180,6 +193,7 @@ Private Referenzen:
 - vom Auftraggeber festgelegte DV-Auswahl für LF2 und LF7
 - lokal bereitgestellter KMK-Rahmenlehrplan unter `assets/Rahmenlehrplan.pdf`
 - lokale LF2-Lehrwerksdateien unter `assets/LF2/`
+- lokale LF9-Lehrwerksdateien unter `assets/LF9/`
 
 Die privaten Quellen dienen der fachlichen Orientierung. Originalseiten,
 Screenshots, Buchtexte, Musterlösungen und personenbezogene Inhalte werden
@@ -213,7 +227,8 @@ Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
 `website/assets/materials/lf6-social-media-arbeitsblatt.pdf`,
 `website/assets/materials/lf6-vertriebswege-arbeitsblatt.pdf`,
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
-`website/assets/materials/dv-lehrplan-kompass.pdf`.
+`website/assets/materials/dv-lehrplan-kompass.pdf` und
+`website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
 Das aktuelle Titelbild `website/assets/ecommerce-consultation-hero.png` wurde
