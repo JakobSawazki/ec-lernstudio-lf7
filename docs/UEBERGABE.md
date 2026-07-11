@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 11. Juli 2026
-Version: `1.34.0`
+Version: `1.35.0`
 
 ## Auftrag und Ergebnis
 
@@ -84,6 +84,10 @@ Buchkapitel nach und nach bereitgestellt.
   Selbsteinschätzung je Modul
 - lokaler Lehrerbereich für eigene Multiple-Choice-Aufgaben mit Training,
   JSON-Export und JSON-Import von Aufgabensätzen
+- Projektthemen-Pool LF7/LF8 als Lehrermaterial-Karte im Lehrerbereich und
+  eigenes PDF-Material `lf7-lf8-projektthemen-pool.pdf` (17 Einzel- und
+  Partnerprojekte mit Ablauf, Bewertung und Modul-Verweisen); technisch
+  über die Liste `teacherMaterials` in `content.js` gesteuert
 - XP und sechsundzwanzig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
@@ -355,8 +359,15 @@ Bewertung 50/30/20, verbindliche Branchenwahl) wurde als eigenständig
 formulierter Projektauftrag `lf7-abschlussprojekt-marketing-strategie.pdf`
 aufbereitet; die Namenslisten und Musterzuweisungen aus den Quellen werden
 nicht veröffentlicht. Die alternative Projektliste mit 17 Einzelthemen aus
-`OneNote-Aufschrieb Projektarbeit.pdf` bleibt als private Quelle liegen und
-kann später bei Bedarf als Themenpool ergänzt werden.
+`OneNote-Aufschrieb Projektarbeit.pdf` wurde am 11. Juli 2026 (v1.35.0)
+als eigenständig formulierter Themenpool `lf7-lf8-projektthemen-pool.pdf`
+aufbereitet und im Lehrerbereich verlinkt; kommerzielle Tool-Nennungen der
+Quelle wurden überwiegend durch neutrale Werkzeug-Kategorien ersetzt, die
+Beispiel-Zuweisungstabelle mit Namen bleibt unveröffentlicht. Die ebenfalls
+dort liegende `Projekte EC.pptx` (Jahresübersicht möglicher
+Projektkompetenzen über alle Lernfelder) wurde gesichtet; sie bestätigt die
+LF7-Projektwahl und bleibt private Planungsquelle ohne eigenen
+Veröffentlichungsbedarf.
 
 Der nächste fachliche Schritt ist ein vollständiger Abgleich der eigenständig
 formulierten Inhalte mit den BiBox-Unterkapiteln, ohne geschützte Texte zu

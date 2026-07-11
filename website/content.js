@@ -1,5 +1,14 @@
 window.EC_CONTENT = {
-  version: "1.34.0",
+  version: "1.35.0",
+  teacherMaterials: [
+    {
+      eyebrow: "Lehrermaterial",
+      title: "Projektthemen-Pool LF7/LF8.",
+      text: "17 klar umrissene Einzel- und Partnerprojekte als Alternative oder Ergänzung zum 360°-Abschlussprojekt – mit Ablauf, Bewertungsraster und passenden Lernstudio-Modulen je Thema.",
+      href: "assets/materials/lf7-lf8-projektthemen-pool.pdf",
+      button: "Themenpool öffnen"
+    }
+  ],
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",

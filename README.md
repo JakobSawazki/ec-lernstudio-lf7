@@ -4,7 +4,7 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6` und `LF7` eingebunden.
 
-**Version:** `1.34.0`
+**Version:** `1.35.0`
 **Dokumentationsstand:** 11. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
@@ -120,6 +120,9 @@ nachgeschärft.
   Selbsteinschätzung je Modul
 - lokaler Lehrerbereich für eigene Multiple-Choice-Aufgaben mit JSON-Export
   und -Import von Aufgabensätzen
+- Projektthemen-Pool LF7/LF8 als Lehrermaterial im Lehrerbereich: 17
+  Einzel- und Partnerprojekte mit Ablauf, Bewertungsraster und
+  Modul-Verweisen
 - XP, Level, Lernserie und sechsundzwanzig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
@@ -381,7 +384,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.34.0`
+Aktueller Stand: `1.35.0`
 
 ## Offene Weiterentwicklung
 

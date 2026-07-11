@@ -1600,6 +1600,19 @@
         </aside>
       </section>
 
+      ${(content.teacherMaterials || []).map((material) => `
+        <section class="page-shell reference-strip section-block">
+          <div>
+            <p class="eyebrow light">${escapeHtml(material.eyebrow)}</p>
+            <h2>${escapeHtml(material.title)}</h2>
+            <p>${escapeHtml(material.text)}</p>
+          </div>
+          <a class="light-button" href="${escapeHtml(material.href)}" target="_blank" rel="noopener">
+            ${escapeHtml(material.button)}
+          </a>
+        </section>
+      `).join("")}
+
       <section class="page-shell section-block">
         <div class="section-heading">
           <div>

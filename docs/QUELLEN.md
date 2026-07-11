@@ -282,8 +282,17 @@ Planungs-Dokumente `Aufteilung_Themen_ Rahmenlehrplan_CK.docx` und
 `DV_1.bis 3. Jahr_2020.docx`. Daraus wurde der eigenständig formulierte
 Projektauftrag `lf7-abschlussprojekt-marketing-strategie.pdf` (v1.33.0)
 erstellt. Die in den Quellen enthaltenen Namen und Beispiel-Zuweisungen
-werden nicht veröffentlicht; die Projektliste mit 17 Einzelthemen bleibt
-als privater Themenpool für eine spätere Erweiterung liegen.
+werden nicht veröffentlicht. Die Projektliste mit 17 Einzelthemen wurde am
+11. Juli 2026 (v1.35.0) als eigenständig formulierter Themenpool
+`lf7-lf8-projektthemen-pool.pdf` für den Lehrerbereich aufbereitet:
+Beschreibungen neu formuliert, kommerzielle Tool-Nennungen der Quelle
+(z. B. Gestaltungs-, Notiz- und Traffic-Analyse-Dienste) überwiegend durch
+neutrale Werkzeug-Kategorien ersetzt (frei nutzbare Google-Werkzeuge wie
+PageSpeed Insights und Lighthouse bleiben genannt), LF8-Bezüge
+gekennzeichnet und
+Lernstudio-Modul-Verweise ergänzt. Die `Projekte EC.pptx`
+(Jahresübersicht möglicher Projektkompetenzen) wurde gesichtet und bleibt
+private Planungsquelle.
 
 Ebenfalls am 11. Juli 2026 wurde der eigene OneNote-Aufschrieb
 `assets/LF7/KA/OneNote-Aufschrieb Vorbereitung KA LF7.pdf` gesichtet

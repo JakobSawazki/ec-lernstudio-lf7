@@ -2,6 +2,17 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.35.0 - 11. Juli 2026
+
+- Projektthemen-Pool LF7/LF8 als Lehrermaterial ergänzt: eigenständig
+  formuliertes PDF `lf7-lf8-projektthemen-pool.pdf` mit 17 Einzel- und
+  Partnerprojekten (Kurzbeschreibung, Sozialform, Werkzeuge), Ablaufphasen,
+  Bewertungsraster 50/30/20, Modul-Verweisen ins Lernstudio und
+  Durchführungshinweisen
+- Lehrerbereich zeigt eine neue Lehrermaterial-Karte, die den Themenpool
+  öffnet; technisch über die neue Liste `teacherMaterials` in `content.js`
+- Offline-Cache auf `ec-lernstudio-v41` erhöht
+
 ## 1.34.0 - 11. Juli 2026
 
 - Lerncoach-Auftrag zur LF7-Klassenarbeit ergänzt: eigenständig formuliertes

@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 11. Juli 2026<br>
-Aktuelle Version: `1.34.0`<br>
+Aktuelle Version: `1.35.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -64,6 +64,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.32.0 | 10.07.2026 | Lehrerbereich für eigene Aufgaben | Lokalen Lehrerbereich mit Aufgabenerstellung, Training sowie JSON-Export/-Import eigener Multiple-Choice-Aufgaben umgesetzt |
 | Erledigt | 1.33.0 | 11.07.2026 | LF7-Abschlussprojekt 360°-Marketing-Strategie | Projektauftrag nach den OneNote-Projektunterlagen eigenständig als PDF aufbereitet (Agentur-Konzept, acht Bausteine, Branchenwahl, Zeitplan, Bewertung 50/30/20) und als LF7-Startseiten-Callout eingebunden; im Browser geprüft |
 | Erledigt | 1.34.0 | 11.07.2026 | KA-Vorbereitung LF7 mit KI-Lerncoach | Lerncoach-Auftrag nach dem OneNote-Aufschrieb eigenständig als PDF aufbereitet (Prompt, Spielregeln, Themen-Check) und als Karte im LF7-Kompetenzcheck eingebunden; im Browser geprüft |
+| Erledigt | 1.35.0 | 11.07.2026 | Projektthemen-Pool LF7/LF8 als Lehrermaterial | Die 17 Einzelthemen aus dem OneNote-Aufschrieb Projektarbeit eigenständig als Themenpool-PDF aufbereitet (Sozialform, Werkzeuge, Ablauf, Bewertung, Modul-Verweise) und als Lehrermaterial-Karte im Lehrerbereich eingebunden; im Browser geprüft |
 
 ## In Arbeit
 
