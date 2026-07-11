@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.32.0",
+  version: "1.33.0",
   curriculum: {
     eyebrow: "Lehrplan-Kompass",
     title: "DV-Fahrplan im Blick.",
@@ -66,7 +66,19 @@ window.EC_CONTENT = {
       heroEmphasis: "verstehen, messen, entscheiden.",
       heroText: "Online-Handel ist mehr als Klicks: Verstehe Kunden, Sortiment, Kanäle und Kennzahlen und verwandle Daten in gute Entscheidungen.",
       modulesTitle: "Vom passenden Kontakt zur messbaren Wirkung.",
-      modulesText: "Die Module folgen der DV-Auswahl für Lernfeld 7, ergänzt um eine Webanalyse-Vertiefung zu 7.19. Du kannst sie der Reihe nach bearbeiten oder gezielt in ein aktuelles Unterrichtsthema einsteigen."
+      modulesText: "Die Module folgen der DV-Auswahl für Lernfeld 7, ergänzt um eine Webanalyse-Vertiefung zu 7.19. Du kannst sie der Reihe nach bearbeiten oder gezielt in ein aktuelles Unterrichtsthema einsteigen.",
+      project: {
+        eyebrow: "LF7-Abschlussprojekt",
+        title: "360°-Online-Marketing-Strategie",
+        text: "Gründet im Team eine fiktive Marketing-Agentur und entwickelt für einen Webshop eurer Branche eine komplette Strategie: Personas, Keywords, SEA-Kampagne, KPIs und Pitch. Der Projektauftrag führt durch alle acht Bausteine.",
+        href: "assets/materials/lf7-abschlussprojekt-marketing-strategie.pdf",
+        button: "Projektauftrag öffnen",
+        stats: [
+          ["01", "Strategie"],
+          ["02", "Kampagne"],
+          ["03", "Pitch"]
+        ]
+      }
     }
   ],
   modules: [

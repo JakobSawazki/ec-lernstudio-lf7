@@ -64,6 +64,15 @@ Zusätzliche geordnete Ablage seit 9. Juli 2026: `assets/Lehrplan/`
 - `LF7/7.5 Targeting.pdf`
 - `LF7/7.5 OneNote-Aufschrieb.pdf` (eigene Notizen, nur Inspiration)
 - `LF7/LF7 Übersicht.pdf`
+- `LF7/7.7` bis `LF7/7.20` Buchkapitel samt OneNote-Aufschrieben
+  (seit 10. Juli 2026, Details im Abschnitt Quellenstatus)
+- `LF7/KA/OneNote-Aufschrieb Vorbereitung KA LF7.pdf` (eigener Auftrag
+  „KI-gestützte Lernkontrolle zur Übungsklausur“)
+- `LF7/Projektarbeit/OneNote-Aufschrieb Projektaufgabe.pdf`
+- `LF7/Projektarbeit/OneNote-Aufschrieb Projektarbeit.pdf`
+- `LF7/Projektarbeit/Aufteilung_Themen_ Rahmenlehrplan_CK.docx`
+- `LF7/Projektarbeit/DV_1.bis 3. Jahr_2020.docx`
+- `LF7/Projektarbeit/Projekte EC.pptx`
 - `Lehrplan/KMK_Rahmenlehrplan_Kaufmann_Kauffrau_E-Commerce_2017-11-24.pdf`
 - `Lehrplan/DV_Uebersicht_Lehrplan.pdf`
 - `Lehrplan/DV_LP_komplett.pdf`
@@ -262,6 +271,19 @@ Der `dv-lehrplan-kompass.pdf` wurde am 9. Juli 2026 als eigenständige
 Orientierung aus dem offiziellen KMK-Rahmenlehrplan, den lokalen
 DV-Unterlagen und den privaten Arbeitsnotizen abgeleitet. Die Original-PDFs
 werden nicht öffentlich ausgeliefert.
+
+Am 11. Juli 2026 wurden die privaten Projektunterlagen in
+`assets/LF7/Projektarbeit/` gesichtet: `OneNote-Aufschrieb Projektaufgabe.pdf`
+(Abschlussprojekt „360° Online-Marketing-Strategie“ mit Agentur-Konzept,
+acht Projektabschnitten, Bewertung 50/30/20 und Branchenwahl),
+`OneNote-Aufschrieb Projektarbeit.pdf` (alternative Projektliste mit 17
+Einzelthemen für LF7/LF8 samt Beispiel-Zuweisungstabelle) sowie die
+Planungs-Dokumente `Aufteilung_Themen_ Rahmenlehrplan_CK.docx` und
+`DV_1.bis 3. Jahr_2020.docx`. Daraus wurde der eigenständig formulierte
+Projektauftrag `lf7-abschlussprojekt-marketing-strategie.pdf` (v1.33.0)
+erstellt. Die in den Quellen enthaltenen Namen und Beispiel-Zuweisungen
+werden nicht veröffentlicht; die Projektliste mit 17 Einzelthemen bleibt
+als privater Themenpool für eine spätere Erweiterung liegen.
 
 ### Schulinterne EduCloud / OneDrive
 

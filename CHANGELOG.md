@@ -2,6 +2,19 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.33.0 - 11. Juli 2026
+
+- LF7-Abschlussprojekt `360°-Online-Marketing-Strategie` ergänzt: Teams
+  gründen eine fiktive Marketing-Agentur und entwickeln für einen Webshop
+  ihrer Branche eine komplette Strategie in acht Bausteinen
+- eigenständig formulierter Projektauftrag als PDF
+  `lf7-abschlussprojekt-marketing-strategie.pdf` mit Rahmen, Branchenwahl,
+  Bausteinen samt Modul-Verweisen ins Lernstudio, Zeitplan, Bewertung
+  (50/30/20), Teamregeln und Kompetenzzielen
+- LF7-Startseite zeigt den Projektauftrag nun als Praxisauftrag-Callout;
+  das Kennzahlen-Labor bleibt über die Navigation erreichbar
+- Offline-Cache auf `ec-lernstudio-v39` erhöht
+
 ## 1.32.0 - 10. Juli 2026
 
 - lokalen Lehrerbereich ergänzt: eigene Multiple-Choice-Aufgaben können einem

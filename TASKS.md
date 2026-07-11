@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
-Stand: 10. Juli 2026<br>
-Aktuelle Version: `1.32.0`<br>
+Stand: 11. Juli 2026<br>
+Aktuelle Version: `1.33.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -62,6 +62,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.30.0 | 10.07.2026 | Druckansicht für Arbeitsphasen | Druckbutton auf Modul-Detailseiten ergänzt, Print-Styles für lesbare Arbeitsphasen umgesetzt und Offline-Cache aktualisiert |
 | Erledigt | 1.31.0 | 10.07.2026 | Kompetenzcheck mit Ich-kann-Aussagen | Kompetenzcheck-View, Startseiten-Karte und gespeicherte Selbsteinschätzung je Modul umgesetzt |
 | Erledigt | 1.32.0 | 10.07.2026 | Lehrerbereich für eigene Aufgaben | Lokalen Lehrerbereich mit Aufgabenerstellung, Training sowie JSON-Export/-Import eigener Multiple-Choice-Aufgaben umgesetzt |
+| Erledigt | 1.33.0 | 11.07.2026 | LF7-Abschlussprojekt 360°-Marketing-Strategie | Projektauftrag nach den OneNote-Projektunterlagen eigenständig als PDF aufbereitet (Agentur-Konzept, acht Bausteine, Branchenwahl, Zeitplan, Bewertung 50/30/20) und als LF7-Startseiten-Callout eingebunden; im Browser geprüft |
 
 ## In Arbeit
 

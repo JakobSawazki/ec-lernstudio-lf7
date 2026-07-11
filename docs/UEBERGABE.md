@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 10. Juli 2026
-Version: `1.32.0`
+Stand: 11. Juli 2026
+Version: `1.33.0`
 
 ## Auftrag und Ergebnis
 
@@ -92,6 +92,10 @@ Buchkapitel nach und nach bereitgestellt.
 - versionierter Datei-Export und -Import mit Desktop-Vorschlag in unterstützten Browsern
 - LF2-Projektauftrag `E-Commerce-Homepage mit Marketing-Optimierung` als
   Startseiten-Callout und eigenes PDF-Material
+- LF7-Abschlussprojekt `360°-Online-Marketing-Strategie` als
+  Startseiten-Callout und eigenes PDF-Material
+  `lf7-abschlussprojekt-marketing-strategie.pdf` (fiktive Agentur, acht
+  Bausteine mit Modul-Verweisen, Branchenwahl, Zeitplan, Bewertung 50/30/20)
 - DV-Lehrplan-Kompass als Startseiten-Karte und eigenes PDF-Material
 - LF7-SEO/SEA-Transferfall als eigenes PDF-Material für Suchintention,
   Landingpage-Briefing, Anzeigenplanung und KPI-Vergleich
@@ -326,6 +330,19 @@ Jakob genannte Einführungsvideo ist als externe Ressource verlinkt.
 Damit ist der LF7-Buchabgleich abgeschlossen: Alle Module mit
 vorliegendem Buchkapitel (7.5, 7.7, 7.8, 7.9, 7.19, 7.20) sind am
 Lehrbuch nachgeschärft.
+
+Am 11. Juli 2026 wurden die neu bereitgestellten Projektunterlagen in
+`assets/LF7/Projektarbeit/` gesichtet (`OneNote-Aufschrieb Projektarbeit.pdf`,
+`OneNote-Aufschrieb Projektaufgabe.pdf` sowie die Planungs-Dokumente
+`Aufteilung_Themen_ Rahmenlehrplan_CK.docx` und `DV_1.bis 3. Jahr_2020.docx`).
+Das darin beschriebene Abschlussprojekt `360°-Online-Marketing-Strategie`
+(fiktive Agentur, 2-3 Personen, 4-5 Wochen, acht Projektabschnitte,
+Bewertung 50/30/20, verbindliche Branchenwahl) wurde als eigenständig
+formulierter Projektauftrag `lf7-abschlussprojekt-marketing-strategie.pdf`
+aufbereitet; die Namenslisten und Musterzuweisungen aus den Quellen werden
+nicht veröffentlicht. Die alternative Projektliste mit 17 Einzelthemen aus
+`OneNote-Aufschrieb Projektarbeit.pdf` bleibt als private Quelle liegen und
+kann später bei Bedarf als Themenpool ergänzt werden.
 
 Der nächste fachliche Schritt ist ein vollständiger Abgleich der eigenständig
 formulierten Inhalte mit den BiBox-Unterkapiteln, ohne geschützte Texte zu
