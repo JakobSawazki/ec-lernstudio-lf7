@@ -152,14 +152,20 @@
     <div class="modal-backdrop" id="settings-modal" hidden>
       <section class="settings-card" role="dialog" aria-modal="true" aria-labelledby="settings-title">
         <button class="modal-close" id="settings-close" type="button" aria-label="Dialog schließen">×</button>
-        <p class="eyebrow">Profil & Datensicherung</p>
-        <h2 id="settings-title">Dein Lernstand</h2>
+        <div class="settings-head">
+          <span class="settings-avatar" id="settings-avatar" aria-hidden="true">G</span>
+          <div class="settings-head-copy">
+            <p class="eyebrow">Profil & Datensicherung</p>
+            <h2 id="settings-title">Dein Lernstand</h2>
+          </div>
+        </div>
         <label for="settings-name">Login-Kürzel</label>
         <div class="inline-form">
           <input id="settings-name" maxlength="32" autocomplete="off" placeholder="z. B. jak.saw">
           <button class="secondary-button" id="save-name" type="button">Speichern</button>
         </div>
         <div class="settings-stats" id="settings-stats"></div>
+        <p class="settings-section-label">Datensicherung</p>
         <div class="settings-actions">
           <button class="secondary-button" id="export-progress" type="button">
             Lernstand als Datei speichern

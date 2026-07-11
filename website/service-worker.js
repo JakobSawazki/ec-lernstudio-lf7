@@ -1,4 +1,4 @@
-const CACHE_NAME = "ec-lernstudio-v41";
+const CACHE_NAME = "ec-lernstudio-v42";
 const APP_SHELL = [
   "./",
   "./index.html",

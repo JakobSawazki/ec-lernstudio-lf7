@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.35.0",
+  version: "1.36.0",
   teacherMaterials: [
     {
       eyebrow: "Lehrermaterial",

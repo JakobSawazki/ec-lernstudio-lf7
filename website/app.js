@@ -2095,6 +2095,8 @@
   }
 
   function openSettings() {
+    const name = state.name || "Gast";
+    document.getElementById("settings-avatar").textContent = name.slice(0, 1).toUpperCase();
     document.getElementById("settings-name").value = state.name;
     document.getElementById("settings-stats").innerHTML = `
       <div><strong>${totalXp()}</strong><span>XP</span></div>

@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 11. Juli 2026
-Version: `1.35.0`
+Version: `1.36.0`
 
 ## Auftrag und Ergebnis
 
@@ -137,6 +137,8 @@ Buchkapitel nach und nach bereitgestellt.
 - Druckansicht für Modul-Arbeitsphasen mit ausgeblendeter Navigation und
   lesbarer Schwarz-Weiß-Struktur
 - Dark Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
+- neu gestalteter Profil-Dialog `Dein Lernstand` mit Avatar-Kopfzeile,
+  Abschnitts-Labels und kontrastfesten Buttons in beiden Themes (v1.36.0)
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`
 - LF2-Arbeitsblätter:
   `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf`,

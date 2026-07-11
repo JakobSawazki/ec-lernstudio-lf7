@@ -2,6 +2,19 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.36.0 - 11. Juli 2026
+
+- Profil-Dialog `Dein Lernstand` neu gestaltet: Kopfzeile mit
+  Verlaufs-Avatar aus dem Login-Kürzel, strukturierende Abschnitts-Labels
+  (`Login-Kürzel`, `Datensicherung`) und aufgeräumte Abstände
+- Lesbarkeit in beiden Themes deutlich verbessert: Speichern-Button jetzt
+  als Cyan-Primäraktion, Datei-Buttons mit klarem Flächen-/Rahmenkontrast
+  statt halbtransparentem Weiß, Lösch-Button mit eigener Dark-Mode-Variante,
+  Hinweis-Box mit Akzentkante und hellerer Schrift, größere
+  Statistik-Beschriftungen; alle Textkontraste im Dialog liegen nun bei
+  mindestens 4,5:1 (gemessen 5:1 bis 15:1)
+- Offline-Cache auf `ec-lernstudio-v42` erhöht
+
 ## 1.35.0 - 11. Juli 2026
 
 - Projektthemen-Pool LF7/LF8 als Lehrermaterial ergänzt: eigenständig

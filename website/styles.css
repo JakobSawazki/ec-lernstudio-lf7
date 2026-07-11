@@ -62,10 +62,13 @@ body {
   border: 1px solid rgba(223, 242, 247, 0.12);
 }
 
+:root[data-theme="light"] .settings-card {
+  background: #ffffff;
+}
+
 :root[data-theme="dark"] .welcome-card input,
 :root[data-theme="dark"] .settings-card input,
-:root[data-theme="dark"] .settings-stats div,
-:root[data-theme="dark"] .settings-help {
+:root[data-theme="dark"] .settings-stats div {
   color: var(--ink);
   background: #081b28;
   border-color: var(--line);
@@ -3141,6 +3144,16 @@ h3 {
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.4rem;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.modal-close:hover {
+  background: rgba(11, 32, 48, 0.16);
+  transform: scale(1.06);
+}
+
+:root[data-theme="dark"] .modal-close:hover {
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .inline-form {
@@ -3149,19 +3162,75 @@ h3 {
   gap: 10px;
 }
 
+.settings-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 24px;
+  padding-right: 44px;
+}
+
+.settings-head .eyebrow {
+  margin-bottom: 4px;
+}
+
+.settings-card .settings-head h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.85rem, 5vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.settings-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  color: var(--night);
+  background: linear-gradient(135deg, var(--cyan), var(--orange));
+  border-radius: 20px 20px 20px 7px;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.settings-card label:not(.file-button),
+.settings-section-label {
+  margin: 26px 0 8px;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.settings-card input {
+  border-radius: 14px;
+}
+
+.settings-card .inline-form .secondary-button {
+  color: var(--night);
+  background: var(--cyan);
+  border: 0;
+  font-weight: 900;
+}
+
+.settings-card .inline-form .secondary-button:hover {
+  background: #a0f3ef;
+}
+
 .settings-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin: 28px 0;
+  gap: 10px;
+  margin: 26px 0 0;
 }
 
 .settings-stats div {
-  padding: 15px;
+  padding: 14px 8px 12px;
   text-align: center;
-  background: white;
+  background: #eef4f6;
   border: 1px solid var(--line);
-  border-radius: 13px;
+  border-radius: 16px;
 }
 
 .settings-stats strong,
@@ -3170,17 +3239,67 @@ h3 {
 }
 
 .settings-stats strong {
-  font-size: 1.8rem;
+  font-size: 1.65rem;
+  line-height: 1.2;
+}
+
+:root[data-theme="dark"] .settings-stats strong {
+  color: var(--cyan);
 }
 
 .settings-stats span {
+  margin-top: 2px;
   color: var(--ink-soft);
-  font-size: 0.72rem;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .settings-actions {
   display: grid;
-  gap: 9px;
+  gap: 10px;
+}
+
+.settings-actions .secondary-button,
+.settings-actions .file-button {
+  min-height: 52px;
+  color: var(--ink);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.settings-actions .secondary-button:hover,
+.settings-actions .file-button:hover {
+  background: #ffffff;
+  border-color: rgba(11, 32, 48, 0.25);
+}
+
+:root[data-theme="dark"] .settings-actions .secondary-button:hover,
+:root[data-theme="dark"] .settings-actions .file-button:hover {
+  background: #1c3d55;
+  border-color: rgba(223, 242, 247, 0.3);
+}
+
+.settings-card .danger-button {
+  min-height: 52px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+}
+
+.settings-card .danger-button:hover {
+  background: #fbd9dd;
+}
+
+:root[data-theme="dark"] .settings-card .danger-button {
+  color: #ffccd2;
+  background: rgba(158, 60, 69, 0.18);
+  border-color: rgba(255, 150, 160, 0.28);
+}
+
+:root[data-theme="dark"] .settings-card .danger-button:hover {
+  background: rgba(158, 60, 69, 0.34);
 }
 
 .file-button {
@@ -3189,19 +3308,30 @@ h3 {
   cursor: pointer;
 }
 
-.settings-help {
-  margin: 16px 0 0;
-  padding: 12px 14px;
-  font-size: 0.81rem;
-  line-height: 1.45;
-  background: white;
+.settings-card p.settings-help {
+  margin: 20px 0 0;
+  padding: 13px 16px;
+  color: #45606f;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background: #eef4f6;
   border: 1px solid var(--line);
-  border-radius: 11px;
+  border-left: 3px solid #087b7a;
+  border-radius: 8px 14px 14px 8px;
 }
 
-.privacy-note {
-  margin: 12px 0 0;
-  font-size: 0.77rem;
+:root[data-theme="dark"] .settings-card p.settings-help {
+  color: #c3d6e0;
+  background: #081b28;
+  border-color: var(--line);
+  border-left-color: var(--cyan);
+}
+
+.settings-card p.privacy-note {
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .toast-region {
