@@ -77,6 +77,8 @@ Zusätzliche geordnete Ablage seit 9. Juli 2026: `assets/Lehrplan/`
 - `LF9/9.4 Beurteilung von Webshops und Shopsoftware.pdf`
 - `LF9/9.4 OneNote-Aufschrieb Beurteilung von Webshops und Shopsoftware.pdf`
 - `LF9/9.9 Grundlegende Entscheidungen bei der Auswahl von Hardware und Software.pdf`
+- `LF9/9.10 Die Hardware.pdf`
+- `LF9/9.11 Die Software.pdf`
 - `LF9/9.9` bis `LF9/9.16` weitere private Buchkapitel für die DV-Planung
 - `LF9/LF9 Prüfungsfragen.pdf` und `LF9/LF9-LF12 Lösungen.pdf`
   (nur private Prüfungsvorbereitung, nicht zur Veröffentlichung bestimmt)
@@ -129,6 +131,19 @@ Hardware und Software.pdf` wurde am 11. Juli 2026 visuell als private
 Orientierungsquelle geprüft. Eigenständig veröffentlicht werden nur das
 Lernstudio-Modul, die Aufgaben und das Arbeitsblatt
 `website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf`.
+
+Die PDF `assets/LF9/9.10 Die Hardware.pdf` wurde am 11. Juli 2026 visuell als
+private Orientierungsquelle geprüft. Eigenständig erstellt wurden nur das
+Lernstudio-Modul, die Aufgaben, das Kapitelbild und das Arbeitsblatt
+`website/assets/materials/lf9-9-10-hardware-arbeitsblatt.pdf`; sie wurden
+nach Freigabe am 15. Juli 2026 veröffentlicht (v1.39.0).
+
+Die PDF `assets/LF9/9.11 Die Software.pdf` wurde am 11. Juli 2026 visuell als
+private Orientierungsquelle geprüft. Eigenständig erstellt wurden nur das
+Lernstudio-Modul, die Aufgaben, sieben Glossarbegriffe, das Kapitelbild und
+das Arbeitsblatt `website/assets/materials/lf9-9-11-software-arbeitsblatt.pdf`.
+Lehrbuchseiten und Formulierungen wurden nicht übernommen; die Materialien
+wurden nach Freigabe am 15. Juli 2026 veröffentlicht (v1.40.0).
 
 Das LF6-Überblicksmodul `6.0 Servicekanäle` und sein Arbeitsblatt
 `website/assets/materials/lf6-servicekanaele-arbeitsblatt.pdf` wurden am
@@ -659,5 +674,26 @@ LF6-Kapitelbilder:
 - Motiv: fotorealistisches Team bei der Konfiguration eines Versand- und
   Servicearbeitsplatzes mit generischem Laptop, Etikettendrucker,
   Barcodescanner, Netzwerk-Switch und Versandpaket
+- Einschränkungen im Prompt: keine Logos, keine lesbaren Oberflächentexte,
+  keine Wasserzeichen
+
+`website/assets/module-icons/lf9-9-10-hardware.png`
+
+- Erzeugt: 11. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF9 9.10 `Die Hardware`
+- Motiv: fotorealistischer Versandarbeitsplatz mit Lernenden, Barcodescanner,
+  Etikettendrucker, Laptop, Monitor, externem Speicher und Versandkarton
+- Einschränkungen im Prompt: keine Logos, keine lesbaren Oberflächentexte,
+  keine Wasserzeichen
+
+`website/assets/module-icons/lf9-9-11-software.png`
+
+- Erzeugt: 11. Juli 2026
+- Werkzeug: integrierter OpenAI-Bildgenerator
+- Zweck: Kapitelbild für LF9 9.11 `Die Software`
+- Motiv: fotorealistisches Team an einem E-Commerce-Arbeitsplatz mit
+  generischen, nicht lesbaren Shop- und Analyseoberflächen, Barcodescanner,
+  Laptop und Versandpaket
 - Einschränkungen im Prompt: keine Logos, keine lesbaren Oberflächentexte,
   keine Wasserzeichen

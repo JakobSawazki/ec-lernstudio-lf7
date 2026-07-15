@@ -4,8 +4,8 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6`, `LF7` und `LF9` eingebunden.
 
-**Version:** `1.38.0`
-**Dokumentationsstand:** 11. Juli 2026
+**Version:** `1.40.0`
+**Dokumentationsstand:** 15. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -87,18 +87,22 @@ Für LF9 (`Online-Vertriebskanäle auswählen`) beginnt der DV-Lernpfad mit:
 | --- | --- | --- |
 | 9.4 | Beurteilung von Webshops und Shopsoftware | Webshops und Shopsoftware beurteilen |
 | 9.9 | Grundlegende Entscheidungen bei der Auswahl von Hardware und Software | Hardware und Software auswählen |
+| 9.10 | Die Hardware | Die Hardware |
+| 9.11 | Die Software | Die Software |
 
-Das Modul behandelt Usability, Funktionalität, Softwareergonomie,
-Barrierefreiheit, Nutzwertanalyse, SWOT und Mikro-Conversions. Die weiteren
-vorliegenden DV-Kapitel 9.10 bis 9.16 folgen als einzelne Module. Das neue
-Modul 9.9 verbindet Hardware-/Software-Konfiguration, EVA-Prinzip,
-Kostenanalyse und Entscheidungswerkzeuge mit dem Webshop-Kontext.
+Die Module verbinden die Beurteilung von Shoplösungen mit Hardware- und
+Softwareentscheidungen im Webshop-Kontext. Modul 9.9 behandelt Konfiguration,
+EVA-Prinzip, Kostenanalyse und Entscheidungswerkzeuge. Modul 9.10 vertieft
+Hardware für Versand, Service und Datensicherung. Modul 9.11 behandelt
+Betriebssysteme, Anwendungssoftware sowie die Auswahl zwischen Open Source,
+Lizenzsoftware, SaaS und Individualentwicklung. Die weiteren vorhandenen
+DV-Kapitel folgen als einzelne Module.
 
 ## Funktionsumfang
 
 - Lernfeld-Umschalter für `LF2`, `LF6`, `LF7` und `LF9`
-- vierundzwanzig Lernmodule mit jeweils vier kompakten Erklärbausteinen
-- 184 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
+- sechsundzwanzig Lernmodule mit jeweils vier kompakten Erklärbausteinen
+- 200 automatisch prüfbare Multiple-Choice- und Rechenaufgaben
 - abrufbare LF2-Arbeitsblätter `2.2 Webshop-Layout`, `2.3 Webshop-Seiten`,
   `2.4 Das Impressum`, `2.5 Haftung für Webseiteninhalte` und
   `2.6 Produktdetailseite`, `2.7 Informationen für Kunden`,
@@ -118,6 +122,11 @@ Kostenanalyse und Entscheidungswerkzeuge mit dem Webshop-Kontext.
 - LF9-Arbeitsblatt `9.9 Hardware und Software auswählen` mit
   Konfigurationscheck, EVA-Werkstatt, Bezugspreis-Rechnung,
   Nutzwertanalyse und Entscheidungstabelle
+- LF9-Arbeitsblatt `9.10 Die Hardware` mit Versandplatz-Check, EVA-Ablauf,
+  Drucker-Vergleich und Backup-Plan
+- LF9-Arbeitsblatt `9.11 Die Software` mit Software-Landkarte,
+  Betriebssystem-Check, Standard-/Individualsoftware-Vergleich und
+  Entscheidungshilfe für Open Source, Lizenzsoftware, SaaS und Eigenentwicklung
 - LF2-Projektbrief `E-Commerce-Homepage mit Marketing-Optimierung` als
   sichtbarer Startseiten-Callout und eigenes PDF-Material
 - LF7-Abschlussprojekt `360°-Online-Marketing-Strategie` als
@@ -142,12 +151,12 @@ Kostenanalyse und Entscheidungswerkzeuge mit dem Webshop-Kontext.
 - Projektthemen-Pool LF7/LF8 als Lehrermaterial im Lehrerbereich: 17
   Einzel- und Partnerprojekte mit Ablauf, Bewertungsraster und
   Modul-Verweisen
-- XP, Level, Lernserie und achtundzwanzig Abzeichen
+- XP, Level, Lernserie und dreißig Abzeichen
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - fotorealistisches EC-Lernstudio-Homepage-Icon mit transparentem Außenbereich,
   dezenter Hover-Animation und reduziertem Header `Datenverarbeitung`
 - fotorealistische Kapitelbilder für die LF2-Module 2.2 bis 2.16 und alle
-  LF6-Module sowie LF9 9.4 und 9.9
+  LF6-Module sowie LF9 9.4, 9.9, 9.10 und 9.11
 - lokale Druckansicht für Modul-Arbeitsphasen
 - Dark Mode als Standard und Light Mode per Toggle im Header
 - responsives Design für Computer, Tablet und Smartphone
@@ -235,7 +244,9 @@ Stattdessen enthält die Website eigenständig formulierte Arbeitsblätter unter
 `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` sowie
 `website/assets/materials/dv-lehrplan-kompass.pdf` und
 `website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf` sowie
-`website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf`.
+`website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf` und
+`website/assets/materials/lf9-9-10-hardware-arbeitsblatt.pdf` sowie
+`website/assets/materials/lf9-9-11-software-arbeitsblatt.pdf`.
 Details stehen in [`docs/QUELLEN.md`](docs/QUELLEN.md).
 
 Das aktuelle Titelbild `website/assets/ecommerce-consultation-hero.png` wurde
@@ -406,7 +417,7 @@ Das Projekt verwendet semantische Versionsnummern:
 - Minor: rückwärtskompatible neue Inhalte oder Funktionen
 - Major: grundlegende, nicht kompatible Änderung
 
-Aktueller Stand: `1.36.0`
+Aktueller Stand: `1.40.0`
 
 ## Offene Weiterentwicklung
 

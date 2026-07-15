@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 11. Juli 2026
-Version: `1.38.0`
+Stand: 15. Juli 2026
+Version: `1.40.0`
 
 ## Auftrag und Ergebnis
 
@@ -69,11 +69,13 @@ LF9:
 
 - 9.4 Beurteilung von Webshops und Shopsoftware
 - 9.9 Grundlegende Entscheidungen bei der Auswahl von Hardware und Software
+- 9.10 Die Hardware
+- 9.11 Die Software
 
 Je Modul existieren vier Erklärungskarten, vier Merksätze und mindestens sechs
 Aufgaben; die Module 2.5, 2.7, 2.8, 2.9, 2.10, 2.12 und 2.16 haben acht
 Aufgaben, alle sieben LF7-Module und alle vier LF6-Module ebenfalls.
-Das ergibt aktuell vierundzwanzig Module und 184 Aufgaben. Die Module
+Das ergibt aktuell sechsundzwanzig Module und 200 Aufgaben. Die Module
 2.12, 2.16, Webanalyse, SEO, SEA und alle LF6-Module enthalten auch
 Rechenaufgaben vom Typ `number` außerhalb des Kennzahlen-Moduls. Damit sind alle LF2- und
 LF6-Kapitel mit vorhandener Quellen-PDF umgesetzt; für LF7 werden weitere
@@ -93,7 +95,7 @@ Buchkapitel nach und nach bereitgestellt.
   eigenes PDF-Material `lf7-lf8-projektthemen-pool.pdf` (17 Einzel- und
   Partnerprojekte mit Ablauf, Bewertung und Modul-Verweisen); technisch
   über die Liste `teacherMaterials` in `content.js` gesteuert
-- XP und achtundzwanzig Abzeichen
+- XP und dreißig Abzeichen
 - Lernserie
 - ausbildungsweites E-Commerce-Glossar mit Suche, Kategorien, Detailseiten und Mini-Quiz
 - lokaler Offline-Cache
@@ -140,7 +142,9 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/module-icons/lf6-6-15-vertriebswege.png`
 - fotorealistisches LF9-Kapitelbild:
   `website/assets/module-icons/lf9-9-4-shopsoftware.png`
-  und `website/assets/module-icons/lf9-9-9-hardware-software.png`
+  und `website/assets/module-icons/lf9-9-9-hardware-software.png` sowie
+  `website/assets/module-icons/lf9-9-10-hardware.png` sowie
+  `website/assets/module-icons/lf9-9-11-software.png`
 - kompaktere Hero-Schrift, damit das Titelbild weniger verdeckt wird
 - Druckansicht für Modul-Arbeitsphasen mit ausgeblendeter Navigation und
   lesbarer Schwarz-Weiß-Struktur
@@ -169,7 +173,9 @@ Buchkapitel nach und nach bereitgestellt.
   `website/assets/materials/lf2-projektidee-ecommerce-homepage.pdf` und
   `website/assets/materials/dv-lehrplan-kompass.pdf` sowie
   `website/assets/materials/lf9-9-4-shopsoftware-arbeitsblatt.pdf` und
-  `website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf`
+  `website/assets/materials/lf9-9-9-hardware-software-arbeitsblatt.pdf` sowie
+  `website/assets/materials/lf9-9-10-hardware-arbeitsblatt.pdf` sowie
+  `website/assets/materials/lf9-9-11-software-arbeitsblatt.pdf`
 
 ## Zustandsmodell
 
@@ -327,6 +333,23 @@ sechs Glossarbegriffe sowie das Arbeitsblatt sind eigenständig formuliert. Das
 Arbeitsblatt wurde als dreiseitiges A4-PDF gerendert und visuell geprüft. Als
 nächstes privates LF9-Quellenkapitel steht 9.10 `Die Hardware` bereit.
 
+Die Quellen-PDF `assets/LF9/9.10 Die Hardware.pdf` wurde am 11. Juli 2026
+nur zur fachlichen Orientierung gelesen und nicht veröffentlicht. Modul,
+Aufgaben, Glossar, Bild und Arbeitsblatt wurden eigenständig erstellt; das
+Arbeitsblatt wurde als dreiseitiges A4-PDF gerendert und visuell geprüft.
+Nach Freigabe durch den Auftraggeber wurde der Stand am 15. Juli 2026
+committet und veröffentlicht (v1.39.0).
+
+Die Quellen-PDF `assets/LF9/9.11 Die Software.pdf` wurde am 11. Juli 2026
+nur zur fachlichen Orientierung gelesen und nicht veröffentlicht. Das Modul
+ordnet Betriebssystem, Anwendungssoftware, Standard- und Individualsoftware
+sowie Open Source, Lizenzsoftware, SaaS und Individualentwicklung eigenständig
+ein. Acht Aufgaben, sieben Glossarbegriffe, Kapitelbild und Arbeitsblatt sind
+eigene Materialien; das dreiseitige Arbeitsblatt wurde gerendert und
+visuell geprüft. Nach Freigabe durch den Auftraggeber wurde der Stand am
+15. Juli 2026 committet und veröffentlicht (v1.40.0). Als nächstes
+privates LF9-Quellenkapitel bietet sich 9.12 `Netze` an.
+
 Die Quellen-PDF `assets/LF7/7.5 Targeting.pdf` wurde am 10. Juli 2026 zur
 fachlichen Nachschärfung des bestehenden Targeting-Moduls gelesen (v1.23.0).
 Die vertieften Erklärtexte (Datenarten, Targeting-Arten, Frequency Capping,
@@ -438,5 +461,5 @@ Danach lokal über HTTP starten und im Browser prüfen:
 ## Sinnvolle Nächste Schritte
 
 1. `TASKS.md` prüfen und die nächste priorisierte Aufgabe auswählen.
-2. LF9 mit 9.10 `Die Hardware` fortführen.
+2. LF9 mit 9.11 `Die Software` fortführen.
 3. Prüfungsvorbereitung als eigenständigen Bereich mit urheberrechtlich unbedenklichem Eigenmaterial planen.

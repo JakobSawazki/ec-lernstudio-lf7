@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
-Stand: 11. Juli 2026<br>
-Aktuelle Version: `1.38.0`<br>
+Stand: 15. Juli 2026<br>
+Aktuelle Version: `1.40.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -68,6 +68,8 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.36.0 | 11.07.2026 | Profil-Dialog neu gestaltet | Kopfzeile mit Avatar, Abschnitts-Labels, Cyan-Speichern-Button, kontrastfeste Datei- und Lösch-Buttons sowie Hinweis-Box mit Akzentkante; Textkontraste in Dark und Light Mode gemessen (mind. 4,5:1) |
 | Erledigt | 1.37.0 | 11.07.2026 | LF9 9.4 Webshops und Shopsoftware beurteilen | Neues Lernfeld LF9 mit Modul, acht Aufgaben, Abzeichen, fünf Glossarbegriffen, eigenem Arbeitsblatt und fotorealistischem Kapitelbild lokal eingebunden und als PDF visuell geprüft |
 | Erledigt | 1.38.0 | 11.07.2026 | LF9 9.9 Hardware und Software auswählen | Modul, acht Aufgaben mit zwei Rechenaufgaben, Abzeichen, sechs Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild lokal eingebunden und als PDF visuell geprüft |
+| Erledigt | 1.39.0 | 15.07.2026 | LF9 9.10 Die Hardware | Modul, acht Aufgaben, Abzeichen, sieben Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild; nach Freigabe am 15.07.2026 veröffentlicht |
+| Erledigt | 1.40.0 | 15.07.2026 | LF9 9.11 Die Software | Modul, acht Aufgaben, Abzeichen, sieben Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild; Betriebssystem, Anwendungssoftware und Softwaremodelle für den Shopbetrieb; nach Freigabe am 15.07.2026 veröffentlicht |
 
 ## In Arbeit
 
@@ -81,7 +83,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Status | Priorität | Aufgabe | Hinweis |
 | --- | --- | --- | --- |
 | Offen | Mittel | LF2 2.11 weitere Produktseiten-Kapitel | 2.10 ist umgesetzt; Folgekapitel als zusammenhängender Produktseiten-Lernpfad denkbar |
-| Offen | Hoch | LF9 9.10 Die Hardware | Nächstes vorhandenes LF9-Kapitel; Hardware-Komponenten, Beschaffungsentscheidung und betriebliche Konfiguration sinnvoll von 9.9 abgrenzen |
+| Offen | Hoch | LF9 9.12 Netze | Nächstes vorhandenes LF9-Kapitel; Netzwerkgrundlagen, sicherer Betrieb und Webshop-Bezug eigenständig aufbereiten |
 | Offen | Mittel | Prüfungsvorbereitung | Eigene Übungsfälle und -lösungen als neuer Bereich planen; echte Abschlussprüfungen oder Lösungen erst nach Rechteprüfung und mit klarer Trennung von veröffentlichtem Eigenmaterial einbinden |
 
 ## Material- und Rechte-Regeln

@@ -2,6 +2,31 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.40.0 - 15. Juli 2026
+
+- LF9-Modul `9.11 Die Software` ergänzt: Programme und Daten,
+  Betriebssysteme, Anwendungssoftware, Standard- und Individualsoftware
+  sowie Open Source, Lizenzsoftware, SaaS und Individualentwicklung
+- acht Aufgaben, sieben Glossarbegriffe und Abzeichen `Software-Stratege`
+  vorbereitet
+- eigenes dreiseitiges Arbeitsblatt
+  `lf9-9-11-software-arbeitsblatt.pdf` samt fotorealistischem Kapitelbild
+  `lf9-9-11-software.png` erstellt und lokal visuell geprüft
+- Offline-Cache auf `ec-lernstudio-v46` erhöht
+
+## 1.39.0 - 15. Juli 2026
+
+- LF9-Modul `9.10 Die Hardware` ergänzt: interne und externe Komponenten,
+  Peripheriegeräte, RAM/ROM, Druckerentscheidung, SSD und Backup im
+  E-Commerce-Kontext
+- acht Aufgaben, sieben Glossarbegriffe und Abzeichen `Hardware-Lotse`
+  vorbereitet
+- eigenes dreiseitiges Arbeitsblatt
+  `lf9-9-10-hardware-arbeitsblatt.pdf` samt fotorealistischem Kapitelbild
+  `lf9-9-10-hardware.png` erstellt und lokal visuell geprüft
+- Offline-Cache auf `ec-lernstudio-v45` erhöht (mit v1.40.0 zusammen als
+  `v46` veröffentlicht)
+
 ## 1.38.0 - 11. Juli 2026
 
 - LF9-Modul `9.9 Hardware und Software auswählen` ergänzt: Konfiguration,

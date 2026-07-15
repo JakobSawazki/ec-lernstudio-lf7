@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.38.0",
+  version: "1.40.0",
   teacherMaterials: [
     {
       eyebrow: "Lehrermaterial",
@@ -106,7 +106,7 @@ window.EC_CONTENT = {
       heroEmphasis: "prüfen, vergleichen, auswählen.",
       heroText: "Im dritten Ausbildungsjahr wählst du Online-Vertriebssysteme kriteriengeleitet aus: Du beurteilst Webshops und Shopsoftware, verstehst die Technik dahinter und bereitest Produktdaten für alle Kanäle auf.",
       modulesTitle: "Vom Kriterienkatalog zur passenden Shoplösung.",
-      modulesText: "Der LF9-Lernpfad führt von der Beurteilung von Webshops und Shopsoftware (9.4) zur Auswahl und Konfiguration von Hardware und Software (9.9). Die weiteren DV-Kapitel 9.10 bis 9.16 - von Hardware und Software über Netze, Schnittstellen und Datenbanken bis zu Datenfeeds und Produktdatenoptimierung - folgen Schritt für Schritt als eigene Module."
+      modulesText: "Der LF9-Lernpfad führt von der Beurteilung von Webshops und Shopsoftware (9.4) zur IT-Konfiguration (9.9) und den Hardware-Grundlagen für Versand und Service (9.10). Die weiteren DV-Kapitel 9.11 bis 9.16 - von Software über Netze, Schnittstellen und Datenbanken bis zu Datenfeeds und Produktdatenoptimierung - folgen Schritt für Schritt als eigene Module."
     }
   ],
   modules: [
@@ -1266,6 +1266,106 @@ window.EC_CONTENT = {
         "Vergleiche zwei Geräte- oder Softwareangebote zunächst über den Bezugspreis und danach über mindestens vier Nutzwertkriterien.",
         "Entwirf eine einfache Entscheidungsmatrix für eine konkrete Ja-Nein-Frage, etwa: Welches Etikettendrucker-Modell erfüllt die Pflichtkriterien?",
         "Formuliere eine Entscheidungstabelle für eine Kundenaktion mit zwei bis drei Bedingungen und klaren Folgen."
+      ]
+    },
+    {
+      id: "lf9-hardware",
+      field: "LF9",
+      code: "9.10",
+      mark: "HW",
+      title: "Die Hardware",
+      short: "Interne und externe Komponenten, Scanner und Drucker, RAM und ROM sowie Speichermedien für Versand, Service und Datensicherung sinnvoll auswählen.",
+      color: "orange",
+      image: "assets/module-icons/lf9-9-10-hardware.png",
+      mission: "Richte einen zuverlässigen Arbeitsplatz für einen wachsenden Onlineshop ein: Ordne Geräte richtig zu, wähle passende Ein- und Ausgabegeräte und begründe Entscheidungen zu Druck und Speicher.",
+      lessons: [
+        {
+          title: "Im Inneren arbeitet die Zentraleinheit",
+          text: "Hardware lässt sich grob in interne und externe Einheiten einteilen. Zur internen Zentraleinheit gehören Prozessor, Steuerwerk, Rechenwerk und Arbeitsspeicher. Das Steuerwerk koordiniert Befehle, das Rechenwerk verarbeitet Daten. RAM ist der flüchtige Arbeitsspeicher: Programme und aktuell benötigte Daten liegen dort nur während der Arbeit. ROM enthält fest vorgegebene Startinformationen. Für einen Shop-Arbeitsplatz sind ausreichend RAM, ein leistungsfähiger Prozessor und passende Anschlüsse wichtiger als eine möglichst lange Liste technischer Werte."
+        },
+        {
+          title: "Peripherie verbindet Shop und Wirklichkeit",
+          text: "Externe Einheiten heißen auch Peripheriegeräte. Eingabegeräte bringen Daten ins System: Tastatur, Maus, Barcodescanner, Kamera oder Kartenleser. Ausgabegeräte geben Ergebnisse aus: Monitor, Drucker, Lautsprecher oder Kundendisplay. Im E-Commerce ist der Ablauf besonders sichtbar: Ein Scanner liest eine Artikelnummer ein, die Warenwirtschaft verarbeitet Bestand und Auftrag, ein Etikettendrucker gibt das Versandlabel aus. Jedes Gerät sollte zur Aufgabe, zur Ergonomie und zu den vorhandenen Schnittstellen passen."
+        },
+        {
+          title: "Drucker nach Einsatz, nicht nach Bauchgefühl",
+          text: "Beim Versand zählen nicht nur Anschaffungskosten. Wichtige Kriterien sind Druckvolumen, Seitenkosten, Geschwindigkeit, Auflösung, Lautstärke, Papierformat, Anschlüsse, Wartung und Zuverlässigkeit. Tintenstrahldrucker sind oft günstig in der Anschaffung und gut für Bilder, verursachen bei hohem Volumen aber häufig höhere Seitenkosten. Laserdrucker sind für viele Text- und Etikettenausdrucke schnell, leise im Betrieb und robust, kosten anfangs aber meist mehr. Für den Versandplatz kann ein spezialisierter Thermo- oder Etikettendrucker sinnvoll sein, wenn viele Labels entstehen."
+        },
+        {
+          title: "Speicher schützt Arbeitsfähigkeit",
+          text: "Interne Speicher sorgen für schnelles Arbeiten, externe Speicher sichern Daten langfristig. SSDs arbeiten ohne bewegliche Teile, reagieren schnell und sind stoßunempfindlicher als klassische HDDs. Externe Festplatten, verschlüsselte Speichermedien oder schulisch freigegebene Cloud-Speicher helfen bei Backups und Austausch. Entscheidend sind Kapazität, Zugriffsgeschwindigkeit, Anschluss, Mobilität, Datenschutz und ein nachvollziehbarer Sicherungsplan. Nicht jedes Speichermedium passt zu jeder Aufgabe: Für laufende Programme ist Geschwindigkeit wichtig, für Backups vor allem Zuverlässigkeit und getrennte Aufbewahrung."
+        }
+      ],
+      takeaways: [
+        "Interne Hardware verarbeitet und speichert Daten; externe Peripheriegeräte erfassen Daten oder geben Ergebnisse aus.",
+        "RAM ist schnell, aber flüchtig. ROM enthält fest vorgegebene Startinformationen. Beide gehören zum Arbeitsbereich des Computers, erfüllen aber verschiedene Aufgaben.",
+        "Scanner sind typische Eingabegeräte, Monitor und Drucker typische Ausgabegeräte. Im Versand verbindet die Warenwirtschaft beide Seiten des EVA-Ablaufs.",
+        "Drucker und Speicher werden nach Einsatz, Folgekosten, Geschwindigkeit, Zuverlässigkeit, Schnittstellen und Datenschutz ausgewählt - nicht nur nach Kaufpreis oder Kapazität."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF9 9.10 Die Hardware",
+          description: "Hardware-Check für Versand und Service, EVA-Ablauf, Drucker-Vergleich mit Rechenteil, Speicher-Entscheidung und Backup-Plan.",
+          href: "assets/materials/lf9-9-10-hardware-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Erstellt für euer Webshop-Projekt eine Hardwareliste für Versand, Service und Administration. Markiert interne Komponenten und Peripheriegeräte.",
+        "Beschreibt einen Versandvorgang nach EVA: Welche Daten kommen über welches Eingabegerät hinein, was verarbeitet das System und was wird ausgegeben?",
+        "Vergleicht für einen konkreten Einsatz zwei Druckerarten. Bewertet Druckvolumen, Seitenkosten, Geschwindigkeit, Anschlüsse und Wartung.",
+        "Plant eine Sicherung für Produktdaten, Bestellungen und Projektdateien: Speichermedium, Sicherungsrhythmus, Zugriffsschutz und Wiederherstellungstest.",
+        "Begründet, warum euer gewählter Speicher für laufende Arbeit oder Backup geeignet ist - und welche Grenze ihr dabei beachten müsst."
+      ]
+    },
+    {
+      id: "lf9-software",
+      field: "LF9",
+      code: "9.11",
+      mark: "SW",
+      title: "Die Software",
+      short: "Betriebssysteme, Anwendungsprogramme sowie Open Source, Kauf-, Miet- und Individualsoftware für einen Webshop begründet auswählen.",
+      color: "blue",
+      image: "assets/module-icons/lf9-9-11-software.png",
+      mission: "Plane die Softwarebasis für einen wachsenden Onlineshop: Trenne die Aufgaben von Betriebssystem und Anwendungen und entscheide nachvollziehbar, welches Bereitstellungsmodell zum Shopteam passt.",
+      lessons: [
+        {
+          title: "Software bringt Hardware zum Arbeiten",
+          text: "Hardware ist anfassbar; Software besteht aus Programmen und den dazugehörigen Daten. Programme geben dem Computer Anweisungen, Daten liefern den Inhalt für die Arbeit. Für einen Webshop sind zum Beispiel Betriebssystem, Browser, Warenwirtschaft, Bildbearbeitung, Shopsoftware und Versandsoftware Programme. Produkttexte, Artikelbilder, Bestellungen und Rechnungen sind dagegen Daten. Erst das Zusammenspiel macht einen Arbeitsplatz nutzbar."
+        },
+        {
+          title: "Das Betriebssystem koordiniert den Arbeitsplatz",
+          text: "Ein Betriebssystem ist Systemsoftware. Es startet den Computer, verwaltet Arbeitsspeicher und Dateien, steuert angeschlossene Hardware und stellt eine Bedienoberfläche bereit. Es sorgt auch dafür, dass Anwendungen geordnet auf Ressourcen zugreifen. Im Shopalltag verbindet es zum Beispiel Drucker, Scanner und Netzwerk mit Warenwirtschaft und Browser. Updates, Benutzerrechte und Datensicherung gehören deshalb zur verantwortlichen Pflege eines Arbeitsplatzes."
+        },
+        {
+          title: "Anwendungssoftware löst konkrete Aufgaben",
+          text: "Anwendungssoftware wird für bestimmte Arbeitsaufgaben eingesetzt. Standardsoftware ist für viele vergleichbare Unternehmen entwickelt, etwa Tabellenkalkulation, Office-Anwendungen oder gängige Warenwirtschaft. Individualsoftware wird speziell für einen Betrieb entwickelt oder stark angepasst. Standardsoftware kann schneller verfügbar und leichter vergleichbar sein. Individualsoftware kann besondere Prozesse sehr genau abbilden, verursacht aber meist mehr Entwicklungs-, Pflege- und Abhängigkeitsaufwand."
+        },
+        {
+          title: "Softwaremodelle bewusst vergleichen",
+          text: "Webshops können mit Open-Source-Software, gekaufter Lizenzsoftware, gemieteter Software als Dienst (SaaS) oder einer Individualentwicklung betrieben werden. Open Source bietet Einblick in den Quellcode und viel Gestaltungsfreiheit, braucht aber fachliche Betreuung. Kaufsoftware wird einmal lizenziert, bringt aber Kosten für Updates, Betrieb oder Erweiterungen mit. SaaS reduziert den eigenen Betriebsaufwand und ist oft schnell startklar, bindet jedoch an Anbieter, Tarif und Daten-/Schnittstellenkonzept. Eine Individualentwicklung kann genau passen, ist aber nur sinnvoll, wenn Nutzen, Budget, Wartung und Risiken realistisch bewertet werden."
+        }
+      ],
+      takeaways: [
+        "Software umfasst Programme und Daten. Programme steuern Abläufe; Daten enthalten zum Beispiel Artikel, Bilder, Bestellungen und Rechnungen.",
+        "Ein Betriebssystem ist Systemsoftware: Es verwaltet Hardware, Dateien, Speicher, Benutzer und die Ausführung von Anwendungen.",
+        "Standardsoftware deckt typische Aufgaben ab. Individualsoftware wird für besondere Prozesse entwickelt oder stark angepasst.",
+        "Bei Shopsoftware zählen nicht nur Einstiegskosten: Schnittstellen, Datenschutz, Updateverantwortung, Erweiterbarkeit, Support und Anbieterabhängigkeit müssen mitbewertet werden."
+      ],
+      resources: [
+        {
+          title: "Arbeitsblatt: LF9 9.11 Die Software",
+          description: "Software-Check, Betriebssystem-Aufgaben, Auswahl zwischen Standard- und Individualsoftware sowie Entscheidungshilfe für Open Source, Lizenz, SaaS und Eigenentwicklung.",
+          href: "assets/materials/lf9-9-11-software-arbeitsblatt.pdf",
+          type: "PDF"
+        }
+      ],
+      projectSteps: [
+        "Erstellt eine Softwarelandkarte für euer Webshop-Projekt: Betriebssystem, Browser, Bildbearbeitung, Shopsoftware, Warenwirtschaft, Versand, Kommunikation und die wichtigsten Daten.",
+        "Beschreibt für einen Arbeitsplatz drei Aufgaben des Betriebssystems und begründet, warum Updates und Benutzerrechte im Shop wichtig sind.",
+        "Vergleicht für eine konkrete Aufgabe Standardsoftware und Individualsoftware. Notiert jeweils Nutzen, Grenzen, Pflegeaufwand und Entscheidungskriterium.",
+        "Bewertet für euren Webshop mindestens zwei Bereitstellungsmodelle: Open Source, Kauf-/Lizenzsoftware, SaaS oder Individualentwicklung. Nutzt dafür Kriterien wie Kosten, Anpassbarkeit, Support, Datenschutz und Schnittstellen.",
+        "Trefft eine begründete Wahl für einen fiktiven kleinen Shop und nennt eine Maßnahme, mit der ihr die Abhängigkeit oder das Betriebsrisiko reduziert."
       ]
     }
   ],
@@ -3745,6 +3845,226 @@ window.EC_CONTENT = {
       ],
       answer: 0,
       explanation: "Entscheidungstabellen bilden Regeln ab: Für Kombinationen aus Bedingungen wird jeweils eine festgelegte Aktion ausgeführt, zum Beispiel ein Rabatt oder eine Versandfreigabe."
+    },
+    {
+      id: "lf9-hardware-01",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Welche Komponente gehört typischerweise zur internen Zentraleinheit eines Computers?",
+      options: [
+        "Prozessor",
+        "Barcodescanner",
+        "Etikettendrucker",
+        "Monitor"
+      ],
+      answer: 0,
+      explanation: "Der Prozessor gehört zur internen Hardware und verarbeitet Befehle und Daten. Scanner, Drucker und Monitor sind externe Peripheriegeräte."
+    },
+    {
+      id: "lf9-hardware-02",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Worin unterscheidet sich RAM am deutlichsten von ROM?",
+      options: [
+        "RAM speichert laufende Programme und Daten vorübergehend; ROM enthält feste Startinformationen.",
+        "RAM ist ein Druckeranschluss, ROM ein Netzwerkgerät.",
+        "ROM ist immer größer als RAM.",
+        "RAM dient nur zur langfristigen Datensicherung."
+      ],
+      answer: 0,
+      explanation: "RAM ist der flüchtige Arbeitsspeicher. Beim Ausschalten gehen seine Inhalte verloren. ROM enthält fest vorgegebene Informationen, die beim Start des Systems gebraucht werden."
+    },
+    {
+      id: "lf9-hardware-03",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Welche Zuordnung zum EVA-Prinzip ist für den Versandplatz richtig?",
+      options: [
+        "Barcodescanner = Eingabe, Warenwirtschaft = Verarbeitung, Etikettendrucker = Ausgabe",
+        "Etikettendrucker = Eingabe, Scanner = Verarbeitung, Warenwirtschaft = Ausgabe",
+        "Monitor = Verarbeitung, Scanner = Ausgabe, Warenwirtschaft = Eingabe",
+        "Alle drei Geräte sind ausschließlich Ausgabegeräte."
+      ],
+      answer: 0,
+      explanation: "Der Scanner erfasst die Artikel- oder Auftragsdaten, die Warenwirtschaft prüft und verarbeitet sie, der Drucker erzeugt das Etikett."
+    },
+    {
+      id: "lf9-hardware-04",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Ein Shop druckt täglich viele Versandlabels mit Text und Barcode. Welche Entscheidung ist am plausibelsten?",
+      options: [
+        "Einen für viele Labels geeigneten Laser- oder Etikettendrucker nach Seitenkosten, Geschwindigkeit und Anschlüssen vergleichen.",
+        "Den günstigsten Fotodrucker ohne Vergleich kaufen.",
+        "Auf einen Drucker verzichten, weil Versandlabels immer handschriftlich erstellt werden.",
+        "Nur die Farbe des Druckergehäuses bewerten."
+      ],
+      answer: 0,
+      explanation: "Bei hohem, wiederkehrendem Druckvolumen zählen Seitenkosten, Geschwindigkeit, Zuverlässigkeit und Schnittstellen. Für Labels kann ein Etikettendrucker besonders passend sein."
+    },
+    {
+      id: "lf9-hardware-05",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Welche Eigenschaft beschreibt eine SSD im Vergleich zu einer klassischen HDD typischerweise?",
+      options: [
+        "Sie arbeitet ohne bewegliche Teile und reagiert meist schneller.",
+        "Sie kann nur Bilder speichern.",
+        "Sie benötigt grundsätzlich kein Backup.",
+        "Sie ist immer größer und billiger als jede HDD."
+      ],
+      answer: 0,
+      explanation: "SSDs nutzen Flash-Speicher statt drehender Magnetscheiben. Sie sind meist schneller und stoßunempfindlicher, können aber pro Speichereinheit teurer sein."
+    },
+    {
+      id: "lf9-hardware-06",
+      module: "lf9-hardware",
+      type: "number",
+      prompt: "Drucker-Vergleich: Drucker A kostet 100 Euro und verursacht 0,12 Euro je Seite. Drucker B kostet 220 Euro und verursacht 0,04 Euro je Seite. Wie viel kostet Drucker B insgesamt bei 2.000 gedruckten Seiten?",
+      answer: 300,
+      tolerance: 0.1,
+      suffix: "Euro",
+      explanation: "220 Euro Anschaffungskosten + 2.000 × 0,04 Euro Seitenkosten = 220 + 80 = 300 Euro. Zum Vergleich: Drucker A würde 340 Euro kosten."
+    },
+    {
+      id: "lf9-hardware-07",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Welche Backup-Regel schützt Produktdaten am sinnvollsten?",
+      options: [
+        "Daten regelmäßig sichern, den Sicherungsort schützen und eine Wiederherstellung testweise prüfen.",
+        "Eine einzige Kopie dauerhaft auf dem Arbeitsplatz-PC lassen.",
+        "Sicherungen nur erstellen, wenn bereits Daten verloren gegangen sind.",
+        "Passwörter in der Sicherungsdatei unverschlüsselt mit abspeichern."
+      ],
+      answer: 0,
+      explanation: "Ein Backup ist nur dann hilfreich, wenn es regelmäßig erstellt, geschützt aufbewahrt und bei Bedarf auch wirklich wiederhergestellt werden kann."
+    },
+    {
+      id: "lf9-hardware-08",
+      module: "lf9-hardware",
+      type: "choice",
+      prompt: "Welche Aussage über externe Speichermedien ist fachlich sinnvoll?",
+      options: [
+        "Sie eignen sich gut für Sicherungen und Datentransport, sollten aber nicht die einzige ungeschützte Datenkopie sein.",
+        "Sie ersetzen grundsätzlich jeden internen Arbeitsspeicher.",
+        "Sie dürfen keine Projektdateien enthalten.",
+        "Ihre Kapazität ist immer wichtiger als Datenschutz und Zugriffsschutz."
+      ],
+      answer: 0,
+      explanation: "Externe Speicher sind praktisch für Backup und Transport. Wichtig bleiben aber Schutz vor Verlust, Zugriffsschutz und weitere getrennte Sicherungen."
+    },
+    {
+      id: "lf9-software-01",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Welche Zuordnung ist fachlich richtig?",
+      options: [
+        "Betriebssystem = Systemsoftware; Warenwirtschaft = Anwendungssoftware.",
+        "Betriebssystem = Peripheriegerät; Warenwirtschaft = Datenträger.",
+        "Betriebssystem = Produktbild; Warenwirtschaft = Hardware.",
+        "Betriebssystem und Warenwirtschaft sind ausschließlich Eingabegeräte."
+      ],
+      answer: 0,
+      explanation: "Das Betriebssystem gehört zur Systemsoftware und schafft die Grundlage für Anwendungen. Eine Warenwirtschaft unterstützt eine konkrete betriebliche Aufgabe und ist damit Anwendungssoftware."
+    },
+    {
+      id: "lf9-software-02",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Welche Aufgabe übernimmt ein Betriebssystem am Arbeitsplatz eines Onlineshops?",
+      options: [
+        "Es verwaltet Dateien und Ressourcen und ermöglicht Anwendungen den Zugriff auf Hardware.",
+        "Es verpackt jede Bestellung physisch.",
+        "Es ersetzt die Datensicherung durch einen einzigen Login.",
+        "Es entscheidet automatisch über alle Produktpreise."
+      ],
+      answer: 0,
+      explanation: "Ein Betriebssystem organisiert grundlegende Ressourcen wie Speicher, Dateien, Geräte und Benutzer. Es führt nicht die konkreten Geschäftsentscheidungen des Shops aus."
+    },
+    {
+      id: "lf9-software-03",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Was unterscheidet Standardsoftware am ehesten von Individualsoftware?",
+      options: [
+        "Standardsoftware ist für viele ähnliche Aufgaben entwickelt; Individualsoftware wird für besondere Anforderungen erstellt oder stark angepasst.",
+        "Standardsoftware darf nie aktualisiert werden; Individualsoftware aktualisiert sich immer selbst.",
+        "Standardsoftware besteht nur aus Hardware; Individualsoftware nur aus Daten.",
+        "Zwischen beiden gibt es keine Unterschiede bei Einführung und Pflege."
+      ],
+      answer: 0,
+      explanation: "Standardsoftware kann schneller verfügbar sein und viele typische Prozesse abdecken. Individualsoftware kann Sonderfälle präzise abbilden, verlangt aber meist mehr Entwicklung und Pflege."
+    },
+    {
+      id: "lf9-software-04",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Ein kleines Shopteam möchte rasch starten und die Serverwartung weitgehend an einen Anbieter abgeben. Welches Modell passt zunächst am besten?",
+      options: [
+        "SaaS: gemietete Software als Dienst, anschließend Schnittstellen, Datenschutz und Tarif sorgfältig prüfen.",
+        "Eine Individualentwicklung ohne Budget- oder Wartungsplanung.",
+        "Nur ein Betriebssystem ohne Shopsoftware.",
+        "Eine externe Festplatte als alleinige Softwarelösung."
+      ],
+      answer: 0,
+      explanation: "SaaS kann den Einstieg und Betrieb vereinfachen. Die Entscheidung braucht trotzdem einen Check von Datenverarbeitung, Schnittstellen, Kostenentwicklung und möglicher Anbieterabhängigkeit."
+    },
+    {
+      id: "lf9-software-05",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Welche Aussage zu Open-Source-Software ist angemessen?",
+      options: [
+        "Sie kann viel Anpassungsfreiheit bieten, braucht aber Verantwortung für Betrieb, Updates, Sicherheit und fachliche Betreuung.",
+        "Sie ist automatisch kostenlos im gesamten Betrieb und benötigt keine Pflege.",
+        "Sie darf nie angepasst werden.",
+        "Sie funktioniert grundsätzlich ohne Hardware und Netzwerk."
+      ],
+      answer: 0,
+      explanation: "Der offene Quellcode kann Gestaltung und Prüfung erleichtern. Kosten und Verantwortung verschwinden dadurch aber nicht: Hosting, Updates, Sicherheit und Know-how müssen geplant werden."
+    },
+    {
+      id: "lf9-software-06",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Warum gehören regelmäßige Updates und klar geregelte Benutzerrechte in ein Softwarekonzept?",
+      options: [
+        "Sie helfen, bekannte Schwachstellen zu schließen und den Zugriff auf Aufgaben und Daten passend zu begrenzen.",
+        "Sie machen Backups überflüssig.",
+        "Sie verhindern jede Fehlbedienung vollständig.",
+        "Sie ersetzen die Prüfung von Schnittstellen."
+      ],
+      answer: 0,
+      explanation: "Updates und Rechteverwaltung sind Sicherheits- und Organisationsmaßnahmen. Sie ergänzen Backups, Schulung und eine sinnvolle technische Anbindung, ersetzen diese aber nicht."
+    },
+    {
+      id: "lf9-software-07",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Ein Händler hat einen sehr besonderen Retourenprozess, der mit Standardlösungen nur umständlich abbildbar ist. Welche Folgerung ist sinnvoll?",
+      options: [
+        "Individualsoftware oder eine stark anpassbare Lösung prüfen und Nutzen gegen Entwicklungs- und Pflegeaufwand abwägen.",
+        "Ohne Prüfung jede Standardsoftware ausschließen.",
+        "Die Prozesse nicht dokumentieren, weil Software sie automatisch versteht.",
+        "Eine Softwarewahl nur anhand der Farbe der Oberfläche treffen."
+      ],
+      answer: 0,
+      explanation: "Besondere Prozesse können eine Anpassung oder Individualentwicklung begründen. Sie ist aber nur tragfähig, wenn Ziele, Budget, Wartung, Schnittstellen und Verantwortlichkeiten geklärt sind."
+    },
+    {
+      id: "lf9-software-08",
+      module: "lf9-software",
+      type: "choice",
+      prompt: "Welches Kriterienset eignet sich für einen nachvollziehbaren Vergleich von Shopsoftware?",
+      options: [
+        "Schnittstellen, Kosten über die Laufzeit, Anpassbarkeit, Support, Datenschutz, Updateverantwortung und Ausstiegsmöglichkeiten.",
+        "Nur das schönste Startseitenfoto.",
+        "Nur die Anzahl vorinstallierter Hintergrundbilder.",
+        "Nur der Preis im ersten Monat."
+      ],
+      answer: 0,
+      explanation: "Eine Softwareentscheidung betrifft den gesamten Betrieb. Deshalb müssen technische, organisatorische, finanzielle und rechtliche Anforderungen gemeinsam betrachtet werden."
     }
   ],
   badges: [
@@ -3945,6 +4265,20 @@ window.EC_CONTENT = {
       description: "Das LF9-Modul zur Auswahl von Hardware und Software vollständig abgeschlossen.",
       condition: "module",
       value: "lf9-hardware-software"
+    },
+    {
+      id: "lf9-hardware-ready",
+      title: "Hardware-Lotse",
+      description: "Das LF9-Modul zu Hardware für Versand, Service und Datensicherung vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf9-hardware"
+    },
+    {
+      id: "lf9-software-ready",
+      title: "Software-Stratege",
+      description: "Das LF9-Modul zu Betriebssystemen und Softwaremodellen vollständig abgeschlossen.",
+      condition: "module",
+      value: "lf9-software"
     }
   ],
   glossary: [
@@ -5723,6 +6057,118 @@ window.EC_CONTENT = {
       summary: "Übersicht, die Kombinationen von Bedingungen klaren Aktionen zuordnet.",
       detail: "Entscheidungstabellen dokumentieren Regeln. In den Zeilen stehen Bedingungen und mögliche Aktionen, in den Spalten Regeln mit Ja- oder Nein-Kombinationen. Sie eignen sich besonders für wiederkehrende, logisch strukturierte Entscheidungen.",
       example: "Nur wenn Stammkunde und Rechnungen pünktlich bezahlt sind, erhält ein Kunde den höchsten Rabatt."
+    },
+    {
+      id: "cpu",
+      term: "CPU",
+      category: "IT & Daten",
+      summary: "Central Processing Unit: zentrale Verarbeitungseinheit eines Computers.",
+      detail: "Die CPU verarbeitet Programmbefehle und steuert zusammen mit weiteren Komponenten die Datenverarbeitung. Ihre Leistung hängt nicht nur von der Taktfrequenz ab, sondern auch von Architektur, Anzahl der Kerne, Arbeitsspeicher und der konkreten Aufgabe.",
+      example: "Die CPU verarbeitet den Auftrag, während die Warenwirtschaft Lagerbestand und Preis abgleicht."
+    },
+    {
+      id: "ram",
+      term: "RAM",
+      category: "IT & Daten",
+      summary: "Flüchtiger Arbeitsspeicher für laufende Programme und aktuell benötigte Daten.",
+      detail: "RAM steht für Random Access Memory. Während ein Programm läuft, hält der Computer dort Daten schnell bereit. Beim Ausschalten gehen die Inhalte verloren, deshalb ersetzt RAM keine langfristige Speicherung oder Datensicherung.",
+      example: "Sind viele Browser-Tabs, Bilddateien und die Warenwirtschaft gleichzeitig geöffnet, braucht der Arbeitsplatz ausreichend RAM."
+    },
+    {
+      id: "rom",
+      term: "ROM",
+      category: "IT & Daten",
+      summary: "Speicherbereich mit fest vorgegebenen Startinformationen.",
+      detail: "ROM steht für Read Only Memory. Er enthält Informationen, die für das Starten und die Grundfunktion eines Systems gebraucht werden. Moderne Geräte nutzen technisch unterschiedliche Speicherformen, die Grundidee bleibt: Diese Informationen sind nicht wie normale Arbeitsdateien veränderbar.",
+      example: "Beim Einschalten lädt der Computer grundlegende Startinformationen, bevor Betriebssystem und Programme arbeiten."
+    },
+    {
+      id: "peripheriegeraet",
+      term: "Peripheriegerät",
+      category: "IT & Daten",
+      summary: "Externes Gerät, das Daten in ein Computersystem bringt oder Ergebnisse ausgibt.",
+      detail: "Peripheriegeräte befinden sich außerhalb der Zentraleinheit. Eingabegeräte erfassen Daten, zum Beispiel Scanner, Tastatur oder Kamera. Ausgabegeräte machen Ergebnisse sichtbar oder nutzbar, etwa Monitor, Drucker oder Kundendisplay.",
+      example: "Der Scanner erfasst die Artikelnummer, der Etikettendrucker gibt das Versandlabel aus."
+    },
+    {
+      id: "druckauflosung",
+      term: "Druckauflösung",
+      category: "IT & Daten",
+      summary: "Maß für die Detailgenauigkeit eines Druckbilds, häufig in dpi angegeben.",
+      detail: "Dpi bedeutet dots per inch, also Punkte pro Zoll. Eine höhere Auflösung kann feinere Details und schärfere Bilder liefern, ist aber nur ein Auswahlkriterium. Für Versandlabels zählen zusätzlich Barcode-Lesbarkeit, Geschwindigkeit, Seitenkosten und Zuverlässigkeit.",
+      example: "Für Produktflyer ist eine hohe Auflösung wichtig; für viele einfache Versandlabels kann ein schneller, robuster Drucker sinnvoller sein."
+    },
+    {
+      id: "ssd",
+      term: "SSD",
+      category: "IT & Daten",
+      summary: "Schneller Flash-Speicher ohne bewegliche Teile.",
+      detail: "Eine Solid State Drive speichert Daten elektronisch statt auf drehenden Scheiben. Sie startet Programme meist schnell, arbeitet leise und ist weniger empfindlich gegen Stöße. Für langfristige Sicherheit braucht auch eine SSD zusätzliche Backups.",
+      example: "Die Shop-Administration startet mit einer SSD spürbar schneller, weil Warenwirtschaft und Browserdaten rasch geladen werden."
+    },
+    {
+      id: "backup",
+      term: "Backup",
+      category: "IT & Daten",
+      summary: "Zusätzliche, geschützte Kopie wichtiger Daten zur Wiederherstellung nach Verlust oder Fehlern.",
+      detail: "Backups schützen vor Geräteausfall, versehentlichem Löschen, Schadsoftware oder Fehlbedienung. Ein guter Plan legt fest, was gesichert wird, wie oft, wo die Kopie liegt, wer zugreifen darf und wie die Wiederherstellung getestet wird.",
+      example: "Produktdaten und Bestellungen werden täglich gesichert; einmal pro Monat wird testweise eine Datei aus dem Backup wiederhergestellt."
+    },
+    {
+      id: "betriebssystem",
+      term: "Betriebssystem",
+      category: "IT & Daten",
+      summary: "Systemsoftware, die Hardware, Dateien, Benutzer und Programme eines Computers koordiniert.",
+      detail: "Das Betriebssystem startet den Computer und organisiert grundlegende Ressourcen: Arbeitsspeicher, Dateien, angeschlossene Geräte, Netzwerkzugänge und Benutzerkonten. Anwendungen wie Warenwirtschaft oder Browser nutzen diese Grundlage. Für den Shopbetrieb sind sichere Einstellungen, Updates und passende Rechte wichtig.",
+      example: "Das Betriebssystem erkennt den Etikettendrucker und erlaubt der Versandsoftware, ein Label auszugeben."
+    },
+    {
+      id: "anwendungssoftware",
+      term: "Anwendungssoftware",
+      category: "IT & Daten",
+      summary: "Programm für eine konkrete Aufgabe von Menschen oder Unternehmen.",
+      detail: "Anwendungssoftware bearbeitet fachliche Aufgaben, zum Beispiel Texte schreiben, Bilder gestalten, Buchungen verwalten, Versandlabels erzeugen oder Bestellungen auswerten. Sie baut auf einem Betriebssystem auf und muss zur Aufgabe, zu den Daten und zu anderen Systemen passen.",
+      example: "Die Warenwirtschaft ist Anwendungssoftware: Sie verwaltet Artikelbestände und verarbeitet Bestellungen."
+    },
+    {
+      id: "standardsoftware",
+      term: "Standardsoftware",
+      category: "IT & Daten",
+      summary: "Fertige Software für typische, bei vielen Organisationen ähnliche Aufgaben.",
+      detail: "Standardsoftware wird für einen breiten Einsatz entwickelt und kann meist schnell eingeführt werden. Häufig gibt es Dokumentation, Updates, Support und Erweiterungen. Vor der Auswahl muss geprüft werden, ob die vorhandenen Funktionen, Schnittstellen, Kosten und Datenschutzanforderungen wirklich passen.",
+      example: "Ein verbreitetes Warenwirtschaftssystem wird von vielen Handelsunternehmen mit ähnlichen Grundprozessen eingesetzt."
+    },
+    {
+      id: "individualsoftware",
+      term: "Individualsoftware",
+      category: "IT & Daten",
+      summary: "Software, die speziell für einen Betrieb oder einen besonderen Prozess entwickelt oder stark angepasst wird.",
+      detail: "Individualsoftware kann Besonderheiten eines Unternehmens sehr genau abbilden. Dafür entstehen Entwicklungs-, Test- und Pflegeaufwand. Wichtig sind klare Anforderungen, Verantwortlichkeiten, Dokumentation und ein Plan für Updates oder einen späteren Anbieterwechsel.",
+      example: "Ein Shop lässt eine Anwendung entwickeln, die seinen ungewöhnlichen Retourenprozess mit mehreren Prüfschritten abbildet."
+    },
+    {
+      id: "open-source-software",
+      term: "Open-Source-Software",
+      category: "IT & Daten",
+      summary: "Software, deren Quellcode unter einer passenden Lizenz öffentlich einsehbar und nutzbar ist.",
+      detail: "Open Source kann Transparenz und Anpassbarkeit ermöglichen. Ob und wie Änderungen erlaubt sind, bestimmt die jeweilige Lizenz. Für den professionellen Einsatz bleiben Betrieb, Hosting, Updates, Sicherheitsmaßnahmen, Datenschutz und fachliche Betreuung eigene Aufgaben.",
+      example: "Ein Team betreibt eine quelloffene Shoplösung und beauftragt Fachleute für Updates, Hosting und Erweiterungen."
+    },
+    {
+      id: "saas",
+      term: "SaaS",
+      category: "IT & Daten",
+      summary: "Software as a Service: Software wird als laufender Onlinedienst genutzt statt selbst betrieben.",
+      detail: "Bei SaaS stellt ein Anbieter die Software in der Regel über das Internet bereit. Das kann Einführung und Betrieb vereinfachen. Gleichzeitig müssen Tarife, Datenverarbeitung, Schnittstellen, Zugriffsrechte, Exportmöglichkeiten und die Abhängigkeit vom Anbieter bewertet werden.",
+      example: "Ein kleiner Shop nutzt eine gemietete Shopplattform und zahlt monatlich für Funktionen, Hosting und Updates."
+    },
+    {
+      id: "kompatibilitaet",
+      term: "Kompatibilität",
+      category: "IT & Daten",
+      summary: "Fähigkeit von Geräten, Programmen, Datenformaten oder Systemen, ohne Konflikte zusammenzuarbeiten.",
+      detail: "Kompatibilität bedeutet nicht nur, dass eine Software installiert werden kann. Im E-Commerce müssen zum Beispiel Browser, Betriebssystem, Warenwirtschaft, Shopsoftware, Zahlungsdienst, Versandlösung und Datenformate zuverlässig zusammenpassen. Schnittstellen und Testfälle machen das überprüfbar.",
+      example: "Vor dem Start prüft das Team, ob die Versandsoftware aktuelle Auftragsdaten aus der Warenwirtschaft übernehmen kann."
     }
   ]
 };
