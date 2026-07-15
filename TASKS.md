@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
 Stand: 15. Juli 2026<br>
-Aktuelle Version: `1.40.0`<br>
+Aktuelle Version: `1.41.0`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -70,11 +70,13 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.38.0 | 11.07.2026 | LF9 9.9 Hardware und Software auswählen | Modul, acht Aufgaben mit zwei Rechenaufgaben, Abzeichen, sechs Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild lokal eingebunden und als PDF visuell geprüft |
 | Erledigt | 1.39.0 | 15.07.2026 | LF9 9.10 Die Hardware | Modul, acht Aufgaben, Abzeichen, sieben Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild; nach Freigabe am 15.07.2026 veröffentlicht |
 | Erledigt | 1.40.0 | 15.07.2026 | LF9 9.11 Die Software | Modul, acht Aufgaben, Abzeichen, sieben Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild; Betriebssystem, Anwendungssoftware und Softwaremodelle für den Shopbetrieb; nach Freigabe am 15.07.2026 veröffentlicht |
+| Erledigt | 1.41.0 | 15.07.2026 | Anonymes Feedback-Register | Feedback-Formular mit Spam-Schutz, Cloudflare-Worker-Code und Anleitung `docs/FEEDBACK.md`; Register bleibt ausgeblendet, bis der Worker-Endpoint in `content.js` eingetragen ist; Sende-, Fehler- und Cooldown-Pfad lokal gegen Mock-Server getestet |
 
 ## In Arbeit
 
 | Status | Version | Datum | Aufgabe | Nächster Schritt |
 | --- | --- | --- | --- | --- |
+| In Arbeit | 1.41.x | 15.07.2026 | Feedback-Kanal scharf schalten | Jakob: Cloudflare-Worker nach `docs/FEEDBACK.md` einrichten (privates Repo, Token, Worker) und die Worker-URL in `website/content.js` unter `feedback.endpoint` eintragen; danach Cache-Version erhöhen und pushen |
 | In Arbeit | 1.5.x | 02.07.2026 | Externe Lehrbuchausschnitte verlinken | EduCloud/OneDrive-Ordner befüllen, Rechte schulisch klären und dann als externe Ressource verlinken |
 | In Arbeit | 1.5.x | 02.07.2026 | Grafiken für eigene Arbeitsblätter | Eigene Illustrationen in `assets/` sammeln oder erzeugen lassen und anschließend in neue PDF-Materialien übernehmen |
 

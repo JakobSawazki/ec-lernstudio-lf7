@@ -498,6 +498,7 @@
     if (view === "teacher") renderTeacherArea();
     if (view === "glossary") renderGlossary();
     if (view === "glossaryTerm") renderGlossaryTerm(options.termId);
+    if (view === "feedback") renderFeedback();
 
     settleAtTop();
   }
@@ -2094,6 +2095,117 @@
     });
   }
 
+  const FEEDBACK_CATEGORIES = [
+    ["verbesserung", "Verbesserungsvorschlag"],
+    ["fehler", "Fehler gefunden"],
+    ["lob", "Lob"],
+    ["sonstiges", "Sonstiges"]
+  ];
+  const FEEDBACK_COOLDOWN_KEY = "ec-lernstudio-feedback-last";
+
+  function feedbackEndpoint() {
+    return (content.feedback?.endpoint || "").trim();
+  }
+
+  function renderFeedback() {
+    const endpoint = feedbackEndpoint();
+    app.innerHTML = `
+      <section class="page-shell page-intro">
+        <p class="eyebrow">Feedback</p>
+        <h1>Hilf mit, das <br>Lernstudio zu verbessern.</h1>
+        <p>${escapeHtml(content.feedback?.intro || "")}</p>
+      </section>
+
+      <section class="page-shell section-block">
+        ${endpoint ? `
+          <form class="teacher-form feedback-form" id="feedback-form">
+            <p class="eyebrow">Anonyme Rückmeldung</p>
+            <h2>Was soll besser werden?</h2>
+            <label for="feedback-category">
+              <span>Kategorie</span>
+              <select id="feedback-category" name="category">
+                ${FEEDBACK_CATEGORIES.map(([value, label]) => `<option value="${value}">${label}</option>`).join("")}
+              </select>
+            </label>
+            <label for="feedback-context">
+              <span>Bezug – optional, z. B. Modul 7.8 oder Glossar</span>
+              <input id="feedback-context" name="context" maxlength="120" autocomplete="off">
+            </label>
+            <label for="feedback-message">
+              <span>Dein Feedback</span>
+              <textarea
+                id="feedback-message"
+                name="message"
+                rows="6"
+                maxlength="1200"
+                required
+                placeholder="Beschreibe möglichst konkret, was dir aufgefallen ist oder was du dir wünschst."
+              ></textarea>
+            </label>
+            <label class="hp-field" for="feedback-website" aria-hidden="true">
+              <span>Website</span>
+              <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">
+            </label>
+            <button class="primary-button full-width" type="submit" id="feedback-submit">Feedback absenden</button>
+            <p class="teacher-note">
+              Deine Rückmeldung wird anonym übertragen und ist nur für die Lehrkraft sichtbar.
+              Bitte keine Namen oder persönlichen Daten eintragen.
+            </p>
+          </form>
+        ` : `
+          <div class="empty-state">
+            <h2>Feedback ist bald verfügbar.</h2>
+            <p>Der anonyme Feedback-Kanal wird gerade eingerichtet. Schau in Kürze noch einmal vorbei.</p>
+          </div>
+        `}
+      </section>
+      ${renderPortalFooter()}
+    `;
+
+    bindAppActions();
+    document.getElementById("feedback-form")?.addEventListener("submit", submitFeedback);
+  }
+
+  async function submitFeedback(event) {
+    event.preventDefault();
+    const endpoint = feedbackEndpoint();
+    if (!endpoint) return;
+    const message = document.getElementById("feedback-message").value.trim();
+    if (message.length < 5) {
+      showToast("Bitte beschreibe dein Feedback mit ein paar Worten.", "error");
+      return;
+    }
+    const lastSent = Number(localStorage.getItem(FEEDBACK_COOLDOWN_KEY) || 0);
+    if (Date.now() - lastSent < 60000) {
+      showToast("Bitte warte einen Moment, bevor du weiteres Feedback sendest.", "error");
+      return;
+    }
+    const submitButton = document.getElementById("feedback-submit");
+    submitButton.disabled = true;
+    submitButton.textContent = "Wird gesendet …";
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          category: document.getElementById("feedback-category").value,
+          context: document.getElementById("feedback-context").value.trim(),
+          message,
+          website: document.getElementById("feedback-website").value
+        })
+      });
+      if (!response.ok) throw new Error("send-failed");
+      localStorage.setItem(FEEDBACK_COOLDOWN_KEY, String(Date.now()));
+      document.getElementById("feedback-form").reset();
+      showToast("Danke! Dein Feedback wurde übermittelt.");
+    } catch (error) {
+      showToast("Das Feedback konnte gerade nicht übertragen werden. Bitte versuche es später noch einmal.", "error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Feedback absenden";
+    }
+  }
+
   function openSettings() {
     const name = state.name || "Gast";
     document.getElementById("settings-avatar").textContent = name.slice(0, 1).toUpperCase();
@@ -2251,6 +2363,12 @@
       navigate(button.dataset.view);
     });
   });
+
+  if (feedbackEndpoint()) {
+    document.querySelectorAll("[data-feedback-nav]").forEach((button) => {
+      button.hidden = false;
+    });
+  }
 
   document.getElementById("home-link")?.addEventListener("click", (event) => {
     event.preventDefault();

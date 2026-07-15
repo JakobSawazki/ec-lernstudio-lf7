@@ -2,6 +2,22 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.41.0 - 15. Juli 2026
+
+- anonymes Feedback-Register vorbereitet: neuer Navigationspunkt `Feedback`
+  (Desktop und Mobil) mit Formular für Kategorie, optionalen Bezug und
+  Nachricht; Honeypot-Feld, 60-Sekunden-Cooldown und Längenbegrenzung als
+  Spam-Schutz
+- Rückmeldungen laufen über einen Cloudflare Worker und werden als
+  GitHub-Issues in einem privaten Feedback-Repository gespeichert;
+  Worker-Code unter `docs/feedback-worker.js`, Einrichtungsanleitung unter
+  `docs/FEEDBACK.md`
+- das Register bleibt vollständig ausgeblendet, bis in `website/content.js`
+  unter `feedback.endpoint` die Worker-URL eingetragen ist
+- mobile Navigationsleiste passt ihre Spaltenzahl nun automatisch an die
+  sichtbaren Einträge an
+- Offline-Cache auf `ec-lernstudio-v47` erhöht
+
 ## 1.40.0 - 15. Juli 2026
 
 - LF9-Modul `9.11 Die Software` ergänzt: Programme und Daten,

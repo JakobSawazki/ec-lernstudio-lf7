@@ -342,6 +342,24 @@ h3 {
   color: white;
 }
 
+.nav-link[hidden],
+.mobile-link[hidden] {
+  display: none;
+}
+
+.feedback-form {
+  width: min(660px, 100%);
+  margin-inline: auto;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .nav-link.is-active {
   color: var(--night);
   background: var(--cyan);
@@ -3489,7 +3507,8 @@ h3 {
     left: 10px;
     z-index: 70;
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     padding: 7px;
     background: rgba(7, 24, 39, 0.96);
     border: 1px solid rgba(255, 255, 255, 0.12);

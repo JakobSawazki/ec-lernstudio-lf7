@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
 Stand: 15. Juli 2026
-Version: `1.40.0`
+Version: `1.41.0`
 
 ## Auftrag und Ergebnis
 
@@ -151,6 +151,12 @@ Buchkapitel nach und nach bereitgestellt.
 - Dark Mode als Standard und Light Mode per Toggle in der Desktop-Navigation
 - neu gestalteter Profil-Dialog `Dein Lernstand` mit Avatar-Kopfzeile,
   Abschnitts-Labels und kontrastfesten Buttons in beiden Themes (v1.36.0)
+- anonymes Feedback-Register (v1.41.0): Formular mit Kategorie, optionalem
+  Bezug, Honeypot und 60-Sekunden-Cooldown; Versand über einen Cloudflare
+  Worker, der GitHub-Issues in einem privaten Feedback-Repository anlegt.
+  Konfiguration über `feedback.endpoint` in `website/content.js` – solange
+  das Feld leer ist, bleibt der Navigationspunkt ausgeblendet. Worker-Code:
+  `docs/feedback-worker.js`, Einrichtung und Betrieb: `docs/FEEDBACK.md`
 - bereinigter Footer: `© 2026 · Designed by Sawazki Electronics`
 - LF2-Arbeitsblätter:
   `website/assets/materials/lf2-2-2-webshop-layout-arbeitsblatt.pdf`,
