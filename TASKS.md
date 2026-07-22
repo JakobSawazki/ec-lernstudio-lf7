@@ -1,7 +1,7 @@
 # EC Lernstudio - Tasks und Übergabe
 
-Stand: 15. Juli 2026<br>
-Aktuelle Version: `1.41.0`<br>
+Stand: 22. Juli 2026<br>
+Aktuelle Version: `1.41.1`<br>
 Repository: <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 
@@ -71,6 +71,7 @@ Live-Seite: <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 | Erledigt | 1.39.0 | 15.07.2026 | LF9 9.10 Die Hardware | Modul, acht Aufgaben, Abzeichen, sieben Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild; nach Freigabe am 15.07.2026 veröffentlicht |
 | Erledigt | 1.40.0 | 15.07.2026 | LF9 9.11 Die Software | Modul, acht Aufgaben, Abzeichen, sieben Glossarbegriffe, eigenes Arbeitsblatt und fotorealistisches Kapitelbild; Betriebssystem, Anwendungssoftware und Softwaremodelle für den Shopbetrieb; nach Freigabe am 15.07.2026 veröffentlicht |
 | Erledigt | 1.41.0 | 15.07.2026 | Anonymes Feedback-Register | Feedback-Formular mit Spam-Schutz, Cloudflare-Worker-Code und Anleitung `docs/FEEDBACK.md`; Register bleibt ausgeblendet, bis der Worker-Endpoint in `content.js` eingetragen ist; Sende-, Fehler- und Cooldown-Pfad lokal gegen Mock-Server getestet |
+| Erledigt | 1.41.1 | 22.07.2026 | PDF-Dokumentkarten hervorheben | Dezente Dokumentvorschau mit gefalteter Ecke, PDF-Kennzeichen und klarer Öffnen-Zeile; Dark Mode, Light Mode und mobile Darstellung geprüft und veröffentlicht |
 
 ## In Arbeit
 

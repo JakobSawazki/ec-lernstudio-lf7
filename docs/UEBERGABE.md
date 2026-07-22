@@ -1,7 +1,7 @@
 # Übergabe: EC Lernstudio
 
-Stand: 15. Juli 2026
-Version: `1.41.0`
+Stand: 22. Juli 2026
+Version: `1.41.1`
 
 ## Auftrag und Ergebnis
 

@@ -1,5 +1,5 @@
 window.EC_CONTENT = {
-  version: "1.41.0",
+  version: "1.41.1",
   feedback: {
     endpoint: "",
     intro: "Sag mir, was am EC Lernstudio besser werden soll: unklare Erklärungen, Fehler in Aufgaben, Wünsche für neue Funktionen – alles hilft. Dein Feedback ist anonym; bitte nenne deshalb keine Namen."

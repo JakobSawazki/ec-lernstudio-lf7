@@ -837,10 +837,26 @@
           </div>
           <div class="resource-list">
             ${module.resources.map((resource) => `
-              <a class="resource-card" href="${escapeHtml(resource.href)}" target="_blank" rel="noopener">
-                <span>${escapeHtml(resource.type)}</span>
-                <strong>${escapeHtml(resource.title)}</strong>
-                <small>${escapeHtml(resource.description)}</small>
+              <a class="resource-card ${resource.type === "PDF" ? "is-document" : ""}" href="${escapeHtml(resource.href)}" target="_blank" rel="noopener" aria-label="${escapeHtml(resource.type === "PDF" ? `${resource.title} als PDF-Dokument öffnen` : `${resource.title} öffnen`)}">
+                ${resource.type === "PDF" ? `
+                  <span class="resource-document-icon" aria-hidden="true">
+                    <span>PDF</span>
+                    <i></i>
+                    <i></i>
+                  </span>
+                  <span class="resource-card-copy">
+                    <strong>${escapeHtml(resource.title)}</strong>
+                    <small>${escapeHtml(resource.description)}</small>
+                    <span class="resource-card-action">
+                      PDF-Dokument öffnen
+                      <span aria-hidden="true">↗</span>
+                    </span>
+                  </span>
+                ` : `
+                  <span class="resource-type-pill">${escapeHtml(resource.type)}</span>
+                  <strong>${escapeHtml(resource.title)}</strong>
+                  <small>${escapeHtml(resource.description)}</small>
+                `}
               </a>
             `).join("")}
           </div>

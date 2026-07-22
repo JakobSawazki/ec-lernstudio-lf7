@@ -4,8 +4,8 @@ Interaktive Lernplattform für Schülerinnen und Schüler im E-Commerce. Die
 Plattform behandelt schrittweise die in Datenverarbeitung vorgesehenen Inhalte
 aus ausgewählten Lernfeldern. Aktuell sind `LF2`, `LF6`, `LF7` und `LF9` eingebunden.
 
-**Version:** `1.41.0`
-**Dokumentationsstand:** 15. Juli 2026
+**Version:** `1.41.1`
+**Dokumentationsstand:** 22. Juli 2026
 **Repository:** <https://github.com/JakobSawazki/ec-lernstudio-lf7>  
 **Online:** <https://jakobsawazki.github.io/ec-lernstudio-lf7/>
 

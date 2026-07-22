@@ -2,6 +2,16 @@
 
 Alle wesentlichen Änderungen am EC Lernstudio werden hier dokumentiert.
 
+## 1.41.1 - 22. Juli 2026
+
+- PDF-Materialkarten als dezente Dokumentvorschau neu gestaltet: Blatt-Symbol
+  mit gefalteter Ecke, PDF-Kennzeichen und eindeutiger Aktionszeile
+  `PDF-Dokument öffnen`
+- Hover- und Fokuszustände sowie Kontraste für Dark und Light Mode verfeinert
+- mobile Darstellung mit kleinerem Dokument-Icon und kompakteren Abständen
+  optimiert
+- Offline-Cache auf `ec-lernstudio-v48` angehoben
+
 ## 1.41.0 - 15. Juli 2026
 
 - anonymes Feedback-Register vorbereitet: neuer Navigationspunkt `Feedback`
